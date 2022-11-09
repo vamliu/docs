@@ -1,10 +1,10 @@
 ---
-title: valid-jsdoc
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: valid-jsdoc
+布局: doc
+规则类型: suggestion
+关联规则:
 - require-jsdoc
-further_reading:
+深入了解:
 - https://jsdoc.app
 ---
 
@@ -30,7 +30,7 @@ If comments are invalid because of typing mistakes, then documentation will be i
 
 If comments are inconsistent because they are not updated when function definitions are modified, then readers might become confused.
 
-## Rule Details
+## 规则详解
 
 This rule enforces valid and consistent JSDoc comments. It reports any of the following problems:
 
@@ -47,7 +47,7 @@ This rule does not report missing JSDoc comments for classes, functions, or meth
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint valid-jsdoc: "error"*/
@@ -86,8 +86,6 @@ function sum(num1, num2) {
     this.num2 = num2;
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -168,9 +166,7 @@ class WonderfulWidget extends Widget {
 }
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule has an object option:
 
@@ -189,7 +185,7 @@ This rule has an object option:
 
 Examples of additional **incorrect** code for this rule with sample `"prefer": { "arg": "param", "argument": "param", "class": "constructor", "return": "returns", "virtual": "abstract" }` options:
 
-::: incorrect
+
 
 ```js
 /*eslint valid-jsdoc: ["error", { "prefer": { "arg": "param", "argument": "param", "class": "constructor", "return": "returns", "virtual": "abstract" } }]*/
@@ -229,13 +225,11 @@ class Widget {
 }
 ```
 
-:::
-
 ### preferType
 
 Examples of additional **incorrect** code for this rule with sample `"preferType": { "Boolean": "boolean", "Number": "number", "object": "Object", "String": "string" }` options:
 
-::: incorrect
+
 
 ```js
 /*eslint valid-jsdoc: ["error", { "preferType": { "Boolean": "boolean", "Number": "number", "object": "Object", "String": "string" } }]*/
@@ -273,13 +267,11 @@ class Widget {
 }
 ```
 
-:::
-
 ### requireReturn
 
 Examples of additional **incorrect** code for this rule with the `"requireReturn": false` option:
 
-::: incorrect
+
 
 ```js
 /*eslint valid-jsdoc: ["error", { "requireReturn": false }]*/
@@ -306,8 +298,6 @@ class Widget {
 }
 ```
 
-:::
-
 Example of additional **correct** code for this rule with the `"requireReturn": false` option:
 
 ::: correct
@@ -322,8 +312,6 @@ function greet(name) {
     console.log("Hello " + name);
 }
 ```
-
-:::
 
 ### requireReturnType
 
@@ -345,8 +333,6 @@ function add(num1, num2) {
 }
 ```
 
-:::
-
 ### requireParamType
 
 Example of additional **correct** code for this rule with the `"requireParamType": false` option:
@@ -367,13 +353,11 @@ function add(num1, num2) {
 }
 ```
 
-:::
-
 ### matchDescription
 
 Example of additional **incorrect** code for this rule with a sample `"matchDescription": ".+"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint valid-jsdoc: ["error", { "matchDescription": ".+" }]*/
@@ -387,8 +371,6 @@ function greet(name) {
     console.log("Hello " + name);
 }
 ```
-
-:::
 
 ### requireParamDescription
 
@@ -410,8 +392,6 @@ function add(num1, num2) {
 }
 ```
 
-:::
-
 ### requireReturnDescription
 
 Example of additional **correct** code for this rule with the `"requireReturnDescription": false` option:
@@ -432,8 +412,6 @@ function add(num1, num2) {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you aren't using JSDoc, then you can safely turn this rule off.

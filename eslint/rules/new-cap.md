@@ -1,7 +1,7 @@
 ---
-title: new-cap
-layout: doc
-rule_type: suggestion
+规则名: new-cap
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -11,7 +11,7 @@ The `new` operator in JavaScript creates a new instance of a particular type of 
 var friend = new Person();
 ```
 
-## Rule Details
+## 规则详解
 
 This rule requires constructor names to begin with a capital letter. Certain built-in identifiers are exempt from this rule. These identifiers are:
 
@@ -39,9 +39,7 @@ function foo(arg) {
 }
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule has an object option:
 
@@ -60,15 +58,13 @@ This rule has an object option:
 
 Examples of **incorrect** code for this rule with the default `{ "newIsCap": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint new-cap: ["error", { "newIsCap": true }]*/
 
 var friend = new person();
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `{ "newIsCap": true }` option:
 
@@ -80,8 +76,6 @@ Examples of **correct** code for this rule with the default `{ "newIsCap": true 
 var friend = new Person();
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `{ "newIsCap": false }` option:
 
 ::: correct
@@ -92,21 +86,17 @@ Examples of **correct** code for this rule with the `{ "newIsCap": false }` opti
 var friend = new person();
 ```
 
-:::
-
 ### capIsNew
 
 Examples of **incorrect** code for this rule with the default `{ "capIsNew": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint new-cap: ["error", { "capIsNew": true }]*/
 
 var colleague = Person();
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `{ "capIsNew": true }` option:
 
@@ -118,8 +108,6 @@ Examples of **correct** code for this rule with the default `{ "capIsNew": true 
 var colleague = new Person();
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `{ "capIsNew": false }` option:
 
 ::: correct
@@ -129,8 +117,6 @@ Examples of **correct** code for this rule with the `{ "capIsNew": false }` opti
 
 var colleague = Person();
 ```
-
-:::
 
 ### newIsCapExceptions
 
@@ -146,8 +132,6 @@ var events = require('events');
 var emitter = new events();
 ```
 
-:::
-
 ### newIsCapExceptionPattern
 
 Examples of additional **correct** code for this rule with the `{ "newIsCapExceptionPattern": "^person\\.." }` option:
@@ -162,8 +146,6 @@ var friend = new person.acquaintance();
 var bestFriend = new person.friend();
 ```
 
-:::
-
 Examples of additional **correct** code for this rule with the `{ "newIsCapExceptionPattern": "\\.bar$" }` option:
 
 ::: correct
@@ -173,8 +155,6 @@ Examples of additional **correct** code for this rule with the `{ "newIsCapExcep
 
 var friend = new person.bar();
 ```
-
-:::
 
 ### capIsNewExceptions
 
@@ -190,8 +170,6 @@ function foo(arg) {
 }
 ```
 
-:::
-
 ### capIsNewExceptionPattern
 
 Examples of additional **correct** code for this rule with the `{ "capIsNewExceptionPattern": "^person\\.." }` option:
@@ -205,8 +183,6 @@ var friend = person.Acquaintance();
 var bestFriend = person.Friend();
 ```
 
-:::
-
 Examples of additional **correct** code for this rule with the `{ "capIsNewExceptionPattern": "\\.Bar$" }` option:
 
 ::: correct
@@ -216,8 +192,6 @@ Examples of additional **correct** code for this rule with the `{ "capIsNewExcep
 
 foo.Bar();
 ```
-
-:::
 
 Examples of additional **correct** code for this rule with the `{ "capIsNewExceptionPattern": "^Foo" }` option:
 
@@ -233,21 +207,17 @@ var y = Foobar(42);
 var z = Foo.Bar(42);
 ```
 
-:::
-
 ### properties
 
 Examples of **incorrect** code for this rule with the default `{ "properties": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint new-cap: ["error", { "properties": true }]*/
 
 var friend = new person.acquaintance();
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `{ "properties": true }` option:
 
@@ -259,8 +229,6 @@ Examples of **correct** code for this rule with the default `{ "properties": tru
 var friend = new person.Acquaintance();
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `{ "properties": false }` option:
 
 ::: correct
@@ -271,8 +239,6 @@ Examples of **correct** code for this rule with the `{ "properties": false }` op
 var friend = new person.acquaintance();
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you have conventions that don't require an uppercase letter for constructors, or don't require capitalized functions be only used as constructors, turn this rule off.

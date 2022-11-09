@@ -1,7 +1,7 @@
 ---
-title: curly
-layout: doc
-rule_type: suggestion
+规则名: curly
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -22,17 +22,17 @@ if (foo) {
 
 There are, however, some who prefer to only use braces when there is more than one statement to be executed.
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at preventing bugs and increasing code clarity by ensuring that block statements are wrapped in curly braces. It will warn when it encounters blocks that omit curly braces.
 
-## Options
+## 配置项
 
 ### all
 
-Examples of **incorrect** code for the default `"all"` option:
+选项 default `"all"` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint curly: "error"*/
@@ -47,9 +47,7 @@ if (foo) {
 } else qux();
 ```
 
-:::
-
-Examples of **correct** code for the default `"all"` option:
+选项 default `"all"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -71,15 +69,13 @@ if (foo) {
 }
 ```
 
-:::
-
 ### multi
 
 By default, this rule warns whenever `if`, `else`, `for`, `while`, or `do` are used without block statements as their body. However, you can specify that block statements should be used only when there are multiple statements in the block and warn when there is only one statement in the block.
 
-Examples of **incorrect** code for the `"multi"` option:
+选项 `"multi"` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint curly: ["error", "multi"]*/
@@ -102,9 +98,7 @@ for (var i=0; i < items.length; i++) {
 }
 ```
 
-:::
-
-Examples of **correct** code for the `"multi"` option:
+选项 `"multi"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -121,15 +115,13 @@ while (true) {
 }
 ```
 
-:::
-
 ### multi-line
 
 Alternatively, you can relax the rule to allow brace-less single-line `if`, `else if`, `else`, `for`, `while`, or `do`, while still enforcing the use of curly braces for other instances.
 
-Examples of **incorrect** code for the `"multi-line"` option:
+选项 `"multi-line"` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint curly: ["error", "multi-line"]*/
@@ -144,9 +136,7 @@ if (foo) foo(
   baz);
 ```
 
-:::
-
-Examples of **correct** code for the `"multi-line"` option:
+选项 `"multi-line"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -177,15 +167,13 @@ while (true) {
 }
 ```
 
-:::
-
 ### multi-or-nest
 
 You can use another configuration that forces brace-less `if`, `else if`, `else`, `for`, `while`, or `do` if their body contains only one single-line statement. And forces braces in all other cases.
 
-Examples of **incorrect** code for the `"multi-or-nest"` option:
+选项 `"multi-or-nest"` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint curly: ["error", "multi-or-nest"]*/
@@ -215,9 +203,7 @@ for (var i = 0; foo; i++) {
 }
 ```
 
-:::
-
-Examples of **correct** code for the `"multi-or-nest"` option:
+选项 `"multi-or-nest"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -248,8 +234,6 @@ for (var i = 0; foo; i++)
     doSomething();
 ```
 
-:::
-
 For single-line statements preceded by a comment, braces are allowed but not required.
 
 Examples of additional **correct** code for the `"multi-or-nest"` option:
@@ -269,8 +253,6 @@ if (foo) {
 }
 ```
 
-:::
-
 ### consistent
 
 When using any of the `multi*` options, you can add an option to enforce all bodies of a `if`,
@@ -278,7 +260,7 @@ When using any of the `multi*` options, you can add an option to enforce all bod
 
 Examples of **incorrect** code for the `"multi", "consistent"` options:
 
-::: incorrect
+
 
 ```js
 /*eslint curly: ["error", "multi", "consistent"]*/
@@ -308,8 +290,6 @@ if (foo) {
     foo++;
 }
 ```
-
-:::
 
 Examples of **correct** code for the `"multi", "consistent"` options:
 
@@ -344,8 +324,6 @@ if (foo)
 
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you have no strict conventions about when to use block statements and when not to, you can safely disable this rule.

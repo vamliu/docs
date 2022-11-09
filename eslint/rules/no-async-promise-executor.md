@@ -1,7 +1,7 @@
 ---
-title: no-async-promise-executor
-layout: doc
-rule_type: problem
+规则名: no-async-promise-executor
+布局: doc
+规则类型: problem
 ---
 
 
@@ -25,13 +25,13 @@ The executor function can also be an `async function`. However, this is usually 
 * If an async executor function throws an error, the error will be lost and won't cause the newly-constructed `Promise` to reject. This could make it difficult to debug and handle some errors.
 * If a Promise executor function is using `await`, this is usually a sign that it is not actually necessary to use the `new Promise` constructor, or the scope of the `new Promise` constructor can be reduced.
 
-## Rule Details
+## 规则详解
 
 This rule aims to disallow async Promise executor functions.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 const foo = new Promise(async (resolve, reject) => {
@@ -48,8 +48,6 @@ const result = new Promise(async (resolve, reject) => {
   resolve(await foo);
 });
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -69,8 +67,6 @@ const foo = new Promise((resolve, reject) => {
 const result = Promise.resolve(foo);
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If your codebase doesn't support async function syntax, there's no need to enable this rule.

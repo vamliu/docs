@@ -1,8 +1,8 @@
 ---
-title: no-fallthrough
-layout: doc
-rule_type: problem
-related_rules:
+规则名: no-fallthrough
+布局: doc
+规则类型: problem
+关联规则:
 - default-case
 ---
 
@@ -77,13 +77,13 @@ switch(foo) {
 
 In this example, there is no confusion as to the expected behavior. It is clear that the first case is meant to fall through to the second case.
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at eliminating unintentional fallthrough of one case to the other. As such, it flags any fallthrough scenarios that are not marked by a comment.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-fallthrough: "error"*/
@@ -96,8 +96,6 @@ switch(foo) {
         doSomething();
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -162,11 +160,9 @@ switch(foo) {
 }
 ```
 
-:::
-
 Note that the last `case` statement in these examples does not cause a warning because there is nothing to fall through into.
 
-## Options
+## 配置项
 
 This rule has an object option:
 
@@ -176,7 +172,7 @@ This rule has an object option:
 
 ### commentPattern
 
-Examples of **correct** code for the `{ "commentPattern": "break[\\s\\w]*omitted" }` option:
+选项 `{ "commentPattern": "break[\\s\\w]*omitted" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -202,11 +198,9 @@ switch(foo) {
 }
 ```
 
-:::
-
 ### allowEmptyCase
 
-Examples of **correct** code for the `{ "allowEmptyCase": true }` option:
+选项 `{ "allowEmptyCase": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -229,8 +223,6 @@ switch(foo){
 
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to enforce that each `case` statement should end with a `throw`, `return`, `break`, or comment, then you can safely turn this rule off.

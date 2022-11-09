@@ -1,7 +1,7 @@
 ---
-title: eqeqeq
-layout: doc
-rule_type: suggestion
+规则名: eqeqeq
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -17,13 +17,13 @@ For instance, the following statements are all considered `true`:
 
 If one of those occurs in an innocent-looking statement such as `a == b` the actual problem is very difficult to spot.
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at eliminating the type-unsafe equality operators.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint eqeqeq: "error"*/
@@ -35,19 +35,17 @@ if ("" == text) { }
 if (obj.getStuff() != undefined) { }
 ```
 
-:::
-
 The `--fix` option on the command line automatically fixes some problems reported by this rule. A problem is only fixed if one of the operands is a `typeof` expression, or if both operands are literals with the same type.
 
-## Options
+## 配置项
 
 ### always
 
 The `"always"` option (default) enforces the use of `===` and `!==` in every situation (except when you opt-in to more specific handling of `null` [see below]).
 
-Examples of **incorrect** code for the `"always"` option:
+选项 `"always"` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint eqeqeq: ["error", "always"]*/
@@ -64,9 +62,7 @@ foo == null
 
 ```
 
-:::
-
-Examples of **correct** code for the `"always"` option:
+选项 `"always"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -85,8 +81,6 @@ foo === null
 
 ```
 
-:::
-
 This rule optionally takes a second argument, which should be an object with the following supported properties:
 
 * `"null"`: Customize how this rule treats `null` literals. Possible values:
@@ -102,9 +96,9 @@ The `"smart"` option enforces the use of `===` and `!==` except for these cases:
 * Evaluating the value of `typeof`
 * Comparing against `null`
 
-Examples of **incorrect** code for the `"smart"` option:
+选项 `"smart"` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint eqeqeq: ["error", "smart"]*/
@@ -120,9 +114,7 @@ bananas != 1
 value == undefined
 ```
 
-:::
-
-Examples of **correct** code for the `"smart"` option:
+选项 `"smart"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -136,8 +128,6 @@ true == true
 foo == null
 ```
 
-:::
-
 ### allow-null
 
 **Deprecated:** Instead of using this option use "always" and pass a "null" option property with value "ignore". This will tell ESLint to always enforce strict equality except when comparing with the `null` literal.
@@ -146,6 +136,6 @@ foo == null
 ["error", "always", {"null": "ignore"}]
 ```
 
-## When Not To Use It
+## 使用建议
 
 If you don't want to enforce a style for using equality operators, then it's safe to disable this rule.

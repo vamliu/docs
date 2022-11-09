@@ -1,7 +1,7 @@
 ---
-title: no-inner-declarations
-layout: doc
-rule_type: problem
+规则名: no-inner-declarations
+布局: doc
+规则类型: problem
 ---
 
 
@@ -9,10 +9,10 @@ rule_type: problem
 In JavaScript, prior to ES6, a function declaration is only allowed in the first level of a program or the body of another function, though parsers sometimes [erroneously accept them elsewhere](https://code.google.com/p/esprima/issues/detail?id=422). This only applies to function declarations; named or anonymous function expressions can occur anywhere an expression is permitted.
 
 ```js
-// Good
+// 推荐
 function doSomething() { }
 
-// Bad
+// 不推荐
 if (test) {
     function doSomethingElse () { }
 }
@@ -22,10 +22,10 @@ function anotherThing() {
 
     if (test) {
 
-        // Good
+        // 推荐
         fn = function expression() { };
 
-        // Bad
+        // 不推荐
         function declaration() { }
     }
 }
@@ -36,35 +36,35 @@ A variable declaration is permitted anywhere a statement can go, even nested dee
 ```js
 /*eslint-env es6*/
 
-// Good
+// 推荐
 var foo = 42;
 
-// Good
+// 推荐
 if (foo) {
     let bar1;
 }
 
-// Bad
+// 不推荐
 while (test) {
     var bar2;
 }
 
 function doSomething() {
-    // Good
+    // 推荐
     var baz = true;
 
-    // Bad
+    // 不推荐
     if (baz) {
         var quux;
     }
 }
 ```
 
-## Rule Details
+## 规则详解
 
 This rule requires that function declarations and, optionally, variable declarations be in the root of a program, or in the root of the body of a function, or in the root of the body of a class static block.
 
-## Options
+## 配置项
 
 This rule has a string option:
 
@@ -75,7 +75,7 @@ This rule has a string option:
 
 Examples of **incorrect** code for this rule with the default `"functions"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint no-inner-declarations: "error"*/
@@ -100,8 +100,6 @@ class C {
     }
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `"functions"` option:
 
@@ -134,13 +132,11 @@ if (test) {
 if (foo) var a;
 ```
 
-:::
-
 ### both
 
 Examples of **incorrect** code for this rule with the `"both"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint no-inner-declarations: ["error", "both"]*/
@@ -168,8 +164,6 @@ class C {
 }
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `"both"` option:
 
 ::: correct
@@ -194,8 +188,6 @@ class C {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 The function declaration portion rule will be rendered obsolete when [block-scoped functions](https://bugzilla.mozilla.org/show_bug.cgi?id=585536) land in ES6, but until then, it should be left on to enforce valid constructions. Disable checking variable declarations when using [block-scoped-var](block-scoped-var) or if declaring variables in nested blocks is acceptable despite hoisting.

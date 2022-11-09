@@ -1,7 +1,7 @@
 ---
-title: no-path-concat
-layout: doc
-rule_type: suggestion
+规则名: no-path-concat
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -29,13 +29,13 @@ var fullPath = path.resolve(__dirname, "foo.js");
 
 Both `path.join()` and `path.resolve()` are suitable replacements for string concatenation wherever file or directory paths are being created.
 
-## Rule Details
+## 规则详解
 
 This rule aims to prevent string concatenation of directory paths in Node.js
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-path-concat: "error"*/
@@ -45,8 +45,6 @@ var fullPath = __dirname + "/foo.js";
 var fullPath = __filename + "/foo.js";
 
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -58,8 +56,6 @@ Examples of **correct** code for this rule:
 var fullPath = dirname + "/foo.js";
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you want to allow string concatenation of path names.

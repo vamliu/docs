@@ -1,8 +1,8 @@
 ---
-title: no-arrow-condition
-layout: doc
+规则名: no-arrow-condition
+布局: doc
 
-related_rules:
+关联规则:
 - arrow-parens
 - no-confusing-arrow
 - no-constant-condition
@@ -34,11 +34,9 @@ var x = function (a) { return a >= 1 ? 2 : 3 }
 var x = a <= 1 ? 2 : 3
 ```
 
-## Rule Details
+## 规则详解
 
 Examples of **incorrect** code for this rule:
-
-:::incorrect
 
 ```js
 /*eslint no-arrow-condition: "error"*/
@@ -52,5 +50,3 @@ a => 1 ? 2 : 3
 var x = a => 1 ? 2 : 3
 var x = (a) => 1 ? 2 : 3
 ```
-
-:::

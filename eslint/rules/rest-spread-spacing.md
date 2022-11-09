@@ -1,8 +1,8 @@
 ---
-title: rest-spread-spacing
-layout: doc
-rule_type: layout
-further_reading:
+规则名: rest-spread-spacing
+布局: doc
+规则类型: layout
+深入了解:
 - https://github.com/tc39/proposal-object-rest-spread
 ---
 
@@ -47,7 +47,7 @@ n; // -> { x: 1, y: 2, a: 3, b: 4 }
 
 As with other operators, whitespace is allowed between the rest or spread operator and the expression it is operating on, which can lead to inconsistent spacing within a codebase.
 
-## Rule Details
+## 规则详解
 
 This rule aims to enforce consistent spacing between rest and spread operators and their expressions. The rule also supports object rest and spread properties in ES2018:
 
@@ -61,7 +61,7 @@ This rule aims to enforce consistent spacing between rest and spread operators a
 
 Please read the user guide's section on [configuring parser options](/docs/user-guide/configuring#specifying-parser-options) to learn more.
 
-## Options
+## 配置项
 
 This rule takes one option: a string with the value of `"never"` or `"always"`. The default value is `"never"`.
 
@@ -81,7 +81,7 @@ rest-spread-spacing: ["error", "never"]
 
 Examples of **incorrect** code for this rule with `"never"`:
 
-::: incorrect
+
 
 ```js
 /*eslint rest-spread-spacing: ["error", "never"]*/
@@ -93,8 +93,6 @@ function fn(... args) { console.log(args); }
 let { x, y, ... z } = { x: 1, y: 2, a: 3, b: 4 };
 let n = { x, y, ... z };
 ```
-
-:::
 
 Examples of **correct** code for this rule with `"never"`:
 
@@ -111,8 +109,6 @@ let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 };
 let n = { x, y, ...z };
 ```
 
-:::
-
 ### "always"
 
 When using the `"always"` option, whitespace is required between spread operators and their expressions.
@@ -123,7 +119,7 @@ rest-spread-spacing: ["error", "always"]
 
 Examples of **incorrect** code for this rule with `"always"`:
 
-::: incorrect
+
 
 ```js
 /*eslint rest-spread-spacing:["error", "always"]*/
@@ -135,8 +131,6 @@ function fn(...args) { console.log(args); }
 let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 };
 let n = { x, y, ...z };
 ```
-
-:::
 
 Examples of **correct** code for this rule with `"always"`:
 
@@ -153,8 +147,6 @@ let { x, y, ... z } = { x: 1, y: 2, a: 3, b: 4 };
 let n = { x, y, ... z };
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 You can safely disable this rule if you do not care about enforcing consistent spacing between spread operators and their expressions.

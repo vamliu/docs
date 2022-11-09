@@ -1,7 +1,7 @@
 ---
-title: global-require
-layout: doc
-rule_type: suggestion
+规则名: global-require
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -27,13 +27,13 @@ Since `require()` does a synchronous load, it can cause performance problems whe
 
 Further, ES6 modules mandate that `import` and `export` statements can only occur in the top level of the module's body.
 
-## Rule Details
+## 规则详解
 
 This rule requires all calls to `require()` to be at the top level of the module, similar to ES6 `import` and `export` statements, which also can occur only at the top level.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint global-require: "error"*/
@@ -73,8 +73,6 @@ try {
 }
 ```
 
-:::
-
 Examples of **correct** code for this rule:
 
 ::: correct
@@ -104,8 +102,6 @@ var x = require("x"),
     z = require("z");
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you have a module that must be initialized with information that comes from the file-system or if a module is only used in very rare situations and will cause significant overhead to load it may make sense to disable the rule. If you need to `require()` an optional dependency inside of a `try`/`catch`, you can disable this rule for just that dependency using the `// eslint-disable-line global-require` comment.

@@ -1,10 +1,10 @@
 ---
-title: object-shorthand
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: object-shorthand
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-useless-rename
-further_reading:
+深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer
 ---
 
@@ -45,7 +45,7 @@ var foo = {
 };
 ```
 
-## Rule Details
+## 规则详解
 
 This rule enforces the use of the shorthand syntax. This applies
 to all methods (including generators) defined in object literals and any
@@ -91,7 +91,7 @@ var foo = {
 };
 ```
 
-## Options
+## 配置项
 
 The rule takes an option which specifies when it should be applied. It can be set to one of the following values:
 
@@ -127,7 +127,7 @@ Additionally, the rule takes an optional object configuration:
 
 Example of **incorrect** code for this rule with the `"always", { "avoidQuotes": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint object-shorthand: ["error", "always", { "avoidQuotes": true }]*/
@@ -137,8 +137,6 @@ var foo = {
     "bar-baz"() {}
 };
 ```
-
-:::
 
 Example of **correct** code for this rule with the `"always", { "avoidQuotes": true }` option:
 
@@ -153,8 +151,6 @@ var foo = {
     "qux": qux
 };
 ```
-
-:::
 
 ### `ignoreConstructors`
 
@@ -177,8 +173,6 @@ var foo = {
 };
 ```
 
-:::
-
 ### `methodsIgnorePattern`
 
 Example of **correct** code for this rule with the `"always", { "methodsIgnorePattern": "^bar$" }` option:
@@ -193,8 +187,6 @@ var foo = {
 };
 ```
 
-:::
-
 ### `avoidExplicitReturnArrows`
 
 ```json
@@ -205,7 +197,7 @@ var foo = {
 
 Example of **incorrect** code for this rule with the `"always", { "avoidExplicitReturnArrows": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint object-shorthand: ["error", "always", { "avoidExplicitReturnArrows": true }]*/
@@ -221,8 +213,6 @@ var foo = {
   }
 };
 ```
-
-:::
 
 Example of **correct** code for this rule with the `"always", { "avoidExplicitReturnArrows": true }` option:
 
@@ -241,11 +231,9 @@ var foo = {
 };
 ```
 
-:::
-
 Example of **incorrect** code for this rule with the `"consistent"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint object-shorthand: [2, "consistent"]*/
@@ -256,8 +244,6 @@ var foo = {
     b: "foo",
 };
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"consistent"` option:
 
@@ -278,11 +264,9 @@ var bar = {
 };
 ```
 
-:::
-
 Example of **incorrect** code with the `"consistent-as-needed"` option, which is very similar to `"consistent"`:
 
-::: incorrect
+
 
 ```js
 /*eslint object-shorthand: [2, "consistent-as-needed"]*/
@@ -294,9 +278,7 @@ var foo = {
 };
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 Anyone not yet in an ES6 environment would not want to apply this rule. Others may find the terseness of the shorthand
 syntax harder to read and may not want to encourage it with this rule.

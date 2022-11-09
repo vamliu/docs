@@ -1,8 +1,8 @@
 ---
-title: radix
-layout: doc
-rule_type: suggestion
-further_reading:
+规则名: radix
+布局: doc
+规则类型: suggestion
+深入了解:
 - https://davidwalsh.name/parseint-radix
 ---
 
@@ -26,11 +26,11 @@ ECMAScript 5 changed the behavior of `parseInt()` so that it no longer autodetec
 
 On the other hand, if the code is targeting only ES5-compliant environments passing the radix `10` may be redundant. In such a case you might want to disallow using such a radix.
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at preventing the unintended conversion of a string to a number of a different base than intended or at preventing the redundant `10` radix if targeting modern environments only.
 
-## Options
+## 配置项
 
 There are two options for this rule:
 
@@ -39,9 +39,9 @@ There are two options for this rule:
 
 ### always
 
-Examples of **incorrect** code for the default `"always"` option:
+选项 default `"always"` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint radix: "error"*/
@@ -57,9 +57,7 @@ var num = parseInt("071", 37);
 var num = parseInt();
 ```
 
-:::
-
-Examples of **correct** code for the default `"always"` option:
+选项 default `"always"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -73,13 +71,11 @@ var num = parseInt("071", 8);
 var num = parseFloat(someValue);
 ```
 
-:::
-
 ### as-needed
 
-Examples of **incorrect** code for the `"as-needed"` option:
+选项 `"as-needed"` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint radix: ["error", "as-needed"]*/
@@ -91,9 +87,7 @@ var num = parseInt("071", "abc");
 var num = parseInt();
 ```
 
-:::
-
-Examples of **correct** code for the `"as-needed"` option:
+选项 `"as-needed"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -107,8 +101,6 @@ var num = parseInt("071", 8);
 var num = parseFloat(someValue);
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to enforce either presence or omission of the `10` radix value you can turn this rule off.

@@ -1,8 +1,8 @@
 ---
-title: sort-keys
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: sort-keys
+布局: doc
+规则类型: suggestion
+关联规则:
 - sort-imports
 - sort-vars
 ---
@@ -10,13 +10,13 @@ related_rules:
 
 When declaring multiple properties, some developers prefer to sort property names alphabetically to more easily find and/or diff necessary properties at a later time. Others feel that it adds complexity and becomes burden to maintain.
 
-## Rule Details
+## 规则详解
 
 This rule checks all property definitions of object expressions and verifies that all variables are sorted alphabetically.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint sort-keys: "error"*/
@@ -37,8 +37,6 @@ const S = Symbol("s")
 let obj = {a: 1, ["c"]: 3, b: 2};
 let obj = {a: 1, [S]: 3, b: 2};
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -71,9 +69,7 @@ let obj = {a: 1, [tag`c`]: 3, b: 2};
 let obj = {b: 1, ...c, a: 2};
 ```
 
-:::
-
-## Options
+## 配置项
 
 ```json
 {
@@ -111,9 +107,9 @@ With `natural` as false, the ordering would be
 
 ### desc
 
-Examples of **incorrect** code for the `"desc"` option:
+选项 `"desc"` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint sort-keys: ["error", "desc"]*/
@@ -129,9 +125,7 @@ let obj = {C: 1, b: 3, a: 2};
 let obj = {10: b, 2: c, 1: a};
 ```
 
-:::
-
-Examples of **correct** code for the `"desc"` option:
+选项 `"desc"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -149,13 +143,11 @@ let obj = {b: 3, a: 2, C: 1};
 let obj = {2: c, 10: b, 1: a};
 ```
 
-:::
-
 ### insensitive
 
-Examples of **incorrect** code for the `{caseSensitive: false}` option:
+选项 `{caseSensitive: false}` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint sort-keys: ["error", "asc", {caseSensitive: false}]*/
@@ -165,9 +157,7 @@ let obj = {a: 1, c: 3, C: 4, b: 2};
 let obj = {a: 1, C: 3, c: 4, b: 2};
 ```
 
-:::
-
-Examples of **correct** code for the `{caseSensitive: false}` option:
+选项 `{caseSensitive: false}` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -179,13 +169,11 @@ let obj = {a: 1, b: 2, c: 3, C: 4};
 let obj = {a: 1, b: 2, C: 3, c: 4};
 ```
 
-:::
-
 ### natural
 
-Examples of **incorrect** code for the `{natural: true}` option:
+选项 `{natural: true}` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint sort-keys: ["error", "asc", {natural: true}]*/
@@ -194,9 +182,7 @@ Examples of **incorrect** code for the `{natural: true}` option:
 let obj = {1: a, 10: c, 2: b};
 ```
 
-:::
-
-Examples of **correct** code for the `{natural: true}` option:
+选项 `{natural: true}` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -207,13 +193,11 @@ Examples of **correct** code for the `{natural: true}` option:
 let obj = {1: a, 2: b, 10: c};
 ```
 
-:::
-
 ### minKeys
 
-Examples of **incorrect** code for the `{minKeys: 4}` option:
+选项 `{minKeys: 4}` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint sort-keys: ["error", "asc", {minKeys: 4}]*/
@@ -237,9 +221,7 @@ let obj = {
 };
 ```
 
-:::
-
-Examples of **correct** code for the `{minKeys: 4}` option:
+选项 `{minKeys: 4}` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -261,13 +243,11 @@ let obj = {
 };
 ```
 
-:::
-
 ### allowLineSeparatedGroups
 
-Examples of **incorrect** code for the `{allowLineSeparatedGroups: true}` option:
+选项 `{allowLineSeparatedGroups: true}` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint sort-keys: ["error", "asc", {allowLineSeparatedGroups: true}]*/
@@ -309,9 +289,7 @@ let obj4 = {
 };
 ```
 
-:::
-
-Examples of **correct** code for the `{allowLineSeparatedGroups: true}` option:
+选项 `{allowLineSeparatedGroups: true}` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -383,9 +361,7 @@ var obj = {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to notify about properties' order, then it's safe to disable this rule.
 

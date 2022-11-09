@@ -1,8 +1,8 @@
 ---
-title: no-constant-condition
-layout: doc
-rule_type: problem
-related_rules:
+规则名: no-constant-condition
+布局: doc
+规则类型: problem
+关联规则:
 - no-constant-binary-expression
 ---
 
@@ -16,7 +16,7 @@ if (false) {
 }
 ```
 
-## Rule Details
+## 规则详解
 
 This rule disallows constant expressions in the test condition of:
 
@@ -25,7 +25,7 @@ This rule disallows constant expressions in the test condition of:
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-constant-condition: "error"*/
@@ -77,8 +77,6 @@ do {
 var result = 0 ? a : b;
 ```
 
-:::
-
 Examples of **correct** code for this rule:
 
 ::: correct
@@ -105,9 +103,7 @@ do {
 var result = x !== 0 ? a : b;
 ```
 
-:::
-
-## Options
+## 配置项
 
 ### checkLoops
 
@@ -141,5 +137,3 @@ do {
     }
 } while (true)
 ```
-
-:::

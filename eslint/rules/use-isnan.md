@@ -1,7 +1,7 @@
 ---
-title: use-isnan
-layout: doc
-rule_type: problem
+规则名: use-isnan
+布局: doc
+规则类型: problem
 ---
 
 
@@ -15,13 +15,13 @@ Because `NaN` is unique in JavaScript by not being equal to anything, including 
 
 Therefore, use `Number.isNaN()` or global `isNaN()` functions to test whether a value is `NaN`.
 
-## Rule Details
+## 规则详解
 
 This rule disallows comparisons to 'NaN'.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint use-isnan: "error"*/
@@ -43,8 +43,6 @@ if (foo != Number.NaN) {
 }
 ```
 
-:::
-
 Examples of **correct** code for this rule:
 
 ::: correct
@@ -61,9 +59,7 @@ if (!isNaN(foo)) {
 }
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule has an object option, with two options:
 
@@ -77,7 +73,7 @@ Therefore, it can never match `case NaN`. Also, `switch(NaN)` can never match a 
 
 Examples of **incorrect** code for this rule with `"enforceForSwitchCase"` option set to `true` (default):
 
-::: incorrect
+
 
 ```js
 /*eslint use-isnan: ["error", {"enforceForSwitchCase": true}]*/
@@ -123,8 +119,6 @@ switch (Number.NaN) {
 }
 ```
 
-:::
-
 Examples of **correct** code for this rule with `"enforceForSwitchCase"` option set to `true` (default):
 
 ::: correct
@@ -149,8 +143,6 @@ if (Number.isNaN(a)) {
     baz();
 } // ...
 ```
-
-:::
 
 Examples of **correct** code for this rule with `"enforceForSwitchCase"` option set to `false`:
 
@@ -200,8 +192,6 @@ switch (Number.NaN) {
 }
 ```
 
-:::
-
 ### enforceForIndexOf
 
 The following methods internally use the `===` comparison to match the given value with an array element:
@@ -215,7 +205,7 @@ Set `"enforceForIndexOf"` to `true` if you want this rule to report `indexOf(NaN
 
 Examples of **incorrect** code for this rule with `"enforceForIndexOf"` option set to `true`:
 
-::: incorrect
+
 
 ```js
 /*eslint use-isnan: ["error", {"enforceForIndexOf": true}]*/
@@ -226,8 +216,6 @@ var firstIndex = myArray.indexOf(NaN);
 
 var lastIndex = myArray.lastIndexOf(NaN);
 ```
-
-:::
 
 Examples of **correct** code for this rule with `"enforceForIndexOf"` option set to `true`:
 
@@ -276,8 +264,6 @@ var firstIndex = myArray.findIndex(Number.isNaN);
 var hasNaN = myArray.includes(NaN);
 ```
 
-:::
-
-#### Known Limitations
+#### 已知局限
 
 This option checks methods with the given names, *even if* the object which has the method is *not* an array.

@@ -1,8 +1,8 @@
 ---
-title: no-restricted-syntax
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-restricted-syntax
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-alert
 - no-console
 - no-debugger
@@ -16,11 +16,11 @@ Rather than creating separate rules for every language feature you want to turn 
 
 You can also specify [AST selectors](../developer-guide/selectors) to restrict, allowing much more precise control over syntax patterns.
 
-## Rule Details
+## 规则详解
 
 This rule disallows specified (that is, user-defined) syntax.
 
-## Options
+## 配置项
 
 This rule takes a list of strings, where each string is an AST selector:
 
@@ -58,7 +58,7 @@ The string and object formats can be freely mixed in the configuration as needed
 
 Examples of **incorrect** code for this rule with the `"FunctionExpression", "WithStatement", BinaryExpression[operator='in']` options:
 
-::: incorrect
+
 
 ```js
 /* eslint no-restricted-syntax: ["error", "FunctionExpression", "WithStatement", "BinaryExpression[operator='in']"] */
@@ -71,8 +71,6 @@ var doSomething = function () {};
 
 foo in bar;
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"FunctionExpression", "WithStatement", BinaryExpression[operator='in']` options:
 
@@ -88,8 +86,6 @@ function doSomething() {};
 foo instanceof bar;
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to restrict your code from using any JavaScript features or syntax, you should not use this rule.

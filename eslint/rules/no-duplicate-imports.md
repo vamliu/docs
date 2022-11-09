@@ -1,7 +1,7 @@
 ---
-title: no-duplicate-imports
-layout: doc
-rule_type: problem
+规则名: no-duplicate-imports
+布局: doc
+规则类型: problem
 ---
 
 
@@ -15,13 +15,13 @@ import something from 'another-module';
 import { find } from 'module';
 ```
 
-## Rule Details
+## 规则详解
 
 This rule requires that all imports from a single module that can be merged exist in a single `import` statement.
 
 Example of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-duplicate-imports: "error"*/
@@ -30,8 +30,6 @@ import { merge } from 'module';
 import something from 'another-module';
 import { find } from 'module';
 ```
-
-:::
 
 Example of **correct** code for this rule:
 
@@ -43,8 +41,6 @@ Example of **correct** code for this rule:
 import { merge, find } from 'module';
 import something from 'another-module';
 ```
-
-:::
 
 Example of **correct** code for this rule:
 
@@ -58,9 +54,7 @@ import { merge } from 'module';
 import * as something from 'module';
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule takes one optional argument, an object with a single key, `includeExports` which is a `boolean`. It defaults to `false`.
 
@@ -68,7 +62,7 @@ If re-exporting from an imported module, you should add the imports to the `impo
 
 Example of **incorrect** code for this rule with the `{ "includeExports": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint no-duplicate-imports: ["error", { "includeExports": true }]*/
@@ -77,8 +71,6 @@ import { merge } from 'module';
 
 export { find } from 'module';
 ```
-
-:::
 
 Example of **correct** code for this rule with the `{ "includeExports": true }` option:
 
@@ -91,8 +83,6 @@ import { merge, find } from 'module';
 
 export { find };
 ```
-
-:::
 
 Example of **correct** code for this rule with the `{ "includeExports": true }` option:
 
@@ -109,5 +99,3 @@ export * as something from 'module';
 // cannot be written differently
 export * from 'module';
 ```
-
-:::

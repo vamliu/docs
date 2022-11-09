@@ -1,7 +1,7 @@
 ---
-title: no-self-compare
-layout: doc
-rule_type: problem
+规则名: no-self-compare
+布局: doc
+规则类型: problem
 ---
 
 
@@ -9,13 +9,13 @@ Comparing a variable against itself is usually an error, either a typo or refact
 
 The only time you would compare a variable against itself is when you are testing for `NaN`. However, it is far more appropriate to use `typeof x === 'number' && isNaN(x)` or the [Number.isNaN ES2015 function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN) for that use case rather than leaving the reader of the code to determine the intent of self comparison.
 
-## Rule Details
+## 规则详解
 
 This error is raised to highlight a potentially confusing and potentially pointless piece of code. There are almost no situations in which you would need to compare something to itself.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-self-compare: "error"*/
@@ -25,5 +25,3 @@ if (x === x) {
     x = 20;
 }
 ```
-
-:::

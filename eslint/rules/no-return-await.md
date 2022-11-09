@@ -1,8 +1,8 @@
 ---
-title: no-return-await
-layout: doc
-rule_type: suggestion
-further_reading:
+规则名: no-return-await
+布局: doc
+规则类型: suggestion
+深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
 - https://jakearchibald.com/2017/await-vs-return-vs-return-await/
 ---
@@ -12,13 +12,13 @@ Using `return await` inside an `async function` keeps the current function in th
 
 You can avoid the extra microtask by not awaiting the return value, with the trade off of the function no longer being a part of the stack trace if an error is thrown asynchronously from the Promise being returned. This can make debugging more difficult.
 
-## Rule Details
+## 规则详解
 
 This rule aims to prevent a likely common performance hazard due to a lack of understanding of the semantics of `async function`.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-return-await: "error"*/
@@ -27,8 +27,6 @@ async function foo() {
     return await bar();
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -60,9 +58,7 @@ async function foo() {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 There are a few reasons you might want to turn this rule off:
 

@@ -1,20 +1,20 @@
 ---
-title: no-trailing-spaces
-layout: doc
-rule_type: layout
+规则名: no-trailing-spaces
+布局: doc
+规则类型: layout
 ---
 
 
 
 Sometimes in the course of editing files, you can end up with extra whitespace at the end of lines. These whitespace differences can be picked up by source control systems and flagged as diffs, causing frustration for developers. While this extra whitespace causes no functional issues, many code conventions require that trailing spaces be removed before check-in.
 
-## Rule Details
+## 规则详解
 
 This rule disallows trailing whitespace (spaces, tabs, and other Unicode whitespace characters) at the end of lines.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-trailing-spaces: "error"*/
@@ -23,8 +23,6 @@ var foo = 0;//•••••
 var baz = 5;//••
 //•••••
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -37,9 +35,7 @@ var foo = 0;
 var baz = 5;
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule has an object option:
 
@@ -62,8 +58,6 @@ var baz = 5;
 //•••••
 ```
 
-:::
-
 ### ignoreComments
 
 Examples of **correct** code for this rule with the `{ "ignoreComments": true }` option:
@@ -81,5 +75,3 @@ Examples of **correct** code for this rule with the `{ "ignoreComments": true }`
  *•bar
  */
 ```
-
-:::

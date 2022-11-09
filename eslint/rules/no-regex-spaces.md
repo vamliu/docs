@@ -1,8 +1,8 @@
 ---
-title: no-regex-spaces
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-regex-spaces
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-div-regex
 - no-control-regex
 ---
@@ -25,13 +25,13 @@ var re = /foo {3}bar/;
 
 Now it is very clear that three spaces are expected to be matched.
 
-## Rule Details
+## 规则详解
 
 This rule disallows multiple spaces in regular expression literals.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-regex-spaces: "error"*/
@@ -39,8 +39,6 @@ Examples of **incorrect** code for this rule:
 var re = /foo   bar/;
 var re = new RegExp("foo   bar");
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -53,8 +51,6 @@ var re = /foo {3}bar/;
 var re = new RegExp("foo {3}bar");
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you want to allow multiple spaces in a regular expression, then you can safely turn this rule off.

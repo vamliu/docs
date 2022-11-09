@@ -1,8 +1,8 @@
 ---
-title: getter-return
-layout: doc
-rule_type: problem
-further_reading:
+规则名: getter-return
+布局: doc
+规则类型: problem
+深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get
 - https://leanpub.com/understandinges6/read/#leanpub-auto-accessor-properties
 ---
@@ -27,13 +27,13 @@ Object.defineProperty(p, "age", {
 
 Note that every `getter` is expected to return a value.
 
-## Rule Details
+## 规则详解
 
 This rule enforces that a return statement is present in property getters.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint getter-return: "error"*/
@@ -56,8 +56,6 @@ class P{
     }
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -85,15 +83,13 @@ class P{
 }
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule has an object option:
 
 * `"allowImplicit": false` (default) disallows implicitly returning `undefined` with a `return` statement.
 
-Examples of **correct** code for the `{ "allowImplicit": true }` option:
+选项 `{ "allowImplicit": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -106,8 +102,6 @@ p = {
 };
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If your project will not be using ES5 property getters you do not need this rule.

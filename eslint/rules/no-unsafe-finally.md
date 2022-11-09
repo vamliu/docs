@@ -1,7 +1,7 @@
 ---
-title: no-unsafe-finally
-layout: doc
-rule_type: problem
+规则名: no-unsafe-finally
+布局: doc
+规则类型: problem
 ---
 
 
@@ -65,13 +65,13 @@ JavaScript suspends the control flow statements of `try` and `catch` blocks unti
 // > 1
 ```
 
-## Rule Details
+## 规则详解
 
 This rule disallows `return`, `throw`, `break`, and `continue` statements inside `finally` blocks. It allows indirect usages, such as in `function` or `class` definitions.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-unsafe-finally: "error"*/
@@ -86,9 +86,7 @@ let foo = function() {
 };
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint no-unsafe-finally: "error"*/
@@ -102,8 +100,6 @@ let foo = function() {
     }
 };
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -122,8 +118,6 @@ let foo = function() {
 };
 ```
 
-:::
-
 ::: correct
 
 ```js
@@ -140,8 +134,6 @@ let foo = function() {
     }
 };
 ```
-
-:::
 
 ::: correct
 
@@ -163,8 +155,6 @@ let foo = function(a) {
 };
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you want to allow control flow operations in `finally` blocks, you can turn this rule off.

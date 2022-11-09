@@ -1,7 +1,7 @@
 ---
-title: no-new-require
-layout: doc
-rule_type: suggestion
+规则名: no-new-require
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -27,21 +27,19 @@ var appHeader = new (require('app-header'));
 
 For this reason, it is usually best to disallow this particular expression.
 
-## Rule Details
+## 规则详解
 
 This rule aims to eliminate use of the `new require` expression.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-new-require: "error"*/
 
 var appHeader = new require('app-header');
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -54,8 +52,6 @@ var AppHeader = require('app-header');
 var appHeader = new AppHeader();
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you are using a custom implementation of `require` and your code will never be used in projects where a standard `require` (CommonJS, Node.js, AMD) is expected, you can safely turn this rule off.

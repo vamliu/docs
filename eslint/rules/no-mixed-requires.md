@@ -1,7 +1,7 @@
 ---
-title: no-mixed-requires
-layout: doc
-rule_type: suggestion
+规则名: no-mixed-requires
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -9,7 +9,7 @@ This rule was **deprecated** in ESLint v7.0.0. Please use the corresponding rule
 
 In the Node.js community it is often customary to separate initializations with calls to `require` modules from other variable declarations, sometimes also grouping them by the type of module. This rule helps you enforce this convention.
 
-## Rule Details
+## 规则详解
 
 When this rule is enabled, each `var` statement must satisfy the following conditions:
 
@@ -36,7 +36,7 @@ var fs = require('fs'),        // "core"     \
     bam;                       // "uninitialized"
 ```
 
-## Options
+## 配置项
 
 This rule can have an object literal option whose two properties have `false` values by default.
 
@@ -44,7 +44,7 @@ Configuring this rule with one boolean option `true` is deprecated.
 
 Examples of **incorrect** code for this rule with the default `{ "grouping": false, "allowCall": false }` options:
 
-::: incorrect
+
 
 ```js
 /*eslint no-mixed-requires: "error"*/
@@ -56,8 +56,6 @@ var async = require('async'),
     debug = require('diagnostics').someFunction('my-module'),
     eslint = require('eslint');
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `{ "grouping": false, "allowCall": false }` options:
 
@@ -82,13 +80,11 @@ var foo = require('foo' + VERSION),
     baz = require();
 ```
 
-:::
-
 ### grouping
 
 Examples of **incorrect** code for this rule with the `{ "grouping": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint no-mixed-requires: ["error", { "grouping": true }]*/
@@ -102,13 +98,11 @@ var foo = require('foo'),
     bar = require(getBarModuleName());
 ```
 
-:::
-
 ### allowCall
 
 Examples of **incorrect** code for this rule with the `{ "allowCall": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint no-mixed-requires: ["error", { "allowCall": true }]*/
@@ -117,8 +111,6 @@ var async = require('async'),
     debug = require('diagnostics').someFunction('my-module'), /* allowCall doesn't allow calling any function */
     eslint = require('eslint');
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "allowCall": true }` option:
 
@@ -132,16 +124,14 @@ var async = require('async'),
     eslint = require('eslint');
 ```
 
-:::
-
-## Known Limitations
+## 已知局限
 
 * The implementation is not aware of any local functions with the name `require` that may shadow Node.js' global `require`.
 
 * Internally, the list of core modules is retrieved via `require("repl")._builtinLibs`. If you use different versions of Node.js for ESLint and your application, the list of core modules for each version may be different.
   The above mentioned `_builtinLibs` property became available in 0.8, for earlier versions a hardcoded list of module names is used as a fallback. If your version of Node.js is older than 0.6 that list may be inaccurate.
 
-## When Not To Use It
+## 使用建议
 
 If you use a pattern such as [UMD][4] where the `require`d modules are not loaded in variable declarations, this rule will obviously do nothing for you.
 

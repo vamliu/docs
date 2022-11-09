@@ -1,8 +1,8 @@
 ---
-title: default-case
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: default-case
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-fallthrough
 ---
 
@@ -44,13 +44,13 @@ switch (foo) {
 
 Once again, the intent here is to show that the developer intended for there to be no default behavior.
 
-## Rule Details
+## 规则详解
 
 This rule aims to require `default` case in `switch` statements. You may optionally include a `// no default` after the last `case` if there is no `default` case. The comment may be in any desired case, such as `// No Default`.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint default-case: "error"*/
@@ -62,8 +62,6 @@ switch (a) {
 }
 
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -99,9 +97,7 @@ switch (a) {
 }
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule accepts a single options argument:
 
@@ -109,7 +105,7 @@ This rule accepts a single options argument:
 
 ### commentPattern
 
-Examples of **correct** code for the `{ "commentPattern": "^skip\\sdefault" }` option:
+选项 `{ "commentPattern": "^skip\\sdefault" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -133,8 +129,6 @@ switch(a) {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to enforce a `default` case for `switch` statements, you can safely disable this rule.

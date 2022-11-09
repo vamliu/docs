@@ -1,7 +1,7 @@
 ---
-title: no-throw-literal
-layout: doc
-rule_type: suggestion
+规则名: no-throw-literal
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -10,13 +10,13 @@ The fundamental benefit of `Error` objects is that they automatically keep track
 
 This rule restricts what can be thrown as an exception.  When it was first created, it only prevented literals from being thrown (hence the name), but it has now been expanded to only allow expressions which have a possibility of being an `Error` object.
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at maintaining consistency when throwing exception by disallowing to throw literals and other expressions which cannot possibly be an `Error` object.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-throw-literal: "error"*/
@@ -39,8 +39,6 @@ throw `${err}`
 
 ```
 
-:::
-
 Examples of **correct** code for this rule:
 
 ::: correct
@@ -62,9 +60,7 @@ try {
 }
 ```
 
-:::
-
-## Known Limitations
+## 已知局限
 
 Due to the limits of static analysis, this rule cannot guarantee that you will only throw `Error` objects.
 
@@ -90,5 +86,3 @@ var foo = {
 };
 throw foo.bar;
 ```
-
-:::

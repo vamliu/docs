@@ -1,8 +1,8 @@
 ---
-title: no-space-before-semi
-layout: doc
+规则名: no-space-before-semi
+布局: doc
 
-related_rules:
+关联规则:
 - semi
 - no-extra-semi
 ---
@@ -21,13 +21,13 @@ var thing = function () {
 }  ;
 ```
 
-## Rule Details
+## 规则详解
 
 This rule prevents the use of spaces before a semicolon in expressions.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 var foo = "bar" ;
@@ -40,8 +40,6 @@ var foo = function() {
 var foo = 1 + 2 ;
 ```
 
-:::
-
 Examples of **correct** code for this rule:
 
 ::: correct
@@ -51,5 +49,3 @@ Examples of **correct** code for this rule:
 
 var foo = "bar";
 ```
-
-:::

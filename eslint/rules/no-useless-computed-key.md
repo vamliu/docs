@@ -1,7 +1,7 @@
 ---
-title: no-useless-computed-key
-layout: doc
-rule_type: suggestion
+规则名: no-useless-computed-key
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -18,13 +18,13 @@ The code can be rewritten as:
 var foo = {"a": "b"};
 ```
 
-## Rule Details
+## 规则详解
 
 This rule disallows unnecessary usage of computed property keys.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-useless-computed-key: "error"*/
@@ -35,8 +35,6 @@ var a = { [0]: 0 };
 var a = { ['x']: 0 };
 var a = { ['x']() {} };
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -52,8 +50,6 @@ var c = { a: 0 };
 var c = { '0+1,234': 0 };
 ```
 
-:::
-
 Examples of additional **correct** code for this rule:
 
 ::: correct
@@ -68,9 +64,7 @@ var c = {
 };
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule has an object option:
 
@@ -85,7 +79,7 @@ When `enforceForClassMembers` is set to `true`, the rule will also disallow unne
 
 Examples of **incorrect** code for this rule with the `{ "enforceForClassMembers": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint no-useless-computed-key: ["error", { "enforceForClassMembers": true }]*/
@@ -103,8 +97,6 @@ class Foo {
     static ['a']() {}
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "enforceForClassMembers": true }` option:
 
@@ -127,8 +119,6 @@ class Foo {
 }
 ```
 
-:::
-
 Examples of additional **correct** code for this rule with the `{ "enforceForClassMembers": true }` option:
 
 ::: correct
@@ -149,8 +139,6 @@ class Foo {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to be notified about unnecessary computed property keys, you can safely disable this rule.

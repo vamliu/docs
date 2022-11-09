@@ -1,8 +1,8 @@
 ---
-title: no-undef-init
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-undef-init
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-undefined
 - no-void
 ---
@@ -25,13 +25,13 @@ var foo = undefined;
 
 It's considered a best practice to avoid initializing variables to `undefined`.
 
-## Rule Details
+## 规则详解
 
 This rule aims to eliminate `var` and `let` variable declarations that initialize to `undefined`.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-undef-init: "error"*/
@@ -39,8 +39,6 @@ Examples of **incorrect** code for this rule:
 var foo = undefined;
 let bar = undefined;
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -52,8 +50,6 @@ Examples of **correct** code for this rule:
 var foo;
 let bar;
 ```
-
-:::
 
 Please note that this rule does not check `const` declarations, destructuring patterns, function parameters, and class fields.
 
@@ -77,15 +73,13 @@ class Foo {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 There is one situation where initializing to `undefined` behaves differently than omitting the initialization, and that's when a `var` declaration occurs inside of a loop. For example:
 
 Example of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 for (i = 0; i < 10; i++) {
@@ -94,8 +88,6 @@ for (i = 0; i < 10; i++) {
     x = i;
 }
 ```
-
-:::
 
 In this case, the `var x` is hoisted out of the loop, effectively creating:
 
@@ -147,5 +139,3 @@ for (i = 0; i < 10; i++) {
     x = i;
 }
 ```
-
-:::

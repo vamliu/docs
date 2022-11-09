@@ -1,8 +1,8 @@
 ---
-title: spaced-line-comment
-layout: doc
+规则名: spaced-line-comment
+布局: doc
 
-related_rules:
+关联规则:
 - spaced-comment
 ---
 
@@ -14,7 +14,7 @@ Some style guides require or disallow a whitespace immediately after the initial
 Whitespace after the `//` makes it easier to read text in comments.
 On the other hand, commenting out code is easier without having to put a whitespace right after the `//`.
 
-## Rule Details
+## 规则详解
 
 This rule will enforce consistency of spacing after the start of a line comment `//`.
 
@@ -29,16 +29,14 @@ Exceptions cannot be mixed.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 // When ["never"]
 // This is a comment with a whitespace at the beginning
 ```
 
-:::
 
-::: incorrect
 
 ```js
 //When ["always"]
@@ -46,9 +44,7 @@ Examples of **incorrect** code for this rule:
 var foo = 5;
 ```
 
-:::
 
-::: incorrect
 
 ```js
 // When ["always",{"exceptions":["-","+"]}]
@@ -56,8 +52,6 @@ var foo = 5;
 // Comment block
 //------++++++++
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -69,8 +63,6 @@ Examples of **correct** code for this rule:
 var foo = 5;
 ```
 
-:::
-
 ::: correct
 
 ```js
@@ -78,8 +70,6 @@ var foo = 5;
 //This is a comment with no whitespace at the beginning
 var foo = 5;
 ```
-
-:::
 
 ::: correct
 
@@ -90,8 +80,6 @@ var foo = 5;
 //--------------
 ```
 
-:::
-
 ::: correct
 
 ```js
@@ -100,5 +88,3 @@ var foo = 5;
 // Comment block
 //-+-+-+-+-+-+-+
 ```
-
-:::

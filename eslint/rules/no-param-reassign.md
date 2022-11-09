@@ -1,8 +1,8 @@
 ---
-title: no-param-reassign
-layout: doc
-rule_type: suggestion
-further_reading:
+规则名: no-param-reassign
+布局: doc
+规则类型: suggestion
+深入了解:
 - https://spin.atomicobject.com/2011/04/10/javascript-don-t-reassign-your-function-arguments/
 ---
 
@@ -11,13 +11,13 @@ Assignment to variables declared as function parameters can be misleading and le
 
 This rule can be also configured to fail when function parameters are modified. Side effects on parameters can cause counter-intuitive execution flow and make errors difficult to track down.
 
-## Rule Details
+## 规则详解
 
 This rule aims to prevent unintended behavior caused by modification or reassignment of function parameters.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-param-reassign: "error"*/
@@ -39,8 +39,6 @@ function foo(bar) {
 }
 ```
 
-:::
-
 Examples of **correct** code for this rule:
 
 ::: correct
@@ -53,15 +51,13 @@ function foo(bar) {
 }
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule takes one option, an object, with a boolean property `"props"`, and  arrays `"ignorePropertyModificationsFor"` and `"ignorePropertyModificationsForRegex"`. `"props"` is `false` by default. If `"props"` is set to `true`, this rule warns against the modification of parameter properties unless they're included in `"ignorePropertyModificationsFor"` or `"ignorePropertyModificationsForRegex"`, which is an empty array by default.
 
 ### props
 
-Examples of **correct** code for the default `{ "props": false }` option:
+选项 default `{ "props": false }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -89,11 +85,9 @@ function foo(bar) {
 }
 ```
 
-:::
+选项 `{ "props": true }` 的 **错误** 代码示例：
 
-Examples of **incorrect** code for the `{ "props": true }` option:
 
-::: incorrect
 
 ```js
 /*eslint no-param-reassign: ["error", { "props": true }]*/
@@ -118,8 +112,6 @@ function foo(bar) {
     for (bar.aaa of baz) {}
 }
 ```
-
-:::
 
 Examples of **correct** code for the `{ "props": true }` option with `"ignorePropertyModificationsFor"` set:
 
@@ -149,8 +141,6 @@ function foo(bar) {
 }
 ```
 
-:::
-
 Examples of **correct** code for the `{ "props": true }` option with `"ignorePropertyModificationsForRegex"` set:
 
 ::: correct
@@ -179,8 +169,6 @@ function foo(barBaz) {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you want to allow assignment to function parameters, then you can safely disable this rule.

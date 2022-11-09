@@ -1,8 +1,8 @@
 ---
-title: no-reserved-keys
-layout: doc
+规则名: no-reserved-keys
+布局: doc
 
-further_reading:
+深入了解:
 - https://kangax.github.io/compat-table/es5/#Reserved_words_as_property_names
 ---
 
@@ -22,13 +22,13 @@ In this code, `enum` is used as an object key and will throw an error in an ECMA
 
 ECMAScript 5 loosened the restriction such that keywords and reserved words can be used as object keys without causing an error. However, any code that needs to run in ECMAScript 3 still needs to avoid using keywords and reserved words as keys.
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at eliminating the use of ECMAScript 3 keywords and reserved words as object literal keys. As such, it warns whenever an object key would throw an error in an ECMAScript 3 environment.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 var superman = {
@@ -40,8 +40,6 @@ var values = {
     enum: ["red", "blue", "green"]
 };
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -58,8 +56,6 @@ var values = {
 };
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If your code is only going to be executed in an ECMAScript 5 or higher environment, then you can safely leave this rule off.

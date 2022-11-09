@@ -1,17 +1,17 @@
 ---
-title: func-name-matching
-layout: doc
-rule_type: suggestion
+规则名: func-name-matching
+布局: doc
+规则类型: suggestion
 ---
 
 
-## Rule Details
+## 规则详解
 
 This rule requires function names to match the name of the variable or property to which they are assigned. The rule will ignore property assignments where the property name is a literal that is not a valid identifier in the ECMAScript version specified in your configuration (default ES5).
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint func-name-matching: "error"*/
@@ -28,9 +28,7 @@ class C {
 }
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint func-name-matching: ["error", "never"] */
@@ -46,8 +44,6 @@ class C {
     foo = function foo() {};
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -96,8 +92,6 @@ module.exports = function foo(name) {};
 module['exports'] = function foo(name) {};
 ```
 
-:::
-
 ::: correct
 
 ```js
@@ -142,9 +136,7 @@ module.exports = function foo(name) {};
 module['exports'] = function foo(name) {};
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule takes an optional string of "always" or "never" (when omitted, it defaults to "always"), and an optional options object with two properties `considerPropertyDescriptor` and `includeCommonJSModuleExports`.
 
@@ -152,7 +144,7 @@ This rule takes an optional string of "always" or "never" (when omitted, it defa
 
 A boolean value that defaults to `false`. If `considerPropertyDescriptor` is set to true, the check will take into account the use of `Object.create`, `Object.defineProperty`, `Object.defineProperties`, and `Reflect.defineProperty`.
 
-Examples of **correct** code for the `{ considerPropertyDescriptor: true }` option:
+选项 `{ considerPropertyDescriptor: true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -166,11 +158,9 @@ Object.defineProperties(obj, {baz:{value: function baz() {} }});
 Reflect.defineProperty(obj, 'foo', {value: function foo() {}});
 ```
 
-:::
+选项 `{ considerPropertyDescriptor: true }` 的 **错误** 代码示例：
 
-Examples of **incorrect** code for the `{ considerPropertyDescriptor: true }` option:
 
-::: incorrect
 
 ```js
 /*eslint func-name-matching: ["error", { "considerPropertyDescriptor": true }]*/
@@ -182,15 +172,13 @@ Object.defineProperties(obj, {baz:{value: function foo() {} }});
 Reflect.defineProperty(obj, 'foo', {value: function value() {}});
 ```
 
-:::
-
 ### includeCommonJSModuleExports
 
 A boolean value that defaults to `false`. If `includeCommonJSModuleExports` is set to true, `module.exports` and `module["exports"]` will be checked by this rule.
 
-Examples of **incorrect** code for the `{ includeCommonJSModuleExports: true }` option:
+选项 `{ includeCommonJSModuleExports: true }` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint func-name-matching: ["error", { "includeCommonJSModuleExports": true }]*/
@@ -200,9 +188,7 @@ module.exports = function foo(name) {};
 module['exports'] = function foo(name) {};
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 Do not use this rule if you want to allow named functions to have different names from the variable or property to which they are assigned.
 

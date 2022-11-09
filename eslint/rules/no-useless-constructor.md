@@ -1,7 +1,7 @@
 ---
-title: no-useless-constructor
-layout: doc
-rule_type: suggestion
+规则名: no-useless-constructor
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -20,7 +20,7 @@ class B extends A {
 }
 ```
 
-## Rule Details
+## 规则详解
 
 This rule flags class constructors that can be safely removed without changing how the class works.
 
@@ -28,7 +28,7 @@ This rule flags class constructors that can be safely removed without changing h
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-useless-constructor: "error"*/
@@ -45,8 +45,6 @@ class B extends A {
     }
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -77,8 +75,6 @@ class B extends A {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to be notified about unnecessary constructors, you can safely disable this rule.

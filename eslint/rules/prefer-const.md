@@ -1,8 +1,8 @@
 ---
-title: prefer-const
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: prefer-const
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-var
 - no-use-before-define
 ---
@@ -13,13 +13,13 @@ If a variable is never reassigned, using the `const` declaration is better.
 
 `const` declaration tells readers, "this variable is never reassigned," reducing cognitive load and improving maintainability.
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at flagging variables that are declared using `let` keyword, but never reassigned after the initial assignment.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint prefer-const: "error"*/
@@ -50,8 +50,6 @@ for (let a of [1, 2, 3]) {
     console.log(a);
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -123,9 +121,7 @@ var b = 3;
 console.log(b);
 ```
 
-:::
-
-## Options
+## 配置项
 
 ```json
 {
@@ -144,9 +140,9 @@ There are 2 values:
 * `"any"` (default) - If any variables in destructuring should be `const`, this rule warns for those variables.
 * `"all"` - If all variables in destructuring should be `const`, this rule warns the variables. Otherwise, ignores them.
 
-Examples of **incorrect** code for the default `{"destructuring": "any"}` option:
+选项 default `{"destructuring": "any"}` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint prefer-const: "error"*/
@@ -156,9 +152,7 @@ let {a, b} = obj;    /*error 'b' is never reassigned, use 'const' instead.*/
 a = a + 1;
 ```
 
-:::
-
-Examples of **correct** code for the default `{"destructuring": "any"}` option:
+选项 default `{"destructuring": "any"}` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -176,11 +170,9 @@ a = a + 1;
 b = b + 1;
 ```
 
-:::
+选项 `{"destructuring": "all"}` 的 **错误** 代码示例：
 
-Examples of **incorrect** code for the `{"destructuring": "all"}` option:
 
-::: incorrect
 
 ```js
 /*eslint prefer-const: ["error", {"destructuring": "all"}]*/
@@ -191,9 +183,7 @@ let {a, b} = obj;    /*error 'a' is never reassigned, use 'const' instead.
                              'b' is never reassigned, use 'const' instead.*/
 ```
 
-:::
-
-Examples of **correct** code for the `{"destructuring": "all"}` option:
+选项 `{"destructuring": "all"}` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -206,15 +196,13 @@ let {a, b} = obj;
 a = a + 1;
 ```
 
-:::
-
 ### ignoreReadBeforeAssign
 
 This is an option to avoid conflicting with `no-use-before-define` rule (without `"nofunc"` option).
 If `true` is specified, this rule will ignore variables that are read between the declaration and the first assignment.
 Default is `false`.
 
-Examples of **correct** code for the `{"ignoreReadBeforeAssign": true}` option:
+选项 `{"ignoreReadBeforeAssign": true}` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -231,9 +219,7 @@ function initialize() {
 timer = setInterval(initialize, 100);
 ```
 
-:::
-
-Examples of **correct** code for the default `{"ignoreReadBeforeAssign": false}` option:
+选项 default `{"ignoreReadBeforeAssign": false}` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -249,8 +235,6 @@ function initialize() {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to be notified about variables that are never reassigned after initial assignment, you can safely disable this rule.

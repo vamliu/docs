@@ -1,8 +1,8 @@
 ---
-title: max-len
-layout: doc
-rule_type: layout
-related_rules:
+规则名: max-len
+布局: doc
+规则类型: layout
+关联规则:
 - complexity
 - max-depth
 - max-nested-callbacks
@@ -17,11 +17,11 @@ Very long lines of code in any language can be difficult to read. In order to ai
 var foo = { "bar": "This is a bar.", "baz": { "qux": "This is a qux" }, "difficult": "to read" }; // very long
 ```
 
-## Rule Details
+## 规则详解
 
 This rule enforces a maximum line length to increase code readability and maintainability. The length of a line is defined as the number of Unicode characters in the line.
 
-## Options
+## 配置项
 
 This rule has a number or object option:
 
@@ -40,15 +40,13 @@ This rule has a number or object option:
 
 Examples of **incorrect** code for this rule with the default `{ "code": 80 }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint max-len: ["error", { "code": 80 }]*/
 
 var foo = { "bar": "This is a bar.", "baz": { "qux": "This is a qux" }, "difficult": "to read" };
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `{ "code": 80 }` option:
 
@@ -64,21 +62,17 @@ var foo = {
 };
 ```
 
-:::
-
 ### tabWidth
 
 Examples of **incorrect** code for this rule with the default `{ "tabWidth": 4 }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint max-len: ["error", { "code": 80, "tabWidth": 4 }]*/
 
 \t  \t  var foo = { "bar": "This is a bar.", "baz": { "qux": "This is a qux" } };
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `{ "tabWidth": 4 }` option:
 
@@ -93,13 +87,11 @@ Examples of **correct** code for this rule with the default `{ "tabWidth": 4 }` 
 \t  \t  };
 ```
 
-:::
-
 ### comments
 
 Examples of **incorrect** code for this rule with the `{ "comments": 65 }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint max-len: ["error", { "comments": 65 }]*/
@@ -108,8 +100,6 @@ Examples of **incorrect** code for this rule with the `{ "comments": 65 }` optio
  * This is a comment that violates the maximum line length we have specified
 **/
 ```
-
-:::
 
 ### ignoreComments
 
@@ -125,8 +115,6 @@ Examples of **correct** code for this rule with the `{ "ignoreComments": true }`
 **/
 ```
 
-:::
-
 ### ignoreTrailingComments
 
 Examples of **correct** code for this rule with the `{ "ignoreTrailingComments": true }` option:
@@ -138,8 +126,6 @@ Examples of **correct** code for this rule with the `{ "ignoreTrailingComments":
 
 var foo = 'bar'; // This is a really really really really really really really long comment
 ```
-
-:::
 
 ### ignoreUrls
 
@@ -153,8 +139,6 @@ Examples of **correct** code for this rule with the `{ "ignoreUrls": true }` opt
 var url = 'https://www.example.com/really/really/really/really/really/really/really/long';
 ```
 
-:::
-
 ### ignoreStrings
 
 Examples of **correct** code for this rule with the `{ "ignoreStrings": true }` option:
@@ -166,8 +150,6 @@ Examples of **correct** code for this rule with the `{ "ignoreStrings": true }` 
 
 var longString = 'this is a really really really really really long string!';
 ```
-
-:::
 
 ### ignoreTemplateLiterals
 
@@ -181,8 +163,6 @@ Examples of **correct** code for this rule with the `{ "ignoreTemplateLiterals":
 var longTemplateLiteral = `this is a really really really really really long template literal!`;
 ```
 
-:::
-
 ### ignoreRegExpLiterals
 
 Examples of **correct** code for this rule with the `{ "ignoreRegExpLiterals": true }` option:
@@ -195,8 +175,6 @@ Examples of **correct** code for this rule with the `{ "ignoreRegExpLiterals": t
 var longRegExpLiteral = /this is a really really really really really long regular expression!/;
 ```
 
-:::
-
 ### ignorePattern
 
 Examples of **correct** code for this rule with the `ignorePattern` option:
@@ -208,5 +186,3 @@ Examples of **correct** code for this rule with the `ignorePattern` option:
 
 var dep = require('really/really/really/really/really/really/really/really/long/module');
 ```
-
-:::

@@ -1,12 +1,12 @@
 ---
-title: no-implicit-globals
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-implicit-globals
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-undef
 - no-global-assign
 - no-unused-vars
-further_reading:
+深入了解:
 - https://benalman.com/news/2010/11/immediately-invoked-function-expression/
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Undeclared_var
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone
@@ -35,7 +35,7 @@ This rule has an object option with one option:
 
 * Set `"lexicalBindings"` to `true` if you want this rule to check `const`, `let` and `class` declarations as well.
 
-## Rule Details
+## 规则详解
 
 ### `var` and `function` declarations
 
@@ -45,7 +45,7 @@ This rule disallows `var` and `function` declarations at the top-level script sc
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-implicit-globals: "error"*/
@@ -54,8 +54,6 @@ var foo = 1;
 
 function bar() {}
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -76,8 +74,6 @@ window.bar = function() {};
 })();
 ```
 
-:::
-
 Examples of **correct** code for this rule with `"parserOptions": { "sourceType": "module" }` in the ESLint configuration:
 
 ::: correct
@@ -90,8 +86,6 @@ var foo = 1;
 function bar() {}
 ```
 
-:::
-
 ### Global variable leaks
 
 When the code is not in `strict` mode, an assignment to an undeclared variable creates
@@ -101,7 +95,7 @@ This does not apply to ES modules since the module code is implicitly in `strict
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-implicit-globals: "error"*/
@@ -112,8 +106,6 @@ Bar.prototype.baz = function () {
     a = 1; // Intended to be this.a = 1;
 };
 ```
-
-:::
 
 ### Read-only global variables
 
@@ -128,7 +120,7 @@ or in a `/*global */` comment.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-implicit-globals: "error"*/
@@ -140,8 +132,6 @@ foo = 1;
 Array = [];
 var Object;
 ```
-
-:::
 
 ### `const`, `let` and `class` declarations
 
@@ -168,11 +158,9 @@ let baz;
 class Bar {}
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with `"lexicalBindings"` option set to `true`:
 
-::: incorrect
+
 
 ```js
 /*eslint no-implicit-globals: ["error", {"lexicalBindings": true}]*/
@@ -183,8 +171,6 @@ let baz;
 
 class Bar {}
 ```
-
-:::
 
 Examples of **correct** code for this rule with `"lexicalBindings"` option set to `true`:
 
@@ -206,8 +192,6 @@ Examples of **correct** code for this rule with `"lexicalBindings"` option set t
 }());
 ```
 
-:::
-
 If you intend to create a global `const` or `let` variable or a global `class` declaration, to be used from other scripts,
 be aware that there are certain differences when compared to the traditional methods, which are `var` declarations and assigning to a property of the global `window` object:
 
@@ -222,7 +206,7 @@ Even the `typeof` check is not safe from TDZ reference exceptions.
 
 Examples of **incorrect** code for this rule with `"lexicalBindings"` option set to `true`:
 
-::: incorrect
+
 
 ```js
 /*eslint no-implicit-globals: ["error", {"lexicalBindings": true}]*/
@@ -235,8 +219,6 @@ const MyGlobalFunction = (function() {
     }
 }());
 ```
-
-:::
 
 Examples of **correct** code for this rule with `"lexicalBindings"` option set to `true`:
 
@@ -254,8 +236,6 @@ window.MyGlobalFunction = (function() {
 }());
 ```
 
-:::
-
 ### exported
 
 You can use `/* exported variableName */` block comments in the same way as in [`no-unused-vars`](./no-unused-vars). See the [`no-unused-vars` exported section](./no-unused-vars#exported) for details.
@@ -270,9 +250,7 @@ Examples of **correct** code for `/* exported variableName */` operation:
 var global_var = 42;
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 In the case of a browser script, if you want to be able to explicitly declare variables and functions in the global scope,
 and your code is in strict mode or you don't want this rule to warn you about undeclared variables,

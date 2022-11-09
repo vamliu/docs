@@ -1,8 +1,8 @@
 ---
-title: multiline-ternary
-layout: doc
-rule_type: layout
-related_rules:
+规则名: multiline-ternary
+布局: doc
+规则类型: layout
+关联规则:
 - operator-linebreak
 ---
 
@@ -24,12 +24,12 @@ var foo = bar > baz ?
     value2;
 ```
 
-## Rule Details
+## 规则详解
 
 This rule enforces or disallows newlines between operands of a ternary expression.
 Note: The location of the operators is not enforced by this rule. Please see the [operator-linebreak](operator-linebreak) rule if you are interested in enforcing the location of the operators themselves.
 
-## Options
+## 配置项
 
 This rule has a string option:
 
@@ -43,7 +43,7 @@ This is the default option.
 
 Examples of **incorrect** code for this rule with the `"always"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint multiline-ternary: ["error", "always"]*/
@@ -56,8 +56,6 @@ foo > bar ? value :
 foo > bar ?
     value : value2;
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"always"` option:
 
@@ -77,13 +75,11 @@ foo > bar ?
     value3;
 ```
 
-:::
-
 ### always-multiline
 
 Examples of **incorrect** code for this rule with the `"always-multiline"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint multiline-ternary: ["error", "always-multiline"]*/
@@ -97,8 +93,6 @@ foo > bar ?
 foo > bar &&
     bar > baz ? value1 : value2;
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"always-multiline"` option:
 
@@ -129,13 +123,11 @@ foo > bar &&
         value2;
 ```
 
-:::
-
 ### never
 
 Examples of **incorrect** code for this rule with the `"never"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint multiline-ternary: ["error", "never"]*/
@@ -151,8 +143,6 @@ foo >
     value1 :
     value2;
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"never"` option:
 
@@ -170,9 +160,7 @@ foo > bar ? (
 ) : value3;
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 You can safely disable this rule if you do not have any strict conventions about whether the operands of a ternary expression should be separated by newlines.
 

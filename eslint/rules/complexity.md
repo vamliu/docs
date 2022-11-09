@@ -1,8 +1,8 @@
 ---
-title: complexity
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: complexity
+布局: doc
+规则类型: suggestion
+关联规则:
 - max-depth
 - max-len
 - max-lines
@@ -10,7 +10,7 @@ related_rules:
 - max-nested-callbacks
 - max-params
 - max-statements
-further_reading:
+深入了解:
 - https://en.wikipedia.org/wiki/Cyclomatic_complexity
 - https://ariya.io/2012/12/complexity-analysis-of-javascript-code
 - https://craftsmanshipforsoftware.com/2015/05/25/complexity-for-javascript/
@@ -33,13 +33,13 @@ function a(x) {
 }
 ```
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at reducing code complexity by capping the amount of cyclomatic complexity allowed in a program. As such, it will warn when the cyclomatic complexity crosses the configured threshold (default is `20`).
 
 Examples of **incorrect** code for a maximum of 2:
 
-::: incorrect
+
 
 ```js
 /*eslint complexity: ["error", 2]*/
@@ -59,8 +59,6 @@ function b() {
     bar &&= 1;
 }
 ```
-
-:::
 
 Examples of **correct** code for a maximum of 2:
 
@@ -82,13 +80,11 @@ function b() {
 }
 ```
 
-:::
-
 Class field initializers and class static blocks are implicit functions. Therefore, their complexity is calculated separately for each initializer and each static block, and it doesn't contribute to the complexity of the enclosing code.
 
 Examples of additional **incorrect** code for a maximum of 2:
 
-::: incorrect
+
 
 ```js
 /*eslint complexity: ["error", 2]*/
@@ -105,8 +101,6 @@ class D { // this static block has complexity = 3
     }
 }
 ```
-
-:::
 
 Examples of additional **correct** code for a maximum of 2:
 
@@ -137,9 +131,7 @@ function foo() { // this function has complexity = 1
 }
 ```
 
-:::
-
-## Options
+## 配置项
 
 Optionally, you may specify a `max` object property:
 
@@ -155,6 +147,6 @@ is equivalent to
 
 **Deprecated:** the object property `maximum` is deprecated. Please use the property `max` instead.
 
-## When Not To Use It
+## 使用建议
 
 If you can't determine an appropriate complexity limit for your code, then it's best to disable this rule.

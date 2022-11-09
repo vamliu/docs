@@ -1,7 +1,7 @@
 ---
-title: array-callback-return
-layout: doc
-rule_type: problem
+规则名: array-callback-return
+布局: doc
+规则类型: problem
 ---
 
 
@@ -15,7 +15,7 @@ var indexMap = myArray.reduce(function(memo, item, index) {
 }, {}); // Error: cannot set property 'b' of undefined
 ```
 
-## Rule Details
+## 规则详解
 
 This rule enforces usage of `return` statement in callbacks of array's methods.
 Additionally, it may also enforce the `forEach` array method callback to **not** return a value by using the `checkForEach` option.
@@ -40,8 +40,6 @@ This rule finds callback functions of the following methods, then checks usage o
 
 Examples of **incorrect** code for this rule:
 
-:::incorrect
-
 ```js
 /*eslint array-callback-return: "error"*/
 
@@ -64,11 +62,7 @@ var bar = foo.filter(function(x) {
 });
 ```
 
-:::
-
 Examples of **correct** code for this rule:
-
-:::correct
 
 ```js
 /*eslint array-callback-return: "error"*/
@@ -88,9 +82,7 @@ var foo = Array.from(nodes, function(node) {
 var bar = foo.map(node => node.getAttribute("id"));
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule accepts a configuration object with two options:
 
@@ -99,9 +91,7 @@ This rule accepts a configuration object with two options:
 
 ### allowImplicit
 
-Examples of **correct** code for the `{ "allowImplicit": true }` option:
-
-:::correct
+选项 `{ "allowImplicit": true }` 的 **正确** 代码示例：
 
 ```js
 /*eslint array-callback-return: ["error", { allowImplicit: true }]*/
@@ -110,13 +100,9 @@ var undefAllTheThings = myArray.map(function(item) {
 });
 ```
 
-:::
-
 ### checkForEach
 
-Examples of **incorrect** code for the `{ "checkForEach": true }` option:
-
-:::incorrect
+选项 `{ "checkForEach": true }` 的 **错误** 代码示例：
 
 ```js
 /*eslint array-callback-return: ["error", { checkForEach: true }]*/
@@ -139,11 +125,7 @@ myArray.forEach(item => {
 });
 ```
 
-:::
-
-Examples of **correct** code for the `{ "checkForEach": true }` option:
-
-:::correct
+选项 `{ "checkForEach": true }` 的 **正确** 代码示例：
 
 ```js
 /*eslint array-callback-return: ["error", { checkForEach: true }]*/
@@ -169,12 +151,10 @@ myArray.forEach(item => {
 });
 ```
 
-:::
-
-## Known Limitations
+## 已知局限
 
 This rule checks callback functions of methods with the given names, *even if* the object which has the method is *not* an array.
 
-## When Not To Use It
+## 使用建议
 
 If you don't want to warn about usage of `return` statement in callbacks of array's methods, then it's safe to disable this rule.

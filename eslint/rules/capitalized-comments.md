@@ -1,7 +1,7 @@
 ---
-title: capitalized-comments
-layout: doc
-rule_type: suggestion
+规则名: capitalized-comments
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -10,15 +10,13 @@ Comments are useful for leaving information for future developers. In order for 
 
 In general, no comment style is any more or less valid than any others, but many developers would agree that a consistent style can improve a project's maintainability.
 
-## Rule Details
+## 规则详解
 
 This rule aims to enforce a consistent style of comments across your codebase, specifically by either requiring or disallowing a capitalized letter as the first word character in a comment. This rule will not issue warnings when non-cased letters are used.
 
 By default, this rule will require a non-lowercase letter at the beginning of comments.
 
 Examples of **incorrect** code for this rule:
-
-:::incorrect
 
 ```js
 /* eslint capitalized-comments: ["error"] */
@@ -27,11 +25,7 @@ Examples of **incorrect** code for this rule:
 
 ```
 
-:::
-
 Examples of **correct** code for this rule:
-
-:::correct
 
 ```js
 
@@ -57,9 +51,7 @@ Examples of **correct** code for this rule:
 
 ```
 
-:::
-
-### Options
+### 配置项
 
 This rule has two options: a string value `"always"` or `"never"` which determines whether capitalization of the first word of a comment should be required or forbidden, and optionally an object containing more configuration parameters for the rule.
 
@@ -93,8 +85,6 @@ Note that configuration comments and comments which start with URLs are never re
 
 Examples of **incorrect** code for this rule:
 
-:::incorrect
-
 ```js
 /* eslint capitalized-comments: ["error", "always"] */
 
@@ -102,11 +92,7 @@ Examples of **incorrect** code for this rule:
 
 ```
 
-:::
-
 Examples of **correct** code for this rule:
-
-:::correct
 
 ```js
 /* eslint capitalized-comments: ["error", "always"] */
@@ -133,15 +119,11 @@ Examples of **correct** code for this rule:
 
 ```
 
-:::
-
 #### `"never"`
 
 Using the `"never"` option means that this rule will report any comments which start with an uppercase letter.
 
 Examples of **incorrect** code with the `"never"` option:
-
-:::incorrect
 
 ```js
 /* eslint capitalized-comments: ["error", "never"] */
@@ -150,11 +132,7 @@ Examples of **incorrect** code with the `"never"` option:
 
 ```
 
-:::
-
 Examples of **correct** code with the `"never"` option:
-
-:::correct
 
 ```js
 /* eslint capitalized-comments: ["error", "never"] */
@@ -167,15 +145,11 @@ Examples of **correct** code with the `"never"` option:
 
 ```
 
-:::
-
 #### `ignorePattern`
 
 The `ignorePattern` object takes a string value, which is used as a regular expression applied to the first word of a comment.
 
 Examples of **correct** code with the `"ignorePattern"` option set to `"pragma"`:
-
-:::correct
 
 ```js
 /* eslint capitalized-comments: ["error", "always", { "ignorePattern": "pragma" }] */
@@ -186,15 +160,11 @@ function foo() {
 
 ```
 
-:::
-
 #### `ignoreInlineComments`
 
 Setting the `ignoreInlineComments` option to `true` means that comments in the middle of code (with a token on the same line as the beginning of the comment, and another token on the same line as the end of the comment) will not be reported by this rule.
 
 Examples of **correct** code with the `"ignoreInlineComments"` option set to `true`:
-
-:::correct
 
 ```js
 /* eslint capitalized-comments: ["error", "always", { "ignoreInlineComments": true }] */
@@ -204,15 +174,11 @@ function foo(/* ignored */ a) {
 
 ```
 
-:::
-
 #### `ignoreConsecutiveComments`
 
 If the `ignoreConsecutiveComments` option is set to `true`, then comments which otherwise violate the rule will not be reported as long as they immediately follow another comment. This can be applied more than once.
 
 Examples of **correct** code with `ignoreConsecutiveComments` set to `true`:
-
-:::correct
 
 ```js
 /* eslint capitalized-comments: ["error", "always", { "ignoreConsecutiveComments": true }] */
@@ -228,11 +194,7 @@ Examples of **correct** code with `ignoreConsecutiveComments` set to `true`:
  */
 ```
 
-:::
-
 Examples of **incorrect** code with `ignoreConsecutiveComments` set to `true`:
-
-:::incorrect
 
 ```js
 /* eslint capitalized-comments: ["error", "always", { "ignoreConsecutiveComments": true }] */
@@ -240,8 +202,6 @@ Examples of **incorrect** code with `ignoreConsecutiveComments` set to `true`:
 // this comment is invalid, but only on this line.
 // this comment does NOT get reported, since it is a consecutive comment.
 ```
-
-:::
 
 ### Using Different Options for Line and Block Comments
 
@@ -267,8 +227,6 @@ If you wish to have a different configuration for line comments and block commen
 
 Examples of **incorrect** code with different line and block comment configuration:
 
-:::incorrect
-
 ```js
 /* eslint capitalized-comments: ["error", "always", { "block": { "ignorePattern": "blockignore" } }] */
 
@@ -277,11 +235,7 @@ Examples of **incorrect** code with different line and block comment configurati
 
 ```
 
-:::
-
 Examples of **correct** code with different line and block comment configuration:
-
-:::correct
 
 ```js
 /* eslint capitalized-comments: ["error", "always", { "block": { "ignorePattern": "blockignore" } }] */
@@ -291,9 +245,7 @@ Examples of **correct** code with different line and block comment configuration
 
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 This rule can be disabled if you do not care about the grammatical style of comments in your codebase.
 

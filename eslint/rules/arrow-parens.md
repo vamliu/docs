@@ -1,8 +1,8 @@
 ---
-title: arrow-parens
-layout: doc
-rule_type: layout
-further_reading:
+规则名: arrow-parens
+布局: doc
+规则类型: layout
+深入了解:
 - https://github.com/airbnb/javascript#arrows--one-arg-parens
 ---
 
@@ -11,17 +11,17 @@ further_reading:
 Arrow functions can omit parentheses when they have exactly one parameter. In all other cases the parameter(s) must
 be wrapped in parentheses. This rule enforces the consistent use of parentheses in arrow functions.
 
-## Rule Details
+## 规则详解
 
 This rule enforces parentheses around arrow function parameters regardless of arity. For example:
 
 ```js
 /*eslint-env es6*/
 
-// Bad
+// 不推荐
 a => {}
 
-// Good
+// 推荐
 (a) => {}
 ```
 
@@ -31,11 +31,11 @@ when a comparison such as `>=` was the intent.
 ```js
 /*eslint-env es6*/
 
-// Bad
+// 不推荐
 if (a => 2) {
 }
 
-// Good
+// 推荐
 if (a >= 2) {
 }
 ```
@@ -45,14 +45,14 @@ The rule can also be configured to discourage the use of parens when they are no
 ```js
 /*eslint-env es6*/
 
-// Bad
+// 不推荐
 (a) => {}
 
-// Good
+// 推荐
 a => {}
 ```
 
-## Options
+## 配置项
 
 This rule has a string option and an object one.
 
@@ -69,8 +69,6 @@ Object properties for variants of the `"as-needed"` option:
 
 Examples of **incorrect** code for this rule with the default `"always"` option:
 
-:::incorrect
-
 ```js
 /*eslint arrow-parens: ["error", "always"]*/
 /*eslint-env es6*/
@@ -83,11 +81,7 @@ a.then(foo => a);
 a(foo => { if (true) {} });
 ```
 
-:::
-
 Examples of **correct** code for this rule with the default `"always"` option:
-
-:::correct
 
 ```js
 /*eslint arrow-parens: ["error", "always"]*/
@@ -100,8 +94,6 @@ Examples of **correct** code for this rule with the default `"always"` option:
 a.then((foo) => {});
 a.then((foo) => { if (true) {} });
 ```
-
-:::
 
 #### If Statements
 
@@ -164,8 +156,6 @@ var f = (a) => b ? c: d;
 
 Examples of **incorrect** code for this rule with the `"as-needed"` option:
 
-:::incorrect
-
 ```js
 /*eslint arrow-parens: ["error", "as-needed"]*/
 /*eslint-env es6*/
@@ -181,11 +171,7 @@ const g = /* comment */ (a) => a + a;
 const h = (a) /* comment */ => a + a;
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `"as-needed"` option:
-
-:::correct
 
 ```js
 /*eslint arrow-parens: ["error", "as-needed"]*/
@@ -206,13 +192,9 @@ const g = (/* comment */ a) => a + a;
 const h = (a /* comment */) => a + a;
 ```
 
-:::
-
 ### requireForBlockBody
 
-Examples of **incorrect** code for the `{ "requireForBlockBody": true }` option:
-
-:::incorrect
+选项 `{ "requireForBlockBody": true }` 的 **错误** 代码示例：
 
 ```js
 /*eslint arrow-parens: [2, "as-needed", { "requireForBlockBody": true }]*/
@@ -228,11 +210,7 @@ a.map(x => {
 a.then(foo => {});
 ```
 
-:::
-
-Examples of **correct** code for the `{ "requireForBlockBody": true }` option:
-
-:::correct
+选项 `{ "requireForBlockBody": true }` 的 **正确** 代码示例：
 
 ```js
 /*eslint arrow-parens: [2, "as-needed", { "requireForBlockBody": true }]*/
@@ -251,5 +229,3 @@ a((foo) => { if (true) {} });
 ([a, b]) => a;
 ({a, b}) => a;
 ```
-
-:::

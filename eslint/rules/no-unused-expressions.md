@@ -1,7 +1,7 @@
 ---
-title: no-unused-expressions
-layout: doc
-rule_type: suggestion
+规则名: no-unused-expressions
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -9,7 +9,7 @@ An unused expression which has no effect on the state of the program indicates a
 
 For example, `n + 1;` is not a syntax error, but it might be a typing mistake where a programmer meant an assignment statement `n += 1;` instead. Sometimes, such unused expressions may be eliminated by some build tools in production environment, which possibly breaks application logic.
 
-## Rule Details
+## 规则详解
 
 This rule aims to eliminate unused expressions which have no effect on the state of the program.
 
@@ -29,7 +29,7 @@ This rule does not apply to directives (which are in the form of literal string 
 
 Sequence expressions (those using a comma, such as `a = 1, b = 2`) are always considered unused unless their return value is assigned or used in a condition evaluation, or a function call is made with the sequence expression value.
 
-## Options
+## 配置项
 
 This rule, in its default state, does not require any arguments. If you would like to enable one or more of the following you may pass an object with the options set as follows:
 
@@ -42,7 +42,7 @@ These options allow unused expressions *only if all* of the code paths either di
 
 Examples of **incorrect** code for the default `{ "allowShortCircuit": false, "allowTernary": false }` options:
 
-::: incorrect
+
 
 ```js
 /*eslint no-unused-expressions: "error"*/
@@ -69,8 +69,6 @@ injectGlobal`body{ color: red; }`
 
 ```
 
-:::
-
 Examples of **correct** code for the default `{ "allowShortCircuit": false, "allowTernary": false }` options:
 
 ::: correct
@@ -96,8 +94,6 @@ delete a.b
 
 void a
 ```
-
-:::
 
 Note that one or more string expression statements (with or without semi-colons) will only be considered as unused if they are not in the beginning of a script, module, or function (alone and uninterrupted by other statements). Otherwise, they will be treated as part of a "directive prologue", a section potentially usable by JavaScript engines. This includes "strict mode" directives.
 
@@ -126,11 +122,9 @@ class Foo {
 }
 ```
 
-:::
-
 Examples of **incorrect** code for this rule in regard to directives:
 
-::: incorrect
+
 
 ```js
 /*eslint no-unused-expressions: "error"*/
@@ -149,13 +143,11 @@ class Foo {
 }
 ```
 
-:::
-
 ### allowShortCircuit
 
-Examples of **incorrect** code for the `{ "allowShortCircuit": true }` option:
+选项 `{ "allowShortCircuit": true }` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint no-unused-expressions: ["error", { "allowShortCircuit": true }]*/
@@ -163,9 +155,7 @@ Examples of **incorrect** code for the `{ "allowShortCircuit": true }` option:
 a || b
 ```
 
-:::
-
-Examples of **correct** code for the `{ "allowShortCircuit": true }` option:
+选项 `{ "allowShortCircuit": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -176,13 +166,11 @@ a && b()
 a() || (b = c)
 ```
 
-:::
-
 ### allowTernary
 
-Examples of **incorrect** code for the `{ "allowTernary": true }` option:
+选项 `{ "allowTernary": true }` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint no-unused-expressions: ["error", { "allowTernary": true }]*/
@@ -191,9 +179,7 @@ a ? b : 0
 a ? b : c()
 ```
 
-:::
-
-Examples of **correct** code for the `{ "allowTernary": true }` option:
+选项 `{ "allowTernary": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -203,8 +189,6 @@ Examples of **correct** code for the `{ "allowTernary": true }` option:
 a ? b() : c()
 a ? (b = c) : d()
 ```
-
-:::
 
 ### allowShortCircuit and allowTernary
 
@@ -218,13 +202,11 @@ Examples of **correct** code for the `{ "allowShortCircuit": true, "allowTernary
 a ? b() || (c = d) : e()
 ```
 
-:::
-
 ### allowTaggedTemplates
 
-Examples of **incorrect** code for the `{ "allowTaggedTemplates": true }` option:
+选项 `{ "allowTaggedTemplates": true }` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint no-unused-expressions: ["error", { "allowTaggedTemplates": true }]*/
@@ -232,9 +214,7 @@ Examples of **incorrect** code for the `{ "allowTaggedTemplates": true }` option
 `some untagged template string`;
 ```
 
-:::
-
-Examples of **correct** code for the `{ "allowTaggedTemplates": true }` option:
+选项 `{ "allowTaggedTemplates": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -244,15 +224,13 @@ Examples of **correct** code for the `{ "allowTaggedTemplates": true }` option:
 tag`some tagged template string`;
 ```
 
-:::
-
 ### enforceForJSX
 
 JSX is most-commonly used in the React ecosystem, where it is compiled to `React.createElement` expressions. Though free from side-effects, these calls are not automatically flagged by the `no-unused-expression` rule. If you're using React, or any other side-effect-free JSX pragma, this option can be enabled to flag these expressions.
 
-Examples of **incorrect** code for the `{ "enforceForJSX": true }` option:
+选项 `{ "enforceForJSX": true }` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```jsx
 /*eslint no-unused-expressions: ["error", { "enforceForJSX": true }]*/
@@ -262,9 +240,7 @@ Examples of **incorrect** code for the `{ "enforceForJSX": true }` option:
 <></>;
 ```
 
-:::
-
-Examples of **correct** code for the `{ "enforceForJSX": true }` option:
+选项 `{ "enforceForJSX": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -275,5 +251,3 @@ var myComponentPartial = <MyComponent />;
 
 var myFragment = <></>;
 ```
-
-:::

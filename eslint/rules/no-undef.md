@@ -1,8 +1,8 @@
 ---
-title: no-undef
-layout: doc
-rule_type: problem
-related_rules:
+规则名: no-undef
+布局: doc
+规则类型: problem
+关联规则:
 - no-global-assign
 - no-redeclare
 ---
@@ -11,13 +11,13 @@ related_rules:
 
 This rule can help you locate potential ReferenceErrors resulting from misspellings of variable and parameter names, or accidental implicit globals (for example, from forgetting the `var` keyword in a `for` loop initializer).
 
-## Rule Details
+## 规则详解
 
 Any reference to an undeclared variable causes a warning, unless the variable is explicitly mentioned in a `/*global ...*/` comment, or specified in the [`globals` key in the configuration file](../user-guide/configuring/language-options#using-configuration-files-1). A common use case for these is if you intentionally use globals that are defined elsewhere (e.g. in a script sourced from HTML).
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-undef: "error"*/
@@ -25,8 +25,6 @@ Examples of **incorrect** code for this rule:
 var foo = someFunction();
 var bar = a + 1;
 ```
-
-:::
 
 Examples of **correct** code for this rule with `global` declaration:
 
@@ -40,21 +38,19 @@ var foo = someFunction();
 var bar = a + 1;
 ```
 
-:::
-
 Note that this rule does not disallow assignments to read-only global variables.
 See [no-global-assign](no-global-assign) if you also want to disallow those assignments.
 
 This rule also does not disallow redeclarations of global variables.
 See [no-redeclare](no-redeclare) if you also want to disallow those redeclarations.
 
-## Options
+## 配置项
 
 * `typeof` set to true will warn for variables used inside typeof check (Default false).
 
 ### typeof
 
-Examples of **correct** code for the default `{ "typeof": false }` option:
+选项 default `{ "typeof": false }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -66,21 +62,17 @@ if (typeof UndefinedIdentifier === "undefined") {
 }
 ```
 
-:::
-
 You can use this option if you want to prevent `typeof` check on a variable which has not been declared.
 
-Examples of **incorrect** code for the `{ "typeof": true }` option:
+选项 `{ "typeof": true }` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint no-undef: ["error", { "typeof": true }] */
 
 if(typeof a === "string"){}
 ```
-
-:::
 
 Examples of **correct** code for the `{ "typeof": true }` option with `global` declaration:
 
@@ -92,8 +84,6 @@ Examples of **correct** code for the `{ "typeof": true }` option with `global` d
 
 if(typeof a === "string"){}
 ```
-
-:::
 
 ## Environments
 
@@ -114,8 +104,6 @@ setTimeout(function() {
 });
 ```
 
-:::
-
 ### Node.js
 
 Examples of **correct** code for this rule with `node` environment:
@@ -132,9 +120,7 @@ module.exports = function() {
 };
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If explicit declaration of global variables is not to your taste.
 

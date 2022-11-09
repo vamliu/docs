@@ -1,7 +1,7 @@
 ---
-title: no-restricted-modules
-layout: doc
-rule_type: suggestion
+规则名: no-restricted-modules
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -14,11 +14,11 @@ Why would you want to restrict a module?
 
 Disallowing usage of specific Node.js modules can be useful if you want to limit the available methods a developer can use. For example, you can block usage of the `fs` module if you want to disallow file system access.
 
-## Rule Details
+## 规则详解
 
 This rule allows you to specify modules that you don’t want to use in your application.
 
-## Options
+## 配置项
 
 The rule takes one or more strings as options: the names of restricted modules.
 
@@ -76,7 +76,7 @@ To restrict the use of all Node.js core modules (via <https://github.com/nodejs/
 
 Examples of **incorrect** code for this rule  with sample `"fs", "cluster", "lodash"` restricted modules:
 
-::: incorrect
+
 
 ```js
 /*eslint no-restricted-modules: ["error", "fs", "cluster"]*/
@@ -85,9 +85,7 @@ var fs = require('fs');
 var cluster = require('cluster');
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint no-restricted-modules: ["error", {"paths": ["cluster"] }]*/
@@ -95,17 +93,13 @@ var cluster = require('cluster');
 var cluster = require('cluster');
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint no-restricted-modules: ["error", { "patterns": ["lodash/*"] }]*/
 
 var pick = require('lodash/pick');
 ```
-
-:::
 
 Examples of **correct** code for this rule with sample `"fs", "cluster", "lodash"` restricted modules:
 
@@ -116,8 +110,6 @@ Examples of **correct** code for this rule with sample `"fs", "cluster", "lodash
 
 var crypto = require('crypto');
 ```
-
-:::
 
 ::: correct
 
@@ -130,5 +122,3 @@ var crypto = require('crypto');
 var crypto = require('crypto');
 var pick = require('lodash/pick');
 ```
-
-:::

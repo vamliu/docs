@@ -1,8 +1,8 @@
 ---
-title: handle-callback-err
-layout: doc
-rule_type: suggestion
-further_reading:
+规则名: handle-callback-err
+布局: doc
+规则类型: suggestion
+深入了解:
 - https://github.com/maxogden/art-of-node#callbacks
 - https://web.archive.org/web/20171224042620/https://docs.nodejitsu.com/articles/errors/what-are-the-error-conventions/
 ---
@@ -20,17 +20,17 @@ function loadData (err, data) {
 }
 ```
 
-## Rule Details
+## 规则详解
 
 This rule expects that when you're using the callback pattern in Node.js you'll handle the error.
 
-## Options
+## 配置项
 
 The rule takes a single string option: the name of the error parameter. The default is `"err"`.
 
 Examples of **incorrect** code for this rule with the default `"err"` parameter name:
 
-::: incorrect
+
 
 ```js
 /*eslint handle-callback-err: "error"*/
@@ -40,8 +40,6 @@ function loadData (err, data) {
 }
 
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `"err"` parameter name:
 
@@ -62,8 +60,6 @@ function generateError (err) {
 }
 ```
 
-:::
-
 Examples of **correct** code for this rule with a sample `"error"` parameter name:
 
 ::: correct
@@ -79,8 +75,6 @@ function loadData (error, data) {
 }
 ```
 
-:::
-
 ### regular expression
 
 Sometimes (especially in big projects) the name of the error variable is not consistent across the project,
@@ -92,7 +86,7 @@ If the configured name of the error variable begins with a `^` it is considered 
 * If the option is `"^.+Error$"`, the rule reports unhandled errors where the parameter name ends with `Error` (for example, `connectionError` or `validationError` will match).
 * If the option is `"^.*(e|E)rr"`, the rule reports unhandled errors where the parameter name matches any string that contains `err` or `Err` (for example, `err`, `error`, `anyError`, `some_err` will match).
 
-## When Not To Use It
+## 使用建议
 
 There are cases where it may be safe for your application to ignore errors, however only ignore errors if you are
 confident that some other form of monitoring will help you catch the problem.

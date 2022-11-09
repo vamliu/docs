@@ -1,7 +1,7 @@
 ---
-title: no-octal
-layout: doc
-rule_type: suggestion
+规则名: no-octal
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -14,7 +14,7 @@ var num = 071;      // 57
 
 Because the leading zero which identifies an octal literal has been a source of confusion and error in JavaScript code, ECMAScript 5 deprecates the use of octal numeric literals.
 
-## Rule Details
+## 规则详解
 
 The rule disallows octal literals.
 
@@ -22,7 +22,7 @@ If ESLint parses code in strict mode, the parser (instead of this rule) reports 
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-octal: "error"*/
@@ -30,8 +30,6 @@ Examples of **incorrect** code for this rule:
 var num = 071;
 var result = 5 + 07;
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -42,8 +40,6 @@ Examples of **correct** code for this rule:
 
 var num  = "071";
 ```
-
-:::
 
 ## Compatibility
 

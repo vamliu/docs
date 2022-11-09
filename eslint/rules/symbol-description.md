@@ -1,8 +1,8 @@
 ---
-title: symbol-description
-layout: doc
-rule_type: suggestion
-further_reading:
+规则名: symbol-description
+布局: doc
+规则类型: suggestion
+深入了解:
 - https://www.ecma-international.org/ecma-262/6.0/#sec-symbol-description
 ---
 
@@ -27,7 +27,7 @@ var foo = Symbol("some description");
 
 It may facilitate identifying symbols when one is observed during debugging.
 
-## Rule Details
+## 规则详解
 
 This rules requires a description when creating symbols.
 
@@ -35,7 +35,7 @@ This rules requires a description when creating symbols.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint symbol-description: "error"*/
@@ -43,8 +43,6 @@ Examples of **incorrect** code for this rule:
 
 var foo = Symbol();
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -60,9 +58,7 @@ var someString = "some description";
 var bar = Symbol(someString);
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 This rule should not be used in ES3/5 environments.
 In addition, this rule can be safely turned off if you don't want to enforce presence of `description` when creating Symbols.

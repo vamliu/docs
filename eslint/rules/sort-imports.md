@@ -1,8 +1,8 @@
 ---
-title: sort-imports
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: sort-imports
+布局: doc
+规则类型: suggestion
+关联规则:
 - sort-keys
 - sort-vars
 ---
@@ -32,13 +32,13 @@ import "my-module.js"
 
 When declaring multiple imports, a sorted list of import declarations make it easier for developers to read the code and find necessary imports later. This rule is purely a matter of style.
 
-## Rule Details
+## 规则详解
 
 This rule checks all import declarations and verifies that all imports are first sorted by the used member syntax and then alphabetically by the first member or alias name.
 
 The `--fix` option on the command line automatically fixes some problems reported by this rule: multiple members on a single line are automatically sorted (e.g. `import { b, a } from 'foo.js'` is corrected to `import { a, b } from 'foo.js'`), but multiple lines are not reordered.
 
-## Options
+## 配置项
 
 This rule accepts an object with its properties as
 
@@ -100,11 +100,9 @@ import {d} from 'quux.js';
 import {a, b, c} from 'foo.js'
 ```
 
-:::
-
 Examples of **incorrect** code for this rule when using default options:
 
-::: incorrect
+
 
 ```js
 /*eslint sort-imports: "error"*/
@@ -135,15 +133,13 @@ import * as b from 'bar.js';
 import {b, a, c} from 'foo.js'
 ```
 
-:::
-
 ### `ignoreCase`
 
 When `true` the rule ignores the case-sensitivity of the imports local name.
 
 Examples of **incorrect** code for this rule with the `{ "ignoreCase": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint sort-imports: ["error", { "ignoreCase": true }]*/
@@ -151,8 +147,6 @@ Examples of **incorrect** code for this rule with the `{ "ignoreCase": true }` o
 import B from 'foo.js';
 import a from 'bar.js';
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "ignoreCase": true }` option:
 
@@ -166,8 +160,6 @@ import B from 'bar.js';
 import c from 'baz.js';
 ```
 
-:::
-
 Default is `false`.
 
 ### `ignoreDeclarationSort`
@@ -176,15 +168,13 @@ Ignores the sorting of import declaration statements.
 
 Examples of **incorrect** code for this rule with the default `{ "ignoreDeclarationSort": false }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint sort-imports: ["error", { "ignoreDeclarationSort": false }]*/
 import b from 'foo.js'
 import a from 'bar.js'
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "ignoreDeclarationSort": true }` option:
 
@@ -196,8 +186,6 @@ import a from 'foo.js'
 import b from 'bar.js'
 ```
 
-:::
-
 ::: correct
 
 ```js
@@ -205,8 +193,6 @@ import b from 'bar.js'
 import b from 'foo.js'
 import a from 'bar.js'
 ```
-
-:::
 
 Default is `false`.
 
@@ -216,14 +202,12 @@ Ignores the member sorting within a `multiple` member import declaration.
 
 Examples of **incorrect** code for this rule with the default `{ "ignoreMemberSort": false }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint sort-imports: ["error", { "ignoreMemberSort": false }]*/
 import {b, a, c} from 'foo.js'
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "ignoreMemberSort": true }` option:
 
@@ -233,8 +217,6 @@ Examples of **correct** code for this rule with the `{ "ignoreMemberSort": true 
 /*eslint sort-imports: ["error", { "ignoreMemberSort": true }]*/
 import {b, a, c} from 'foo.js'
 ```
-
-:::
 
 Default is `false`.
 
@@ -251,15 +233,13 @@ All four options must be specified in the array, but you can customize their ord
 
 Examples of **incorrect** code for this rule with the default `{ "memberSyntaxSortOrder": ["none", "all", "multiple", "single"] }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint sort-imports: "error"*/
 import a from 'foo.js';
 import * as b from 'bar.js';
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "memberSyntaxSortOrder": ['single', 'all', 'multiple', 'none'] }` option:
 
@@ -271,8 +251,6 @@ Examples of **correct** code for this rule with the `{ "memberSyntaxSortOrder": 
 import a from 'foo.js';
 import * as b from 'bar.js';
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "memberSyntaxSortOrder": ['all', 'single', 'multiple', 'none'] }` option:
 
@@ -286,8 +264,6 @@ import z from 'zoo.js';
 import {a, b} from 'foo.js';
 ```
 
-:::
-
 Default is `["none", "all", "multiple", "single"]`.
 
 ### `allowSeparatedGroups`
@@ -298,7 +274,7 @@ In other words, a blank line or a comment line or line with any other statement 
 
 Examples of **incorrect** code for this rule with the `{ "allowSeparatedGroups": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint sort-imports: ["error", { "allowSeparatedGroups": true }]*/
@@ -307,8 +283,6 @@ import b from 'foo.js';
 import c from 'bar.js';
 import a from 'baz.js';
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "allowSeparatedGroups": true }` option:
 
@@ -323,8 +297,6 @@ import c from 'bar.js';
 import a from 'baz.js';
 ```
 
-:::
-
 ::: correct
 
 ```js
@@ -335,8 +307,6 @@ import c from 'bar.js';
 // comment
 import a from 'baz.js';
 ```
-
-:::
 
 ::: correct
 
@@ -349,10 +319,8 @@ quux();
 import a from 'baz.js';
 ```
 
-:::
-
 Default is `false`.
 
-## When Not To Use It
+## 使用建议
 
 This rule is a formatting preference and not following it won't negatively affect the quality of your code. If alphabetizing imports isn't a part of your coding standards, then you can leave this rule disabled.

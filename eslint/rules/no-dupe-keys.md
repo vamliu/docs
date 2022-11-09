@@ -1,7 +1,7 @@
 ---
-title: no-dupe-keys
-layout: doc
-rule_type: problem
+规则名: no-dupe-keys
+布局: doc
+规则类型: problem
 ---
 
 
@@ -15,13 +15,13 @@ var foo = {
 };
 ```
 
-## Rule Details
+## 规则详解
 
 This rule disallows duplicate keys in object literals.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-dupe-keys: "error"*/
@@ -42,8 +42,6 @@ var foo = {
 };
 ```
 
-:::
-
 Examples of **correct** code for this rule:
 
 ::: correct
@@ -56,5 +54,3 @@ var foo = {
     quxx: "qux"
 };
 ```
-
-:::

@@ -1,18 +1,18 @@
 ---
-title: multiline-comment-style
-layout: doc
-rule_type: suggestion
+规则名: multiline-comment-style
+布局: doc
+规则类型: suggestion
 ---
 
 
 
 Many style guides require a particular style for comments that span multiple lines. For example, some style guides prefer the use of a single block comment for multiline comments, whereas other style guides prefer consecutive line comments.
 
-## Rule Details
+## 规则详解
 
 This rule aims to enforce a particular style for multiline comments.
 
-### Options
+### 配置项
 
 This rule has a string option, which can have one of the following values:
 
@@ -24,7 +24,7 @@ The rule always ignores directive comments such as `/* eslint-disable */`. Addit
 
 Examples of **incorrect** code for this rule with the default `"starred-block"` option:
 
-::: incorrect
+
 
 ```js
 
@@ -56,8 +56,6 @@ foo();
 
 ```
 
-:::
-
 Examples of **correct** code for this rule with the default `"starred-block"` option:
 
 ::: correct
@@ -74,11 +72,9 @@ foo();
 // single-line comment
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `"bare-block"` option:
 
-::: incorrect
+
 
 ```js
 /* eslint multiline-comment-style: ["error", "bare-block"] */
@@ -94,8 +90,6 @@ foo();
 foo();
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `"bare-block"` option:
 
 ::: correct
@@ -108,11 +102,9 @@ Examples of **correct** code for this rule with the `"bare-block"` option:
 foo();
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `"separate-lines"` option:
 
-::: incorrect
+
 
 ```js
 
@@ -130,8 +122,6 @@ foo();
 
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `"separate-lines"` option:
 
 ::: correct
@@ -145,8 +135,6 @@ foo();
 
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to enforce a particular style for multiline comments, you can disable the rule.

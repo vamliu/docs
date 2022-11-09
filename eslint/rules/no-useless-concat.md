@@ -1,7 +1,7 @@
 ---
-title: no-useless-concat
-layout: doc
-rule_type: suggestion
+规则名: no-useless-concat
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -17,13 +17,13 @@ This code is likely the result of refactoring where a variable was removed from 
 var foo = "ab";
 ```
 
-## Rule Details
+## 规则详解
 
 This rule aims to flag the concatenation of 2 literals when they could be combined into a single literal. Literals can be strings or template literals.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-useless-concat: "error"*/
@@ -37,8 +37,6 @@ var a = '1' + `0`;
 var a = `1` + '0';
 var a = `1` + `0`;
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -57,8 +55,6 @@ var c = "foo" +
     "bar";
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to be notified about unnecessary string concatenation, you can safely disable this rule.

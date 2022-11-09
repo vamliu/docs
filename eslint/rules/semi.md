@@ -1,12 +1,12 @@
 ---
-title: semi
-layout: doc
-rule_type: layout
-related_rules:
+规则名: semi
+布局: doc
+规则类型: layout
+关联规则:
 - no-extra-semi
 - no-unexpected-multiline
 - semi-spacing
-further_reading:
+深入了解:
 - https://blog.izs.me/2010/12/an-open-letter-to-javascript-leaders-regarding/
 - https://web.archive.org/web/20200420230322/http://inimino.org/~inimino/blog/javascript_semicolons
 ---
@@ -66,11 +66,11 @@ Although ASI allows for more freedom over your coding style, it can also make yo
 1. It is a `for()`, `while()`, `do`, `if()`, or `else`, and there is no `{`
 1. The next line starts with `[`, `(`, `+`, `*`, `/`, `-`, `,`, `.`, or some other binary operator that can only be found between two tokens in a single expression.
 
-## Rule Details
+## 规则详解
 
 This rule enforces consistent use of semicolons.
 
-## Options
+## 配置项
 
 This rule has two options, a string option and an object option.
 
@@ -95,7 +95,7 @@ Object option (when `"never"`):
 
 Examples of **incorrect** code for this rule with the default `"always"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint semi: ["error", "always"]*/
@@ -110,8 +110,6 @@ class Foo {
     bar = 1
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `"always"` option:
 
@@ -131,13 +129,11 @@ class Foo {
 }
 ```
 
-:::
-
 ### never
 
 Examples of **incorrect** code for this rule with the `"never"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint semi: ["error", "never"]*/
@@ -152,8 +148,6 @@ class Foo {
     bar = 1;
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"never"` option:
 
@@ -189,8 +183,6 @@ class Foo {
 }
 ```
 
-:::
-
 #### omitLastInOneLineBlock
 
 Examples of additional **correct** code for this rule with the `"always", { "omitLastInOneLineBlock": true }` options:
@@ -213,13 +205,11 @@ class C {
 }
 ```
 
-:::
-
 #### beforeStatementContinuationChars
 
 Examples of additional **incorrect** code for this rule with the `"never", { "beforeStatementContinuationChars": "always" }` options:
 
-::: incorrect
+
 
 ```js
 /*eslint semi: ["error", "never", { "beforeStatementContinuationChars": "always"}] */
@@ -230,11 +220,9 @@ import a from "a"
 })()
 ```
 
-:::
-
 Examples of additional **incorrect** code for this rule with the `"never", { "beforeStatementContinuationChars": "never" }` options:
 
-::: incorrect
+
 
 ```js
 /*eslint semi: ["error", "never", { "beforeStatementContinuationChars": "never"}] */
@@ -245,8 +233,6 @@ import a from "a"
 })()
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you do not want to enforce semicolon usage (or omission) in any particular way, then you can turn this rule off.

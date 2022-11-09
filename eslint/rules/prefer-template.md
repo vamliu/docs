@@ -1,8 +1,8 @@
 ---
-title: prefer-template
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: prefer-template
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-useless-concat
 - quotes
 ---
@@ -21,7 +21,7 @@ var str = "Hello, " + name + "!";
 var str = `Hello, ${name}!`;
 ```
 
-## Rule Details
+## 规则详解
 
 This rule is aimed to flag usage of `+` operators with strings.
 
@@ -29,7 +29,7 @@ This rule is aimed to flag usage of `+` operators with strings.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint prefer-template: "error"*/
@@ -37,8 +37,6 @@ Examples of **incorrect** code for this rule:
 var str = "Hello, " + name + "!";
 var str = "Time: " + (12 * 60 * 60 * 1000);
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -56,9 +54,7 @@ var str = `Time: ${12 * 60 * 60 * 1000}`;
 var str = "Hello, " + "World!";
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 This rule should not be used in ES3/5 environments.
 

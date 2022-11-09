@@ -1,7 +1,7 @@
 ---
-title: no-use-before-define
-layout: doc
-rule_type: problem
+规则名: no-use-before-define
+布局: doc
+规则类型: problem
 ---
 
 
@@ -9,13 +9,13 @@ In JavaScript, prior to ES6, variable and function declarations are hoisted to t
 
 In ES6, block-level bindings (`let` and `const`) introduce a "temporal dead zone" where a `ReferenceError` will be thrown with any attempt to access the variable before its declaration.
 
-## Rule Details
+## 规则详解
 
 This rule will warn when it encounters a reference to an identifier that has not yet been declared.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-use-before-define: "error"*/
@@ -64,8 +64,6 @@ var b = 1;
 export { foo };
 const foo = 1;
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -121,9 +119,7 @@ const foo = 1;
 export { foo };
 ```
 
-:::
-
-## Options
+## 配置项
 
 ```json
 {
@@ -163,7 +159,7 @@ This rule accepts `"nofunc"` string as an option.
 
 ### functions
 
-Examples of **correct** code for the `{ "functions": false }` option:
+选项 `{ "functions": false }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -174,15 +170,13 @@ f();
 function f() {}
 ```
 
-:::
-
 This option allows references to function declarations. For function expressions and arrow functions, please see the [`variables`](#variables) option.
 
 ### classes
 
-Examples of **incorrect** code for the `{ "classes": false }` option:
+选项 `{ "classes": false }` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint no-use-before-define: ["error", { "classes": false }]*/
@@ -217,9 +211,7 @@ class A {
 }
 ```
 
-:::
-
-Examples of **correct** code for the `{ "classes": false }` option:
+选项 `{ "classes": false }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -234,13 +226,11 @@ class A {
 }
 ```
 
-:::
-
 ### variables
 
-Examples of **incorrect** code for the `{ "variables": false }` option:
+选项 `{ "variables": false }` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint no-use-before-define: ["error", { "variables": false }]*/
@@ -277,9 +267,7 @@ const g = function() {};
 }
 ```
 
-:::
-
-Examples of **correct** code for the `{ "variables": false }` option:
+选项 `{ "variables": false }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -307,11 +295,9 @@ const g = function() {}
 }
 ```
 
-:::
-
 ### allowNamedExports
 
-Examples of **correct** code for the `{ "allowNamedExports": true }` option:
+选项 `{ "allowNamedExports": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -329,11 +315,9 @@ function f () {}
 class C {}
 ```
 
-:::
+选项 `{ "allowNamedExports": true }` 的 **错误** 代码示例：
 
-Examples of **incorrect** code for the `{ "allowNamedExports": true }` option:
 
-::: incorrect
 
 ```js
 /*eslint no-use-before-define: ["error", { "allowNamedExports": true }]*/
@@ -349,5 +333,3 @@ export function foo() {
 }
 const d = 1;
 ```
-
-:::

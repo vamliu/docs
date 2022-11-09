@@ -1,8 +1,8 @@
 ---
-title: class-methods-use-this
-layout: doc
-rule_type: suggestion
-further_reading:
+规则名: class-methods-use-this
+布局: doc
+规则类型: suggestion
+深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static
 ---
@@ -53,13 +53,13 @@ A.sayHi(); // => "hi"
 
 Also note in the above examples that if you switch a method to a static method, *instances* of the class that call the static method (`let a = new A(); a.sayHi();`) have to be updated to being a static call (`A.sayHi();`) instead of having the instance of the *class* call the method
 
-## Rule Details
+## 规则详解
 
 This rule is aimed to flag class methods that do not use `this`.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint class-methods-use-this: "error"*/
@@ -71,8 +71,6 @@ class A {
     }
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -104,9 +102,7 @@ class A {
 }
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule has two options:
 
@@ -123,7 +119,7 @@ The `exceptMethods` option allows you to pass an array of method names for which
 
 Examples of **incorrect** code for this rule when used without exceptMethods:
 
-::: incorrect
+
 
 ```js
 /*eslint class-methods-use-this: "error"*/
@@ -133,8 +129,6 @@ class A {
     }
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule when used with exceptMethods:
 
@@ -151,8 +145,6 @@ class A {
 }
 ```
 
-:::
-
 ### enforceForClassFields
 
 ```js
@@ -163,7 +155,7 @@ The `enforceForClassFields` option enforces that arrow functions and function ex
 
 Examples of **incorrect** code for this rule with the `{ "enforceForClassFields": true }` option (default):
 
-::: incorrect
+
 
 ```js
 /*eslint class-methods-use-this: ["error", { "enforceForClassFields": true }] */
@@ -172,8 +164,6 @@ class A {
     foo = () => {}
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "enforceForClassFields": true }` option (default):
 
@@ -187,8 +177,6 @@ class A {
 }
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `{ "enforceForClassFields": false }` option:
 
 ::: correct
@@ -200,5 +188,3 @@ class A {
     foo = () => {}
 }
 ```
-
-:::

@@ -1,7 +1,7 @@
 ---
-title: no-warning-comments
-layout: doc
-rule_type: suggestion
+规则名: no-warning-comments
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -12,11 +12,11 @@ Developers often add comments to code which is not complete or needs review. Mos
 // FIXME: this is not a good idea
 ```
 
-## Rule Details
+## 规则详解
 
 This rule reports comments that include any of the predefined terms specified in its configuration.
 
-## Options
+## 配置项
 
 This rule has an options object literal:
 
@@ -26,7 +26,7 @@ This rule has an options object literal:
 
 Example of **incorrect** code for the default `{ "terms": ["todo", "fixme", "xxx"], "location": "start" }` options:
 
-::: incorrect
+
 
 ```js
 /*eslint no-warning-comments: "error"*/
@@ -42,8 +42,6 @@ function callback(err, results) {
   // TODO
 }
 ```
-
-:::
 
 Example of **correct** code for the default `{ "terms": ["todo", "fixme", "xxx"], "location": "start" }` options:
 
@@ -62,13 +60,11 @@ function callback(err, results) {
 }
 ```
 
-:::
-
 ### terms and location
 
 Examples of **incorrect** code for the `{ "terms": ["todo", "fixme", "any other term"], "location": "anywhere" }` options:
 
-::: incorrect
+
 
 ```js
 /*eslint no-warning-comments: ["error", { "terms": ["todo", "fixme", "any other term"], "location": "anywhere" }]*/
@@ -82,8 +78,6 @@ Examples of **incorrect** code for the `{ "terms": ["todo", "fixme", "any other 
  * as well as any other term
  */
 ```
-
-:::
 
 Examples of **correct** code for the `{ "terms": ["todo", "fixme", "any other term"], "location": "anywhere" }` options:
 
@@ -102,13 +96,11 @@ Examples of **correct** code for the `{ "terms": ["todo", "fixme", "any other te
  */
 ```
 
-:::
-
 ### Decoration Characters
 
 Examples of **incorrect** code for the `{ "decoration": ["*"] }` options:
 
-::: incorrect
+
 
 ```js
 /*eslint no-warning-comments: ["error", { "decoration": ["*"] }]*/
@@ -119,11 +111,9 @@ Examples of **incorrect** code for the `{ "decoration": ["*"] }` options:
  */
 ```
 
-:::
-
 Examples of **incorrect** code for the `{ "decoration": ["/", "*"] }` options:
 
-::: incorrect
+
 
 ```js
 /*eslint no-warning-comments: ["error", { "decoration": ["/", "*"] }]*/
@@ -134,8 +124,6 @@ Examples of **incorrect** code for the `{ "decoration": ["/", "*"] }` options:
  * TODO new lines are also ignored in block comments.
  */
 ```
-
-:::
 
 Examples of **correct** code for the `{ "decoration": ["/", "*"] }` options:
 
@@ -150,9 +138,7 @@ Examples of **correct** code for the `{ "decoration": ["/", "*"] }` options:
  */
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 * If you have a large code base that was not developed with a policy to not use such warning terms, you might get hundreds of warnings / errors which might be counter-productive if you can't fix all of them (e.g. if you don't get the time to do it) as you might overlook other warnings / errors or get used to many of them and don't pay attention on it anymore.
 * Same reason as the point above: You shouldn't configure terms that are used very often (e.g. central parts of the native language used in your comments).

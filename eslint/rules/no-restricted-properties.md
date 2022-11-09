@@ -1,8 +1,8 @@
 ---
-title: no-restricted-properties
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-restricted-properties
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-restricted-globals
 - no-restricted-syntax
 ---
@@ -10,11 +10,11 @@ related_rules:
 
 Certain properties on objects may be disallowed in a codebase. This is useful for deprecating an API or restricting usage of a module's methods. For example, you may want to disallow using `describe.only` when using Mocha or telling people to use `Object.assign` instead of `_.extend`.
 
-## Rule Details
+## 规则详解
 
 This rule looks for accessing a given property key on a given object name, either when reading the property's value or invoking it as a function. You may specify an optional message to indicate an alternative API or a reason for the restriction.
 
-### Options
+### 配置项
 
 This rule takes a list of objects, where the object name and property names are specified:
 
@@ -74,7 +74,7 @@ If the property name is omitted, accessing any property of the given object is d
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /* eslint no-restricted-properties: [2, {
@@ -87,9 +87,7 @@ var example = disallowedObjectName.disallowedPropertyName; /*error Disallowed ob
 disallowedObjectName.disallowedPropertyName(); /*error Disallowed object property: disallowedObjectName.disallowedPropertyName.*/
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /* eslint no-restricted-properties: [2, {
@@ -99,9 +97,7 @@ disallowedObjectName.disallowedPropertyName(); /*error Disallowed object propert
 foo.__defineGetter__(bar, baz);
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /* eslint no-restricted-properties: [2, {
@@ -110,8 +106,6 @@ foo.__defineGetter__(bar, baz);
 
 require.resolve('foo');
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -128,8 +122,6 @@ var example = disallowedObjectName.somePropertyName;
 allowedObjectName.disallowedPropertyName();
 ```
 
-:::
-
 ::: correct
 
 ```js
@@ -140,8 +132,6 @@ allowedObjectName.disallowedPropertyName();
 require('foo');
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't have any object/property combinations to restrict, you should not use this rule.

@@ -1,8 +1,8 @@
 ---
-title: prefer-regex-literals
-layout: doc
-rule_type: suggestion
-further_reading:
+规则名: prefer-regex-literals
+布局: doc
+规则类型: suggestion
+深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 ---
@@ -41,7 +41,7 @@ new RegExp("^\d\.$");
 When a regular expression is known in advance, it is considered a best practice to avoid the string literal notation on top
 of the regular expression notation, and use regular expression literals instead of the constructor function.
 
-## Rule Details
+## 规则详解
 
 This rule disallows the use of the `RegExp` constructor function with string literals as its arguments.
 
@@ -53,7 +53,7 @@ dynamically generated regular expressions.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint prefer-regex-literals: "error"*/
@@ -72,8 +72,6 @@ RegExp(`^\\d\\.$`);
 
 new RegExp(String.raw`^\d\.$`);
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -103,9 +101,7 @@ RegExp(`${prefix}abc`);
 new RegExp(String.raw`^\d\. ${suffix}`);
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule has an object option:
 

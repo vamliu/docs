@@ -1,8 +1,8 @@
 ---
-title: prefer-spread
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: prefer-spread
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-useless-call
 ---
 
@@ -23,7 +23,7 @@ var args = [1, 2, 3, 4];
 Math.max(...args);
 ```
 
-## Rule Details
+## 规则详解
 
 This rule is aimed to flag usage of `Function.prototype.apply()` in situations where spread syntax could be used instead.
 
@@ -31,7 +31,7 @@ This rule is aimed to flag usage of `Function.prototype.apply()` in situations w
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint prefer-spread: "error"*/
@@ -40,8 +40,6 @@ foo.apply(undefined, args);
 foo.apply(null, args);
 obj.foo.apply(obj, args);
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -66,8 +64,6 @@ foo.apply(null, [1, 2, 3]);
 obj.foo.apply(obj, [1, 2, 3]);
 ```
 
-:::
-
 Known limitations:
 
 This rule analyzes code statically to check whether or not the `this` argument is changed. So, if the `this` argument is computed in a dynamic expression, this rule cannot detect a violation.
@@ -82,7 +78,7 @@ a[i++].foo.apply(a[i++], args);
 a[++i].foo.apply(a[i], args);
 ```
 
-## When Not To Use It
+## 使用建议
 
 This rule should not be used in ES3/5 environments.
 

@@ -1,8 +1,8 @@
 ---
-title: generator-star-spacing
-layout: doc
-rule_type: layout
-further_reading:
+规则名: generator-star-spacing
+布局: doc
+规则类型: layout
+深入了解:
 - https://leanpub.com/understandinges6/read/#leanpub-auto-generators
 ---
 
@@ -46,11 +46,11 @@ function * generator() {
 
 To keep a sense of consistency when using generators this rule enforces a single position for the `*`.
 
-## Rule Details
+## 规则详解
 
 This rule aims to enforce spacing around the `*` of generator functions.
 
-## Options
+## 配置项
 
 The rule takes one option, an object, which has two keys `before` and `after` having boolean values `true` or `false`.
 
@@ -123,8 +123,6 @@ var anonymous = function *() {};
 var shorthand = { *generator() {} };
 ```
 
-:::
-
 ### after
 
 Examples of **correct** code for this rule with the `"after"` option:
@@ -141,8 +139,6 @@ var anonymous = function* () {};
 
 var shorthand = { * generator() {} };
 ```
-
-:::
 
 ### both
 
@@ -161,8 +157,6 @@ var anonymous = function * () {};
 var shorthand = { * generator() {} };
 ```
 
-:::
-
 ### neither
 
 Examples of **correct** code for this rule with the `"neither"` option:
@@ -180,11 +174,9 @@ var anonymous = function*() {};
 var shorthand = { *generator() {} };
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with overrides present:
 
-::: incorrect
+
 
 ```js
 /*eslint generator-star-spacing: ["error", {
@@ -203,8 +195,6 @@ var shorthand = { *generator() {} };
 
 class Class { static* method() {} }
 ```
-
-:::
 
 Examples of **correct** code for this rule with overrides present:
 
@@ -228,8 +218,6 @@ var shorthand = { * generator() {} };
 class Class { static * method() {} }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If your project will not be using generators or you are not concerned with spacing consistency, you do not need this rule.

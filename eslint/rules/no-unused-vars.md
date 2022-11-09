@@ -1,14 +1,14 @@
 ---
-title: no-unused-vars
-layout: doc
-rule_type: problem
+规则名: no-unused-vars
+布局: doc
+规则类型: problem
 ---
 
 
 
 Variables that are declared and not used anywhere in the code are most likely an error due to incomplete refactoring. Such variables take up space in the code and can lead to confusion by readers.
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at eliminating unused variables, functions, and function parameters.
 
@@ -23,7 +23,7 @@ A variable is *not* considered to be used if it is only ever declared (`var foo 
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-unused-vars: "error"*/
@@ -59,8 +59,6 @@ function getY([x, y]) {
 }
 ```
 
-:::
-
 Examples of **correct** code for this rule:
 
 ::: correct
@@ -92,8 +90,6 @@ function getY([, y]) {
 }
 ```
 
-:::
-
 ### exported
 
 In environments outside of CommonJS or ECMAScript modules, you may use `var` to create a global variable that may be used by other scripts. You can use the `/* exported variableName */` comment block to indicate that this variable is being exported and therefore should not be considered unused.
@@ -116,9 +112,7 @@ Examples of **correct** code for `/* exported variableName */` operation:
 var global_var = 42;
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule takes one argument which can be a string or an object. The string settings are the same as those of the `vars` property (explained below).
 
@@ -141,7 +135,7 @@ The `vars` option has two settings:
 
 #### vars: local
 
-Examples of **correct** code for the `{ "vars": "local" }` option:
+选项 `{ "vars": "local" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -152,13 +146,11 @@ Examples of **correct** code for the `{ "vars": "local" }` option:
 some_unused_var = 42;
 ```
 
-:::
-
 ### varsIgnorePattern
 
 The `varsIgnorePattern` option specifies exceptions not to check for usage: variables whose names match a regexp pattern. For example, variables whose names contain `ignored` or `Ignored`.
 
-Examples of **correct** code for the `{ "varsIgnorePattern": "[iI]gnored" }` option:
+选项 `{ "varsIgnorePattern": "[iI]gnored" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -170,8 +162,6 @@ var secondVar = 2;
 console.log(secondVar);
 ```
 
-:::
-
 ### args
 
 The `args` option has three settings:
@@ -182,9 +172,9 @@ The `args` option has three settings:
 
 #### args: after-used
 
-Examples of **incorrect** code for the default `{ "args": "after-used" }` option:
+选项 default `{ "args": "after-used" }` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint no-unused-vars: ["error", { "args": "after-used" }]*/
@@ -197,9 +187,7 @@ Examples of **incorrect** code for the default `{ "args": "after-used" }` option
 })();
 ```
 
-:::
-
-Examples of **correct** code for the default `{ "args": "after-used" }` option:
+选项 default `{ "args": "after-used" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -211,13 +199,11 @@ Examples of **correct** code for the default `{ "args": "after-used" }` option:
 })();
 ```
 
-:::
-
 #### args: all
 
-Examples of **incorrect** code for the `{ "args": "all" }` option:
+选项 `{ "args": "all" }` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint no-unused-vars: ["error", { "args": "all" }]*/
@@ -230,11 +216,9 @@ Examples of **incorrect** code for the `{ "args": "all" }` option:
 })();
 ```
 
-:::
-
 #### args: none
 
-Examples of **correct** code for the `{ "args": "none" }` option:
+选项 `{ "args": "none" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -246,13 +230,11 @@ Examples of **correct** code for the `{ "args": "none" }` option:
 })();
 ```
 
-:::
-
 ### ignoreRestSiblings
 
 The `ignoreRestSiblings` option is a boolean (default: `false`). Using a [Rest Property](https://github.com/tc39/proposal-object-rest-spread) it is possible to "omit" properties from an object, but by default the sibling properties are marked as "unused". With this option enabled the rest property's siblings are ignored.
 
-Examples of **correct** code for the `{ "ignoreRestSiblings": true }` option:
+选项 `{ "ignoreRestSiblings": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -265,13 +247,11 @@ var bar;
 ({ bar, ...coords } = data);
 ```
 
-:::
-
 ### argsIgnorePattern
 
 The `argsIgnorePattern` option specifies exceptions not to check for usage: arguments whose names match a regexp pattern. For example, variables whose names begin with an underscore.
 
-Examples of **correct** code for the `{ "argsIgnorePattern": "^_" }` option:
+选项 `{ "argsIgnorePattern": "^_" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -284,13 +264,11 @@ function foo(x, _y) {
 foo();
 ```
 
-:::
-
 ### destructuredArrayIgnorePattern
 
 The `destructuredArrayIgnorePattern` option specifies exceptions not to check for usage: elements of array destructuring patterns whose names match a regexp pattern. For example, variables whose names begin with an underscore.
 
-Examples of **correct** code for the `{ "destructuredArrayIgnorePattern": "^_" }` option:
+选项 `{ "destructuredArrayIgnorePattern": "^_" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -325,8 +303,6 @@ _o = 1;
 p;
 ```
 
-:::
-
 ### caughtErrors
 
 The `caughtErrors` option is used for `catch` block arguments validation.
@@ -340,7 +316,7 @@ It has two settings:
 
 Not specifying this rule is equivalent of assigning it to `none`.
 
-Examples of **correct** code for the `{ "caughtErrors": "none" }` option:
+选项 `{ "caughtErrors": "none" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -354,13 +330,11 @@ try {
 }
 ```
 
-:::
-
 #### caughtErrors: all
 
-Examples of **incorrect** code for the `{ "caughtErrors": "all" }` option:
+选项 `{ "caughtErrors": "all" }` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint no-unused-vars: ["error", { "caughtErrors": "all" }]*/
@@ -374,13 +348,11 @@ try {
 }
 ```
 
-:::
-
 ### caughtErrorsIgnorePattern
 
 The `caughtErrorsIgnorePattern` option specifies exceptions not to check for usage: catch arguments whose names match a regexp pattern. For example, variables whose names begin with a string 'ignore'.
 
-Examples of **correct** code for the `{ "caughtErrorsIgnorePattern": "^ignore" }` option:
+选项 `{ "caughtErrorsIgnorePattern": "^ignore" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -394,8 +366,6 @@ try {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to be notified about unused variables or function arguments, you can safely turn this rule off.

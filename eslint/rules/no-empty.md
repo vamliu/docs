@@ -1,8 +1,8 @@
 ---
-title: no-empty
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-empty
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-empty-function
 ---
 
@@ -10,13 +10,13 @@ related_rules:
 
 Empty block statements, while not technically errors, usually occur due to refactoring that wasn't completed. They can cause confusion when reading code.
 
-## Rule Details
+## 规则详解
 
 This rule disallows empty block statements. This rule ignores block statements which contain a comment (for example, in an empty `catch` or `finally` block of a `try` statement to indicate that execution should continue regardless of errors).
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-empty: "error"*/
@@ -38,8 +38,6 @@ try {
 
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -69,9 +67,7 @@ try {
 }
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule has an object option for exceptions:
 
@@ -98,8 +94,6 @@ finally {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you intentionally use empty block statements then you can disable this rule.

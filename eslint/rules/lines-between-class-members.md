@@ -1,8 +1,8 @@
 ---
-title: lines-between-class-members
-layout: doc
-rule_type: layout
-related_rules:
+规则名: lines-between-class-members
+布局: doc
+规则类型: layout
+关联规则:
 - padded-blocks
 - padding-line-between-statements
 ---
@@ -11,11 +11,11 @@ related_rules:
 
 This rule improves readability by enforcing lines between class members. It will not check empty lines before the first member and after the last member, since that is already taken care of by padded-blocks.
 
-## Rule Details
+## 规则详解
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /* eslint lines-between-class-members: ["error", "always"]*/
@@ -29,8 +29,6 @@ class MyClass {
   }
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -51,8 +49,6 @@ class MyClass {
 }
 ```
 
-:::
-
 Examples of additional **correct** code for this rule:
 
 ::: correct
@@ -66,9 +62,7 @@ class MyClass {
 }
 ```
 
-:::
-
-### Options
+### 配置项
 
 This rule has a string option and an object option.
 
@@ -84,7 +78,7 @@ Object option:
 
 Examples of **incorrect** code for this rule with the string option:
 
-::: incorrect
+
 
 ```js
 /* eslint lines-between-class-members: ["error", "always"]*/
@@ -103,8 +97,6 @@ class Foo{
   baz(){}
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the string option:
 
@@ -128,8 +120,6 @@ class Foo{
 }
 ```
 
-:::
-
 Examples of **correct** code for this rule with the object option:
 
 ::: correct
@@ -147,9 +137,7 @@ class Foo{
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to enforce empty lines between class members, you can disable this rule.
 

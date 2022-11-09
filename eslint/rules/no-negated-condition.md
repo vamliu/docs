@@ -1,13 +1,13 @@
 ---
-title: no-negated-condition
-layout: doc
-rule_type: suggestion
+规则名: no-negated-condition
+布局: doc
+规则类型: suggestion
 ---
 
 
 Negated conditions are more difficult to understand. Code can be made more readable by inverting the condition instead.
 
-## Rule Details
+## 规则详解
 
 This rule disallows negated conditions in either of the following:
 
@@ -16,7 +16,7 @@ This rule disallows negated conditions in either of the following:
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-negated-condition: "error"*/
@@ -42,8 +42,6 @@ if (a !== b) {
 !a ? c : b
 ```
 
-:::
-
 Examples of **correct** code for this rule:
 
 ::: correct
@@ -67,5 +65,3 @@ if (a != b) {
 
 a ? b : c
 ```
-
-:::

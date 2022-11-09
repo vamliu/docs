@@ -1,8 +1,8 @@
 ---
-title: dot-location
-layout: doc
-rule_type: layout
-related_rules:
+规则名: dot-location
+布局: doc
+规则类型: layout
+关联规则:
 - newline-after-var
 - dot-notation
 ---
@@ -21,11 +21,11 @@ var b = universe
        .galaxy;
 ```
 
-## Rule Details
+## 规则详解
 
 This rule aims to enforce newline consistency in member expressions. This rule prevents the use of mixed newlines around the dot in a member expression.
 
-## Options
+## 配置项
 
 The rule takes one option, a string:
 
@@ -36,9 +36,9 @@ The rule takes one option, a string:
 
 The default `"object"` option requires the dot to be on the same line as the object.
 
-Examples of **incorrect** code for the default `"object"` option:
+选项 default `"object"` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint dot-location: ["error", "object"]*/
@@ -47,9 +47,7 @@ var foo = object
 .property;
 ```
 
-:::
-
-Examples of **correct** code for the default `"object"` option:
+选项 default `"object"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -67,15 +65,13 @@ property;
 var baz = object.property;
 ```
 
-:::
-
 ### property
 
 The `"property"` option requires the dot to be on the same line as the property.
 
-Examples of **incorrect** code for the `"property"` option:
+选项 `"property"` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint dot-location: ["error", "property"]*/
@@ -84,9 +80,7 @@ var foo = object.
 property;
 ```
 
-:::
-
-Examples of **correct** code for the `"property"` option:
+选项 `"property"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -98,8 +92,6 @@ var foo = object
 var bar = object.property;
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 You can turn this rule off if you are not concerned with the consistency of newlines before or after dots in member expressions.

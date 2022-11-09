@@ -1,7 +1,7 @@
 ---
-title: init-declarations
-layout: doc
-rule_type: suggestion
+规则名: init-declarations
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -18,7 +18,7 @@ if (foo) {
 }
 ```
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at enforcing or eliminating variable initializations during declaration. For example, in the following code, `foo` is initialized during declaration, while `bar` is not.
 
@@ -31,7 +31,7 @@ bar = 2;
 
 This rule aims to bring consistency to variable initializations and declarations.
 
-## Options
+## 配置项
 
 The rule takes two options:
 
@@ -66,9 +66,9 @@ Variables must not be initialized at declaration, except in for loops, where it 
 
 ### always
 
-Examples of **incorrect** code for the default `"always"` option:
+选项 default `"always"` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint init-declarations: ["error", "always"]*/
@@ -80,9 +80,7 @@ function foo() {
 }
 ```
 
-:::
-
-Examples of **correct** code for the default `"always"` option:
+选项 default `"always"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -97,13 +95,11 @@ function foo() {
 }
 ```
 
-:::
-
 ### never
 
-Examples of **incorrect** code for the `"never"` option:
+选项 `"never"` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint init-declarations: ["error", "never"]*/
@@ -117,9 +113,7 @@ function foo() {
 }
 ```
 
-:::
-
-Examples of **correct** code for the `"never"` option:
+选项 `"never"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -134,8 +128,6 @@ function foo() {
 }
 ```
 
-:::
-
 The `"never"` option ignores `const` variable initializations.
 
 ### ignoreForLoopInit
@@ -149,8 +141,6 @@ Examples of **correct** code for the `"never", { "ignoreForLoopInit": true }` op
 for (var i = 0; i < 1; i++) {}
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 When you are indifferent as to how your variables are initialized.

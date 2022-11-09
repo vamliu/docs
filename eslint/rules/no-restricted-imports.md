@@ -1,7 +1,7 @@
 ---
-title: no-restricted-imports
-layout: doc
-rule_type: suggestion
+规则名: no-restricted-imports
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -13,13 +13,13 @@ Why would you want to restrict imports?
 
 * Some modules provide similar or identical functionality, think `lodash` and `underscore`. Your project may have standardized on a module. You want to make sure that the other alternatives are not being used as this would unnecessarily bloat the project and provide a higher maintenance cost of two dependencies when one would suffice.
 
-## Rule Details
+## 规则详解
 
 This rule allows you to specify imports that you don't want to use in your application.
 
 It applies to static imports only, not dynamic ones.
 
-## Options
+## 配置项
 
 The syntax to specify restricted imports looks like this:
 
@@ -131,7 +131,7 @@ To restrict the use of all Node.js core imports (via <https://github.com/nodejs/
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-restricted-imports: ["error", "fs"]*/
@@ -139,9 +139,7 @@ Examples of **incorrect** code for this rule:
 import fs from 'fs';
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint no-restricted-imports: ["error", "fs"]*/
@@ -149,9 +147,7 @@ import fs from 'fs';
 export { fs } from 'fs';
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint no-restricted-imports: ["error", "fs"]*/
@@ -159,9 +155,7 @@ export { fs } from 'fs';
 export * from 'fs';
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint no-restricted-imports: ["error", { "paths": ["cluster"] }]*/
@@ -169,9 +163,7 @@ export * from 'fs';
 import cluster from 'cluster';
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint no-restricted-imports: ["error", { "patterns": ["lodash/*"] }]*/
@@ -179,9 +171,7 @@ import cluster from 'cluster';
 import pick from 'lodash/pick';
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint no-restricted-imports: ["error", { paths: [{
@@ -193,9 +183,7 @@ import pick from 'lodash/pick';
 import DisallowedObject from "foo";
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint no-restricted-imports: ["error", { paths: [{
@@ -211,9 +199,7 @@ import { DisallowedObject as AllowedObject } from "foo";
 import { "DisallowedObject" as AllowedObject } from "foo";
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint no-restricted-imports: ["error", { paths: [{
@@ -225,9 +211,7 @@ import { "DisallowedObject" as AllowedObject } from "foo";
 import * as Foo from "foo";
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint no-restricted-imports: ["error", { patterns: [{
@@ -238,9 +222,7 @@ import * as Foo from "foo";
 import pick from 'lodash/pick';
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint no-restricted-imports: ["error", { patterns: [{
@@ -251,9 +233,7 @@ import pick from 'lodash/pick';
 import pick from 'fooBar';
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint no-restricted-imports: ["error", { patterns: [{
@@ -264,8 +244,6 @@ import pick from 'fooBar';
 
 import { isEmpty } from 'utils/collection-utils';
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -278,8 +256,6 @@ import crypto from 'crypto';
 export { foo } from "bar";
 ```
 
-:::
-
 ::: correct
 
 ```js
@@ -290,8 +266,6 @@ import eslint from 'eslint';
 export * from "path";
 ```
 
-:::
-
 ::: correct
 
 ```js
@@ -299,8 +273,6 @@ export * from "path";
 
 import DisallowedObject from "foo"
 ```
-
-:::
 
 ::: correct
 
@@ -314,8 +286,6 @@ import DisallowedObject from "foo"
 import { AllowedObject as DisallowedObject } from "foo";
 ```
 
-:::
-
 ::: correct
 
 ```js
@@ -327,8 +297,6 @@ import { AllowedObject as DisallowedObject } from "foo";
 import lodash from 'lodash';
 ```
 
-:::
-
 ::: correct
 
 ```js
@@ -339,8 +307,6 @@ import lodash from 'lodash';
 
 import pick from 'food';
 ```
-
-:::
 
 ::: correct
 
@@ -354,8 +320,6 @@ import pick from 'food';
 import { hasValues } from 'utils/collection-utils';
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 Don't use this rule or don't include a module in the list for this rule if you want to be able to import a module in your project without an ESLint error or warning.

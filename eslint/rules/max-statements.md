@@ -1,8 +1,8 @@
 ---
-title: max-statements
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: max-statements
+布局: doc
+规则类型: suggestion
+关联规则:
 - complexity
 - max-depth
 - max-len
@@ -23,11 +23,11 @@ function foo() {
 }
 ```
 
-## Rule Details
+## 规则详解
 
 This rule enforces a maximum number of statements allowed in function blocks.
 
-## Options
+## 配置项
 
 This rule has a number or object option:
 
@@ -43,7 +43,7 @@ This rule has an object option:
 
 Examples of **incorrect** code for this rule with the default `{ "max": 10 }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint max-statements: ["error", 10]*/
@@ -79,8 +79,6 @@ let foo = () => {
   var foo11 = 11; // Too many.
 };
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `{ "max": 10 }` option:
 
@@ -131,8 +129,6 @@ let foo = () => {
 }
 ```
 
-:::
-
 Note that this rule does not apply to class static blocks, and that statements in class static blocks do not count as statements in the enclosing function.
 
 Examples of **correct** code for this rule with `{ "max": 2 }` option:
@@ -159,8 +155,6 @@ function foo() {
 }
 ```
 
-:::
-
 ### ignoreTopLevelFunctions
 
 Examples of additional **correct** code for this rule with the `{ "max": 10 }, { "ignoreTopLevelFunctions": true }` options:
@@ -184,5 +178,3 @@ function foo() {
   var foo11 = 11;
 }
 ```
-
-:::

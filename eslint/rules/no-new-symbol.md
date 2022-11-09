@@ -1,8 +1,8 @@
 ---
-title: no-new-symbol
-layout: doc
-rule_type: problem
-further_reading:
+规则名: no-new-symbol
+布局: doc
+规则类型: problem
+深入了解:
 - https://www.ecma-international.org/ecma-262/6.0/#sec-symbol-objects
 ---
 
@@ -16,7 +16,7 @@ var foo = new Symbol("foo");
 
 This throws a `TypeError` exception.
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at preventing the accidental calling of `Symbol` with the `new` operator.
 
@@ -24,7 +24,7 @@ This rule is aimed at preventing the accidental calling of `Symbol` with the `ne
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-new-symbol: "error"*/
@@ -32,8 +32,6 @@ Examples of **incorrect** code for this rule:
 
 var foo = new Symbol('foo');
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -52,8 +50,6 @@ function bar(Symbol) {
 
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 This rule should not be used in ES3/5 environments.

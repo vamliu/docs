@@ -1,8 +1,8 @@
 ---
-title: object-curly-newline
-layout: doc
-rule_type: layout
-related_rules:
+规则名: object-curly-newline
+布局: doc
+规则类型: layout
+关联规则:
 - comma-spacing
 - key-spacing
 - object-curly-spacing
@@ -13,11 +13,11 @@ related_rules:
 
 A number of style guides require or disallow line breaks inside of object braces and other tokens.
 
-## Rule Details
+## 规则详解
 
 This rule requires or disallows a line break between `{` and its following token, and between `}` and its preceding token of object literals or destructuring assignments.
 
-## Options
+## 配置项
 
 This rule has either a string option:
 
@@ -52,7 +52,7 @@ You can specify different options for object literals, destructuring assignments
 
 Examples of **incorrect** code for this rule with the `"always"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint object-curly-newline: ["error", "always"]*/
@@ -76,8 +76,6 @@ let {k = function() {
     dosomething();
 }} = obj;
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"always"` option:
 
@@ -124,13 +122,11 @@ let {
 } = obj;
 ```
 
-:::
-
 ### never
 
 Examples of **incorrect** code for this rule with the `"never"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint object-curly-newline: ["error", "never"]*/
@@ -173,8 +169,6 @@ let {
 } = obj;
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `"never"` option:
 
 ::: correct
@@ -202,13 +196,11 @@ let {k = function() {
 }} = obj;
 ```
 
-:::
-
 ### multiline
 
 Examples of **incorrect** code for this rule with the `{ "multiline": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint object-curly-newline: ["error", { "multiline": true }]*/
@@ -242,8 +234,6 @@ let {k = function() {
     dosomething();
 }} = obj;
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "multiline": true }` option:
 
@@ -280,13 +270,11 @@ let {
 } = obj;
 ```
 
-:::
-
 ### minProperties
 
 Examples of **incorrect** code for this rule with the `{ "minProperties": 2 }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint object-curly-newline: ["error", { "minProperties": 2 }]*/
@@ -320,8 +308,6 @@ let {
     }
 } = obj;
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "minProperties": 2 }` option:
 
@@ -358,13 +344,11 @@ let {k = function() {
 }} = obj;
 ```
 
-:::
-
 ### consistent
 
 Examples of **incorrect** code for this rule with the default `{ "consistent": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint object-curly-newline: ["error", { "consistent": true }]*/
@@ -407,8 +391,6 @@ let {
         dosomething();
     }} = obj;
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `{ "consistent": true }` option:
 
@@ -464,13 +446,11 @@ let {
 } = obj;
 ```
 
-:::
-
 ### ObjectExpression and ObjectPattern
 
 Examples of **incorrect** code for this rule with the `{ "ObjectExpression": "always", "ObjectPattern": "never" }` options:
 
-::: incorrect
+
 
 ```js
 /*eslint object-curly-newline: ["error", { "ObjectExpression": "always", "ObjectPattern": "never" }]*/
@@ -503,8 +483,6 @@ let {
     }
 } = obj;
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "ObjectExpression": "always", "ObjectPattern": "never" }` options:
 
@@ -542,13 +520,11 @@ let {k = function() {
 }} = obj;
 ```
 
-:::
-
 ### ImportDeclaration and ExportDeclaration
 
 Examples of **incorrect** code for this rule with the `{ "ImportDeclaration": "always", "ExportDeclaration": "never" }` options:
 
-::: incorrect
+
 
 ```js
 /*eslint object-curly-newline: ["error", { "ImportDeclaration": "always", "ExportDeclaration": "never" }]*/
@@ -568,8 +544,6 @@ export {
    bar
 } from 'foo-bar';
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "ImportDeclaration": "always", "ExportDeclaration": "never" }` options:
 
@@ -595,9 +569,7 @@ export { foo, bar } from 'foo-bar';
 export { foo as f, bar } from 'foo-bar';
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to enforce consistent line breaks after opening and before closing braces, then it's safe to disable this rule.
 

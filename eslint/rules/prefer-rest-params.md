@@ -1,8 +1,8 @@
 ---
-title: prefer-rest-params
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: prefer-rest-params
+布局: doc
+规则类型: suggestion
+关联规则:
 - prefer-spread
 ---
 
@@ -12,7 +12,7 @@ We can use that feature for variadic functions instead of the `arguments` variab
 
 `arguments` does not have methods of `Array.prototype`, so it's a bit of an inconvenience.
 
-## Rule Details
+## 规则详解
 
 This rule is aimed to flag usage of `arguments` variables.
 
@@ -20,7 +20,7 @@ This rule is aimed to flag usage of `arguments` variables.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint prefer-rest-params: "error"*/
@@ -39,8 +39,6 @@ function foo(action) {
     action.apply(null, args);
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -67,9 +65,7 @@ function foo() {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 This rule should not be used in ES3/5 environments.
 

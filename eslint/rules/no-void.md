@@ -1,11 +1,11 @@
 ---
-title: no-void
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-void
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-undef-init
 - no-undefined
-further_reading:
+深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void
 - https://oreilly.com/javascript/excerpts/javascript-good-parts/bad-parts.html
 ---
@@ -55,13 +55,13 @@ function(){ foo = 1; }() // will throw SyntaxError
 
 Some code styles prohibit `void` operator, marking it as non-obvious and hard to read.
 
-## Rule Details
+## 规则详解
 
 This rule aims to eliminate use of void operator.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-void: "error"*/
@@ -75,9 +75,7 @@ function baz() {
 }
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule has an object option:
 
@@ -87,9 +85,9 @@ This rule has an object option:
 
 When `allowAsStatement` is set to true, the rule will not error on cases that the void operator is used as a statement, i.e. when it's not used in an expression position, like in a variable assignment or a function return.
 
-Examples of **incorrect** code for `{ "allowAsStatement": true }`:
+`{ "allowAsStatement": true }` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint no-void: ["error", { "allowAsStatement": true }]*/
@@ -100,9 +98,7 @@ function baz() {
 }
 ```
 
-:::
-
-Examples of **correct** code for `{ "allowAsStatement": true }`:
+`{ "allowAsStatement": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -113,8 +109,6 @@ void foo;
 void someFunction();
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you intentionally use the `void` operator then you can disable this rule.

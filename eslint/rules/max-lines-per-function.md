@@ -1,8 +1,8 @@
 ---
-title: max-lines-per-function
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: max-lines-per-function
+布局: doc
+规则类型: suggestion
+关联规则:
 - complexity
 - max-depth
 - max-lines
@@ -15,7 +15,7 @@ related_rules:
 
 Some people consider large functions a code smell. Large functions tend to do a lot of things and can make it hard following what's going on. Many coding style guides dictate a limit of the number of lines that a function can comprise of. This rule can help enforce that style.
 
-## Rule Details
+## 规则详解
 
 This rule enforces a maximum number of lines per function, in order to aid in maintainability and reduce complexity.
 
@@ -47,7 +47,7 @@ function() {
 * `max-nested-callbacks` will only report 1
 * `max-depth` will report a depth of 0
 
-## Options
+## 配置项
 
 This rule has the following options that can be specified using an object:
 
@@ -75,7 +75,7 @@ is equivalent to
 
 Examples of **incorrect** code for this rule with a max value of `2`:
 
-::: incorrect
+
 
 ```js
 /*eslint max-lines-per-function: ["error", 2]*/
@@ -84,9 +84,7 @@ function foo() {
 }
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint max-lines-per-function: ["error", 2]*/
@@ -96,9 +94,7 @@ function foo() {
 }
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint max-lines-per-function: ["error", 2]*/
@@ -108,8 +104,6 @@ function foo() {
     var x = 0;
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with a max value of `3`:
 
@@ -122,8 +116,6 @@ function foo() {
 }
 ```
 
-:::
-
 ::: correct
 
 ```js
@@ -133,8 +125,6 @@ function foo() {
     var x = 0;
 }
 ```
-
-:::
 
 ::: correct
 
@@ -147,13 +137,11 @@ function foo() {
 }
 ```
 
-:::
-
 ### skipBlankLines
 
 Examples of **incorrect** code for this rule with the `{ "skipBlankLines": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint max-lines-per-function: ["error", {"max": 2, "skipBlankLines": true}]*/
@@ -162,8 +150,6 @@ function foo() {
     var x = 0;
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "skipBlankLines": true }` option:
 
@@ -177,13 +163,11 @@ function foo() {
 }
 ```
 
-:::
-
 ### skipComments
 
 Examples of **incorrect** code for this rule with the `{ "skipComments": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint max-lines-per-function: ["error", {"max": 2, "skipComments": true}]*/
@@ -192,8 +176,6 @@ function foo() {
     var x = 0;
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "skipComments": true }` option:
 
@@ -207,13 +189,11 @@ function foo() {
 }
 ```
 
-:::
-
 ### IIFEs
 
 Examples of **incorrect** code for this rule with the `{ "IIFEs": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint max-lines-per-function: ["error", {"max": 2, "IIFEs": true}]*/
@@ -225,8 +205,6 @@ Examples of **incorrect** code for this rule with the `{ "IIFEs": true }` option
     var x = 0;
 })();
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "IIFEs": true }` option:
 
@@ -243,8 +221,6 @@ Examples of **correct** code for this rule with the `{ "IIFEs": true }` option:
 })();
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 You can turn this rule off if you are not concerned with the number of lines in your functions.

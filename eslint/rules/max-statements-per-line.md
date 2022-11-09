@@ -1,8 +1,8 @@
 ---
-title: max-statements-per-line
-layout: doc
-rule_type: layout
-related_rules:
+规则名: max-statements-per-line
+布局: doc
+规则类型: layout
+关联规则:
 - max-depth
 - max-len
 - max-lines
@@ -19,11 +19,11 @@ A line of code containing too many statements can be difficult to read. Code is 
 function foo () { var bar; if (condition) { bar = 1; } else { bar = 2; } return true; } // too many statements
 ```
 
-## Rule Details
+## 规则详解
 
 This rule enforces a maximum number of statements allowed per line.
 
-## Options
+## 配置项
 
 ### max
 
@@ -31,7 +31,7 @@ The "max" object property is optional (default: 1).
 
 Examples of **incorrect** code for this rule with the default `{ "max": 1 }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint max-statements-per-line: ["error", { "max": 1 }]*/
@@ -44,8 +44,6 @@ function foo() { bar = 1; }
 var foo = function foo() { bar = 1; };
 (function foo() { bar = 1; })();
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `{ "max": 1 }` option:
 
@@ -63,11 +61,9 @@ var foo = function foo() { };
 (function foo() { })();
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `{ "max": 2 }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint max-statements-per-line: ["error", { "max": 2 }]*/
@@ -80,8 +76,6 @@ function foo() { bar = 1; baz = 2; }
 var foo = function foo() { bar = 1; };
 (function foo() { bar = 1; baz = 2; })();
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "max": 2 }` option:
 
@@ -99,8 +93,6 @@ var foo = function foo() { bar = 1; };
 (function foo() { var bar = 1; })();
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 You can turn this rule off if you are not concerned with the number of statements on each line.

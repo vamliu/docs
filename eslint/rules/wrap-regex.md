@@ -1,7 +1,7 @@
 ---
-title: wrap-regex
-layout: doc
-rule_type: layout
+规则名: wrap-regex
+布局: doc
+规则类型: layout
 ---
 
 
@@ -14,13 +14,13 @@ function a() {
 }
 ```
 
-## Rule Details
+## 规则详解
 
 This is used to disambiguate the slash operator and facilitates more readable code.
 
 Example of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint wrap-regex: "error"*/
@@ -29,8 +29,6 @@ function a() {
     return /foo/.test("bar");
 }
 ```
-
-:::
 
 Example of **correct** code for this rule:
 
@@ -43,5 +41,3 @@ function a() {
     return (/foo/).test("bar");
 }
 ```
-
-:::

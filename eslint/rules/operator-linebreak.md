@@ -1,8 +1,8 @@
 ---
-title: operator-linebreak
-layout: doc
-rule_type: layout
-related_rules:
+规则名: operator-linebreak
+布局: doc
+规则类型: layout
+关联规则:
 - comma-style
 ---
 
@@ -24,11 +24,11 @@ var fullHeight = borderTop
                + borderBottom;
 ```
 
-## Rule Details
+## 规则详解
 
 This rule enforces a consistent linebreak style for operators.
 
-## Options
+## 配置项
 
 This rule has two options, a string option and an object option.
 
@@ -48,7 +48,7 @@ The default configuration is `"after", { "overrides": { "?": "before", ":": "bef
 
 Examples of **incorrect** code for this rule with the `"after"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint operator-linebreak: ["error", "after"]*/
@@ -81,8 +81,6 @@ class Foo {
         = 3;
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"after"` option:
 
@@ -119,13 +117,11 @@ class Foo {
 }
 ```
 
-:::
-
 ### before
 
 Examples of **incorrect** code for this rule with the `"before"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint operator-linebreak: ["error", "before"]*/
@@ -154,8 +150,6 @@ class Foo {
         3;
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"before"` option:
 
@@ -192,13 +186,11 @@ class Foo {
 }
 ```
 
-:::
-
 ### none
 
 Examples of **incorrect** code for this rule with the `"none"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint operator-linebreak: ["error", "none"]*/
@@ -243,8 +235,6 @@ class Foo {
 }
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `"none"` option:
 
 ::: correct
@@ -273,13 +263,11 @@ class Foo {
 }
 ```
 
-:::
-
 ### overrides
 
 Examples of additional **incorrect** code for this rule with the `{ "overrides": { "+=": "before" } }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint operator-linebreak: ["error", "after", { "overrides": { "+=": "before" } }]*/
@@ -288,8 +276,6 @@ var thing = 'thing';
 thing +=
   's';
 ```
-
-:::
 
 Examples of additional **correct** code for this rule with the `{ "overrides": { "+=": "before" } }` option:
 
@@ -302,8 +288,6 @@ var thing = 'thing';
 thing
   += 's';
 ```
-
-:::
 
 Examples of additional **correct** code for this rule with the `{ "overrides": { "?": "ignore", ":": "ignore" } }` option:
 
@@ -323,11 +307,9 @@ answer = everything
   foo;
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the default `"after", { "overrides": { "?": "before", ":": "before" } }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint operator-linebreak: ["error", "after", { "overrides": { "?": "before", ":": "before" } }]*/
@@ -350,8 +332,6 @@ answer = everything ?
   42 :
   foo;
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `"after", { "overrides": { "?": "before", ":": "before" } }` option:
 
@@ -377,8 +357,6 @@ answer = everything
   : foo;
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If your project will not be using a common operator line break style, turn this rule off.

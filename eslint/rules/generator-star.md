@@ -1,7 +1,7 @@
 ---
-title: generator-star
-layout: doc
-further_reading:
+规则名: generator-star
+布局: doc
+深入了解:
 - https://leanpub.com/understandinges6/read/#leanpub-auto-generators
 ---
 
@@ -47,7 +47,7 @@ function * generator() {
 
 To keep a sense of consistency when using generators this rule enforces a single position for the `*`.
 
-## Rule Details
+## 规则详解
 
 This rule enforces that the `*` is either placed next to the `function` keyword or the name of the function. The single
 option for this rule is a string specifying the placement of the asterisk. For this option you may pass
@@ -124,6 +124,6 @@ var generator = function*() {
 
 The shortened object literal syntax for generators is not affected by this rule.
 
-## When Not To Use It
+## 使用建议
 
 If your project will not be using generators you do not need this rule.

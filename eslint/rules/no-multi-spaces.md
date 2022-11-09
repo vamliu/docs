@@ -1,8 +1,8 @@
 ---
-title: no-multi-spaces
-layout: doc
-rule_type: layout
-related_rules:
+规则名: no-multi-spaces
+布局: doc
+规则类型: layout
+关联规则:
 - key-spacing
 - space-infix-ops
 - space-in-brackets
@@ -30,13 +30,13 @@ if(foo === "bar") {}
 
 ```
 
-## Rule Details
+## 规则详解
 
 This rule aims to disallow multiple whitespace around logical expressions, conditional expressions, declarations, array elements, object properties, sequences and function parameters.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-multi-spaces: "error"*/
@@ -51,8 +51,6 @@ var arr = [1,  2];
 
 a ?  b: c
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -72,9 +70,7 @@ var arr = [1, 2];
 a ? b: c
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule's configuration consists of an object with the following properties:
 
@@ -85,7 +81,7 @@ This rule's configuration consists of an object with the following properties:
 
 Examples of **incorrect** code for this rule with the `{ "ignoreEOLComments": false }` (default) option:
 
-::: incorrect
+
 
 ```js
 /*eslint no-multi-spaces: ["error", { ignoreEOLComments: false }]*/
@@ -95,8 +91,6 @@ var x = 5;      /* multiline
  * comment
  */
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "ignoreEOLComments": false }` (default) option:
 
@@ -110,8 +104,6 @@ var x = 5; /* multiline
  * comment
  */
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "ignoreEOLComments": true }` option:
 
@@ -130,8 +122,6 @@ var x = 5;      /* multiline
  */
 ```
 
-:::
-
 ### exceptions
 
 To avoid contradictions with other rules that require multiple spaces, this rule has an `exceptions` option to ignore certain nodes.
@@ -140,7 +130,7 @@ This option is an object that expects property names to be AST node types as def
 
 Only the `Property` node type is ignored by default, because for the [key-spacing](key-spacing) rule some alignment options require multiple spaces in properties of object literals.
 
-Examples of **correct** code for the default `"exceptions": { "Property": true }` option:
+选项 default `"exceptions": { "Property": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -154,11 +144,9 @@ var obj = {
 };
 ```
 
-:::
+选项 `"exceptions": { "Property": false }` 的 **错误** 代码示例：
 
-Examples of **incorrect** code for the `"exceptions": { "Property": false }` option:
 
-::: incorrect
 
 ```js
 /*eslint no-multi-spaces: ["error", { exceptions: { "Property": false } }]*/
@@ -170,9 +158,7 @@ var obj = {
 };
 ```
 
-:::
-
-Examples of **correct** code for the `"exceptions": { "BinaryExpression": true }` option:
+选项 `"exceptions": { "BinaryExpression": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -182,9 +168,7 @@ Examples of **correct** code for the `"exceptions": { "BinaryExpression": true }
 var a = 1  *  2;
 ```
 
-:::
-
-Examples of **correct** code for the `"exceptions": { "VariableDeclarator": true }` option:
+选项 `"exceptions": { "VariableDeclarator": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -195,9 +179,7 @@ var someVar      = 'foo';
 var someOtherVar = 'barBaz';
 ```
 
-:::
-
-Examples of **correct** code for the `"exceptions": { "ImportDeclaration": true }` option:
+选项 `"exceptions": { "ImportDeclaration": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -208,8 +190,6 @@ import mod          from 'mod';
 import someOtherMod from 'some-other-mod';
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to check and disallow multiple spaces, then you should turn this rule off.

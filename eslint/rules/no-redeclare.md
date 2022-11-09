@@ -1,8 +1,8 @@
 ---
-title: no-redeclare
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-redeclare
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-shadow
 ---
 
@@ -10,13 +10,13 @@ related_rules:
 
 In JavaScript, it's possible to redeclare the same variable name using `var`. This can lead to confusion as to where the variable is actually declared and initialized.
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at eliminating variables that have multiple declarations in the same scope.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-redeclare: "error"*/
@@ -36,8 +36,6 @@ class C {
     }
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -63,9 +61,7 @@ class C {
 
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule takes one optional argument, an object with a boolean property `"builtinGlobals"`. It defaults to `true`.
 If set to `true`, this rule also checks redeclaration of built-in globals, such as `Object`, `Array`, `Number`...
@@ -74,9 +70,9 @@ If set to `true`, this rule also checks redeclaration of built-in globals, such 
 
 The `"builtinGlobals"` option will check for redeclaration of built-in globals in global scope.
 
-Examples of **incorrect** code for the `{ "builtinGlobals": true }` option:
+选项 `{ "builtinGlobals": true }` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint no-redeclare: ["error", { "builtinGlobals": true }]*/
@@ -84,11 +80,9 @@ Examples of **incorrect** code for the `{ "builtinGlobals": true }` option:
 var Object = 0;
 ```
 
-:::
-
 Examples of **incorrect** code for the `{ "builtinGlobals": true }` option and the `browser` environment:
 
-::: incorrect
+
 
 ```js
 /*eslint no-redeclare: ["error", { "builtinGlobals": true }]*/
@@ -96,8 +90,6 @@ Examples of **incorrect** code for the `{ "builtinGlobals": true }` option and t
 
 var top = 0;
 ```
-
-:::
 
 The `browser` environment has many built-in global variables (for example, `top`). Some of built-in global variables cannot be redeclared.
 

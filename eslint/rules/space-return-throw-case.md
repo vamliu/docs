@@ -1,6 +1,6 @@
 ---
-title: space-return-throw-case
-layout: doc
+规则名: space-return-throw-case
+布局: doc
 
 ---
 
@@ -12,11 +12,11 @@ Requires spaces after `return`, `throw`, and `case` keywords.
 
 Require spaces following `return`, `throw`, and `case`.
 
-## Rule Details
+## 规则详解
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint space-return-throw-case: "error"*/
@@ -27,8 +27,6 @@ function f(){ return-a; }
 
 switch(a){ case'a': break; }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -43,5 +41,3 @@ function f(){ return -a; }
 
 switch(a){ case 'a': break; }
 ```
-
-:::

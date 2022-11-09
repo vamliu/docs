@@ -1,8 +1,8 @@
 ---
-title: prefer-object-has-own
-layout: doc
-rule_type: suggestion
-further_reading:
+规则名: prefer-object-has-own
+布局: doc
+规则类型: suggestion
+深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn
 ---
 
@@ -26,11 +26,11 @@ if (Object.hasOwn(object, "foo")) {
 }
 ```
 
-## Rule Details
+## 规则详解
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint prefer-object-has-own: "error"*/
@@ -44,8 +44,6 @@ Object.hasOwnProperty.call(obj, "a");
 const hasProperty = Object.prototype.hasOwnProperty.call(object, property);
 ```
 
-:::
-
 Examples of **correct** code for this rule:
 
 ::: correct
@@ -58,8 +56,6 @@ Object.hasOwn(obj, "a");
 const hasProperty = Object.hasOwn(object, property);
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 This rule should not be used unless ES2022 is supported in your codebase.

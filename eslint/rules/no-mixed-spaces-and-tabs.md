@@ -1,8 +1,8 @@
 ---
-title: no-mixed-spaces-and-tabs
-layout: doc
-rule_type: layout
-further_reading:
+规则名: no-mixed-spaces-and-tabs
+布局: doc
+规则类型: layout
+深入了解:
 - https://www.emacswiki.org/emacs/SmartTabs
 ---
 
@@ -10,13 +10,13 @@ further_reading:
 
 Most code conventions require either tabs or spaces be used for indentation. As such, it's usually an error if a single line of code is indented with both tabs and spaces.
 
-## Rule Details
+## 规则详解
 
 This rule disallows mixed spaces and tabs for indentation.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-mixed-spaces-and-tabs: "error"*/
@@ -36,8 +36,6 @@ function main() {
 }
 ```
 
-:::
-
 Examples of **correct** code for this rule:
 
 ::: correct
@@ -51,9 +49,7 @@ function add(x, y) {
 }
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule has a string option.
 
@@ -76,5 +72,3 @@ function main() {
         y = 7;
 }
 ```
-
-:::

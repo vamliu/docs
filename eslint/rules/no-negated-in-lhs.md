@@ -1,7 +1,7 @@
 ---
-title: no-negated-in-lhs
-layout: doc
-rule_type: problem
+规则名: no-negated-in-lhs
+布局: doc
+规则类型: problem
 ---
 
 
@@ -9,13 +9,13 @@ This rule was **deprecated** in ESLint v3.3.0 and replaced by the [no-unsafe-neg
 
 Just as developers might type `-a + b` when they mean `-(a + b)` for the negative of a sum, they might type `!key in object` by mistake when they almost certainly mean `!(key in object)` to test that a key is not in an object.
 
-## Rule Details
+## 规则详解
 
 This rule disallows negating the left operand in `in` expressions.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-negated-in-lhs: "error"*/
@@ -25,8 +25,6 @@ if(!key in object) {
     // and type conversion makes it equivalent to (key ? "false" : "true") in object
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -45,8 +43,6 @@ if(('' + !key) in object) {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 Never.

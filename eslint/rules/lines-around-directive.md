@@ -1,8 +1,8 @@
 ---
-title: lines-around-directive
-layout: doc
-rule_type: layout
-related_rules:
+规则名: lines-around-directive
+布局: doc
+规则类型: layout
+关联规则:
 - lines-around-comment
 - padded-blocks
 ---
@@ -35,11 +35,11 @@ function bar() {
 }
 ```
 
-## Rule Details
+## 规则详解
 
 This rule requires or disallows blank newlines around directive prologues. This rule does not enforce any conventions about blank newlines between the individual directives. In addition, it does not require blank newlines before directive prologues unless they are preceded by a comment. Please use the [padded-blocks](padded-blocks) rule if this is a style you would like to enforce.
 
-## Options
+## 配置项
 
 This rule has one option. It can either be a string or an object:
 
@@ -61,7 +61,7 @@ This is the default option.
 
 Examples of **incorrect** code for this rule with the `"always"` option:
 
-::: incorrect
+
 
 ```js
 /* eslint lines-around-directive: ["error", "always"] */
@@ -88,8 +88,6 @@ function foo() {
   var bar;
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"always"` option:
 
@@ -127,13 +125,11 @@ function foo() {
 }
 ```
 
-:::
-
 ### never
 
 Examples of **incorrect** code for this rule with the `"never"` option:
 
-::: incorrect
+
 
 ```js
 /* eslint lines-around-directive: ["error", "never"] */
@@ -167,8 +163,6 @@ function foo() {
   var bar;
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"never"` option:
 
@@ -200,13 +194,11 @@ function foo() {
 }
 ```
 
-:::
-
 ### before & after
 
 Examples of **incorrect** code for this rule with the `{ "before": "never", "after": "always" }` option:
 
-::: incorrect
+
 
 ```js
 /* eslint lines-around-directive: ["error", { "before": "never", "after": "always" }] */
@@ -236,8 +228,6 @@ function foo() {
   var bar;
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "before": "never", "after": "always" }`  option:
 
@@ -273,11 +263,9 @@ function foo() {
 }
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `{ "before": "always", "after": "never" }` option:
 
-::: incorrect
+
 
 ```js
 /* eslint lines-around-directive: ["error", { "before": "always", "after": "never" }] */
@@ -308,8 +296,6 @@ function foo() {
   var bar;
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "before": "always", "after": "never" }` option:
 
@@ -343,9 +329,7 @@ function foo() {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 You can safely disable this rule if you do not have any strict conventions about whether or not directive prologues should have blank newlines before or after them.
 

@@ -1,8 +1,8 @@
 ---
-title: prefer-exponentiation-operator
-layout: doc
-rule_type: suggestion
-further_reading:
+规则名: prefer-exponentiation-operator
+布局: doc
+规则类型: suggestion
+深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation
 - https://bugs.chromium.org/p/v8/issues/detail?id=5848
 ---
@@ -13,13 +13,13 @@ Introduced in ES2016, the infix exponentiation operator `**` is an alternative f
 
 Infix notation is considered to be more readable and thus more preferable than the function notation.
 
-## Rule Details
+## 规则详解
 
 This rule disallows calls to `Math.pow` and suggests using the `**` operator instead.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint prefer-exponentiation-operator: "error"*/
@@ -32,8 +32,6 @@ let baz = Math.pow(a + b, c + d);
 
 let quux = Math.pow(-1, n);
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -51,8 +49,6 @@ let baz = (a + b) ** (c + d);
 let quux = (-1) ** n;
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 This rule should not be used unless ES2016 is supported in your codebase.

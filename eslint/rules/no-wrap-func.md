@@ -1,6 +1,6 @@
 ---
-title: no-wrap-func
-layout: doc
+规则名: no-wrap-func
+布局: doc
 
 ---
 
@@ -20,19 +20,17 @@ var bar = (function() {
 });
 ```
 
-## Rule Details
+## 规则详解
 
 This rule will raise a warning when it encounters a function expression wrapped in parentheses with no following invoking parentheses.
 
 Example of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 var a = (function() {/*...*/});
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -43,5 +41,3 @@ var a = function() {/*...*/};
 
 (function() {/*...*/})();
 ```
-
-:::

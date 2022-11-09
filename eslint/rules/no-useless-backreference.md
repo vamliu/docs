@@ -1,12 +1,12 @@
 ---
-title: no-useless-backreference
-layout: doc
-rule_type: problem
-related_rules:
+规则名: no-useless-backreference
+布局: doc
+规则类型: problem
+关联规则:
 - no-control-regex
 - no-empty-character-class
 - no-invalid-regexp
-further_reading:
+深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 ---
 
@@ -32,7 +32,7 @@ equivalentRegex.test("ab"); // false
 
 Useless backreference is a possible error in the code. It usually indicates that the regular expression does not work as intended.
 
-## Rule Details
+## 规则详解
 
 This rule aims to detect and disallow the following backreferences in regular expression:
 
@@ -53,7 +53,7 @@ This might be surprising to developers coming from other languages where some of
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-useless-backreference: "error"*/
@@ -86,8 +86,6 @@ new RegExp('(\\1)'); // nested reference to (\1)
 
 /(?<!(a))b\1/; // reference to (a) into a negative lookbehind
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -123,8 +121,6 @@ new RegExp('(.)\\1'); // reference to (.)
 /(?<!\1(a))b/; // reference to (a), correct as it's from within the same negative lookbehind
 ```
 
-:::
-
 Please note that this rule does not aim to detect and disallow a potentially erroneous use of backreference syntax in regular expressions, like the use in character classes or an attempt to reference a group that doesn't exist. Depending on the context, a `\1`...`\9` sequence that is not a syntactically valid backreference may produce syntax error, or be parsed as something else (e.g., as a legacy octal escape sequence).
 
 Examples of additional **correct** code for this rule:
@@ -140,5 +136,3 @@ Examples of additional **correct** code for this rule:
 /^\1$/.test("\x01"); // true. Since the group 1 doesn't exist, \1 is treated as an octal escape sequence.
 /^(a)\1\2$/.test("aa\x02"); // true. In this case, \1 is a backreference, \2 is an octal escape sequence.
 ```
-
-:::

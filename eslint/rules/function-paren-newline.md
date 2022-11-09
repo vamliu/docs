@@ -1,18 +1,18 @@
 ---
-title: function-paren-newline
-layout: doc
-rule_type: layout
+规则名: function-paren-newline
+布局: doc
+规则类型: layout
 ---
 
 
 
 Many style guides require or disallow newlines inside of function parentheses.
 
-## Rule Details
+## 规则详解
 
 This rule enforces consistent line breaks inside parentheses of function parameters or arguments.
 
-### Options
+### 配置项
 
 This rule has a single option, which can either be a string or an object.
 
@@ -43,7 +43,7 @@ Example configurations:
 
 Examples of **incorrect** code for this rule with the `"always"` option:
 
-::: incorrect
+
 
 ```js
 /* eslint function-paren-newline: ["error", "always"] */
@@ -56,8 +56,6 @@ var foo = (bar, baz) => {};
 
 foo(bar, baz);
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"always"` option:
 
@@ -86,11 +84,9 @@ foo(
 );
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `"never"` option:
 
-::: incorrect
+
 
 ```js
 /* eslint function-paren-newline: ["error", "never"] */
@@ -115,8 +111,6 @@ foo(
 );
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `"never"` option:
 
 ::: correct
@@ -139,11 +133,9 @@ foo(bar,
   baz);
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the default `"multiline"` option:
 
-::: incorrect
+
 
 ```js
 /* eslint function-paren-newline: ["error", "multiline"] */
@@ -169,8 +161,6 @@ foo(
   }
 );
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `"multiline"` option:
 
@@ -201,11 +191,9 @@ foo(function() {
 });
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `"consistent"` option:
 
-::: incorrect
+
 
 ```js
 /* eslint function-paren-newline: ["error", "consistent"] */
@@ -231,8 +219,6 @@ foo(
     return baz;
   });
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"consistent"` option:
 
@@ -262,11 +248,9 @@ foo(
 );
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `"multiline-arguments"` option:
 
-::: incorrect
+
 
 ```js
 /* eslint function-paren-newline: ["error", "multiline-arguments"] */
@@ -293,8 +277,6 @@ foo(
 );
 ```
 
-:::
-
 Examples of **correct** code for this rule with the consistent `"multiline-arguments"` option:
 
 ::: correct
@@ -320,11 +302,9 @@ foo(
 );
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `{ "minItems": 3 }` option:
 
-::: incorrect
+
 
 ```js
 /* eslint function-paren-newline: ["error", { "minItems": 3 }] */
@@ -346,8 +326,6 @@ var foo = (bar,
 foo(bar,
   baz);
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "minItems": 3 }` option:
 
@@ -375,8 +353,6 @@ foo(
 );
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If don't want to enforce consistent linebreaks inside function parentheses, do not turn on this rule.

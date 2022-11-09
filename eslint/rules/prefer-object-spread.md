@@ -1,7 +1,7 @@
 ---
-title: prefer-object-spread
-layout: doc
-rule_type: suggestion
+规则名: prefer-object-spread
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -10,11 +10,11 @@ When Object.assign is called using an object literal as the first argument, this
 
 Introduced in ES2018, object spread is a declarative alternative which may perform better than the more dynamic, imperative `Object.assign`.
 
-## Rule Details
+## 规则详解
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint prefer-object-spread: "error"*/
@@ -34,8 +34,6 @@ Object.assign({});
 
 Object.assign({ foo: bar });
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -58,8 +56,6 @@ Object.assign(foo, { bar, baz });
 Object.assign(foo, { ...baz });
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 This rule should not be used unless ES2018 is supported in your codebase.

@@ -1,8 +1,8 @@
 ---
-title: no-empty-function
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-empty-function
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-empty
 ---
 
@@ -24,14 +24,14 @@ list.map(() => {});   // This is a block, would return undefined.
 list.map(() => ({})); // This is an empty object.
 ```
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at eliminating empty functions.
 A function will not be considered a problem if it contains a comment.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-empty-function: "error"*/
@@ -81,8 +81,6 @@ class A {
     static set foo(value) {}
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -177,9 +175,7 @@ class A {
 }
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule has an option to allow specific kinds of functions to be empty.
 
@@ -197,7 +193,7 @@ This rule has an option to allow specific kinds of functions to be empty.
 
 ### allow: functions
 
-Examples of **correct** code for the `{ "allow": ["functions"] }` option:
+选项 `{ "allow": ["functions"] }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -213,11 +209,9 @@ var obj = {
 };
 ```
 
-:::
-
 ### allow: arrowFunctions
 
-Examples of **correct** code for the `{ "allow": ["arrowFunctions"] }` option:
+选项 `{ "allow": ["arrowFunctions"] }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -228,11 +222,9 @@ Examples of **correct** code for the `{ "allow": ["arrowFunctions"] }` option:
 var foo = () => {};
 ```
 
-:::
-
 ### allow: generatorFunctions
 
-Examples of **correct** code for the `{ "allow": ["generatorFunctions"] }` option:
+选项 `{ "allow": ["generatorFunctions"] }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -249,11 +241,9 @@ var obj = {
 };
 ```
 
-:::
-
 ### allow: methods
 
-Examples of **correct** code for the `{ "allow": ["methods"] }` option:
+选项 `{ "allow": ["methods"] }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -271,11 +261,9 @@ class A {
 }
 ```
 
-:::
-
 ### allow: generatorMethods
 
-Examples of **correct** code for the `{ "allow": ["generatorMethods"] }` option:
+选项 `{ "allow": ["generatorMethods"] }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -293,11 +281,9 @@ class A {
 }
 ```
 
-:::
-
 ### allow: getters
 
-Examples of **correct** code for the `{ "allow": ["getters"] }` option:
+选项 `{ "allow": ["getters"] }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -315,11 +301,9 @@ class A {
 }
 ```
 
-:::
-
 ### allow: setters
 
-Examples of **correct** code for the `{ "allow": ["setters"] }` option:
+选项 `{ "allow": ["setters"] }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -337,11 +321,9 @@ class A {
 }
 ```
 
-:::
-
 ### allow: constructors
 
-Examples of **correct** code for the `{ "allow": ["constructors"] }` option:
+选项 `{ "allow": ["constructors"] }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -353,8 +335,6 @@ class A {
     constructor() {}
 }
 ```
-
-:::
 
 ### allow: asyncFunctions
 
@@ -368,8 +348,6 @@ Examples of **correct** code for the `{ "allow": ["asyncFunctions"] }` options:
 
 async function a(){}
 ```
-
-:::
 
 ### allow: asyncMethods
 
@@ -391,8 +369,6 @@ class A {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to be notified about empty functions, then it's safe to disable this rule.

@@ -1,8 +1,8 @@
 ---
-title: no-irregular-whitespace
-layout: doc
-rule_type: problem
-further_reading:
+规则名: no-irregular-whitespace
+布局: doc
+规则类型: problem
+深入了解:
 - https://es5.github.io/#x7.2
 - https://web.archive.org/web/20200414142829/http://timelessrepo.com/json-isnt-a-javascript-subset
 ---
@@ -23,7 +23,7 @@ Known issues these spaces cause:
 * Line Separator
     * Is NOT a valid character within JSON which would cause parse errors
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at catching invalid whitespace that is not a normal tab and space. Some of these characters may cause issues in modern browsers and others will be a debugging issue to spot.
 
@@ -56,7 +56,7 @@ This rule disallows the following characters except where the options allow:
 \u3000 - Ideographic Space
 ```
 
-## Options
+## 配置项
 
 This rule has an object option for exceptions:
 
@@ -69,7 +69,7 @@ This rule has an object option for exceptions:
 
 Examples of **incorrect** code for this rule with the default `{ "skipStrings": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint no-irregular-whitespace: "error"*/
@@ -116,8 +116,6 @@ function thing() {
 }
 ```
 
-:::
-
 Examples of **correct** code for this rule with the default `{ "skipStrings": true }` option:
 
 ::: correct
@@ -138,8 +136,6 @@ function thing() {
 }
 ```
 
-:::
-
 ### skipComments
 
 Examples of additional **correct** code for this rule with the `{ "skipComments": true }` option:
@@ -158,8 +154,6 @@ Description <NBSP>: some descriptive text
 */
 ```
 
-:::
-
 ### skipRegExps
 
 Examples of additional **correct** code for this rule with the `{ "skipRegExps": true }` option:
@@ -173,8 +167,6 @@ function thing() {
     return / <NBSP>regexp/;
 }
 ```
-
-:::
 
 ### skipTemplates
 
@@ -191,8 +183,6 @@ function thing() {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you decide that you wish to use whitespace other than tabs and spaces outside of strings in your application.

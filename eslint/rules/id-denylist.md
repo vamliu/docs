@@ -1,7 +1,7 @@
 ---
-title: id-denylist
-layout: doc
-rule_type: suggestion
+规则名: id-denylist
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -9,7 +9,7 @@ rule_type: suggestion
 
 Generic names can lead to hard-to-decipher code. This rule allows you to specify a deny list of disallowed identifier names to avoid this practice.
 
-## Rule Details
+## 规则详解
 
 This rule disallows specified identifiers in assignments and `function` definitions.
 
@@ -26,7 +26,7 @@ It will not catch disallowed identifiers that are:
 * function calls (so you can still use functions you do not have control over)
 * object properties (so you can still use objects you do not have control over)
 
-## Options
+## 配置项
 
 The rule takes one or more strings as options: the names of restricted identifiers.
 
@@ -42,7 +42,7 @@ For example, to restrict the use of common generic identifiers:
 
 Examples of **incorrect** code for this rule with sample `"data", "callback"` restricted identifiers:
 
-::: incorrect
+
 
 ```js
 /*eslint id-denylist: ["error", "data", "callback"] */
@@ -77,8 +77,6 @@ class Foo {
     #callback( {);
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with sample `"data", "callback"` restricted identifiers:
 
@@ -124,8 +122,6 @@ class Foo {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 You can turn this rule off if you do not want to restrict the use of certain identifiers.

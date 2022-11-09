@@ -1,23 +1,22 @@
 ---
-title: accessor-pairs
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: accessor-pairs
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-dupe-keys
 - no-dupe-class-members
-further_reading:
+深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
 ---
 
+我们在写js代码时常犯的一个错误是：只为属性创建一个 setter ，而未定义相应的 getter 。没有 getter ，无法读取属性，导致它不可用。
 
-It's a common mistake in JavaScript to create an object with just a setter for a property but never have a corresponding getter defined for it. Without a getter, you cannot read the property, so it ends up not being used.
-
-Here are some examples:
+就像这个例子：
 
 ```js
-// Bad
+// 不推荐
 var o = {
     set a(value) {
         this.val = value;
@@ -25,7 +24,7 @@ var o = {
 };
 
 
-// Good
+// 推荐
 var o = {
     set a(value) {
         this.val = value;
@@ -36,28 +35,24 @@ var o = {
 };
 
 ```
+启用此规则，当定义了 setter 却没有 getter 则会发出警告，使用选项 `getWithoutSet` ，如果定义了 getter 却没有 setter 时，也会发出警告。
 
-This rule warns if setters are defined without getters. Using an option `getWithoutSet`, it will warn if you have a getter without a setter also.
+## 规则详解
+此规则强制执行一种样式，它要求每个定义了 setter 的属性都有一个getter。
 
-## Rule Details
+通过激活选项 `getWithoutSet` ，它强制为每个定义了 getter 的属性设置 setter 。
 
-This rule enforces a style where it requires to have a getter for every property which has a setter defined.
+此规则始终检查 object literals（对象字面量，以对象字面量的方式创建对象，如：`var o = {a: 1}`）和 property descriptors（属性描述符，可以理解为对象的 defineProperty 方法）。默认情况下，它还检查类声明和类表达式。
 
-By activating the option `getWithoutSet` it enforces the presence of a setter for every property which has a getter defined.
+## 配置项
 
-This rule always checks object literals and property descriptors. By default, it also checks class declarations and class expressions.
-
-## Options
-
-* `setWithoutGet` set to `true` will warn for setters without getters (Default `true`).
-* `getWithoutSet` set to `true` will warn for getters without setters (Default `false`).
-* `enforceForClassMembers` set to `true` additionally applies this rule to class getters/setters (Default `true`). Set `enforceForClassMembers` to `false` if you want this rule to ignore class declarations and class expressions.
+* `setWithoutGet` 设为 `true` 会对定义了 setter 却没有 getter 作出警告 （默认 `true`）。
+* `getWithoutSet` 设为 `true` 会对定义了 getter 却没有 setter 作出警告 （默认 `false`）。
+* `enforceForClassMembers` 设为 `true` 会将此规则应用于类的 getters/setters 上（默认 `true`）如果你希望此规则忽略类声明和类表达式，可将 `enforceForClassMembers` 设为 `false` 。
 
 ### setWithoutGet
 
-Examples of **incorrect** code for the default `{ "setWithoutGet": true }` option:
-
-:::incorrect
+默认选项 `｛"setWithoutGet"：true｝` 的 **错误** 代码示例：
 
 ```js
 /*eslint accessor-pairs: "error"*/
@@ -76,12 +71,7 @@ Object.defineProperty(o, 'c', {
     }
 });
 ```
-
-:::
-
-Examples of **correct** code for the default `{ "setWithoutGet": true }` option:
-
-:::correct
+默认选项 `｛"setWithoutGet"：true｝` 的 **正确** 代码示例：
 
 ```js
 /*eslint accessor-pairs: "error"*/
@@ -106,14 +96,10 @@ Object.defineProperty(o, 'c', {
 });
 
 ```
-
-:::
 
 ### getWithoutSet
 
-Examples of **incorrect** code for the `{ "getWithoutSet": true }` option:
-
-:::incorrect
+选项 `｛"getWithoutSet"：true｝` 的 **错误** 代码示例：
 
 ```js
 /*eslint accessor-pairs: ["error", { "getWithoutSet": true }]*/
@@ -144,12 +130,7 @@ Object.defineProperty(o, 'c', {
     }
 });
 ```
-
-:::
-
-Examples of **correct** code for the `{ "getWithoutSet": true }` option:
-
-:::correct
+选项 `{ "getWithoutSet": true }` 的 **正确** 代码示例：
 
 ```js
 /*eslint accessor-pairs: ["error", { "getWithoutSet": true }]*/
@@ -173,19 +154,19 @@ Object.defineProperty(o, 'c', {
 });
 
 ```
-
-:::
 
 ### enforceForClassMembers
 
-When `enforceForClassMembers` is set to `true` (default):
+当 `enforceForClassMembers` 设置为默认值 `true` 时：
 
-* `"getWithoutSet": true` will also warn for getters without setters in classes.
-* `"setWithoutGet": true` will also warn for setters without getters in classes.
+* `"getWithoutSet": true` 当类中属性定义了getters而没有setters时也会作出警告。
 
-Examples of **incorrect** code for `{ "getWithoutSet": true, "enforceForClassMembers": true }`:
+* `"setWithoutGet": true` 当类中属性定义了setters而没有getters时也会作出警告。
 
-:::incorrect
+当 `enforceForClassMembers` 被设为默认值 `true` 时：
+
+
+`{ "getWithoutSet": true, "enforceForClassMembers": true }` 的 **错误** 代码示例：
 
 ```js
 /*eslint accessor-pairs: ["error", { "getWithoutSet": true, "enforceForClassMembers": true }]*/
@@ -212,11 +193,7 @@ const Baz = class {
 }
 ```
 
-:::
-
-Examples of **incorrect** code for `{ "setWithoutGet": true, "enforceForClassMembers": true }`:
-
-:::incorrect
+`{ "setWithoutGet": true, "enforceForClassMembers": true }` 的 **错误** 代码示例：
 
 ```js
 /*eslint accessor-pairs: ["error", { "setWithoutGet": true, "enforceForClassMembers": true }]*/
@@ -233,14 +210,9 @@ const Bar = class {
     }
 }
 ```
+当 `enforceForClassMembers` 被设为 `false` 时，此规则会忽略类。
 
-:::
-
-When `enforceForClassMembers` is set to `false`, this rule ignores classes.
-
-Examples of **correct** code for `{ "getWithoutSet": true, "setWithoutGet": true, "enforceForClassMembers": false }`:
-
-:::correct
+`{ "getWithoutSet": true, "setWithoutGet": true, "enforceForClassMembers": false }` 的 **正确** 代码示例：
 
 ```js
 /*eslint accessor-pairs: ["error", {
@@ -272,19 +244,16 @@ const Quux = class {
 }
 ```
 
-:::
+## 已知局限
 
-## Known Limitations
-
-Due to the limits of static analysis, this rule does not account for possible side effects and in certain cases
-might not report a missing pair for a getter/setter that has a computed key, like in the following example:
+由于静态解析的限制，此规则不会对表达式属性的 getter/setter 的缺失作出警告，如以下示例所示：
 
 ```js
 /*eslint accessor-pairs: "error"*/
 
 var a = 1;
 
-// no warnings
+// 不会警告
 var o = {
     get [a++]() {
         return this.val;
@@ -295,13 +264,12 @@ var o = {
 };
 ```
 
-Also, this rule does not disallow duplicate keys in object literals and class definitions, and in certain cases with duplicate keys
-might not report a missing pair for a getter/setter, like in the following example:
+此外，该规则不允许对象字面量和类定义中的重复键，并且在某些情况下，重复键可能不会报告getter/setter的缺失，如以下示例所示：
 
 ```js
 /*eslint accessor-pairs: "error"*/
 
-// no warnings
+// 不会警告
 var o = {
     get a() {
         return this.val;
@@ -311,14 +279,13 @@ var o = {
         this.val = value;
     }
 };
+// 上面的代码为属性“a”创建了一个只有setter的对象。
 ```
 
-The code above creates an object with just a setter for the property `"a"`.
+详见 [no-dupe-keys](no-dupe-keys) 禁用对象声明中的重复键
 
-See [no-dupe-keys](no-dupe-keys) if you also want to disallow duplicate keys in object literals.
+详见 [no-dupe-class-members](no-dupe-class-members) 禁用类声明中的重复成员
 
-See [no-dupe-class-members](no-dupe-class-members) if you also want to disallow duplicate names in class definitions.
+## 使用建议
 
-## When Not To Use It
-
-You can turn this rule off if you are not concerned with the simultaneous presence of setters and getters on objects.
+如果您不关心对象上是否同时存在setter和getter，可以关闭此规则。

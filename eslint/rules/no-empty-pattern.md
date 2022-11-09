@@ -1,7 +1,7 @@
 ---
-title: no-empty-pattern
-layout: doc
-rule_type: problem
+规则名: no-empty-pattern
+布局: doc
+规则类型: problem
 ---
 
 
@@ -29,13 +29,13 @@ var {a = {}} = foo;
 
 The difference between these two patterns is subtle, especially because the problematic empty pattern looks just like an object literal.
 
-## Rule Details
+## 规则详解
 
 This rule aims to flag any empty patterns in destructured objects and arrays, and as such, will report a problem whenever one is encountered.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-empty-pattern: "error"*/
@@ -50,8 +50,6 @@ function foo({a: {}}) {}
 function foo({a: []}) {}
 ```
 
-:::
-
 Examples of **correct** code for this rule:
 
 ::: correct
@@ -64,5 +62,3 @@ var {a = []} = foo;
 function foo({a = {}}) {}
 function foo({a = []}) {}
 ```
-
-:::

@@ -1,8 +1,8 @@
 ---
-title: no-labels
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-labels
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-extra-label
 - no-label-var
 - no-unused-labels
@@ -25,13 +25,13 @@ The `break outer` statement ensures that this code will not result in an infinit
 
 While convenient in some cases, labels tend to be used only rarely and are frowned upon by some as a remedial form of flow control that is more error prone and harder to understand.
 
-## Rule Details
+## 规则详解
 
 This rule aims to eliminate the use of labeled statements in JavaScript. It will warn whenever a labeled statement is encountered and whenever `break` or `continue` are used with a label.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-labels: "error"*/
@@ -68,8 +68,6 @@ label:
     }
 ```
 
-:::
-
 Examples of **correct** code for this rule:
 
 ::: correct
@@ -90,9 +88,7 @@ while (true) {
 }
 ```
 
-:::
-
-## Options
+## 配置项
 
 The options allow labels with loop or switch statements:
 
@@ -104,7 +100,7 @@ However, this way is ultra rare, not well-known, so this would be confusing deve
 
 ### allowLoop
 
-Examples of **correct** code for the `{ "allowLoop": true }` option:
+选项 `{ "allowLoop": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -117,11 +113,9 @@ label:
     }
 ```
 
-:::
-
 ### allowSwitch
 
-Examples of **correct** code for the `{ "allowSwitch": true }` option:
+选项 `{ "allowSwitch": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -135,8 +129,6 @@ label:
     }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you need to use labeled statements everywhere, then you can safely disable this rule.

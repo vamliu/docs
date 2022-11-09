@@ -1,8 +1,8 @@
 ---
-title: no-unused-labels
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-unused-labels
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-extra-label
 - no-labels
 - no-label-var
@@ -27,13 +27,13 @@ for (const student of students) {
 In this case, probably removing `OUTER_LOOP:` had been forgotten.
 Such labels take up space in the code and can lead to confusion by readers.
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at eliminating unused labels.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-unused-labels: "error"*/
@@ -49,8 +49,6 @@ for (let i = 0; i < 10; ++i) {
     foo();
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -75,8 +73,6 @@ for (let i = 0; i < 10; ++i) {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to be notified about unused labels, then it's safe to disable this rule.

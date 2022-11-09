@@ -1,19 +1,19 @@
 ---
-title: no-tabs
-layout: doc
-rule_type: layout
+规则名: no-tabs
+布局: doc
+规则类型: layout
 ---
 
 
 Some style guides don't allow the use of tab characters at all, including within comments.
 
-## Rule Details
+## 规则详解
 
 This rule looks for tabs anywhere inside a file: code, comments or anything else.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 var a \t= 2;
@@ -25,8 +25,6 @@ function test(){}
 
 var x = 1; // \t test
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -43,9 +41,7 @@ function test(){}
 var x = 1; // test
 ```
 
-:::
-
-### Options
+### 配置项
 
 This rule has an optional object option with the following properties:
 
@@ -67,9 +63,7 @@ function test() {
 \t// comment with leading indentation tab
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you have established a standard where having tabs is fine, then you can disable this rule.
 

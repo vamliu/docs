@@ -1,7 +1,7 @@
 ---
-title: no-class-assign
-layout: doc
-rule_type: problem
+规则名: no-class-assign
+布局: doc
+规则类型: problem
 ---
 
 
@@ -17,13 +17,13 @@ A = 0;
 
 But the modification is a mistake in most cases.
 
-## Rule Details
+## 规则详解
 
 This rule is aimed to flag modifying variables of class declarations.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-class-assign: "error"*/
@@ -33,9 +33,7 @@ class A { }
 A = 0;
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint no-class-assign: "error"*/
@@ -45,9 +43,7 @@ A = 0;
 class A { }
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint no-class-assign: "error"*/
@@ -60,9 +56,7 @@ class A {
 }
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint no-class-assign: "error"*/
@@ -76,8 +70,6 @@ let A = class A {
 }
 ```
 
-:::
-
 Examples of **correct** code for this rule:
 
 ::: correct
@@ -89,8 +81,6 @@ Examples of **correct** code for this rule:
 let A = class A { }
 A = 0; // A is a variable.
 ```
-
-:::
 
 ::: correct
 
@@ -105,8 +95,6 @@ let A = class {
 }
 ```
 
-:::
-
 ::: correct
 
 ```js
@@ -120,8 +108,6 @@ class A {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to be notified about modifying variables of class declarations, you can safely disable this rule.

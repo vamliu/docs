@@ -1,7 +1,7 @@
 ---
-title: no-extra-boolean-cast
-layout: doc
-rule_type: suggestion
+规则名: no-extra-boolean-cast
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -24,13 +24,13 @@ if (foo) {
 }
 ```
 
-## Rule Details
+## 规则详解
 
 This rule disallows unnecessary boolean casts.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-extra-boolean-cast: "error"*/
@@ -64,8 +64,6 @@ for (; !!foo; ) {
 }
 ```
 
-:::
-
 Examples of **correct** code for this rule:
 
 ::: correct
@@ -83,9 +81,7 @@ function foo() {
 var foo = bar ? !!baz : !!bat;
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule has an object option:
 
@@ -95,7 +91,7 @@ This rule has an object option:
 
 Examples of **incorrect** code for this rule with `"enforceForLogicalOperands"` option set to `true`:
 
-::: incorrect
+
 
 ```js
 /*eslint no-extra-boolean-cast: ["error", {"enforceForLogicalOperands": true}]*/
@@ -116,8 +112,6 @@ foo && Boolean(bar) ? baz : bat
 
 var foo = new Boolean(!!bar || baz)
 ```
-
-:::
 
 Examples of **correct** code for this rule with `"enforceForLogicalOperands"` option set to `true`:
 
@@ -144,5 +138,3 @@ var foo = new Boolean(bar || baz)
 
 var foo = !!bar || baz;
 ```
-
-:::

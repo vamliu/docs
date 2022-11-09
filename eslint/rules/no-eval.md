@@ -1,10 +1,10 @@
 ---
-title: no-eval
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-eval
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-implied-eval
-further_reading:
+深入了解:
 - https://ericlippert.com/2003/11/01/eval-is-evil-part-one/
 - https://javascriptweblog.wordpress.com/2010/04/19/how-evil-is-eval/
 ---
@@ -18,13 +18,13 @@ var obj = { x: "foo" },
     value = eval("obj." + key);
 ```
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at preventing potentially dangerous, unnecessary, and slow code by disallowing the use of the `eval()` function. As such, it will warn whenever the `eval()` function is used.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-eval: "error"*/
@@ -42,11 +42,9 @@ foo("var a = 0");
 this.eval("var a = 0");
 ```
 
-:::
-
 Example of additional **incorrect** code for this rule when `browser` environment is set to `true`:
 
-::: incorrect
+
 
 ```js
 /*eslint no-eval: "error"*/
@@ -55,11 +53,9 @@ Example of additional **incorrect** code for this rule when `browser` environmen
 window.eval("var a = 0");
 ```
 
-:::
-
 Example of additional **incorrect** code for this rule when `node` environment is set to `true`:
 
-::: incorrect
+
 
 ```js
 /*eslint no-eval: "error"*/
@@ -67,8 +63,6 @@ Example of additional **incorrect** code for this rule when `node` environment i
 
 global.eval("var a = 0");
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -101,9 +95,7 @@ class A {
 }
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule has an option to allow indirect calls to `eval`.
 Indirect calls to `eval` are less dangerous than direct calls to `eval` because they cannot dynamically change the scope. Because of this, they also will not negatively impact performance to the degree of direct `eval`.
@@ -116,7 +108,7 @@ Indirect calls to `eval` are less dangerous than direct calls to `eval` because 
 
 Example of **incorrect** code for this rule with the `{"allowIndirect": true}` option:
 
-::: incorrect
+
 
 ```js
 /*eslint no-eval: "error"*/
@@ -125,8 +117,6 @@ var obj = { x: "foo" },
     key = "x",
     value = eval("obj." + key);
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{"allowIndirect": true}` option:
 
@@ -143,8 +133,6 @@ foo("var a = 0");
 this.eval("var a = 0");
 ```
 
-:::
-
 ::: correct
 
 ```js
@@ -153,8 +141,6 @@ this.eval("var a = 0");
 
 window.eval("var a = 0");
 ```
-
-:::
 
 ::: correct
 
@@ -165,9 +151,7 @@ window.eval("var a = 0");
 global.eval("var a = 0");
 ```
 
-:::
-
-## Known Limitations
+## 已知局限
 
 * This rule is warning every `eval()` even if the `eval` is not global's.
   This behavior is in order to detect calls of direct `eval`. Such as:

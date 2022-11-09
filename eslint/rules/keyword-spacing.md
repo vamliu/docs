@@ -1,7 +1,7 @@
 ---
-title: keyword-spacing
-layout: doc
-rule_type: layout
+规则名: keyword-spacing
+布局: doc
+规则类型: layout
 ---
 
 
@@ -23,11 +23,11 @@ Of course, you could also have a style guide that disallows spaces around keywor
 
 However, if you want to enforce the style of spacing between the `function` keyword and the following opening parenthesis, please refer to [space-before-function-paren](space-before-function-paren).
 
-## Rule Details
+## 规则详解
 
 This rule enforces consistent spacing around keywords and keyword-like tokens: `as` (in module declarations), `async` (of async functions), `await` (of await expressions), `break`, `case`, `catch`, `class`, `const`, `continue`, `debugger`, `default`, `delete`, `do`, `else`, `export`, `extends`, `finally`, `for`, `from` (in module declarations), `function`, `get` (of getters), `if`, `import`, `in` (in for-in statements), `let`, `new`, `of` (in for-of statements), `return`, `set` (of setters), `static`, `super`, `switch`, `this`, `throw`, `try`, `typeof`, `var`, `void`, `while`, `with`, and `yield`. This rule is designed carefully not to conflict with other spacing rules: it does not apply to spacing where other rules report problems.
 
-## Options
+## 配置项
 
 This rule has an object option:
 
@@ -41,7 +41,7 @@ This rule has an object option:
 
 Examples of **incorrect** code for this rule with the default `{ "before": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint keyword-spacing: ["error", { "before": true }]*/
@@ -54,8 +54,6 @@ if (foo) {
     //...
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `{ "before": true }` option:
 
@@ -114,11 +112,9 @@ if (10+this.foo<= this.bar) {}
 let a = <A foo={this.foo} bar={function(){}} />
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `{ "before": false }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint keyword-spacing: ["error", { "before": false }]*/
@@ -131,8 +127,6 @@ if (foo) {
     //...
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "before": false }` option:
 
@@ -150,13 +144,11 @@ if (foo) {
 }
 ```
 
-:::
-
 ### after
 
 Examples of **incorrect** code for this rule with the default `{ "after": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint keyword-spacing: ["error", { "after": true }]*/
@@ -169,8 +161,6 @@ if(foo) {
     //...
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `{ "after": true }` option:
 
@@ -241,11 +231,9 @@ function* foo(a) {
 let a = <A foo={this.foo} bar={function(){}} />
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `{ "after": false }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint keyword-spacing: ["error", { "after": false }]*/
@@ -258,8 +246,6 @@ if (foo) {
     //...
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "after": false }` option:
 
@@ -276,8 +262,6 @@ if(foo) {
     //...
 }
 ```
-
-:::
 
 ### overrides
 
@@ -317,8 +301,6 @@ class C {
 export { C as"my class" };
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to enforce consistency on keyword spacing, then it's safe to disable this rule.

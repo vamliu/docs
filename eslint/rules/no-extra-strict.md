@@ -1,8 +1,8 @@
 ---
-title: no-extra-strict
-layout: doc
+规则名: no-extra-strict
+布局: doc
 
-further_reading:
+深入了解:
 - https://es5.github.io/#C
 ---
 
@@ -21,13 +21,13 @@ The `"use strict";` directive applies to the scope in which it appears and all i
 }());
 ```
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at preventing unnecessary `"use strict";` directives. As such, it will warn when it encounters a `"use strict";` directive when already in strict mode.
 
 Example of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 "use strict";
@@ -37,8 +37,6 @@ Example of **incorrect** code for this rule:
     var foo = true;
 }());
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -52,8 +50,6 @@ Examples of **correct** code for this rule:
 }());
 ```
 
-:::
-
 ::: correct
 
 ```js
@@ -62,5 +58,3 @@ Examples of **correct** code for this rule:
     var foo = true;
 }());
 ```
-
-:::

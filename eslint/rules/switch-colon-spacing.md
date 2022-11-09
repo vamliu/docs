@@ -1,14 +1,14 @@
 ---
-title: switch-colon-spacing
-layout: doc
-rule_type: layout
+规则名: switch-colon-spacing
+布局: doc
+规则类型: layout
 ---
 
 
 
 Spacing around colons improves readability of `case`/`default` clauses.
 
-## Rule Details
+## 规则详解
 
 This rule controls spacing around colons of `case` and `default` clauses in `switch` statements.
 This rule does the check only if the consecutive tokens exist on the same line.
@@ -28,7 +28,7 @@ This rule has 2 options that are boolean value.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint switch-colon-spacing: "error"*/
@@ -38,8 +38,6 @@ switch (a) {
     default :foo();
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -59,11 +57,9 @@ switch (a) {
 }
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with `{"after": false, "before": true}` option:
 
-::: incorrect
+
 
 ```js
 /*eslint switch-colon-spacing: ["error", {"after": false, "before": true}]*/
@@ -73,8 +69,6 @@ switch (a) {
     default: foo();
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with `{"after": false, "before": true}` option:
 
@@ -94,8 +88,6 @@ switch (a) {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to notify spacing around colons of switch statements, then it's safe to disable this rule.

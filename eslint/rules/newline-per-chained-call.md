@@ -1,7 +1,7 @@
 ---
-title: newline-per-chained-call
-layout: doc
-rule_type: layout
+规则名: newline-per-chained-call
+布局: doc
+规则类型: layout
 ---
 
 
@@ -54,11 +54,11 @@ d3
 +    .style("color", "blue");
 ```
 
-## Rule Details
+## 规则详解
 
 This rule requires a newline after each call in a method chain or deep member access. Computed property accesses such as `instance[something]` are excluded.
 
-## Options
+## 配置项
 
 This rule has an object option:
 
@@ -68,7 +68,7 @@ This rule has an object option:
 
 Examples of **incorrect** code for this rule with the default `{ "ignoreChainWithDepth": 2 }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint newline-per-chained-call: ["error", { "ignoreChainWithDepth": 2 }]*/
@@ -86,8 +86,6 @@ _
 // Or
 obj.method().method2().method3();
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `{ "ignoreChainWithDepth": 2 }` option:
 
@@ -125,8 +123,6 @@ obj
   .method3().prop;
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you have conflicting rules or when you are fine with chained calls on one line, you can safely turn this rule off.

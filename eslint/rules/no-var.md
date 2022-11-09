@@ -1,7 +1,7 @@
 ---
-title: no-var
-layout: doc
-rule_type: suggestion
+规则名: no-var
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -23,7 +23,7 @@ if (enoughFood) {
 console.log("We have " + count + " people and " + sandwiches.length + " sandwiches!");
 ```
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at discouraging the use of `var` and encouraging the use of `const` or `let` instead.
 
@@ -31,7 +31,7 @@ This rule is aimed at discouraging the use of `var` and encouraging the use of `
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-var: "error"*/
@@ -39,8 +39,6 @@ Examples of **incorrect** code for this rule:
 var x = "y";
 var CONFIG = {};
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -54,9 +52,7 @@ let x = "y";
 const CONFIG = {};
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 In addition to non-ES6 environments, existing JavaScript projects that are beginning to introduce ES6 into their
 codebase may not want to apply this rule if the cost of migrating from `var` to `let` is too costly.

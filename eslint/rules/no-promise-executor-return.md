@@ -1,10 +1,10 @@
 ---
-title: no-promise-executor-return
-layout: doc
-rule_type: problem
-related_rules:
+规则名: no-promise-executor-return
+布局: doc
+规则类型: problem
+关联规则:
 - no-async-promise-executor
-further_reading:
+深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 ---
 
@@ -27,7 +27,7 @@ The executor function usually initiates some asynchronous operation. Once it is 
 
 The return value of the executor is ignored. Returning a value from an executor function is a possible error because the returned value cannot be used and it doesn't affect the promise in any way.
 
-## Rule Details
+## 规则详解
 
 This rule disallows returning values from Promise executor functions.
 
@@ -35,7 +35,7 @@ Only `return` without a value is allowed, as it's a control flow statement.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-promise-executor-return: "error"*/
@@ -65,8 +65,6 @@ new Promise(() => {
     return 1;
 });
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -101,5 +99,3 @@ new Promise((resolve, reject) => {
 
 Promise.resolve(1);
 ```
-
-:::

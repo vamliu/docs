@@ -1,7 +1,7 @@
 ---
-title: no-catch-shadow
-layout: doc
-rule_type: suggestion
+规则名: no-catch-shadow
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -21,13 +21,13 @@ try {
 console.log(err)    // err is 'problem', not 'x'
 ```
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at preventing unexpected behavior in your program that may arise from a bug in IE 8 and earlier, in which the catch clause parameter can leak into outer scopes. This rule will warn whenever it encounters a catch clause parameter that has the same name as a variable in an outer scope.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-catch-shadow: "error"*/
@@ -50,8 +50,6 @@ try {
 
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -79,8 +77,6 @@ try {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you do not need to support IE 8 and earlier, you should turn this rule off.

@@ -1,7 +1,7 @@
 ---
-title: require-atomic-updates
-layout: doc
-rule_type: problem
+规则名: require-atomic-updates
+布局: doc
+规则类型: problem
 ---
 
 
@@ -41,7 +41,7 @@ Promise.all([getPageLength(1), getPageLength(2)]).then(pageLengths => {
 });
 ```
 
-## Rule Details
+## 规则详解
 
 This rule aims to report assignments to variables or properties in cases where the assignments may be based on outdated values.
 
@@ -62,7 +62,7 @@ Note that the rule does not report the assignment in step 3 in any of the follow
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /* eslint require-atomic-updates: error */
@@ -91,8 +91,6 @@ function* generator() {
     result += yield;
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -131,8 +129,6 @@ function* generator() {
 }
 ```
 
-:::
-
 ### Properties
 
 This rule reports an assignment to a property through a variable when it detects the following execution flow in a generator or async function:
@@ -145,7 +141,7 @@ This logic is similar to the logic for variables, but stricter because the prope
 
 Example of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /* eslint require-atomic-updates: error */
@@ -156,8 +152,6 @@ async function foo(obj) {
     }
 }
 ```
-
-:::
 
 Example of **correct** code for this rule:
 
@@ -176,9 +170,7 @@ async function foo(obj) {
 }
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule has an object option:
 
@@ -200,8 +192,6 @@ async function foo(obj) {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't use async or generator functions, you don't need to enable this rule.

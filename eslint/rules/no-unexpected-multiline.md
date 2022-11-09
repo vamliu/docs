@@ -1,8 +1,8 @@
 ---
-title: no-unexpected-multiline
-layout: doc
-rule_type: problem
-related_rules:
+规则名: no-unexpected-multiline
+布局: doc
+规则类型: problem
+关联规则:
 - func-call-spacing
 - semi
 - space-unary-ops
@@ -21,13 +21,13 @@ The rules for ASI are relatively straightforward: As once described by Isaac Sch
 
 In the exceptions where a newline does **not** end a statement, a typing mistake to omit a semicolon causes two unrelated consecutive lines to be interpreted as one expression. Especially for a coding style without semicolons, readers might overlook the mistake. Although syntactically correct, the code might throw exceptions when it is executed.
 
-## Rule Details
+## 规则详解
 
 This rule disallows confusing multiline expressions where a newline looks like it is ending a statement, but is not.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-unexpected-multiline: "error"*/
@@ -48,8 +48,6 @@ x
 let x = foo
 /regex/g.test(bar)
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -77,9 +75,7 @@ let tag = function() {}
 tag `hello`
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 You can turn this rule off if you are confident that you will not accidentally introduce code like this.
 

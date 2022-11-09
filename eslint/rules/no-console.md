@@ -1,8 +1,8 @@
 ---
-title: no-console
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-console
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-alert
 - no-debugger
 ---
@@ -15,13 +15,13 @@ console.log("Made it here.");
 console.error("That shouldn't have happened.");
 ```
 
-## Rule Details
+## 规则详解
 
 This rule disallows calls or assignments to methods of the `console` object.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /* eslint no-console: "error" */
@@ -31,8 +31,6 @@ console.warn("Log a warn level message.");
 console.error("Log an error level message.");
 console.log = foo();
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -45,9 +43,7 @@ Examples of **correct** code for this rule:
 Console.log("Hello world!");
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule has an object option for exceptions:
 
@@ -64,9 +60,7 @@ console.warn("Log a warn level message.");
 console.error("Log an error level message.");
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you're using Node.js, however, `console` is used to output information to the user and so is not strictly used for debugging purposes. If you are developing for Node.js then you most likely do not want this rule enabled.
 

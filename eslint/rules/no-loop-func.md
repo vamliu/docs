@@ -1,7 +1,7 @@
 ---
-title: no-loop-func
-layout: doc
-rule_type: suggestion
+规则名: no-loop-func
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -31,7 +31,7 @@ for (let i = 0; i < 10; i++) {
 
 In this case, each function created within the loop returns a different number as expected.
 
-## Rule Details
+## 规则详解
 
 This error is raised to highlight a piece of code that may not work as you expect it to and could also indicate a misunderstanding of how the language works. Your code may run without any problems if you do not fix this error, but in some situations it could behave unexpectedly.
 
@@ -39,7 +39,7 @@ This rule disallows any function within a loop that contains unsafe references (
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-loop-func: "error"*/
@@ -73,8 +73,6 @@ for (let i = 0; i < 10; ++i) {
 foo = 100;
 ```
 
-:::
-
 Examples of **correct** code for this rule:
 
 ::: correct
@@ -106,5 +104,3 @@ for (let i=10; i; i--) {
 }
 //... no modifications of foo after this loop ...
 ```
-
-:::

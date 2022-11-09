@@ -1,7 +1,7 @@
 ---
-title: id-blacklist
-layout: doc
-rule_type: suggestion
+规则名: id-blacklist
+布局: doc
+规则类型: suggestion
 ---
 
 

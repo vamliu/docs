@@ -1,8 +1,8 @@
 ---
-title: no-native-reassign
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-native-reassign
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-extend-native
 - no-redeclare
 - no-shadow
@@ -19,7 +19,7 @@ window = {};
 
 While examples such as `window` are obvious, there are often hundreds of built-in global objects provided by JavaScript environments. It can be hard to know if you're assigning to a global variable or not.
 
-## Rule Details
+## 规则详解
 
 This rule disallows modifications to read-only global variables.
 
@@ -30,7 +30,7 @@ ESLint has the capability to configure global variables as read-only.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-native-reassign: "error"*/
@@ -39,9 +39,7 @@ Object = null
 undefined = 1
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint no-native-reassign: "error"*/
@@ -52,9 +50,7 @@ length = 1
 top = 1
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint no-native-reassign: "error"*/
@@ -62,8 +58,6 @@ top = 1
 
 a = 1
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -77,8 +71,6 @@ var b = 1
 b = 2
 ```
 
-:::
-
 ::: correct
 
 ```js
@@ -87,8 +79,6 @@ b = 2
 
 onload = function() {}
 ```
-
-:::
 
 ::: correct
 
@@ -99,9 +89,7 @@ onload = function() {}
 a = 1
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule accepts an `exceptions` option, which can be used to specify a list of builtins for which reassignments will be allowed:
 
@@ -113,6 +101,6 @@ This rule accepts an `exceptions` option, which can be used to specify a list of
 }
 ```
 
-## When Not To Use It
+## 使用建议
 
 If you are trying to override one of the native objects.

@@ -1,13 +1,13 @@
 ---
-title: no-unused-private-class-members
-layout: doc
-rule_type: problem
+规则名: no-unused-private-class-members
+布局: doc
+规则类型: problem
 ---
 
 
 Private class members that are declared and not used anywhere in the code are most likely an error due to incomplete refactoring. Such class members take up space in the code and can lead to confusion by readers.
 
-## Rule Details
+## 规则详解
 
 This rule reports unused private class members.
 
@@ -16,7 +16,7 @@ This rule reports unused private class members.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-unused-private-class-members: "error"*/
@@ -48,8 +48,6 @@ class Foo {
     set #unusedAccessor(value) {}
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -84,8 +82,6 @@ class Foo {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to be notified about unused private class members, you can safely turn this rule off.

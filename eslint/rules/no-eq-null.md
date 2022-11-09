@@ -1,7 +1,7 @@
 ---
-title: no-eq-null
-layout: doc
-rule_type: suggestion
+规则名: no-eq-null
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -13,13 +13,13 @@ if (foo == null) {
 }
 ```
 
-## Rule Details
+## 规则详解
 
 The `no-eq-null` rule aims reduce potential bug and unwanted behavior by ensuring that comparisons to `null` only match `null`, and not also `undefined`. As such it will flag comparisons to null when using `==` and `!=`.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-eq-null: "error"*/
@@ -32,8 +32,6 @@ while (qux != null) {
   baz();
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -51,9 +49,7 @@ while (qux !== null) {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you want to enforce type-checking operations in general, use the more powerful [eqeqeq](./eqeqeq) instead.
 

@@ -1,7 +1,7 @@
 ---
-title: no-self-assign
-layout: doc
-rule_type: problem
+规则名: no-self-assign
+布局: doc
+规则类型: problem
 ---
 
 
@@ -14,13 +14,13 @@ foo = foo;
 [bar, baz] = [bar, qiz];
 ```
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at eliminating self assignments.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-self-assign: "error"*/
@@ -37,8 +37,6 @@ foo &&= foo;
 foo ||= foo;
 foo ??= foo;
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -75,9 +73,7 @@ obj[a + b] = obj[a + b];
 obj["a" + "b"] = obj["a" + "b"];
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule has the option to check properties as well.
 
@@ -105,8 +101,6 @@ obj["a"] = obj["a"];
 obj[a] = obj[a];
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to notify about self assignments, then it's safe to disable this rule.

@@ -1,8 +1,8 @@
 ---
-title: max-params
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: max-params
+布局: doc
+规则类型: suggestion
+关联规则:
 - complexity
 - max-depth
 - max-len
@@ -21,11 +21,11 @@ function foo (bar, baz, qux, qxx) { // four parameters, may be too many
 }
 ```
 
-## Rule Details
+## 规则详解
 
 This rule enforces a maximum number of parameters allowed in function definitions.
 
-## Options
+## 配置项
 
 This rule has a number or object option:
 
@@ -36,8 +36,6 @@ This rule has a number or object option:
 ### max
 
 Examples of **incorrect** code for this rule with the default `{ "max": 3 }` option:
-
-:::incorrect
 
 ```js
 /*eslint max-params: ["error", 3]*/
@@ -52,11 +50,7 @@ let foo = (bar, baz, qux, qxx) => {
 };
 ```
 
-:::
-
 Examples of **correct** code for this rule with the default `{ "max": 3 }` option:
-
-:::correct
 
 ```js
 /*eslint max-params: ["error", 3]*/
@@ -70,5 +64,3 @@ let foo = (bar, baz, qux) => {
     doSomething();
 };
 ```
-
-:::

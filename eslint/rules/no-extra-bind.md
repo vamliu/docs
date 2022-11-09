@@ -1,8 +1,8 @@
 ---
-title: no-extra-bind
-layout: doc
-rule_type: suggestion
-further_reading:
+规则名: no-extra-bind
+布局: doc
+规则类型: suggestion
+深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
 - https://www.smashingmagazine.com/2014/01/understanding-javascript-function-prototype-bind/
 ---
@@ -34,7 +34,7 @@ console.log(boundGetName());      // "ESLint"
 
 In this code, the reference to `this` has been removed but `bind()` is still used. In this case, the `bind()` is unnecessary overhead (and a performance hit) and can be safely removed.
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at avoiding the unnecessary use of `bind()` and as such will warn whenever an immediately-invoked function expression (IIFE) is using `bind()` and doesn't have an appropriate `this` value. This rule won't flag usage of `bind()` that includes function argument binding.
 
@@ -42,7 +42,7 @@ This rule is aimed at avoiding the unnecessary use of `bind()` and as such will 
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-extra-bind: "error"*/
@@ -73,8 +73,6 @@ var x = function () {
 }.bind(baz);
 ```
 
-:::
-
 Examples of **correct** code for this rule:
 
 ::: correct
@@ -91,8 +89,6 @@ var x = function (a) {
 }.bind(foo, bar);
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you are not concerned about unnecessary calls to `bind()`, you can safely disable this rule.

@@ -1,7 +1,7 @@
 ---
-title: no-const-assign
-layout: doc
-rule_type: problem
+规则名: no-const-assign
+布局: doc
+规则类型: problem
 ---
 
 
@@ -11,13 +11,13 @@ It will raise a runtime error.
 
 Under non ES2015 environment, it might be ignored merely.
 
-## Rule Details
+## 规则详解
 
 This rule is aimed to flag modifying variables that are declared using `const` keyword.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-const-assign: "error"*/
@@ -27,9 +27,7 @@ const a = 0;
 a = 1;
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint no-const-assign: "error"*/
@@ -39,9 +37,7 @@ const a = 0;
 a += 1;
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint no-const-assign: "error"*/
@@ -50,8 +46,6 @@ a += 1;
 const a = 0;
 ++a;
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -65,8 +59,6 @@ const a = 0;
 console.log(a);
 ```
 
-:::
-
 ::: correct
 
 ```js
@@ -77,8 +69,6 @@ for (const a in [1, 2, 3]) { // `a` is re-defined (not modified) on each loop st
     console.log(a);
 }
 ```
-
-:::
 
 ::: correct
 
@@ -91,8 +81,6 @@ for (const a of [1, 2, 3]) { // `a` is re-defined (not modified) on each loop st
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to be notified about modifying variables that are declared using `const` keyword, you can safely disable this rule.

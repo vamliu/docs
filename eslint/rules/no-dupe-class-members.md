@@ -1,7 +1,7 @@
 ---
-title: no-dupe-class-members
-layout: doc
-rule_type: problem
+规则名: no-dupe-class-members
+布局: doc
+规则类型: problem
 ---
 
 
@@ -18,10 +18,10 @@ class Foo {
 }
 
 var foo = new Foo();
-foo.bar(); // goodbye
+foo.bar(); // 推荐bye
 ```
 
-## Rule Details
+## 规则详解
 
 This rule is aimed to flag the use of duplicate names in class members.
 
@@ -29,7 +29,7 @@ This rule is aimed to flag the use of duplicate names in class members.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-dupe-class-members: "error"*/
@@ -59,8 +59,6 @@ class Foo {
   static bar() { }
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -95,9 +93,7 @@ class Foo {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 This rule should not be used in ES3/5 environments.
 

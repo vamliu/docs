@@ -1,10 +1,10 @@
 ---
-title: no-shadow-restricted-names
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-shadow-restricted-names
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-shadow
-further_reading:
+深入了解:
 - https://es5.github.io/#x15.1.1
 - https://es5.github.io/#C
 ---
@@ -19,11 +19,11 @@ var undefined = "foo";
 
 Then any code used within the same scope would not get the global `undefined`, but rather the local version with a very different meaning.
 
-## Rule Details
+## 规则详解
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-shadow-restricted-names: "error"*/
@@ -36,8 +36,6 @@ var undefined = 5;
 
 try {} catch(eval){}
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -53,5 +51,3 @@ function f(a, b){}
 // Exception: `undefined` may be shadowed if the variable is never assigned a value.
 var undefined;
 ```
-
-:::

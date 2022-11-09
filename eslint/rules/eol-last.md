@@ -1,7 +1,7 @@
 ---
-title: eol-last
-layout: doc
-rule_type: layout
+规则名: eol-last
+布局: doc
+规则类型: layout
 ---
 
 
@@ -10,7 +10,7 @@ Trailing newlines in non-empty files are a common UNIX idiom. Benefits of
 trailing newlines include the ability to concatenate or append to files as well
 as output files to the terminal without interfering with shell prompts.
 
-## Rule Details
+## 规则详解
 
 This rule enforces at least one newline (or absence thereof) at the end
 of non-empty files.
@@ -22,7 +22,7 @@ the end of the file. If you still want this behavior, consider enabling
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint eol-last: ["error", "always"]*/
@@ -31,8 +31,6 @@ function doSomething() {
   var foo = 2;
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -46,9 +44,7 @@ function doSomething() {
 }\n
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule has a string option:
 

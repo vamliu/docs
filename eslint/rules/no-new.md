@@ -1,7 +1,7 @@
 ---
-title: no-new
-layout: doc
-rule_type: suggestion
+规则名: no-new
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -19,21 +19,19 @@ new Person();
 
 In this case, the created object is thrown away because its reference isn't stored anywhere, and in many cases, this means that the constructor should be replaced with a function that doesn't require `new` to be used.
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at maintaining consistency and convention by disallowing constructor calls using the `new` keyword that do not assign the resulting object to a variable.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-new: "error"*/
 
 new Thing();
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -46,5 +44,3 @@ var thing = new Thing();
 
 Thing();
 ```
-
-:::

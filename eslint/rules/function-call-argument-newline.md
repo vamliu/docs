@@ -1,8 +1,8 @@
 ---
-title: function-call-argument-newline
-layout: doc
-rule_type: layout
-related_rules:
+规则名: function-call-argument-newline
+布局: doc
+规则类型: layout
+关联规则:
 - function-paren-newline
 - func-call-spacing
 - object-property-newline
@@ -13,11 +13,11 @@ related_rules:
 
 A number of style guides require or disallow line breaks between arguments of a function call.
 
-## Rule Details
+## 规则详解
 
 This rule enforces line breaks between arguments of a function call.
 
-## Options
+## 配置项
 
 This rule has a string option:
 
@@ -29,7 +29,7 @@ This rule has a string option:
 
 Examples of **incorrect** code for this rule with the default `"always"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint function-call-argument-newline: ["error", "always"]*/
@@ -45,8 +45,6 @@ baz("one", "two", (x) => {
     console.log(x);
 });
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `"always"` option:
 
@@ -85,13 +83,11 @@ baz(
 );
 ```
 
-:::
-
 ### never
 
 Examples of **incorrect** code for this rule with the `"never"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint function-call-argument-newline: ["error", "never"]*/
@@ -116,8 +112,6 @@ baz(
     }
 );
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"never"` option:
 
@@ -144,13 +138,11 @@ baz("one", "two", (x) => {
 });
 ```
 
-:::
-
 ### consistent
 
 Examples of **incorrect** code for this rule with the `"consistent"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint function-call-argument-newline: ["error", "consistent"]*/
@@ -169,8 +161,6 @@ baz("one", "two",
     (x) => { console.log(x); }
 );
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"consistent"` option:
 
@@ -220,8 +210,6 @@ baz(
 );
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to enforce line breaks between arguments, don't enable this rule.

@@ -1,8 +1,8 @@
 ---
-title: quote-props
-layout: doc
-rule_type: suggestion
-further_reading:
+规则名: quote-props
+布局: doc
+规则类型: suggestion
+深入了解:
 - https://kangax.github.io/compat-table/es5/#Reserved_words_as_property_names
 - https://mathiasbynens.be/notes/javascript-properties
 ---
@@ -39,11 +39,11 @@ var object = {
 
 This may look alright at first sight, but this code in fact throws a syntax error in ECMAScript 5 strict mode. This happens because `1e2` and `100` are coerced into strings before getting used as the property name. Both `String(1e2)` and `String(100)` happen to be equal to `"100"`, which causes the "Duplicate data property in object literal not allowed in strict mode" error. Issues like that can be tricky to debug, so some prefer to require quotes around all property names.
 
-## Rule Details
+## 规则详解
 
 This rule requires quotes around object literal property names.
 
-## Options
+## 配置项
 
 This rule has two options, a string option and an object option.
 
@@ -65,7 +65,7 @@ Object option:
 
 Examples of **incorrect** code for this rule with the default `"always"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint quote-props: ["error", "always"]*/
@@ -75,8 +75,6 @@ var object = {
     baz: 42
 };
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `"always"` option:
 
@@ -105,13 +103,11 @@ var object3 = {
 };
 ```
 
-:::
-
 ### as-needed
 
 Examples of **incorrect** code for this rule with the `"as-needed"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint quote-props: ["error", "as-needed"]*/
@@ -123,8 +119,6 @@ var object = {
     "null": 0
 };
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"as-needed"` option:
 
@@ -155,13 +149,11 @@ var object3 = {
 };
 ```
 
-:::
-
 ### consistent
 
 Examples of **incorrect** code for this rule with the `"consistent"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint quote-props: ["error", "consistent"]*/
@@ -177,8 +169,6 @@ var object2 = {
     baz: 42
 };
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"consistent"` option:
 
@@ -204,13 +194,11 @@ var object3 = {
 };
 ```
 
-:::
-
 ### consistent-as-needed
 
 Examples of **incorrect** code for this rule with the `"consistent-as-needed"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint quote-props: ["error", "consistent-as-needed"]*/
@@ -226,8 +214,6 @@ var object2 = {
     'baz': 42
 };
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"consistent-as-needed"` option:
 
@@ -248,13 +234,11 @@ var object2 = {
 };
 ```
 
-:::
-
 ### keywords
 
 Examples of additional **incorrect** code for this rule with the `"as-needed", { "keywords": true }` options:
 
-::: incorrect
+
 
 ```js
 /*eslint quote-props: ["error", "as-needed", { "keywords": true }]*/
@@ -265,11 +249,9 @@ var x = {
 };
 ```
 
-:::
-
 Examples of additional **incorrect** code for this rule with the `"consistent-as-needed", { "keywords": true }` options:
 
-::: incorrect
+
 
 ```js
 /*eslint quote-props: ["error", "consistent-as-needed", { "keywords": true }]*/
@@ -279,8 +261,6 @@ var x = {
     "bar": "foo"
 };
 ```
-
-:::
 
 ### unnecessary
 
@@ -297,13 +277,11 @@ var x = {
 };
 ```
 
-:::
-
 ### numbers
 
 Examples of additional **incorrect** code for this rule with the `"as-needed", { "numbers": true }` options:
 
-::: incorrect
+
 
 ```js
 /*eslint quote-props: ["error", "as-needed", { "numbers": true }]*/
@@ -313,8 +291,6 @@ var x = {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't care if property names are consistently wrapped in quotes or not, and you don't target legacy ES3 environments, turn this rule off.

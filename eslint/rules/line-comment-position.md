@@ -1,7 +1,7 @@
 ---
-title: line-comment-position
-layout: doc
-rule_type: layout
+规则名: line-comment-position
+布局: doc
+规则类型: layout
 ---
 
 
@@ -12,11 +12,11 @@ Line comments can be positioned above or beside code. This rule helps teams main
 var foo = "bar";  // beside comment
 ```
 
-## Rule Details
+## 规则详解
 
 This rule enforces consistent position of line comments. Block comments are not affected by this rule. By default, this rule ignores comments starting with the following words: `eslint`, `jshint`, `jslint`, `istanbul`, `global`, `exported`, `jscs`, `falls through`.
 
-## Options
+## 配置项
 
 This rule takes one argument, which can be a string or an object. The string settings are the same as those of the `position` property (explained below). The object option has the following properties:
 
@@ -29,7 +29,7 @@ The `position` option has two settings:
 
 #### position: above
 
-Examples of **correct** code for the `{ "position": "above" }` option:
+选项 `{ "position": "above" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -39,22 +39,18 @@ Examples of **correct** code for the `{ "position": "above" }` option:
 1 + 1;
 ```
 
-:::
+选项 `{ "position": "above" }` 的 **错误** 代码示例：
 
-Examples of **incorrect** code for the `{ "position": "above" }` option:
 
-::: incorrect
 
 ```js
 /*eslint line-comment-position: ["error", { "position": "above" }]*/
 1 + 1; // invalid comment
 ```
 
-:::
-
 #### position: beside
 
-Examples of **correct** code for the `{ "position": "beside" }` option:
+选项 `{ "position": "beside" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -63,11 +59,9 @@ Examples of **correct** code for the `{ "position": "beside" }` option:
 1 + 1; // valid comment
 ```
 
-:::
+选项 `{ "position": "beside" }` 的 **错误** 代码示例：
 
-Examples of **incorrect** code for the `{ "position": "beside" }` option:
 
-::: incorrect
 
 ```js
 /*eslint line-comment-position: ["error", { "position": "beside" }]*/
@@ -75,13 +69,11 @@ Examples of **incorrect** code for the `{ "position": "beside" }` option:
 1 + 1;
 ```
 
-:::
-
 ### ignorePattern
 
 By default this rule ignores comments starting with the following words: `eslint`, `jshint`, `jslint`, `istanbul`, `global`, `exported`, `jscs`, `falls through`. An alternative regular expression can be provided.
 
-Examples of **correct** code for the `ignorePattern` option:
+选项 `ignorePattern` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -90,24 +82,20 @@ Examples of **correct** code for the `ignorePattern` option:
 1 + 1; // pragma valid comment
 ```
 
-:::
+选项 `ignorePattern` 的 **错误** 代码示例：
 
-Examples of **incorrect** code for the `ignorePattern` option:
 
-::: incorrect
 
 ```js
 /*eslint line-comment-position: ["error", { "ignorePattern": "pragma" }]*/
 1 + 1; // invalid comment
 ```
 
-:::
-
 ### applyDefaultIgnorePatterns
 
 Default ignore patterns are applied even when `ignorePattern` is provided. If you want to omit default patterns, set this option to `false`.
 
-Examples of **correct** code for the `{ "applyDefaultIgnorePatterns": false }` option:
+选项 `{ "applyDefaultIgnorePatterns": false }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -116,22 +104,18 @@ Examples of **correct** code for the `{ "applyDefaultIgnorePatterns": false }` o
 1 + 1; // pragma valid comment
 ```
 
-:::
+选项 `{ "applyDefaultIgnorePatterns": false }` 的 **错误** 代码示例：
 
-Examples of **incorrect** code for the `{ "applyDefaultIgnorePatterns": false }` option:
 
-::: incorrect
 
 ```js
 /*eslint line-comment-position: ["error", { "ignorePattern": "pragma", "applyDefaultIgnorePatterns": false }]*/
 1 + 1; // falls through
 ```
 
-:::
-
 **Deprecated:** the object property `applyDefaultPatterns` is deprecated. Please use the property `applyDefaultIgnorePatterns` instead.
 
-## When Not To Use It
+## 使用建议
 
 If you aren't concerned about having different line comment styles, then you can turn off this rule.
 

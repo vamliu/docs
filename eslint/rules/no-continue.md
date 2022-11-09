@@ -1,7 +1,7 @@
 ---
-title: no-continue
-layout: doc
-rule_type: suggestion
+规则名: no-continue
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -20,13 +20,13 @@ for(i = 0; i < 10; i++) {
 }
 ```
 
-## Rule Details
+## 规则详解
 
 This rule disallows `continue` statements.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-continue: "error"*/
@@ -43,9 +43,7 @@ for(i = 0; i < 10; i++) {
 }
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint no-continue: "error"*/
@@ -61,8 +59,6 @@ labeledLoop: for(i = 0; i < 10; i++) {
     a += i;
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -80,8 +76,6 @@ for(i = 0; i < 10; i++) {
     }
 }
 ```
-
-:::
 
 ## Compatibility
 

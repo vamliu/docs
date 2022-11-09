@@ -1,14 +1,14 @@
 ---
-title: space-unary-ops
-layout: doc
-rule_type: layout
+规则名: space-unary-ops
+布局: doc
+规则类型: layout
 ---
 
 
 
 Some style guides require or disallow spaces before or after unary operators. This is mainly a stylistic issue, however, some JavaScript expressions can be written without spacing which makes it harder to read and maintain.
 
-## Rule Details
+## 规则详解
 
 This rule enforces consistency regarding the spaces after `words` unary operators and after/before `nonwords` unary operators.
 
@@ -43,7 +43,7 @@ baz = !foo;
 qux = !!baz;
 ```
 
-## Options
+## 配置项
 
 This rule has three options:
 
@@ -69,7 +69,7 @@ In this case, spacing will be disallowed after a `new` operator and required bef
 
 Examples of **incorrect** code for this rule with the default `{"words": true, "nonwords": false}` option:
 
-::: incorrect
+
 
 ```js
 /*eslint space-unary-ops: "error"*/
@@ -91,9 +91,7 @@ foo --;
 + "3";
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint space-unary-ops: "error"*/
@@ -104,9 +102,7 @@ function *foo() {
 }
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint space-unary-ops: "error"*/
@@ -115,8 +111,6 @@ async function foo() {
     await(bar);
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{"words": true, "nonwords": false}` option:
 
@@ -150,8 +144,6 @@ foo--;
 +"3";
 ```
 
-:::
-
 ::: correct
 
 ```js
@@ -163,8 +155,6 @@ function *foo() {
 }
 ```
 
-:::
-
 ::: correct
 
 ```js
@@ -174,5 +164,3 @@ async function foo() {
     await (bar);
 }
 ```
-
-:::

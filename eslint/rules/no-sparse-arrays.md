@@ -1,8 +1,8 @@
 ---
-title: no-sparse-arrays
-layout: doc
-rule_type: problem
-further_reading:
+规则名: no-sparse-arrays
+布局: doc
+规则类型: problem
+深入了解:
 - https://www.nczonline.net/blog/2007/09/09/inconsistent-array-literals/
 ---
 
@@ -24,13 +24,13 @@ In this example, the `colors` array has a `length` of 3. But did the developer i
 
 The confusion around sparse arrays defined in this manner is enough that it's recommended to avoid using them unless you are certain that they are useful in your code.
 
-## Rule Details
+## 规则详解
 
 This rule disallows sparse array literals which have "holes" where commas are not preceded by elements. It does not apply to a trailing comma following the last element.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-sparse-arrays: "error"*/
@@ -38,8 +38,6 @@ Examples of **incorrect** code for this rule:
 var items = [,];
 var colors = [ "red",, "blue" ];
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -55,8 +53,6 @@ var items = new Array(23);
 var colors = [ "red", "blue", ];
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you want to use sparse arrays, then it is safe to disable this rule.

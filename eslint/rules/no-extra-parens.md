@@ -1,12 +1,12 @@
 ---
-title: no-extra-parens
-layout: doc
-rule_type: layout
-related_rules:
+规则名: no-extra-parens
+布局: doc
+规则类型: layout
+关联规则:
 - arrow-parens
 - no-cond-assign
 - no-return-assign
-further_reading:
+深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
 ---
 
@@ -14,7 +14,7 @@ further_reading:
 
 This rule restricts the use of parentheses to only where they are necessary.
 
-## Rule Details
+## 规则详解
 
 This rule always ignores extra parentheses around the following:
 
@@ -22,7 +22,7 @@ This rule always ignores extra parentheses around the following:
 * immediately-invoked function expressions (also known as IIFEs) such as `var x = (function () {})();` and `var x = (function () {}());` to avoid conflicts with the [wrap-iife](wrap-iife) rule
 * arrow function arguments to avoid conflicts with the [arrow-parens](arrow-parens) rule
 
-## Options
+## 配置项
 
 This rule has a string option:
 
@@ -44,7 +44,7 @@ This rule has an object option for exceptions to the `"all"` option:
 
 Examples of **incorrect** code for this rule with the default `"all"` option:
 
-::: incorrect
+
 
 ```js
 /* eslint no-extra-parens: "error" */
@@ -71,8 +71,6 @@ class B {
     x = (y + z);
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `"all"` option:
 
@@ -108,8 +106,6 @@ class B {
 }
 ```
 
-:::
-
 ### conditionalAssign
 
 Examples of **correct** code for this rule with the `"all"` and `{ "conditionalAssign": false }` options:
@@ -127,8 +123,6 @@ do; while ((foo = bar()))
 
 for (;(a = b););
 ```
-
-:::
 
 ### returnAssign
 
@@ -152,8 +146,6 @@ b => (b = 1);
 b => b ? (c = d) : (c = e);
 ```
 
-:::
-
 ### nestedBinaryExpressions
 
 Examples of **correct** code for this rule with the `"all"` and `{ "nestedBinaryExpressions": false }` options:
@@ -167,8 +159,6 @@ x = a || (b && c);
 x = a + (b * c);
 x = (a * b) / c;
 ```
-
-:::
 
 ### ignoreJSX
 
@@ -186,19 +176,15 @@ const Component = (
 )
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `all` and `{ "ignoreJSX": "multi-line" }` options:
 
-::: incorrect
+
 
 ```js
 /* eslint no-extra-parens: ["error", "all", { ignoreJSX: "multi-line" }] */
 const Component = (<div />)
 const Component = (<div><p /></div>)
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `all` and `{ "ignoreJSX": "multi-line" }` options:
 
@@ -218,11 +204,9 @@ const Component = (
 )
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `all` and `{ "ignoreJSX": "single-line" }` options:
 
-::: incorrect
+
 
 ```js
 /* eslint no-extra-parens: ["error", "all", { ignoreJSX: "single-line" }] */
@@ -238,8 +222,6 @@ const Component = (
 )
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `all` and `{ "ignoreJSX": "single-line" }` options:
 
 ::: correct
@@ -249,8 +231,6 @@ Examples of **correct** code for this rule with the `all` and `{ "ignoreJSX": "s
 const Component = (<div />)
 const Component = (<div><p /></div>)
 ```
-
-:::
 
 ### enforceForArrowConditionals
 
@@ -264,8 +244,6 @@ Examples of **correct** code for this rule with the `"all"` and `{ "enforceForAr
 const b = a => 1 ? 2 : 3;
 const d = c => (1 ? 2 : 3);
 ```
-
-:::
 
 ### enforceForSequenceExpressions
 
@@ -283,8 +261,6 @@ if ((val = foo(), val < 10)) {}
 while ((val = foo(), val < 10));
 ```
 
-:::
-
 ### enforceForNewInMemberExpressions
 
 Examples of **correct** code for this rule with the `"all"` and `{ "enforceForNewInMemberExpressions": false }` options:
@@ -300,8 +276,6 @@ const quux = (new Bar())[baz];
 
 (new Bar()).doSomething();
 ```
-
-:::
 
 ### enforceForFunctionPrototypeMethods
 
@@ -321,13 +295,11 @@ const baz = (function () {}.call());
 const quux = (function () {}.apply());
 ```
 
-:::
-
 ### functions
 
 Examples of **incorrect** code for this rule with the `"functions"` option:
 
-::: incorrect
+
 
 ```js
 /* eslint no-extra-parens: ["error", "functions"] */
@@ -336,8 +308,6 @@ Examples of **incorrect** code for this rule with the `"functions"` option:
 
 var y = (function () {return 1;});
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"functions"` option:
 
@@ -362,5 +332,3 @@ a = (b * c);
 
 typeof (a);
 ```
-
-:::

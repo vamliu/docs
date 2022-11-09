@@ -1,8 +1,8 @@
 ---
-title: require-await
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: require-await
+布局: doc
+规则类型: suggestion
+关联规则:
 - require-yield
 ---
 
@@ -27,13 +27,13 @@ Asynchronous functions that don't use `await` might not need to be asynchronous 
 
 Note: this rule ignores async generator functions. This is because generators yield rather than return a value and async generators might yield all the values of another async generator without ever actually needing to use await.
 
-## Rule Details
+## 规则详解
 
 This rule warns async functions which have no `await` expression.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint require-await: "error"*/
@@ -46,8 +46,6 @@ bar(async () => {
     doSomething();
 });
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -76,9 +74,7 @@ bar(() => {
 async function noop() {}
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 Asynchronous functions are designed to work with promises such that throwing an error will cause a promise's rejection handler (such as `catch()`) to be called. For example:
 

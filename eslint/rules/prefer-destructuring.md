@@ -1,8 +1,8 @@
 ---
-title: prefer-destructuring
-layout: doc
-rule_type: suggestion
-further_reading:
+规则名: prefer-destructuring
+布局: doc
+规则类型: suggestion
+深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 - https://2ality.com/2015/01/es6-destructuring.html
 ---
@@ -11,9 +11,9 @@ further_reading:
 
 With JavaScript ES6, a new syntax was added for creating variables from an array index or object property, called [destructuring](#further-reading).  This rule enforces usage of destructuring instead of accessing a property through a member expression.
 
-## Rule Details
+## 规则详解
 
-### Options
+### 配置项
 
 This rule takes two sets of configuration objects. The first object parameter determines what types of destructuring the rule applies to.
 
@@ -34,7 +34,7 @@ The `--fix` option on the command line fixes only problems reported in variable 
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```javascript
 // With `array` enabled
@@ -44,8 +44,6 @@ var foo = array[0];
 var foo = object.foo;
 var foo = object['foo'];
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -65,17 +63,13 @@ let foo;
 ({ foo } = object);
 ```
 
-:::
-
 Examples of **incorrect** code when `enforceForRenamedProperties` is enabled:
 
-::: incorrect
+
 
 ```javascript
 var foo = object.bar;
 ```
-
-:::
 
 Examples of **correct** code when `enforceForRenamedProperties` is enabled:
 
@@ -84,8 +78,6 @@ Examples of **correct** code when `enforceForRenamedProperties` is enabled:
 ```javascript
 var { bar: foo } = object;
 ```
-
-:::
 
 Examples of additional **correct** code when `enforceForRenamedProperties` is enabled:
 
@@ -99,8 +91,6 @@ class C {
     }
 }
 ```
-
-:::
 
 An example configuration, with the defaults `array` and `object` filled in, looks like this:
 
@@ -183,8 +173,6 @@ Examples of **correct** code when object destructuring in `VariableDeclarator` i
 var {bar: foo} = object;
 ```
 
-:::
-
 Examples of **correct** code when array destructuring in `AssignmentExpression` is enforced:
 
 ::: correct
@@ -194,9 +182,7 @@ Examples of **correct** code when array destructuring in `AssignmentExpression` 
 [bar] = array;
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you want to be able to access array indices or object properties directly, you can either configure the rule to your tastes or disable the rule entirely.
 

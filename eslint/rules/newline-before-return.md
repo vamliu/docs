@@ -1,8 +1,8 @@
 ---
-title: newline-before-return
-layout: doc
-rule_type: layout
-related_rules:
+规则名: newline-before-return
+布局: doc
+规则类型: layout
+关联规则:
 - newline-after-var
 ---
 
@@ -39,13 +39,13 @@ function foo(bar) {
 }
 ```
 
-## Rule Details
+## 规则详解
 
 This rule requires an empty line before `return` statements to increase code clarity, except when the `return` is alone inside a statement group (such as an if statement). In the latter case, the `return` statement does not need to be delineated by virtue of it being alone. Comments are ignored and do not count as empty lines.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint newline-before-return: "error"*/
@@ -66,8 +66,6 @@ function foo(bar) {
     return bar;
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -121,8 +119,6 @@ function foo() {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 You can safely disable this rule if you do not have any strict conventions about whitespace before `return` statements.

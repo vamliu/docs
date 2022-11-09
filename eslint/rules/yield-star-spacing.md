@@ -1,18 +1,18 @@
 ---
-title: yield-star-spacing
-layout: doc
-rule_type: layout
-further_reading:
+规则名: yield-star-spacing
+布局: doc
+规则类型: layout
+深入了解:
 - https://leanpub.com/understandinges6/read/#leanpub-auto-generators
 ---
 
 
 
-## Rule Details
+## 规则详解
 
 This rule enforces spacing around the `*` in `yield*` expressions.
 
-## Options
+## 配置项
 
 The rule takes one option, an object, which has two keys `before` and `after` having boolean values `true` or `false`.
 
@@ -56,8 +56,6 @@ function* generator() {
 }
 ```
 
-:::
-
 ### before
 
 Examples of **correct** code for this rule with the `"before"` option:
@@ -72,8 +70,6 @@ function *generator() {
   yield *other();
 }
 ```
-
-:::
 
 ### both
 
@@ -90,8 +86,6 @@ function * generator() {
 }
 ```
 
-:::
-
 ### neither
 
 Examples of **correct** code for this rule with the `"neither"` option:
@@ -107,8 +101,6 @@ function*generator() {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If your project will not be using generators or you are not concerned with spacing consistency, you do not need this rule.

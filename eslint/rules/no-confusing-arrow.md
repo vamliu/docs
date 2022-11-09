@@ -1,8 +1,8 @@
 ---
-title: no-confusing-arrow
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-confusing-arrow
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-constant-condition
 - arrow-parens
 ---
@@ -24,11 +24,11 @@ var x = function (a) {
 var x = a <= 1 ? 2 : 3;
 ```
 
-## Rule Details
+## 规则详解
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-confusing-arrow: "error"*/
@@ -37,8 +37,6 @@ Examples of **incorrect** code for this rule:
 var x = a => 1 ? 2 : 3;
 var x = (a) => 1 ? 2 : 3;
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -55,9 +53,7 @@ var x = (a) => {
 var x = a => { return 1 ? 2 : 3; };
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule accepts two options argument with the following defaults:
 
@@ -79,7 +75,7 @@ This rule accepts two options argument with the following defaults:
 
 Examples of **incorrect** code for this rule with the `{"allowParens": false}` option:
 
-::: incorrect
+
 
 ```js
 /*eslint no-confusing-arrow: ["error", {"allowParens": false}]*/
@@ -87,8 +83,6 @@ Examples of **incorrect** code for this rule with the `{"allowParens": false}` o
 var x = a => (1 ? 2 : 3);
 var x = (a) => (1 ? 2 : 3);
 ```
-
-:::
 
 `onlyOneSimpleParam` is a boolean setting that can be `true` or `false`(default):
 
@@ -109,5 +103,3 @@ Examples of **correct** code for this rule with the `{"onlyOneSimpleParam": true
 ([a]) => 1 ? 2 : 3;
 (...a) => 1 ? 2 : 3;
 ```
-
-:::

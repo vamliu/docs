@@ -1,7 +1,7 @@
 ---
-title: no-plusplus
-layout: doc
-rule_type: suggestion
+规则名: no-plusplus
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -26,13 +26,13 @@ j
 // i = 10, j = 21
 ```
 
-## Rule Details
+## 规则详解
 
 This rule disallows the unary operators `++` and `--`.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-plusplus: "error"*/
@@ -47,8 +47,6 @@ for (i = 0; i < l; i++) {
     return;
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -68,9 +66,7 @@ for (i = 0; i < l; i += 1) {
 }
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule has an object option.
 
@@ -98,11 +94,9 @@ for (i = 0, j = l; i < l; i++, j--) {
 }
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `{ "allowForLoopAfterthoughts": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint no-plusplus: ["error", { "allowForLoopAfterthoughts": true }]*/
@@ -117,5 +111,3 @@ for (i = l; i--;) {
 
 for (i = 0; i < l;) i++;
 ```
-
-:::

@@ -1,7 +1,7 @@
 ---
-title: no-unmodified-loop-condition
-layout: doc
-rule_type: problem
+规则名: no-unmodified-loop-condition
+布局: doc
+规则类型: problem
 ---
 
 
@@ -21,7 +21,7 @@ while (node) {
 }
 ```
 
-## Rule Details
+## 规则详解
 
 This rule finds references which are inside of loop conditions, then checks the
 variables of those references are modified in the loop.
@@ -33,7 +33,7 @@ If a reference is inside of a dynamic expression (e.g. `CallExpression`,
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-unmodified-loop-condition: "error"*/
@@ -53,8 +53,6 @@ while (node !== root) {
     doSomething(node);
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -96,8 +94,6 @@ while (check(obj)) {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to notified about references inside of loop conditions, then it's safe to disable this rule.

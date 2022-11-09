@@ -1,7 +1,7 @@
 ---
-title: space-infix-ops
-layout: doc
-rule_type: layout
+规则名: space-infix-ops
+布局: doc
+规则类型: layout
 ---
 
 
@@ -20,11 +20,11 @@ var sum = i+++2;
 
 While this is valid JavaScript syntax, it is hard to determine what the author intended.
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at ensuring there are spaces around infix operators.
 
-## Options
+## 配置项
 
 This rule accepts a single options argument with the following defaults:
 
@@ -42,7 +42,7 @@ var foo = bar|0; // `foo` is forced to be signed 32 bit integer
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint space-infix-ops: "error"*/
@@ -62,8 +62,6 @@ var {a=0}=bar;
 
 function foo(a=0) { }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -86,8 +84,6 @@ var {a = 0} = bar;
 function foo(a = 0) { }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 You can turn this rule off if you are not concerned with the consistency of spacing around infix operators.

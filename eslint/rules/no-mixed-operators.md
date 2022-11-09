@@ -1,8 +1,8 @@
 ---
-title: no-mixed-operators
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-mixed-operators
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-extra-parens
 ---
 
@@ -30,7 +30,7 @@ will generate
 1:18  Unexpected mix of '&&' and '||'. (no-mixed-operators)
 ```
 
-## Rule Details
+## 规则详解
 
 This rule checks `BinaryExpression`, `LogicalExpression` and `ConditionalExpression`.
 
@@ -39,7 +39,7 @@ If you use both this and [no-extra-parens](no-extra-parens) rule together, you n
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-mixed-operators: "error"*/
@@ -47,8 +47,6 @@ Examples of **incorrect** code for this rule:
 var foo = a && b < 0 || c > 0 || d + 1 === 0;
 var foo = a + b * c;
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -65,9 +63,7 @@ var foo = a + (b * c);
 var foo = (a + b) * c;
 ```
 
-:::
-
-## Options
+## 配置项
 
 ```json
 {
@@ -112,7 +108,7 @@ In this case, this rule checks if bitwise operators and logical operators are mi
 
 Examples of **incorrect** code for this rule with `{"groups": [["&", "|", "^", "~", "<<", ">>", ">>>"], ["&&", "||"]]}` option:
 
-::: incorrect
+
 
 ```js
 /*eslint no-mixed-operators: ["error", {"groups": [["&", "|", "^", "~", "<<", ">>", ">>>"], ["&&", "||"]]}]*/
@@ -121,9 +117,7 @@ var foo = a && b < 0 || c > 0 || d + 1 === 0;
 var foo = a & b | c;
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint no-mixed-operators: ["error", {"groups": [["&&", "||", "?:"]]}]*/
@@ -134,8 +128,6 @@ var bar = a ? b || c : d;
 
 var baz = a ? b : c || d;
 ```
-
-:::
 
 Examples of **correct** code for this rule with `{"groups": [["&", "|", "^", "~", "<<", ">>", ">>>"], ["&&", "||"]]}` option:
 
@@ -155,8 +147,6 @@ var foo = a + (b * c);
 var foo = (a + b) * c;
 ```
 
-:::
-
 ::: correct
 
 ```js
@@ -171,8 +161,6 @@ var baz = a ? b : (c || d);
 var baz = (a ? b : c) || d;
 ```
 
-:::
-
 ### allowSamePrecedence
 
 Examples of **correct** code for this rule with `{"allowSamePrecedence": true}` option:
@@ -186,11 +174,9 @@ Examples of **correct** code for this rule with `{"allowSamePrecedence": true}` 
 var foo = a + b - c;
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with `{"allowSamePrecedence": false}` option:
 
-::: incorrect
+
 
 ```js
 /*eslint no-mixed-operators: ["error", {"allowSamePrecedence": false}]*/
@@ -198,8 +184,6 @@ Examples of **incorrect** code for this rule with `{"allowSamePrecedence": false
 // + and - have the same precedence.
 var foo = a + b - c;
 ```
-
-:::
 
 Examples of **correct** code for this rule with `{"allowSamePrecedence": false}` option:
 
@@ -212,8 +196,6 @@ Examples of **correct** code for this rule with `{"allowSamePrecedence": false}`
 var foo = (a + b) - c;
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to be notified about mixed operators, then it's safe to disable this rule.

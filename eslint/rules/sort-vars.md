@@ -1,8 +1,8 @@
 ---
-title: sort-vars
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: sort-vars
+布局: doc
+规则类型: suggestion
+关联规则:
 - sort-keys
 - sort-imports
 ---
@@ -11,14 +11,14 @@ related_rules:
 
 When declaring multiple variables within the same block, some developers prefer to sort variable names alphabetically to be able to find necessary variable easier at the later time. Others feel that it adds complexity and becomes burden to maintain.
 
-## Rule Details
+## 规则详解
 
 This rule checks all variable declaration blocks and verifies that all variables are sorted alphabetically.
 The default configuration of the rule is case-sensitive.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint sort-vars: "error"*/
@@ -29,8 +29,6 @@ var a, B, c;
 
 var a, A;
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -49,8 +47,6 @@ var A, a;
 var B, a, c;
 ```
 
-:::
-
 Alphabetical list is maintained starting from the first variable and excluding any that are considered problems. So the following code will produce two problems:
 
 ```js
@@ -67,7 +63,7 @@ But this one, will only produce one:
 var c, d, a, e;
 ```
 
-## Options
+## 配置项
 
 This rule has an object option:
 
@@ -87,8 +83,6 @@ var a, A;
 var a, B, c;
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 This rule is a formatting preference and not following it won't negatively affect the quality of your code. If you alphabetizing variables isn't a part of your coding standards, then you can leave this rule off.

@@ -1,8 +1,8 @@
 ---
-title: max-depth
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: max-depth
+布局: doc
+规则类型: suggestion
+关联规则:
 - complexity
 - max-len
 - max-lines
@@ -15,11 +15,11 @@ related_rules:
 
 Many developers consider code difficult to read if blocks are nested beyond a certain depth.
 
-## Rule Details
+## 规则详解
 
 This rule enforces a maximum depth that blocks can be nested to reduce code complexity.
 
-## Options
+## 配置项
 
 This rule has a number or object option:
 
@@ -31,7 +31,7 @@ This rule has a number or object option:
 
 Examples of **incorrect** code for this rule with the default `{ "max": 4 }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint max-depth: ["error", 4]*/
@@ -49,8 +49,6 @@ function foo() {
     }
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `{ "max": 4 }` option:
 
@@ -71,13 +69,11 @@ function foo() {
 }
 ```
 
-:::
-
 Note that class static blocks do not count as nested blocks, and that the depth in them is calculated separately from the enclosing context.
 
 Examples of **incorrect** code for this rule with `{ "max": 2 }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint max-depth: ["error", 2]*/
@@ -97,8 +93,6 @@ function foo() {
     }
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with `{ "max": 2 }` option:
 
@@ -120,5 +114,3 @@ function foo() {
     }
 }
 ```
-
-:::

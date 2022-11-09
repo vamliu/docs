@@ -1,7 +1,7 @@
 ---
-title: consistent-return
-layout: doc
-rule_type: suggestion
+规则名: consistent-return
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -30,13 +30,13 @@ function doSomething(condition) {
 }
 ```
 
-## Rule Details
+## 规则详解
 
 This rule requires `return` statements to either always or never specify values. This rule ignores function definitions where the name begins with an uppercase letter, because constructors (when invoked with the `new` operator) return the instantiated object implicitly if they do not return another object explicitly.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint consistent-return: "error"*/
@@ -55,8 +55,6 @@ function doSomething(condition) {
     }
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -82,9 +80,7 @@ function Foo() {
 }
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule has an object option:
 
@@ -95,7 +91,7 @@ This rule has an object option:
 
 Examples of **incorrect** code for this rule with the default `{ "treatUndefinedAsUnspecified": false }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint consistent-return: ["error", { "treatUndefinedAsUnspecified": false }]*/
@@ -115,11 +111,9 @@ function bar(condition) {
 }
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `{ "treatUndefinedAsUnspecified": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint consistent-return: ["error", { "treatUndefinedAsUnspecified": true }]*/
@@ -138,8 +132,6 @@ function bar(condition) {
     return true;
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "treatUndefinedAsUnspecified": true }` option:
 
@@ -163,8 +155,6 @@ function bar(condition) {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you want to allow functions to have different `return` behavior depending on code branching, then it is safe to disable this rule.

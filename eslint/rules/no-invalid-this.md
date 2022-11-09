@@ -1,13 +1,13 @@
 ---
-title: no-invalid-this
-layout: doc
-rule_type: suggestion
+规则名: no-invalid-this
+布局: doc
+规则类型: suggestion
 ---
 
 
 Under the strict mode, `this` keywords outside of classes or class-like objects might be `undefined` and raise a `TypeError`.
 
-## Rule Details
+## 规则详解
 
 This rule aims to flag usage of `this` keywords in contexts where the value of `this` is `undefined`.
 
@@ -48,7 +48,7 @@ With `"parserOptions": { "sourceType": "module" }` in the ESLint configuration, 
 
 Examples of **incorrect** code for this rule in strict mode:
 
-::: incorrect
+
 
 ```js
 /*eslint no-invalid-this: "error"*/
@@ -91,8 +91,6 @@ foo.forEach(function() {
     baz(() => this);
 });
 ```
-
-:::
 
 Examples of **correct** code for this rule in strict mode:
 
@@ -226,9 +224,7 @@ function foo() {
 }
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule has an object option, with one option:
 
@@ -242,7 +238,7 @@ Set `"capIsConstructor"` to `false` if you want those functions to be treated as
 
 Examples of **incorrect** code for this rule with `"capIsConstructor"` option set to `false`:
 
-::: incorrect
+
 
 ```js
 /*eslint no-invalid-this: ["error", { "capIsConstructor": false }]*/
@@ -266,8 +262,6 @@ Baz = function() {
 };
 ```
 
-:::
-
 Examples of **correct** code for this rule with `"capIsConstructor"` option set to `false`:
 
 ::: correct
@@ -283,8 +277,6 @@ obj.Foo = function Foo() {
 };
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to be notified about usage of `this` keyword outside of classes or class-like objects, you can safely disable this rule.

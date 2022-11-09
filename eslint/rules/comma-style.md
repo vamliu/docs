@@ -1,10 +1,10 @@
 ---
-title: comma-style
-layout: doc
-rule_type: layout
-related_rules:
+规则名: comma-style
+布局: doc
+规则类型: layout
+关联规则:
 - operator-linebreak
-further_reading:
+深入了解:
 - https://gist.github.com/isaacs/357981
 ---
 
@@ -17,7 +17,7 @@ The Comma Style rule enforces styles for comma-separated lists. There are two co
 
 One of the justifications for using Comma First style is that it can help track missing and trailing commas. These are problematic because missing commas in variable declarations can lead to the leakage of global variables and trailing commas can lead to errors in older versions of IE.
 
-## Rule Details
+## 规则详解
 
 This rule enforce consistent comma style in array literals, object literals, and variable declarations.
 
@@ -26,7 +26,7 @@ This rule does not apply in either of the following cases:
 * comma preceded and followed by linebreak (lone comma)
 * single-line array literals, object literals, and variable declarations
 
-## Options
+## 配置项
 
 This rule has a string option:
 
@@ -55,8 +55,6 @@ A way to determine the node types as defined by [ESTree](https://github.com/estr
 
 Examples of **incorrect** code for this rule with the default `"last"` option:
 
-:::incorrect
-
 ```js
 /*eslint comma-style: ["error", "last"]*/
 
@@ -78,11 +76,7 @@ function bar() {
 }
 ```
 
-:::
-
 Examples of **correct** code for this rule with the default `"last"` option:
-
-:::correct
 
 ```js
 /*eslint comma-style: ["error", "last"]*/
@@ -103,13 +97,9 @@ function bar() {
 }
 ```
 
-:::
-
 ### first
 
 Examples of **incorrect** code for this rule with the `"first"` option:
-
-:::incorrect
 
 ```js
 /*eslint comma-style: ["error", "first"]*/
@@ -128,11 +118,7 @@ function bar() {
 }
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `"first"` option:
-
-:::correct
 
 ```js
 /*eslint comma-style: ["error", "first"]*/
@@ -153,15 +139,11 @@ function bar() {
 }
 ```
 
-:::
-
 ### exceptions
 
 An example use case is to enforce comma style *only* in var statements.
 
 Examples of **incorrect** code for this rule with sample `"first", { "exceptions": { … } }` options:
-
-:::incorrect
 
 ```js
 /*eslint comma-style: ["error", "first", { "exceptions": { "ArrayExpression": true, "ObjectExpression": true } }]*/
@@ -170,11 +152,7 @@ var o = {},
     a = [];
 ```
 
-:::
-
 Examples of **correct** code for this rule with sample `"first", { "exceptions": { … } }` options:
-
-:::correct
 
 ```js
 /*eslint comma-style: ["error", "first", { "exceptions": { "ArrayExpression": true, "ObjectExpression": true } }]*/
@@ -185,8 +163,6 @@ var o = {fst:1,
   , a = [];
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 This rule can safely be turned off if your project does not care about enforcing a consistent comma style.

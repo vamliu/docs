@@ -1,7 +1,7 @@
 ---
-title: template-curly-spacing
-layout: doc
-rule_type: layout
+规则名: template-curly-spacing
+布局: doc
+规则类型: layout
 ---
 
 
@@ -14,11 +14,11 @@ This rule can force usage of spacing _within_ the curly brace pair according to 
 let hello = `hello, ${people.name}!`;
 ```
 
-## Rule Details
+## 规则详解
 
 This rule aims to maintain consistency around the spacing inside of template literals.
 
-## Options
+## 配置项
 
 ```json
 {
@@ -37,7 +37,7 @@ This rule has one option which has either `"never"` or `"always"` as value.
 
 Examples of **incorrect** code for this rule with the default `"never"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint template-curly-spacing: "error"*/
@@ -47,8 +47,6 @@ Examples of **incorrect** code for this rule with the default `"never"` option:
 
 `hello, ${ people.name }!`;
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `"never"` option:
 
@@ -64,13 +62,11 @@ Examples of **correct** code for this rule with the default `"never"` option:
 }!`;
 ```
 
-:::
-
 ### always
 
 Examples of **incorrect** code for this rule with the `"always"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint template-curly-spacing: ["error", "always"]*/
@@ -80,8 +76,6 @@ Examples of **incorrect** code for this rule with the `"always"` option:
 
 `hello, ${people.name}!`;
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"always"` option:
 
@@ -97,8 +91,6 @@ Examples of **correct** code for this rule with the `"always"` option:
 }!`;
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to be notified about usage of spacing inside of template strings, then it's safe to disable this rule.

@@ -1,10 +1,10 @@
 ---
-title: guard-for-in
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: guard-for-in
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-prototype-builtins
-further_reading:
+深入了解:
 - https://javascriptweblog.wordpress.com/2011/01/04/exploring-javascript-for-in-loops/
 - https://2ality.com/2012/01/objects-as-maps.html
 ---
@@ -20,13 +20,13 @@ for (key in foo) {
 
 Note that simply checking `foo.hasOwnProperty(key)` is likely to cause an error in some cases; see [no-prototype-builtins](no-prototype-builtins).
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at preventing unexpected behavior that could arise from using a `for in` loop without filtering the results in the loop. As such, it will warn when `for in` loops do not filter their results with an `if` statement.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint guard-for-in: "error"*/
@@ -35,8 +35,6 @@ for (key in foo) {
     doSomething(key);
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -57,5 +55,3 @@ for (key in foo) {
     }
 }
 ```
-
-:::

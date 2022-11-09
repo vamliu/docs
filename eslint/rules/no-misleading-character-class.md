@@ -1,7 +1,7 @@
 ---
-title: no-misleading-character-class
-layout: doc
-rule_type: problem
+规则名: no-misleading-character-class
+布局: doc
+规则类型: problem
 ---
 
 
@@ -50,13 +50,13 @@ The combining characters are characters which belong to one of `Mc`, `Me`, and `
 /^[👍]$/u.test("👍") //→ true
 ```
 
-## Rule Details
+## 规则详解
 
 This rule reports the regular expressions which include multiple code point characters in character class syntax.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-misleading-character-class: error */
@@ -69,8 +69,6 @@ Examples of **incorrect** code for this rule:
 /^[👍]$/
 ```
 
-:::
-
 Examples of **correct** code for this rule:
 
 ::: correct
@@ -82,8 +80,6 @@ Examples of **correct** code for this rule:
 /^[👍]$/u
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 You can turn this rule off if you don't want to check RegExp character class syntax for multiple code point characters.

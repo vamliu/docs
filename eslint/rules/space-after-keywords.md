@@ -1,6 +1,6 @@
 ---
-title: space-after-keywords
-layout: doc
+规则名: space-after-keywords
+布局: doc
 
 ---
 
@@ -26,7 +26,7 @@ if(condition) {
 }
 ```
 
-## Rule Details
+## 规则详解
 
 This rule will enforce consistency of spacing after the keywords `if`, `else`, `for`, `while`, `do`, `switch`, `try`, `catch`, `finally`, and `with`.
 
@@ -35,7 +35,7 @@ then there should be no spaces following. The default is `"always"`.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint space-after-keywords: "error"*/
@@ -47,17 +47,13 @@ if (a) {} else{}
 do{} while (a);
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint space-after-keywords: ["error", "never"]*/
 
 if (a) {}
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -71,8 +67,6 @@ if (a) {}
 if (a) {} else {}
 ```
 
-:::
-
 ::: correct
 
 ```js
@@ -80,5 +74,3 @@ if (a) {} else {}
 
 if(a) {}
 ```
-
-:::

@@ -1,8 +1,8 @@
 ---
-title: id-length
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: id-length
+布局: doc
+规则类型: suggestion
+关联规则:
 - max-len
 - new-cap
 - func-names
@@ -16,17 +16,17 @@ Very short identifier names like `e`, `x`, `_t` or very long ones like `hashGene
 var x = 5; // too short; difficult to understand its purpose without context
 ```
 
-## Rule Details
+## 规则详解
 
 This rule enforces a minimum and/or maximum identifier length convention.
 
 This rule counts [graphemes](https://unicode.org/reports/tr29/#Default_Grapheme_Cluster_Table) instead of using [`String length`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length).
 
-## Options
+## 配置项
 
 Examples of **incorrect** code for this rule with the default options:
 
-::: incorrect
+
 
 ```js
 /*eslint id-length: "error"*/     // default is minimum 2-chars ({ "min": 2 })
@@ -56,8 +56,6 @@ var { x } = {};
 var { prop: a} = {};
 ({ prop: obj.x } = {});
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default options:
 
@@ -99,8 +97,6 @@ var data = { "x": 1 };  // excused because of quotes
 data["y"] = 3;  // excused because of calculated property access
 ```
 
-:::
-
 This rule has an object option:
 
 * `"min"` (default: 2) enforces a minimum identifier length
@@ -114,7 +110,7 @@ This rule has an object option:
 
 Examples of **incorrect** code for this rule with the `{ "min": 4 }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint id-length: ["error", { "min": 4 }]*/
@@ -139,8 +135,6 @@ var [x] = arr;
 var { prop: [x]} = {};
 ({ prop: obj.x } = {});
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "min": 4 }` option:
 
@@ -174,13 +168,11 @@ var data = { "x": 1 };  // excused because of quotes
 data["y"] = 3;  // excused because of calculated property access
 ```
 
-:::
-
 ### max
 
 Examples of **incorrect** code for this rule with the `{ "max": 10 }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint id-length: ["error", { "max": 10 }]*/
@@ -198,8 +190,6 @@ try {
 (reallyLongArgName) => { return !reallyLongArgName; };
 var [reallyLongFirstElementName] = arr;
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "max": 10 }` option:
 
@@ -222,8 +212,6 @@ try {
 var [first] = arr;
 ```
 
-:::
-
 ### properties
 
 Examples of **correct** code for this rule with the `{ "properties": "never" }` option:
@@ -238,8 +226,6 @@ var myObj = { a: 1 };
 ({ a: obj.x.y.z } = {});
 ({ prop: obj.i } = {});
 ```
-
-:::
 
 ### exceptions
 
@@ -266,8 +252,6 @@ const { x } = foo;
 const { a: x } = foo;
 ```
 
-:::
-
 ### exceptionPatterns
 
 Examples of additional **correct** code for this rule with the `{ "exceptionPatterns": ["E|S", "[x-z]"] }` option:
@@ -292,5 +276,3 @@ var [E] = arr;
 const { y } = foo;
 const { a: z } = foo;
 ```
-
-:::

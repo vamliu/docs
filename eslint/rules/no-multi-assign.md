@@ -1,8 +1,8 @@
 ---
-title: no-multi-assign
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-multi-assign
+布局: doc
+规则类型: suggestion
+关联规则:
 - max-statements-per-line
 ---
 
@@ -17,13 +17,13 @@ Chaining the assignment of variables can lead to unexpected results and be diffi
 console.log(bar);        // This will output 1 since `bar` is not scoped.
 ```
 
-## Rule Details
+## 规则详解
 
 This rule disallows using multiple assignments within a single statement.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-multi-assign: "error"*/
@@ -42,8 +42,6 @@ class Foo {
 
 a = b = "quux";
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -71,9 +69,7 @@ a = "quux";
 b = "quux";
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule has an object option:
 
@@ -81,7 +77,7 @@ This rule has an object option:
 
 ### ignoreNonDeclaration
 
-Examples of **correct** code for the `{ "ignoreNonDeclaration": true }` option:
+选项 `{ "ignoreNonDeclaration": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -97,11 +93,9 @@ const y = {};
 x.one = y.one = 1;
 ```
 
-:::
+选项 `{ "ignoreNonDeclaration": true }` 的 **错误** 代码示例：
 
-Examples of **incorrect** code for the `{ "ignoreNonDeclaration": true }` option:
 
-::: incorrect
 
 ```js
 /*eslint no-multi-assign: ["error", { "ignoreNonDeclaration": true }]*/
@@ -114,5 +108,3 @@ class Foo {
     a = b = 10;
 }
 ```
-
-:::

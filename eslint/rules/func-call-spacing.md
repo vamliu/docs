@@ -1,8 +1,8 @@
 ---
-title: func-call-spacing
-layout: doc
-rule_type: layout
-related_rules:
+规则名: func-call-spacing
+布局: doc
+规则类型: layout
+关联规则:
 - no-spaced-func
 ---
 
@@ -21,11 +21,11 @@ new Date();
 new Date ();
 ```
 
-## Rule Details
+## 规则详解
 
 This rule requires or disallows spaces between the function name and the opening parenthesis that calls it.
 
-## Options
+## 配置项
 
 This rule has a string option:
 
@@ -38,7 +38,7 @@ Further, in `"always"` mode, a second object option is available that contains a
 
 Examples of **incorrect** code for this rule with the default `"never"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint func-call-spacing: ["error", "never"]*/
@@ -48,8 +48,6 @@ fn ();
 fn
 ();
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `"never"` option:
 
@@ -61,13 +59,11 @@ Examples of **correct** code for this rule with the default `"never"` option:
 fn();
 ```
 
-:::
-
 ### always
 
 Examples of **incorrect** code for this rule with the `"always"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint func-call-spacing: ["error", "always"]*/
@@ -77,8 +73,6 @@ fn();
 fn
 ();
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"always"` option:
 
@@ -90,23 +84,19 @@ Examples of **correct** code for this rule with the `"always"` option:
 fn ();
 ```
 
-:::
-
 #### allowNewlines
 
 By default, `"always"` does not allow newlines. To permit newlines when in `"always"` mode, set the `allowNewlines` option to `true`. Newlines are never required.
 
 Examples of **incorrect** code for this rule with `allowNewlines` option enabled:
 
-::: incorrect
+
 
 ```js
 /*eslint func-call-spacing: ["error", "always", { "allowNewlines": true }]*/
 
 fn();
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `allowNewlines` option enabled:
 
@@ -121,9 +111,7 @@ fn
 ();
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 This rule can safely be turned off if your project does not care about enforcing a consistent style for spacing within function calls.
 

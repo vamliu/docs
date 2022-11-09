@@ -1,7 +1,7 @@
 ---
-title: no-implicit-coercion
-layout: doc
-rule_type: suggestion
+规则名: no-implicit-coercion
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -31,11 +31,11 @@ var s = String(foo);
 foo = String(foo);
 ```
 
-## Rule Details
+## 规则详解
 
 This rule is aimed to flag shorter notations for the type conversion, then suggest a more self-explanatory notation.
 
-## Options
+## 配置项
 
 This rule has three main options and one override option to allow some coercions as required.
 
@@ -49,9 +49,9 @@ Note that operator `+` in `allow` list would allow `+foo` (number coercion) as w
 
 ### boolean
 
-Examples of **incorrect** code for the default `{ "boolean": true }` option:
+选项 default `{ "boolean": true }` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint no-implicit-coercion: "error"*/
@@ -61,9 +61,7 @@ var b = ~foo.indexOf(".");
 // bitwise not is incorrect only with `indexOf`/`lastIndexOf` method calling.
 ```
 
-:::
-
-Examples of **correct** code for the default `{ "boolean": true }` option:
+选项 default `{ "boolean": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -76,13 +74,11 @@ var b = foo.indexOf(".") !== -1;
 var n = ~foo; // This is a just bitwise not.
 ```
 
-:::
-
 ### number
 
-Examples of **incorrect** code for the default `{ "number": true }` option:
+选项 default `{ "number": true }` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint no-implicit-coercion: "error"*/
@@ -91,9 +87,7 @@ var n = +foo;
 var n = 1 * foo;
 ```
 
-:::
-
-Examples of **correct** code for the default `{ "number": true }` option:
+选项 default `{ "number": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -105,13 +99,11 @@ var n = parseFloat(foo);
 var n = parseInt(foo, 10);
 ```
 
-:::
-
 ### string
 
-Examples of **incorrect** code for the default `{ "string": true }` option:
+选项 default `{ "string": true }` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint no-implicit-coercion: "error"*/
@@ -122,9 +114,7 @@ foo += "";
 foo += ``;
 ```
 
-:::
-
-Examples of **correct** code for the default `{ "string": true }` option:
+选项 default `{ "string": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -135,15 +125,13 @@ var s = String(foo);
 foo = String(foo);
 ```
 
-:::
-
 ### disallowTemplateShorthand
 
 This option is **not** affected by the `string` option.
 
-Examples of **incorrect** code for the `{ "disallowTemplateShorthand": true }` option:
+选项 `{ "disallowTemplateShorthand": true }` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint no-implicit-coercion: ["error", { "disallowTemplateShorthand": true }]*/
@@ -151,9 +139,7 @@ Examples of **incorrect** code for the `{ "disallowTemplateShorthand": true }` o
 var s = `${foo}`;
 ```
 
-:::
-
-Examples of **correct** code for the `{ "disallowTemplateShorthand": true }` option:
+选项 `{ "disallowTemplateShorthand": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -171,9 +157,7 @@ var s = `${foo}${bar}`;
 var s = tag`${foo}`;
 ```
 
-:::
-
-Examples of **correct** code for the default `{ "disallowTemplateShorthand": false }` option:
+选项 default `{ "disallowTemplateShorthand": false }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -183,13 +167,11 @@ Examples of **correct** code for the default `{ "disallowTemplateShorthand": fal
 var s = `${foo}`;
 ```
 
-:::
-
 ### allow
 
 Using `allow` list, we can override and allow specific operators.
 
-Examples of **correct** code for the sample `{ "allow": ["!!", "~"] }` option:
+选项 sample `{ "allow": ["!!", "~"] }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -200,8 +182,6 @@ var b = !!foo;
 var b = ~foo.indexOf(".");
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to be notified about shorter notations for the type conversion, you can safely disable this rule.

@@ -1,10 +1,10 @@
 ---
-title: no-constant-binary-expression
-layout: doc
-rule_type: problem
-related_rules:
+规则名: no-constant-binary-expression
+布局: doc
+规则类型: problem
+关联规则:
 - no-constant-condition
-further_reading:
+深入了解:
 - https://eslint.org/blog/2022/07/interesting-bugs-caught-by-no-constant-binary-expression/
 ---
 
@@ -30,7 +30,7 @@ const isEmpty = x === [];
 // However, this will always result in `isEmpty` being `false`.
 ```
 
-## Rule Details
+## 规则详解
 
 This rule identifies `==` and `===` comparisons which, based on the semantics of the JavaScript language, will always evaluate to `true` or `false`.
 
@@ -38,7 +38,7 @@ It also identifies `||`, `&&` and `??` logical expressions which will either alw
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-constant-binary-expression: "error"*/
@@ -55,8 +55,6 @@ const objIsEmpty = someObj === {};
 
 const arrIsEmpty = someArr === [];
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -77,5 +75,3 @@ const objIsEmpty = Object.keys(someObj).length === 0;
 
 const arrIsEmpty = someArr.length === 0;
 ```
-
-:::

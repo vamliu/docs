@@ -1,7 +1,7 @@
 ---
-title: linebreak-style
-layout: doc
-rule_type: layout
+规则名: linebreak-style
+布局: doc
+规则类型: layout
 ---
 
 
@@ -14,11 +14,11 @@ whereas Linux and Unix use a simple _line feed_ (LF). The corresponding _control
 
 Many versioning systems (like git and subversion) can automatically ensure the correct ending. However to cover all contingencies, you can activate this rule.
 
-## Rule Details
+## 规则详解
 
 This rule enforces consistent line endings independent of operating system, VCS, or editor used across your codebase.
 
-### Options
+### 配置项
 
 This rule has a string option:
 
@@ -29,7 +29,7 @@ This rule has a string option:
 
 Examples of **incorrect** code for this rule with the default `"unix"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint linebreak-style: ["error", "unix"]*/
@@ -37,8 +37,6 @@ Examples of **incorrect** code for this rule with the default `"unix"` option:
 var a = 'a'; // \r\n
 
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `"unix"` option:
 
@@ -55,21 +53,17 @@ function foo(params) { // \n
 }// \n
 ```
 
-:::
-
 ### windows
 
 Examples of **incorrect** code for this rule with the `"windows"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint linebreak-style: ["error", "windows"]*/
 
 var a = 'a'; // \n
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"windows"` option:
 
@@ -86,8 +80,6 @@ function foo(params) { // \r\n
 } // \r\n
 ```
 
-:::
-
 ### Using this rule with version control systems
 
 Version control systems sometimes have special behavior for linebreaks. To make it easy for developers to contribute to your codebase from different platforms, you may want to configure your VCS to handle linebreaks appropriately.
@@ -98,7 +90,7 @@ For example, the default behavior of [git](https://git-scm.com/) on Windows syst
 *.js text eol=lf
 ```
 
-## When Not To Use It
+## 使用建议
 
 If you aren't concerned about having different line endings within your code, then you can safely turn this rule off.
 

@@ -1,8 +1,8 @@
 ---
-title: one-var-declaration-per-line
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: one-var-declaration-per-line
+布局: doc
+规则类型: suggestion
+关联规则:
 - one-var
 ---
 
@@ -24,11 +24,11 @@ var foo,
 
 Keeping to one of these styles across a project's codebase can help with maintaining code consistency.
 
-## Rule Details
+## 规则详解
 
 This rule enforces a consistent newlines around variable declarations. This rule ignores variable declarations inside `for` loop conditionals.
 
-## Options
+## 配置项
 
 This rule has a single string option:
 
@@ -39,7 +39,7 @@ This rule has a single string option:
 
 Examples of **incorrect** code for this rule with the default `"initializations"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint one-var-declaration-per-line: ["error", "initializations"]*/
@@ -50,8 +50,6 @@ var a, b, c = 0;
 let a,
     b = 0, c;
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `"initializations"` option:
 
@@ -70,13 +68,11 @@ let a,
     b = 0;
 ```
 
-:::
-
 ### always
 
 Examples of **incorrect** code for this rule with the `"always"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint one-var-declaration-per-line: ["error", "always"]*/
@@ -88,8 +84,6 @@ let a, b = 0;
 
 const a = 0, b = 0;
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"always"` option:
 
@@ -105,5 +99,3 @@ var a,
 let a,
     b = 0;
 ```
-
-:::

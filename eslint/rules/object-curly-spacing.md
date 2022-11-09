@@ -1,8 +1,8 @@
 ---
-title: object-curly-spacing
-layout: doc
-rule_type: layout
-related_rules:
+规则名: object-curly-spacing
+布局: doc
+规则类型: layout
+关联规则:
 - array-bracket-spacing
 - comma-spacing
 - computed-property-spacing
@@ -29,11 +29,11 @@ import { foo } from "bar";
 export { foo };
 ```
 
-## Rule Details
+## 规则详解
 
 This rule enforces consistent spacing inside braces of object literals, destructuring assignments, and import/export specifiers.
 
-## Options
+## 配置项
 
 This rule has two options, a string option and an object option.
 
@@ -53,7 +53,7 @@ Object option:
 
 Examples of **incorrect** code for this rule with the default `"never"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint object-curly-spacing: ["error", "never"]*/
@@ -65,8 +65,6 @@ var obj = {baz: { 'foo': 'qux'}, bar};
 var {x } = y;
 import { foo } from 'bar';
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `"never"` option:
 
@@ -89,13 +87,11 @@ var {x} = y;
 import {foo} from 'bar';
 ```
 
-:::
-
 ### always
 
 Examples of **incorrect** code for this rule with the `"always"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint object-curly-spacing: ["error", "always"]*/
@@ -111,8 +107,6 @@ var obj = {
 var {x} = y;
 import {foo } from 'bar';
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"always"` option:
 
@@ -131,8 +125,6 @@ var { x } = y;
 import { foo } from 'bar';
 ```
 
-:::
-
 #### arraysInObjects
 
 Examples of additional **correct** code for this rule with the `"never", { "arraysInObjects": true }` options:
@@ -146,8 +138,6 @@ var obj = {"foo": [ 1, 2 ] };
 var obj = {"foo": [ "baz", "bar" ] };
 ```
 
-:::
-
 Examples of additional **correct** code for this rule with the `"always", { "arraysInObjects": false }` options:
 
 ::: correct
@@ -158,8 +148,6 @@ Examples of additional **correct** code for this rule with the `"always", { "arr
 var obj = { "foo": [ 1, 2 ]};
 var obj = { "foo": [ "baz", "bar" ]};
 ```
-
-:::
 
 #### objectsInObjects
 
@@ -173,8 +161,6 @@ Examples of additional **correct** code for this rule with the `"never", { "obje
 var obj = {"foo": {"baz": 1, "bar": 2} };
 ```
 
-:::
-
 Examples of additional **correct** code for this rule with the `"always", { "objectsInObjects": false }` options:
 
 ::: correct
@@ -185,8 +171,6 @@ Examples of additional **correct** code for this rule with the `"always", { "obj
 var obj = { "foo": { "baz": 1, "bar": 2 }};
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 You can turn this rule off if you are not concerned with the consistency of spacing between curly braces.

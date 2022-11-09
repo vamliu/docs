@@ -1,7 +1,7 @@
 ---
-title: require-unicode-regexp
-layout: doc
-rule_type: suggestion
+规则名: require-unicode-regexp
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -24,13 +24,13 @@ RegExp `u` flag has two effects:
 
 Therefore, the `u` flag lets us work better with regular expressions.
 
-## Rule Details
+## 规则详解
 
 This rule aims to enforce the use of `u` flag on regular expressions.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint require-unicode-regexp: error */
@@ -40,8 +40,6 @@ const b = /bbb/gi
 const c = new RegExp("ccc")
 const d = new RegExp("ddd", "gi")
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -61,8 +59,6 @@ function f(flags) {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to notify regular expressions with no `u` flag, then it's safe to disable this rule.

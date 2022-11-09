@@ -1,20 +1,20 @@
 ---
-title: no-useless-return
-layout: doc
-rule_type: suggestion
+规则名: no-useless-return
+布局: doc
+规则类型: suggestion
 ---
 
 
 
 A `return;` statement with nothing after it is redundant, and has no effect on the runtime behavior of a function. This can be confusing, so it's better to disallow these redundant statements.
 
-## Rule Details
+## 规则详解
 
 This rule aims to report redundant `return` statements.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /* eslint no-useless-return: "error" */
@@ -46,8 +46,6 @@ function foo() {
 }
 
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -90,8 +88,6 @@ function foo() {
 
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't care about disallowing redundant return statements, you can turn off this rule.

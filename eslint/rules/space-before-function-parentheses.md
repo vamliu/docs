@@ -1,8 +1,8 @@
 ---
-title: space-before-function-parentheses
-layout: doc
+规则名: space-before-function-parentheses
+布局: doc
 
-related_rules:
+关联规则:
 - space-after-keywords
 - space-return-throw-case
 ---
@@ -29,7 +29,7 @@ var anonymousWithSpace = function () {};
 
 Style guides may require a space after the `function` keyword for anonymous functions, while others specify no whitespace. Similarly, the space after a function name may or may not be required.
 
-## Rule Details
+## 规则详解
 
 This rule aims to enforce consistent spacing before function parentheses and as such, will warn whenever whitespace doesn't match the preferences specified.
 
@@ -37,7 +37,7 @@ This rule takes one argument. If it is `"always"`, which is the default option, 
 
 Examples of **incorrect** code for this rule with the default `"always"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint-env es6*/
@@ -66,8 +66,6 @@ var foo = {
     }
 };
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `"always"` option:
 
@@ -101,11 +99,9 @@ var foo = {
 };
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `"never"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint-env es6*/
@@ -134,8 +130,6 @@ var foo = {
     }
 };
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"never"` option:
 
@@ -169,11 +163,9 @@ var foo = {
 };
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `{"anonymous": "always", "named": "never"}` option:
 
-::: incorrect
+
 
 ```js
 /*eslint-env es6*/
@@ -198,8 +190,6 @@ var foo = {
     }
 };
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{"anonymous": "always", "named": "never"}` option:
 
@@ -229,11 +219,9 @@ var foo = {
 };
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `{"anonymous": "never", "named": "always"}` option:
 
-::: incorrect
+
 
 ```js
 /*eslint-env es6*/
@@ -258,8 +246,6 @@ var foo = {
     }
 };
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{"anonymous": "never", "named": "always"}` option:
 
@@ -289,8 +275,6 @@ var foo = {
 };
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 You can turn this rule off if you are not concerned with the consistency of spacing before function parenthesis.

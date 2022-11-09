@@ -1,7 +1,7 @@
 ---
-title: no-else-return
-layout: doc
-rule_type: suggestion
+规则名: no-else-return
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -18,11 +18,11 @@ function foo() {
 }
 ```
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at highlighting an unnecessary block of code following an `if` containing a return statement. As such, it will warn when it encounters an `else` following a chain of `if`s, all of them containing a `return` statement.
 
-## Options
+## 配置项
 
 This rule has an object option:
 
@@ -33,7 +33,7 @@ This rule has an object option:
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-else-return: "error"*/
@@ -90,8 +90,6 @@ function foo() {
 }
 ```
 
-:::
-
 Examples of **correct** code for this rule:
 
 ::: correct
@@ -136,13 +134,11 @@ function foo() {
 }
 ```
 
-:::
-
 ### `allowElseIf: false`
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-else-return: ["error", {allowElseIf: false}]*/
@@ -155,8 +151,6 @@ function foo() {
     }
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -175,5 +169,3 @@ function foo() {
     }
 }
 ```
-
-:::

@@ -1,7 +1,7 @@
 ---
-title: no-unsafe-negation
-layout: doc
-rule_type: problem
+规则名: no-unsafe-negation
+布局: doc
+规则类型: problem
 ---
 
 
@@ -10,7 +10,7 @@ rule_type: problem
 
 Just as developers might type `-a + b` when they mean `-(a + b)` for the negative of a sum, they might type `!key in object` by mistake when they almost certainly mean `!(key in object)` to test that a key is not in an object. `!obj instanceof Ctor` is similar.
 
-## Rule Details
+## 规则详解
 
 This rule disallows negating the left operand of the following relational operators:
 
@@ -19,7 +19,7 @@ This rule disallows negating the left operand of the following relational operat
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-unsafe-negation: "error"*/
@@ -34,8 +34,6 @@ if (!obj instanceof Ctor) {
     // and it equivalent to always false since boolean values are not objects.
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -52,8 +50,6 @@ if (!(obj instanceof Ctor)) {
     // obj is not an instance of Ctor
 }
 ```
-
-:::
 
 ### Exception
 
@@ -78,11 +74,9 @@ if(("" + !foo) in object) {
 }
 ```
 
-:::
-
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-unsafe-negation: "error"*/
@@ -92,9 +86,7 @@ if (!(foo) in object) {
 }
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule has an object option:
 
@@ -114,7 +106,7 @@ The purpose is to avoid expressions such as `! a < b` (which is equivalent to `(
 
 Examples of additional **incorrect** code for this rule with the `{ "enforceForOrderingRelations": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint no-unsafe-negation: ["error", { "enforceForOrderingRelations": true }]*/
@@ -128,8 +120,6 @@ foo = ! a <= b;
 foo = ! a >= b;
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to notify unsafe logical negations, then it's safe to disable this rule.

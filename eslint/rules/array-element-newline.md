@@ -1,8 +1,8 @@
 ---
-title: array-element-newline
-layout: doc
-rule_type: layout
-related_rules:
+规则名: array-element-newline
+布局: doc
+规则类型: layout
+关联规则:
 - array-bracket-spacing
 - array-bracket-newline
 - object-property-newline
@@ -17,11 +17,11 @@ related_rules:
 
 A number of style guides require or disallow line breaks between array elements.
 
-## Rule Details
+## 规则详解
 
 This rule enforces line breaks between array elements.
 
-## Options
+## 配置项
 
 This rule has either a string option:
 
@@ -52,8 +52,6 @@ Alternatively, different configurations can be specified for array expressions a
 
 Examples of **incorrect** code for this rule with the default `"always"` option:
 
-:::incorrect
-
 ```js
 /*eslint array-element-newline: ["error", "always"]*/
 
@@ -73,11 +71,7 @@ var g = [
 ];
 ```
 
-:::
-
 Examples of **correct** code for this rule with the default `"always"` option:
-
-:::correct
 
 ```js
 /*eslint array-element-newline: ["error", "always"]*/
@@ -104,13 +98,9 @@ var e = [
 ];
 ```
 
-:::
-
 ### never
 
 Examples of **incorrect** code for this rule with the `"never"` option:
-
-:::incorrect
 
 ```js
 /*eslint array-element-newline: ["error", "never"]*/
@@ -134,11 +124,7 @@ var e = [
 ];
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `"never"` option:
-
-:::correct
 
 ```js
 /*eslint array-element-newline: ["error", "never"]*/
@@ -161,13 +147,9 @@ var g = [
 ];
 ```
 
-:::
-
 ### consistent
 
 Examples of **incorrect** code for this rule with the `"consistent"` option:
-
-:::incorrect
 
 ```js
 /*eslint array-element-newline: ["error", "consistent"]*/
@@ -188,11 +170,7 @@ var b = [
 ];
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `"consistent"` option:
-
-:::correct
 
 ```js
 /*eslint array-element-newline: ["error", "consistent"]*/
@@ -232,13 +210,9 @@ var h = [
 ];
 ```
 
-:::
-
 ### multiline
 
 Examples of **incorrect** code for this rule with the `{ "multiline": true }` option:
-
-:::incorrect
 
 ```js
 /*eslint array-element-newline: ["error", { "multiline": true }]*/
@@ -254,11 +228,7 @@ var e = [
 ];
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `{ "multiline": true }` option:
-
-:::correct
 
 ```js
 /*eslint array-element-newline: ["error", { "multiline": true }]*/
@@ -277,13 +247,9 @@ var e = [
 ];
 ```
 
-:::
-
 ### minItems
 
 Examples of **incorrect** code for this rule with the `{ "minItems": 3 }` option:
-
-:::incorrect
 
 ```js
 /*eslint array-element-newline: ["error", { "minItems": 3 }]*/
@@ -301,11 +267,7 @@ var e = [
 ];
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `{ "minItems": 3 }` option:
-
-:::correct
 
 ```js
 /*eslint array-element-newline: ["error", { "minItems": 3 }]*/
@@ -325,13 +287,9 @@ var e = [
 ];
 ```
 
-:::
-
 ### multiline and minItems
 
 Examples of **incorrect** code for this rule with the `{ "multiline": true, "minItems": 3 }` options:
-
-:::incorrect
 
 ```js
 /*eslint array-element-newline: ["error", { "multiline": true, "minItems": 3 }]*/
@@ -348,11 +306,7 @@ var e = [
 ];
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `{ "multiline": true, "minItems": 3 }` options:
-
-:::correct
 
 ```js
 /*eslint array-element-newline: ["error", { "multiline": true, "minItems": 3 }]*/
@@ -373,13 +327,9 @@ var e = [
 ];
 ```
 
-:::
-
 ### ArrayExpression and ArrayPattern
 
 Examples of **incorrect** code for this rule with the `{ "ArrayExpression": "always", "ArrayPattern": "never" }` options:
-
-:::incorrect
 
 ```js
 /*eslint array-element-newline: ["error", { "ArrayExpression": "always", "ArrayPattern": "never" }]*/
@@ -407,11 +357,7 @@ j = function bar() {
 }] = arr
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `{ "ArrayExpression": "always", "ArrayPattern": "never" }` options:
-
-:::correct
 
 ```js
 /*eslint array-element-newline: ["error", { "ArrayExpression": "always", "ArrayPattern": "never" }]*/
@@ -439,9 +385,7 @@ var [i = function foo() {
 }] = arr
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to enforce linebreaks between array elements, don't enable this rule.
 

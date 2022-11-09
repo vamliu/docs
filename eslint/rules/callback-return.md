@@ -1,10 +1,10 @@
 ---
-title: callback-return
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: callback-return
+布局: doc
+规则类型: suggestion
+关联规则:
 - handle-callback-err
-further_reading:
+深入了解:
 - https://github.com/maxogden/art-of-node#callbacks
 - https://web.archive.org/web/20171224042620/https://docs.nodejitsu.com/articles/errors/what-are-the-error-conventions/
 ---
@@ -29,20 +29,18 @@ To prevent calling the callback multiple times it is important to `return` anyti
  For example, in the case of an HTTP request, you may try to send HTTP headers more than once leading Node.js to `throw`
  a `Can't render headers after they are sent to the client.` error.
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at ensuring that callbacks used outside of the main function block are always part-of or immediately
 preceding a `return` statement. This rule decides what is a callback based on the name of the function being called.
 
-## Options
+## 配置项
 
 The rule takes a single option - an array of possible callback names - which may include object methods. The default callback names are `callback`, `cb`, `next`.
 
 ### Default callback names
 
 Examples of **incorrect** code for this rule with the default `["callback", "cb", "next"]` option:
-
-:::incorrect
 
 ```js
 /*eslint callback-return: "error"*/
@@ -55,11 +53,7 @@ function foo(err, callback) {
 }
 ```
 
-:::
-
 Examples of **correct** code for this rule with the default `["callback", "cb", "next"]` option:
-
-:::correct
 
 ```js
 /*eslint callback-return: "error"*/
@@ -72,13 +66,9 @@ function foo(err, callback) {
 }
 ```
 
-:::
-
 ### Supplied callback names
 
 Examples of **incorrect** code for this rule with the option `["done", "send.error", "send.success"]`:
-
-:::incorrect
 
 ```js
 /*eslint callback-return: ["error", ["done", "send.error", "send.success"]]*/
@@ -98,11 +88,7 @@ function bar(err, send) {
 }
 ```
 
-:::
-
 Examples of **correct** code for this rule with the option `["done", "send.error", "send.success"]`:
-
-:::correct
 
 ```js
 /*eslint callback-return: ["error", ["done", "send.error", "send.success"]]*/
@@ -122,9 +108,7 @@ function bar(err, send) {
 }
 ```
 
-:::
-
-## Known Limitations
+## 已知局限
 
 Because it is difficult to understand the meaning of a program through static analysis, this rule has limitations:
 
@@ -185,7 +169,7 @@ function foo(err, callback) {
 }
 ```
 
-## When Not To Use It
+## 使用建议
 
 There are some cases where you might want to call a callback function more than once. In those cases this rule
  may lead to incorrect behavior. In those cases you may want to reserve a special name for those callbacks and

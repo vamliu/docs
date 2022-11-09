@@ -1,7 +1,7 @@
 ---
-title: no-unsafe-optional-chaining
-layout: doc
-rule_type: problem
+规则名: no-unsafe-optional-chaining
+布局: doc
+规则类型: problem
 ---
 
 
@@ -27,13 +27,13 @@ var obj = undefined;
 (obj?.foo).bar; // TypeError
 ```
 
-## Rule Details
+## 规则详解
 
 This rule aims to detect some cases where the use of optional chaining doesn't prevent runtime errors. In particular, it flags optional chaining expressions in positions where short-circuiting to `undefined` causes throwing a TypeError afterward.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-unsafe-optional-chaining: "error"*/
@@ -87,8 +87,6 @@ async function foo () {
 }
 ```
 
-:::
-
 Examples of **correct** code for this rule:
 
 ::: correct
@@ -123,9 +121,7 @@ async function foo () {
 }
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule has an object option:
 
@@ -141,7 +137,7 @@ With this option set to `true` the rule is enforced for:
 
 Examples of additional **incorrect** code for this rule with the `{ "disallowArithmeticOperators": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint no-unsafe-optional-chaining: ["error", { "disallowArithmeticOperators": true }]*/
@@ -169,5 +165,3 @@ async function foo () {
   baz += await obj?.foo;
 }
 ```
-
-:::

@@ -1,8 +1,8 @@
 ---
-title: max-nested-callbacks
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: max-nested-callbacks
+布局: doc
+规则类型: suggestion
+关联规则:
 - complexity
 - max-depth
 - max-len
@@ -10,7 +10,7 @@ related_rules:
 - max-lines-per-function
 - max-params
 - max-statements
-further_reading:
+深入了解:
 - http://book.mixu.net/node/ch7.html
 - https://web.archive.org/web/20220104141150/https://howtonode.org/control-flow
 - https://web.archive.org/web/20220127215850/https://howtonode.org/control-flow-part-ii
@@ -31,11 +31,11 @@ foo(function () {
 });
 ```
 
-## Rule Details
+## 规则详解
 
 This rule enforces a maximum depth that callbacks can be nested to increase code clarity.
 
-## Options
+## 配置项
 
 This rule has a number or object option:
 
@@ -47,7 +47,7 @@ This rule has a number or object option:
 
 Examples of **incorrect** code for this rule with the `{ "max": 3 }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint max-nested-callbacks: ["error", 3]*/
@@ -62,8 +62,6 @@ foo1(function() {
     });
 });
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "max": 3 }` option:
 
@@ -90,5 +88,3 @@ function handleFoo4() {
     foo5();
 }
 ```
-
-:::

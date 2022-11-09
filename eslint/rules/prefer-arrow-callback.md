@@ -1,8 +1,8 @@
 ---
-title: prefer-arrow-callback
-layout: doc
-rule_type: suggestion
-further_reading:
+规则名: prefer-arrow-callback
+布局: doc
+规则类型: suggestion
+深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 ---
 
@@ -18,7 +18,7 @@ Additionally, arrow functions are:
 
 * bound lexically regardless of where or when they are invoked.
 
-## Rule Details
+## 规则详解
 
 This rule locates function expressions used as callbacks or function arguments. An error will be produced for any that could be replaced by an arrow function without changing the result.
 
@@ -58,7 +58,7 @@ foo(function() { return this.a; }); // OK
 foo(function bar(n) { return n && n + bar(n - 1); }); // OK
 ```
 
-## Options
+## 配置项
 
 Access further control over this rule's behavior via an options object.
 
@@ -97,7 +97,7 @@ foo(function() { (() => this); });
 someArray.map(function(item) { return this.doSomething(item); }, someObject);
 ```
 
-## When Not To Use It
+## 使用建议
 
 * In environments that have not yet adopted ES6 language features (ES3/5).
 

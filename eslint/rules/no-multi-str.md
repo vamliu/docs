@@ -1,7 +1,7 @@
 ---
-title: no-multi-str
-layout: doc
-rule_type: suggestion
+规则名: no-multi-str
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -14,13 +14,13 @@ var x = "Line 1 \
 
 Some consider this to be a bad practice as it was an undocumented feature of JavaScript that was only formalized later.
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at preventing the use of multiline strings.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-multi-str: "error"*/
@@ -28,8 +28,6 @@ Examples of **incorrect** code for this rule:
 var x = "some very \
 long text";
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -43,5 +41,3 @@ var x = "some very long text";
 var x = "some very " +
         "long text";
 ```
-
-:::

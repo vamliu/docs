@@ -1,8 +1,8 @@
 ---
-title: require-jsdoc
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: require-jsdoc
+布局: doc
+规则类型: suggestion
+关联规则:
 - valid-jsdoc
 ---
 
@@ -25,7 +25,7 @@ function sum(num1, num2) {
 
 Some style guides require JSDoc comments for all functions as a way of explaining function behavior.
 
-## Rule Details
+## 规则详解
 
 This rule requires JSDoc comments for specified nodes. Supported nodes:
 
@@ -35,7 +35,7 @@ This rule requires JSDoc comments for specified nodes. Supported nodes:
 * `"ArrowFunctionExpression"`
 * `"FunctionExpression"`
 
-## Options
+## 配置项
 
 This rule has a single object option:
 
@@ -61,7 +61,7 @@ Default option settings are:
 
 Examples of **incorrect** code for this rule with the `{ "require": { "FunctionDeclaration": true, "MethodDefinition": true, "ClassDeclaration": true, "ArrowFunctionExpression": true, "FunctionExpression": true } }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint "require-jsdoc": ["error", {
@@ -102,8 +102,6 @@ var foo = {
     }
 };
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "require": { "FunctionDeclaration": true, "MethodDefinition": true, "ClassDeclaration": true, "ArrowFunctionExpression": true, "FunctionExpression": true } }` option:
 
@@ -193,8 +191,6 @@ var foo = {
 setTimeout(() => {}, 10); // since it's an anonymous arrow function
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you do not require JSDoc for your functions, then you can leave this rule off.

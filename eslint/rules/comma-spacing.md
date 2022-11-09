@@ -1,8 +1,8 @@
 ---
-title: comma-spacing
-layout: doc
-rule_type: layout
-related_rules:
+规则名: comma-spacing
+布局: doc
+规则类型: layout
+关联规则:
 - array-bracket-spacing
 - comma-style
 - object-curly-spacing
@@ -12,7 +12,7 @@ related_rules:
 - space-after-keywords
 - space-unary-ops
 - space-return-throw-case
-further_reading:
+深入了解:
 - https://www.crockford.com/code.html
 - https://dojotoolkit.org/reference-guide/1.9/developer/styleguide.html
 ---
@@ -26,7 +26,7 @@ var foo = 1, bar = 2;
 var foo = 1 ,bar = 2;
 ```
 
-## Rule Details
+## 规则详解
 
 This rule enforces consistent spacing before and after commas in variable declarations, array literals, object literals, function parameters, and sequences.
 
@@ -38,7 +38,7 @@ This rule does not apply in either of the following cases:
 * between comma and closing brace `}`, to avoid conflicts with the [`object-curly-spacing`](object-curly-spacing) rule
 * between comma and closing parentheses `)`, to avoid conflicts with the [`space-in-parens`](space-in-parens) rule
 
-## Options
+## 配置项
 
 This rule has an object option:
 
@@ -50,8 +50,6 @@ This rule has an object option:
 ### after
 
 Examples of **incorrect** code for this rule with the default `{ "before": false, "after": true }` options:
-
-:::incorrect
 
 ```js
 /*eslint comma-spacing: ["error", { "before": false, "after": true }]*/
@@ -65,11 +63,7 @@ function foo(a ,b){}
 a ,b
 ```
 
-:::
-
 Examples of **correct** code for this rule with the default `{ "before": false, "after": true }` options:
-
-:::correct
 
 ```js
 /*eslint comma-spacing: ["error", { "before": false, "after": true }]*/
@@ -85,11 +79,7 @@ function foo(a, b){}
 a, b
 ```
 
-:::
-
 Additional examples of **correct** code for this rule with the default `{ "before": false, "after": true }` options:
-
-:::correct
 
 ```js
 /*eslint comma-spacing: ["error", { "before": false, "after": true }]*/
@@ -117,13 +107,9 @@ import {foo, bar,} from "mod";
 foo(a, b,)
 ```
 
-:::
-
 ### before
 
 Examples of **incorrect** code for this rule with the `{ "before": true, "after": false }` options:
-
-:::incorrect
 
 ```js
 /*eslint comma-spacing: ["error", { "before": true, "after": false }]*/
@@ -136,11 +122,7 @@ function foo(a,b){}
 a, b
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `{ "before": true, "after": false }` options:
-
-:::correct
 
 ```js
 /*eslint comma-spacing: ["error", { "before": true, "after": false }]*/
@@ -156,8 +138,6 @@ function foo(a ,b){}
 a ,b
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If your project will not be following a consistent comma-spacing pattern, turn this rule off.

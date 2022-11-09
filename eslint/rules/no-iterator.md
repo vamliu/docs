@@ -1,8 +1,8 @@
 ---
-title: no-iterator
-layout: doc
-rule_type: suggestion
-further_reading:
+规则名: no-iterator
+布局: doc
+规则类型: suggestion
+深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators
 - https://kangax.github.io/es5-compat-table/es6/#Iterators
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#Object_methods
@@ -19,13 +19,13 @@ Foo.prototype.__iterator__ = function() {
 
 You should use ECMAScript 6 iterators and generators instead.
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at preventing errors that may arise from using the `__iterator__` property, which is not implemented in several browsers. As such, it will warn whenever it encounters the `__iterator__` property.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-iterator: "error"*/
@@ -40,8 +40,6 @@ foo["__iterator__"] = function () {};
 
 ```
 
-:::
-
 Examples of **correct** code for this rule:
 
 ::: correct
@@ -51,5 +49,3 @@ Examples of **correct** code for this rule:
 
 var __iterator__ = foo; // Not using the `__iterator__` property.
 ```
-
-:::

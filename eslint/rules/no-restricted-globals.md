@@ -1,8 +1,8 @@
 ---
-title: no-restricted-globals
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-restricted-globals
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-restricted-properties
 - no-restricted-syntax
 ---
@@ -15,11 +15,11 @@ For instance, early Internet Explorer versions exposed the current DOM event as 
 `event`, but using this variable has been considered as a bad practice for a long time. Restricting
 this will make sure this variable isn't used in browser code.
 
-## Rule Details
+## 规则详解
 
 This rule allows you to specify global variable names that you don't want to use in your application.
 
-## Options
+## 配置项
 
 This rule takes a list of strings, where each string is a global to be restricted:
 
@@ -53,7 +53,7 @@ Alternatively, the rule also accepts objects, where the global name and an optio
 
 Examples of **incorrect** code for sample `"event", "fdescribe"` global variable names:
 
-::: incorrect
+
 
 ```js
 /*global event, fdescribe*/
@@ -67,8 +67,6 @@ fdescribe("foo", function() {
 });
 ```
 
-:::
-
 Examples of **correct** code for a sample `"event"` global variable name:
 
 ::: correct
@@ -80,8 +78,6 @@ Examples of **correct** code for a sample `"event"` global variable name:
 import event from "event-module";
 ```
 
-:::
-
 ::: correct
 
 ```js
@@ -91,11 +87,9 @@ import event from "event-module";
 var event = 1;
 ```
 
-:::
-
 Examples of **incorrect** code for a sample `"event"` global variable name, along with a custom error message:
 
-::: incorrect
+
 
 ```js
 /*global event*/
@@ -105,5 +99,3 @@ function onClick() {
     console.log(event);    // Unexpected global variable 'event'. Use local parameter instead.
 }
 ```
-
-:::

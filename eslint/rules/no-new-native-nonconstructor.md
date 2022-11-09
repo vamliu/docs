@@ -1,10 +1,10 @@
 ---
-title: no-new-native-nonconstructor
-layout: doc
-rule_type: problem
-related_rules:
+规则名: no-new-native-nonconstructor
+布局: doc
+规则类型: problem
+关联规则:
 - no-obj-calls
-further_reading:
+深入了解:
 - https://tc39.es/ecma262/#sec-symbol-constructor
 - https://tc39.es/ecma262/#sec-bigint-constructor
 ---
@@ -23,7 +23,7 @@ let result = new BigInt(9007199254740991);
 
 Both `new Symbol` and `new BigInt` throw a type error because they are functions and not classes. It is easy to make this mistake by assuming the uppercase letters indicate classes.
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at preventing the accidental calling of native JavaScript global functions with the `new` operator. These functions are:
 
@@ -34,7 +34,7 @@ This rule is aimed at preventing the accidental calling of native JavaScript glo
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-new-native-nonconstructor: "error"*/
@@ -43,8 +43,6 @@ Examples of **incorrect** code for this rule:
 var foo = new Symbol('foo');
 var bar = new BigInt(9007199254740991);
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -67,8 +65,6 @@ function quux(BigInt) {
 
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 This rule should not be used in ES3/5 environments.

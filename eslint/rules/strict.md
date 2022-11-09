@@ -1,7 +1,7 @@
 ---
-title: strict
-layout: doc
-rule_type: suggestion
+规则名: strict
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -44,7 +44,7 @@ In the **CommonJS** module system, a hidden function wraps each module and limit
 
 In **ECMAScript** modules, which always have strict mode semantics, the directives are unnecessary.
 
-## Rule Details
+## 规则详解
 
 This rule requires or disallows strict mode directives.
 
@@ -59,7 +59,7 @@ This rule does not apply to class static blocks, no matter which option is speci
 
 The `--fix` option on the command line does not insert new `"use strict"` statements, but only removes unneeded statements.
 
-## Options
+## 配置项
 
 This rule has a string option:
 
@@ -83,7 +83,7 @@ Otherwise the `"safe"` option corresponds to the `"function"` option. Note that 
 
 Examples of **incorrect** code for this rule with the `"global"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint strict: ["error", "global"]*/
@@ -92,9 +92,7 @@ function foo() {
 }
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint strict: ["error", "global"]*/
@@ -104,9 +102,7 @@ function foo() {
 }
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint strict: ["error", "global"]*/
@@ -117,8 +113,6 @@ function foo() {
     "use strict";
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"global"` option:
 
@@ -133,15 +127,13 @@ function foo() {
 }
 ```
 
-:::
-
 ### function
 
 This option ensures that all function bodies are strict mode code, while global code is not. Particularly if a build step concatenates multiple scripts, a strict mode directive in global code of one script could unintentionally enable strict mode in another script that was not intended to be strict code.
 
 Examples of **incorrect** code for this rule with the `"function"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint strict: ["error", "function"]*/
@@ -152,9 +144,7 @@ function foo() {
 }
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint strict: ["error", "function"]*/
@@ -169,9 +159,7 @@ function foo() {
 }());
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint strict: ["error", "function"]*/
@@ -188,8 +176,6 @@ function foo(a = 1) {
 function foo(a = 1) {
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"function"` option:
 
@@ -220,13 +206,11 @@ var foo = (function() {
 }());
 ```
 
-:::
-
 ### never
 
 Examples of **incorrect** code for this rule with the `"never"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint strict: ["error", "never"]*/
@@ -237,9 +221,7 @@ function foo() {
 }
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint strict: ["error", "never"]*/
@@ -248,8 +230,6 @@ function foo() {
     "use strict";
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"never"` option:
 
@@ -262,8 +242,6 @@ function foo() {
 }
 ```
 
-:::
-
 ### earlier default (removed)
 
 (removed) The default option (that is, no string option specified) for this rule was **removed** in ESLint v1.0. The `"function"` option is most similar to the removed option.
@@ -272,7 +250,7 @@ This option ensures that all functions are executed in strict mode. A strict mod
 
 Examples of **incorrect** code for this rule with the earlier default option which has been removed:
 
-::: incorrect
+
 
 ```js
 // "strict": "error"
@@ -281,9 +259,7 @@ function foo() {
 }
 ```
 
-:::
 
-::: incorrect
 
 ```js
 // "strict": "error"
@@ -294,8 +270,6 @@ function foo() {
     }
 }());
 ```
-
-:::
 
 Examples of **correct** code for this rule with the earlier default option which has been removed:
 
@@ -310,8 +284,6 @@ function foo() {
 }
 ```
 
-:::
-
 ::: correct
 
 ```js
@@ -321,8 +293,6 @@ function foo() {
     "use strict";
 }
 ```
-
-:::
 
 ::: correct
 
@@ -337,8 +307,6 @@ function foo() {
 }());
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 In a codebase that has both strict and non-strict code, either turn this rule off, or [selectively disable it](/docs/user-guide/configuring/rules#disabling-rules) where necessary. For example, functions referencing `arguments.callee` are invalid in strict mode. A [full list of strict mode differences](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode#Differences_from_non-strict_to_strict) is available on MDN.

@@ -1,8 +1,8 @@
 ---
-title: object-property-newline
-layout: doc
-rule_type: layout
-related_rules:
+规则名: object-property-newline
+布局: doc
+规则类型: layout
+关联规则:
 - brace-style
 - comma-dangle
 - key-spacing
@@ -13,7 +13,7 @@ related_rules:
 
 This rule permits you to restrict the locations of property specifications in object literals. You may prohibit any part of any property specification from appearing on the same line as any part of any other property specification. You may make this prohibition absolute, or, by invoking an object option, you may allow an exception, permitting an object literal to have all parts of all of its property specifications on a single line.
 
-## Rule Details
+## 规则详解
 
 ### Motivations
 
@@ -185,7 +185,7 @@ As illustrated above, the `--fix` option, applied to this rule, does not comply 
 
 Examples of **incorrect** code for this rule, with no object option or with `allowAllPropertiesOnSameLine` set to `false`:
 
-::: incorrect
+
 
 ```js
 /*eslint object-property-newline: "error"*/
@@ -221,8 +221,6 @@ const obj5 = {
 ]: true};
 ```
 
-:::
-
 Examples of **correct** code for this rule, with no object option or with `allowAllPropertiesOnSameLine` set to `false`:
 
 ::: correct
@@ -255,8 +253,6 @@ const obj3 = {
 };
 ```
 
-:::
-
 Examples of additional **correct** code for this rule with the `{ "allowAllPropertiesOnSameLine": true }` option:
 
 ::: correct
@@ -275,9 +271,7 @@ const obj3 = {
 };
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 You can turn this rule off if you want to decide, case-by-case, whether to place property specifications on separate lines.
 

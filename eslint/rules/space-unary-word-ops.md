@@ -1,6 +1,6 @@
 ---
-title: space-unary-word-ops
-layout: doc
+规则名: space-unary-word-ops
+布局: doc
 
 ---
 
@@ -10,41 +10,33 @@ Requires spaces after unary word operators.
 
 Require spaces following unary word operators.
 
-## Rule Details
+## 规则详解
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 typeof!a
 ```
 
-:::
 
-::: incorrect
 
 ```js
 void{a:0}
 ```
 
-:::
 
-::: incorrect
 
 ```js
 new[a][0]
 ```
 
-:::
 
-::: incorrect
 
 ```js
 delete(a.b)
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -54,20 +46,14 @@ Examples of **correct** code for this rule:
 delete a.b
 ```
 
-:::
-
 ::: correct
 
 ```js
 new C
 ```
 
-:::
-
 ::: correct
 
 ```js
 void 0
 ```
-
-:::

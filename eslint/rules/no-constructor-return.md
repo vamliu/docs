@@ -1,19 +1,19 @@
 ---
-title: no-constructor-return
-layout: doc
-rule_type: problem
+规则名: no-constructor-return
+布局: doc
+规则类型: problem
 ---
 
 
 In JavaScript, returning a value in the constructor of a class may be a mistake. Forbidding this pattern prevents mistakes resulting from unfamiliarity with the language or a copy-paste error.
 
-## Rule Details
+## 规则详解
 
 This rule disallows return statements in the constructor of a class. Note that returning nothing with flow control is allowed.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-constructor-return: "error"*/
@@ -33,8 +33,6 @@ class B {
     }
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -59,5 +57,3 @@ class D {
     }
 }
 ```
-
-:::

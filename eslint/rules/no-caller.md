@@ -1,7 +1,7 @@
 ---
-title: no-caller
-layout: doc
-rule_type: suggestion
+规则名: no-caller
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -13,13 +13,13 @@ function foo() {
 }
 ```
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at discouraging the use of deprecated and sub-optimal code by disallowing the use of `arguments.caller` and `arguments.callee`. As such, it will warn when `arguments.caller` and `arguments.callee` are used.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-caller: "error"*/
@@ -36,8 +36,6 @@ function foo(n) {
     return !(n > 1) ? 1 : arguments.callee(n - 1) * n;
 });
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -58,5 +56,3 @@ function foo(n) {
     return !(n > 1) ? 1 : factorial(n - 1) * n;
 });
 ```
-
-:::

@@ -1,11 +1,11 @@
 ---
-title: no-new-wrappers
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-new-wrappers
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-array-constructor
 - no-new-object
-further_reading:
+深入了解:
 - https://www.inkling.com/read/javascript-definitive-guide-david-flanagan-6th/chapter-3/wrapper-objects
 ---
 
@@ -45,13 +45,13 @@ The first problem is that primitive wrapper objects are, in fact, objects. That 
 
 For these reasons, it's considered a best practice to avoid using primitive wrapper types with `new`.
 
-## Rule Details
+## 规则详解
 
 This rule aims to eliminate the use of `String`, `Number`, and `Boolean` with the `new` operator. As such, it warns whenever it sees `new String`, `new Number`, or `new Boolean`.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-new-wrappers: "error"*/
@@ -64,8 +64,6 @@ var stringObject = new String;
 var numberObject = new Number;
 var booleanObject = new Boolean;
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -80,8 +78,6 @@ var num = Number(someValue);
 var object = new MyString();
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you want to allow the use of primitive wrapper objects, then you can safely disable this rule.

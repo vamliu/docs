@@ -1,8 +1,8 @@
 ---
-title: lines-around-comment
-layout: doc
-rule_type: layout
-related_rules:
+规则名: lines-around-comment
+布局: doc
+规则类型: layout
+关联规则:
 - space-before-blocks
 - spaced-comment
 ---
@@ -12,11 +12,11 @@ related_rules:
 Many style guides require empty lines before or after comments. The primary goal
 of these rules is to make the comments easier to read and improve readability of the code.
 
-## Rule Details
+## 规则详解
 
 This rule requires empty lines before and/or after comments. It can be enabled separately for both block (`/*`) and line (`//`) comments. This rule does not apply to comments that appear on the same line as code and does not require empty lines at the beginning or end of a file.
 
-## Options
+## 配置项
 
 This rule has an object option:
 
@@ -39,7 +39,7 @@ This rule has an object option:
 
 Examples of **incorrect** code for this rule with the default `{ "beforeBlockComment": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint lines-around-comment: ["error", { "beforeBlockComment": true }]*/
@@ -48,8 +48,6 @@ var night = "long";
 /* what a great and wonderful day */
 var day = "great"
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `{ "beforeBlockComment": true }` option:
 
@@ -64,13 +62,11 @@ var night = "long";
 var day = "great"
 ```
 
-:::
-
 ### afterBlockComment
 
 Examples of **incorrect** code for this rule with the `{ "afterBlockComment": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint lines-around-comment: ["error", { "afterBlockComment": true }]*/
@@ -80,8 +76,6 @@ var night = "long";
 /* what a great and wonderful day */
 var day = "great"
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "afterBlockComment": true }` option:
 
@@ -97,13 +91,11 @@ var night = "long";
 var day = "great"
 ```
 
-:::
-
 ### beforeLineComment
 
 Examples of **incorrect** code for this rule with the `{ "beforeLineComment": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint lines-around-comment: ["error", { "beforeLineComment": true }]*/
@@ -112,8 +104,6 @@ var night = "long";
 // what a great and wonderful day
 var day = "great"
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "beforeLineComment": true }` option:
 
@@ -128,13 +118,11 @@ var night = "long";
 var day = "great"
 ```
 
-:::
-
 ### afterLineComment
 
 Examples of **incorrect** code for this rule with the `{ "afterLineComment": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint lines-around-comment: ["error", { "afterLineComment": true }]*/
@@ -143,8 +131,6 @@ var night = "long";
 // what a great and wonderful day
 var day = "great"
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "afterLineComment": true }` option:
 
@@ -158,8 +144,6 @@ var night = "long";
 
 var day = "great"
 ```
-
-:::
 
 ### allowBlockStart
 
@@ -195,8 +179,6 @@ class C {
     }
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "beforeBlockComment": true, "allowBlockStart": true }` options:
 
@@ -239,8 +221,6 @@ switch (foo) {
 }
 ```
 
-:::
-
 ### allowBlockEnd
 
 Examples of **correct** code for this rule with the `{ "afterLineComment": true, "allowBlockEnd": true }` option:
@@ -276,8 +256,6 @@ class C {
     // what a great and wonderful day
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "afterBlockComment": true, "allowBlockEnd": true }` option:
 
@@ -325,13 +303,11 @@ switch (foo) {
 }
 ```
 
-:::
-
 ### allowClassStart
 
 Examples of **incorrect** code for this rule with the `{ "beforeLineComment": true, "allowClassStart": false }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint lines-around-comment: ["error", { "beforeLineComment": true, "allowClassStart": false }]*/
@@ -341,8 +317,6 @@ class foo {
     day() {}
 };
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "beforeLineComment": true, "allowClassStart": false }` option:
 
@@ -358,8 +332,6 @@ class foo {
 };
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `{ "beforeLineComment": true, "allowClassStart": true }` option:
 
 ::: correct
@@ -373,11 +345,9 @@ class foo {
 };
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `{ "beforeBlockComment": true, "allowClassStart": false }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint lines-around-comment: ["error", { "beforeBlockComment": true, "allowClassStart": false }]*/
@@ -387,8 +357,6 @@ class foo {
     day() {}
 };
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "beforeBlockComment": true, "allowClassStart": false }` option:
 
@@ -404,8 +372,6 @@ class foo {
 };
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `{ "beforeBlockComment": true, "allowClassStart": true }` option:
 
 ::: correct
@@ -418,8 +384,6 @@ class foo {
     day() {}
 };
 ```
-
-:::
 
 ### allowClassEnd
 
@@ -436,8 +400,6 @@ class foo {
 };
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `{ "afterBlockComment": true, "allowClassEnd": true }` option:
 
 ::: correct
@@ -451,8 +413,6 @@ class foo {
     /* what a great and wonderful day */
 };
 ```
-
-:::
 
 ### allowObjectStart
 
@@ -479,8 +439,6 @@ const {
 } = {day: "great"};
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `{ "beforeBlockComment": true, "allowObjectStart": true }` option:
 
 ::: correct
@@ -503,8 +461,6 @@ const {
     day
 } = {day: "great"};
 ```
-
-:::
 
 ### allowObjectEnd
 
@@ -530,8 +486,6 @@ const {
     // what a great and wonderful day
 } = {day: "great"};
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "afterBlockComment": true, "allowObjectEnd": true }` option:
 
@@ -559,8 +513,6 @@ const {
 } = {day: "great"};
 ```
 
-:::
-
 ### allowArrayStart
 
 Examples of **correct** code for this rule with the `{ "beforeLineComment": true, "allowArrayStart": true }` option:
@@ -582,8 +534,6 @@ const [
 ] = ["great", "not great"];
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `{ "beforeBlockComment": true, "allowArrayStart": true }` option:
 
 ::: correct
@@ -602,8 +552,6 @@ const [
     someDay
 ] = ["great", "not great"];
 ```
-
-:::
 
 ### allowArrayEnd
 
@@ -626,8 +574,6 @@ const [
 ] = ["great", "not great"];
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `{ "afterBlockComment": true, "allowArrayEnd": true }` option:
 
 ::: correct
@@ -649,13 +595,11 @@ const [
 ] = ["great", "not great"];
 ```
 
-:::
-
 ### ignorePattern
 
 By default this rule ignores comments starting with the following words: `eslint`, `jshint`, `jslint`, `istanbul`, `global`, `exported`, `jscs`. To ignore more comments in addition to the defaults, set the `ignorePattern` option to a string pattern that will be passed to the [`RegExp` constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp).
 
-Examples of **correct** code for the `ignorePattern` option:
+选项 `ignorePattern` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -672,11 +616,9 @@ foo();
 /* a valid comment using pragma in it */
 ```
 
-:::
+选项 `ignorePattern` 的 **错误** 代码示例：
 
-Examples of **incorrect** code for the `ignorePattern` option:
 
-::: incorrect
 
 ```js
 /*eslint lines-around-comment: ["error", { "ignorePattern": "pragma" }] */
@@ -685,13 +627,11 @@ Examples of **incorrect** code for the `ignorePattern` option:
 /* something else */
 ```
 
-:::
-
 ### applyDefaultIgnorePatterns
 
 Default ignore patterns are applied even when `ignorePattern` is provided. If you want to omit default patterns, set this option to `false`.
 
-Examples of **correct** code for the `{ "applyDefaultIgnorePatterns": false }` option:
+选项 `{ "applyDefaultIgnorePatterns": false }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -702,11 +642,9 @@ foo();
 /* a valid comment using pragma in it */
 ```
 
-:::
+选项 `{ "applyDefaultIgnorePatterns": false }` 的 **错误** 代码示例：
 
-Examples of **incorrect** code for the `{ "applyDefaultIgnorePatterns": false }` option:
 
-::: incorrect
 
 ```js
 /*eslint lines-around-comment: ["error", { "applyDefaultIgnorePatterns": false }] */
@@ -716,8 +654,6 @@ foo();
 
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 Many people enjoy a terser code style and don't mind comments bumping up against code. If you fall into that category this rule is not for you.

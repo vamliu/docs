@@ -1,8 +1,8 @@
 ---
-title: no-ternary
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-ternary
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-nested-ternary
 - no-unneeded-ternary
 ---
@@ -14,13 +14,13 @@ The ternary operator is used to conditionally assign a value to a variable. Some
 var foo = isBar ? baz : qux;
 ```
 
-## Rule Details
+## 规则详解
 
 This rule disallows ternary operators.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-ternary: "error"*/
@@ -31,8 +31,6 @@ function quux() {
   return foo ? bar() : baz();
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -57,5 +55,3 @@ function quux() {
     }
 }
 ```
-
-:::

@@ -1,10 +1,10 @@
 ---
-title: no-shadow
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-shadow
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-shadow-restricted-names
-further_reading:
+深入了解:
 - https://en.wikipedia.org/wiki/Variable_shadowing
 ---
 
@@ -20,13 +20,13 @@ function b() {
 
 In this case, the variable `a` inside of `b()` is shadowing the variable `a` in the global scope. This can cause confusion while reading the code and it's impossible to access the global variable.
 
-## Rule Details
+## 规则详解
 
 This rule aims to eliminate shadowed variable declarations.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-shadow: "error"*/
@@ -51,9 +51,7 @@ if (true) {
 }
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule takes one option, an object, with properties `"builtinGlobals"`, `"hoist"`, `"allow"` and `"ignoreOnInitialization"`.
 
@@ -68,9 +66,9 @@ This rule takes one option, an object, with properties `"builtinGlobals"`, `"hoi
 The `builtinGlobals` option is `false` by default.
 If it is `true`, the rule prevents shadowing of built-in global variables: `Object`, `Array`, `Number`, and so on.
 
-Examples of **incorrect** code for the `{ "builtinGlobals": true }` option:
+选项 `{ "builtinGlobals": true }` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint no-shadow: ["error", { "builtinGlobals": true }]*/
@@ -79,8 +77,6 @@ function foo() {
     var Object = 0;
 }
 ```
-
-:::
 
 ### hoist
 
@@ -92,9 +88,9 @@ The `hoist` option has three settings:
 
 #### hoist: functions
 
-Examples of **incorrect** code for the default `{ "hoist": "functions" }` option:
+选项 default `{ "hoist": "functions" }` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint no-shadow: ["error", { "hoist": "functions" }]*/
@@ -107,11 +103,9 @@ if (true) {
 function b() {}
 ```
 
-:::
-
 Although `let b` in the `if` statement is before the *function* declaration in the outer scope, it is incorrect.
 
-Examples of **correct** code for the default `{ "hoist": "functions" }` option:
+选项 default `{ "hoist": "functions" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -126,15 +120,13 @@ if (true) {
 let a = 5;
 ```
 
-:::
-
 Because `let a` in the `if` statement is before the *variable* declaration in the outer scope, it is correct.
 
 #### hoist: all
 
-Examples of **incorrect** code for the `{ "hoist": "all" }` option:
+选项 `{ "hoist": "all" }` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint no-shadow: ["error", { "hoist": "all" }]*/
@@ -149,11 +141,9 @@ let a = 5;
 function b() {}
 ```
 
-:::
-
 #### hoist: never
 
-Examples of **correct** code for the `{ "hoist": "never" }` option:
+选项 `{ "hoist": "never" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -170,15 +160,13 @@ let a = 5;
 function b() {}
 ```
 
-:::
-
 Because `let a` and `let b` in the `if` statement are before the declarations in the outer scope, they are correct.
 
 ### allow
 
 The `allow` option is an array of identifier names for which shadowing is allowed. For example, `"resolve"`, `"reject"`, `"done"`, `"cb"`.
 
-Examples of **correct** code for the `{ "allow": ["done"] }` option:
+选项 `{ "allow": ["done"] }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -199,17 +187,15 @@ foo(function (err, result) {
 });
 ```
 
-:::
-
 ### ignoreOnInitialization
 
 The `ignoreOnInitialization` option is `false` by default. If it is `true`, it prevents reporting shadowing of variables in their initializers when the shadowed variable is presumably still uninitialized.
 
 The shadowed variable must be on the left side. The shadowing variable must be on the right side and declared in a callback function or in an IIFE.
 
-Examples of **incorrect** code for the `{ "ignoreOnInitialization": "true" }` option:
+选项 `{ "ignoreOnInitialization": "true" }` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint no-shadow: ["error", { "ignoreOnInitialization": true }]*/
@@ -217,11 +203,9 @@ Examples of **incorrect** code for the `{ "ignoreOnInitialization": "true" }` op
 var x = x => x;
 ```
 
-:::
-
 Because the shadowing variable `x` will shadow the already initialized shadowed variable `x`.
 
-Examples of **correct** code for the `{ "ignoreOnInitialization": true }` option:
+选项 `{ "ignoreOnInitialization": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -232,7 +216,5 @@ var x = foo(x => x)
 
 var y = (y => y)()
 ```
-
-:::
 
 The rationale for callback functions is the assumption that they will be called during the initialization, so that at the time when the shadowing variable will be used, the shadowed variable has not yet been initialized.

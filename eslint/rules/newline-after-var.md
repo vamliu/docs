@@ -1,7 +1,7 @@
 ---
-title: newline-after-var
-layout: doc
-rule_type: layout
+规则名: newline-after-var
+布局: doc
+规则类型: layout
 ---
 
 
@@ -25,11 +25,11 @@ var foo;
 
 The problem is when these developers work together in a project. This rule enforces a coding style where empty newlines are allowed or disallowed after `var`, `let`, or `const` statements. It helps the code to look consistent across the entire project.
 
-## Rule Details
+## 规则详解
 
 This rule enforces a coding style where empty lines are required or disallowed after `var`, `let`, or `const` statements to achieve a consistent coding style across the project.
 
-## Options
+## 配置项
 
 This rule has a string option:
 
@@ -43,7 +43,7 @@ This rule has a string option:
 
 Examples of **incorrect** code for this rule with the default `"always"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint newline-after-var: ["error", "always"]*/
@@ -66,8 +66,6 @@ var name = "world";
 // var name = require("world");
 console.log(greet, name);
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `"always"` option:
 
@@ -99,13 +97,11 @@ var name = "world";
 console.log(greet, name);
 ```
 
-:::
-
 ### never
 
 Examples of **incorrect** code for this rule with the `"never"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint newline-after-var: ["error", "never"]*/
@@ -132,8 +128,6 @@ var name = "world";
 
 console.log(greet, name);
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"never"` option:
 
@@ -160,5 +154,3 @@ var name = "world";
 // var name = require("world");
 console.log(greet, name);
 ```
-
-:::

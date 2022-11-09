@@ -1,8 +1,8 @@
 ---
-title: func-style
-layout: doc
-rule_type: suggestion
-further_reading:
+规则名: func-style
+布局: doc
+规则类型: suggestion
+深入了解:
 - https://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html
 ---
 
@@ -49,11 +49,11 @@ In this case, `doSomething()` is undefined at the time of invocation and so caus
 
 Due to these different behaviors, it is common to have guidelines as to which style of function should be used. There is really no correct or incorrect choice here, it is just a preference.
 
-## Rule Details
+## 规则详解
 
 This rule enforces a particular type of `function` style throughout a JavaScript file, either declarations or expressions. You can specify which you prefer in the configuration.
 
-## Options
+## 配置项
 
 This rule has a string option:
 
@@ -68,7 +68,7 @@ This rule has an object option for an exception:
 
 Examples of **incorrect** code for this rule with the default `"expression"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint func-style: ["error", "expression"]*/
@@ -77,8 +77,6 @@ function foo() {
     // ...
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `"expression"` option:
 
@@ -96,13 +94,11 @@ var foo = () => {};
 // allowed as allowArrowFunctions : false is applied only for declaration
 ```
 
-:::
-
 ### declaration
 
 Examples of **incorrect** code for this rule with the `"declaration"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint func-style: ["error", "declaration"]*/
@@ -113,8 +109,6 @@ var foo = function() {
 
 var foo = () => {};
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"declaration"` option:
 
@@ -133,8 +127,6 @@ SomeObject.foo = function() {
 };
 ```
 
-:::
-
 ### allowArrowFunctions
 
 Examples of additional **correct** code for this rule with the `"declaration", { "allowArrowFunctions": true }` options:
@@ -147,8 +139,6 @@ Examples of additional **correct** code for this rule with the `"declaration", {
 var foo = () => {};
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you want to allow developers to each decide how they want to write functions on their own, then you can disable this rule.

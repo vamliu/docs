@@ -1,8 +1,8 @@
 ---
-title: implicit-arrow-linebreak
-layout: doc
-rule_type: layout
-related_rules:
+规则名: implicit-arrow-linebreak
+布局: doc
+规则类型: layout
+关联规则:
 - brace-style
 ---
 
@@ -10,11 +10,11 @@ related_rules:
 
 An arrow function body can contain an implicit return as an expression instead of a block body. It can be useful to enforce a consistent location for the implicitly returned expression.
 
-## Rule Details
+## 规则详解
 
 This rule aims to enforce a consistent location for an arrow function containing an implicit return.
 
-### Options
+### 配置项
 
 This rule accepts a string option:
 
@@ -23,7 +23,7 @@ This rule accepts a string option:
 
 Examples of **incorrect** code for this rule with the default `"beside"` option:
 
-::: incorrect
+
 
 ```js
 /* eslint implicit-arrow-linebreak: ["error", "beside"] */
@@ -43,8 +43,6 @@ Examples of **incorrect** code for this rule with the default `"beside"` option:
   bar()
 );
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `"beside"` option:
 
@@ -75,11 +73,9 @@ Examples of **correct** code for this rule with the default `"beside"` option:
 }
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `"below"` option:
 
-::: incorrect
+
 
 ```js
 /* eslint implicit-arrow-linebreak: ["error", "below"] */
@@ -90,8 +86,6 @@ Examples of **incorrect** code for this rule with the `"below"` option:
 
 (foo) => bar => baz;
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"below"` option:
 
@@ -111,9 +105,7 @@ Examples of **correct** code for this rule with the `"below"` option:
     baz;
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you're not concerned about consistent locations of implicitly returned arrow function expressions, you should not turn on this rule.
 

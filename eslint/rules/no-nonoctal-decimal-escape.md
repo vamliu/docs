@@ -1,10 +1,10 @@
 ---
-title: no-nonoctal-decimal-escape
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-nonoctal-decimal-escape
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-octal-escape
-further_reading:
+深入了解:
 - https://tc39.es/ecma262/#prod-annexB-NonOctalDecimalEscapeSequence
 ---
 
@@ -25,13 +25,13 @@ Nevertheless, the ECMAScript specification treats `\8` and `\9` in string litera
 
 Regardless of your targeted environment, these escape sequences shouldn't be used when writing new code.
 
-## Rule Details
+## 规则详解
 
 This rule disallows `\8` and `\9` escape sequences in string literals.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-nonoctal-decimal-escape: "error"*/
@@ -48,8 +48,6 @@ var baz = "Don't use \8 and \9 escapes.";
 
 var quux = "\0\8";
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -70,5 +68,3 @@ var baz = "Don't use \\8 and \\9 escapes.";
 
 var quux = "\0\u0038";
 ```
-
-:::

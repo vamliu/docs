@@ -1,8 +1,8 @@
 ---
-title: no-empty-label
-layout: doc
+规则名: no-empty-label
+布局: doc
 
-related_rules:
+关联规则:
 - no-labels
 - no-label-var
 - no-unused-labels
@@ -14,13 +14,13 @@ Disallows labels for anything other than loops and switches.
 
 Labeled statements are only used in conjunction with labeled break and continue statements. ECMAScript has no goto statement.
 
-## Rule Details
+## 规则详解
 
 This error occurs when a label is used to mark a statement that is not an iteration or switch
 
 Example of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-empty-label: "error"*/
@@ -28,8 +28,6 @@ Example of **incorrect** code for this rule:
 labeled:
 var x = 10;
 ```
-
-:::
 
 Example of **correct** code for this rule:
 
@@ -44,8 +42,6 @@ for (var i=10; i; i--) {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to be notified about usage of labels, then it's safe to disable this rule.

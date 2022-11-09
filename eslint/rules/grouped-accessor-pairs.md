@@ -1,12 +1,12 @@
 ---
-title: grouped-accessor-pairs
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: grouped-accessor-pairs
+布局: doc
+规则类型: suggestion
+关联规则:
 - accessor-pairs
 - no-dupe-keys
 - no-dupe-class-members
-further_reading:
+深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
@@ -43,7 +43,7 @@ While it is allowed to define the pair for a getter or a setter anywhere in an o
 
 In other words, if a property has a getter and a setter, the setter should be defined right after the getter, or vice versa.
 
-## Rule Details
+## 规则详解
 
 This rule requires grouped definitions of accessor functions for the same property in object literals, class declarations and class expressions.
 
@@ -53,7 +53,7 @@ This rule does not enforce the existence of the pair for a getter or a setter. S
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint grouped-accessor-pairs: "error"*/
@@ -98,8 +98,6 @@ const Bar = class {
     }
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -149,9 +147,7 @@ const Bar = class {
 }
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule has a string option:
 
@@ -163,7 +159,7 @@ This rule has a string option:
 
 Examples of **incorrect** code for this rule with the `"getBeforeSet"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint grouped-accessor-pairs: ["error", "getBeforeSet"]*/
@@ -195,8 +191,6 @@ const Bar = class {
     }
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"getBeforeSet"` option:
 
@@ -233,13 +227,11 @@ const Bar = class {
 }
 ```
 
-:::
-
 ### setBeforeGet
 
 Examples of **incorrect** code for this rule with the `"setBeforeGet"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint grouped-accessor-pairs: ["error", "setBeforeGet"]*/
@@ -271,8 +263,6 @@ const Bar = class {
     }
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"setBeforeGet"` option:
 
@@ -309,9 +299,7 @@ const Bar = class {
 }
 ```
 
-:::
-
-## Known Limitations
+## 已知局限
 
 Due to the limits of static analysis, this rule does not account for possible side effects and in certain cases
 might require or miss to require grouping or order for getters/setters that have a computed key, like in the following example:

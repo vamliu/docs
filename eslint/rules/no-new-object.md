@@ -1,8 +1,8 @@
 ---
-title: no-new-object
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-new-object
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-array-constructor
 - no-new-wrappers
 ---
@@ -24,13 +24,13 @@ For this reason, many prefer to always use the object literal syntax and never u
 
 While there are no performance differences between the two approaches, the byte savings and conciseness of the object literal form is what has made it the de facto way of creating new objects.
 
-## Rule Details
+## 规则详解
 
 This rule disallows `Object` constructors.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-new-object: "error"*/
@@ -39,8 +39,6 @@ var myObject = new Object();
 
 new Object();
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -57,8 +55,6 @@ var Object = function Object() {};
 new Object();
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you wish to allow the use of the `Object` constructor, you can safely turn this rule off.

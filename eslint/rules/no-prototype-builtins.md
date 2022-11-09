@@ -1,7 +1,7 @@
 ---
-title: no-prototype-builtins
-layout: doc
-rule_type: problem
+规则名: no-prototype-builtins
+布局: doc
+规则类型: problem
 ---
 
 
@@ -12,13 +12,13 @@ Additionally, objects can have properties that shadow the builtins on `Object.pr
 
 To avoid subtle bugs like this, it's better to always call these methods from `Object.prototype`. For example, `foo.hasOwnProperty("bar")` should be replaced with `Object.prototype.hasOwnProperty.call(foo, "bar")`.
 
-## Rule Details
+## 规则详解
 
 This rule disallows calling some `Object.prototype` methods directly on object instances.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-prototype-builtins: "error"*/
@@ -29,8 +29,6 @@ var isPrototypeOfBar = foo.isPrototypeOf(bar);
 
 var barIsEnumerable = foo.propertyIsEnumerable("bar");
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -46,8 +44,6 @@ var isPrototypeOfBar = Object.prototype.isPrototypeOf.call(foo, bar);
 var barIsEnumerable = {}.propertyIsEnumerable.call(foo, "bar");
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 You may want to turn this rule off if your code only touches objects with hardcoded keys, and you will never use an object that shadows an `Object.prototype` method or which does not inherit from `Object.prototype`.

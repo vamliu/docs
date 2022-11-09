@@ -1,7 +1,7 @@
 ---
-title: comma-dangle
-layout: doc
-rule_type: layout
+规则名: comma-dangle
+布局: doc
+规则类型: layout
 ---
 
 
@@ -37,11 +37,11 @@ More clear:
  };
 ```
 
-## Rule Details
+## 规则详解
 
 This rule enforces consistent use of trailing commas in object and array literals.
 
-## Options
+## 配置项
 
 This rule has a string option or an object option:
 
@@ -79,8 +79,6 @@ The default for each option is `"never"` unless otherwise specified.
 
 Examples of **incorrect** code for this rule with the default `"never"` option:
 
-:::incorrect
-
 ```js
 /*eslint comma-dangle: ["error", "never"]*/
 
@@ -97,11 +95,7 @@ foo({
 });
 ```
 
-:::
-
 Examples of **correct** code for this rule with the default `"never"` option:
-
-:::correct
 
 ```js
 /*eslint comma-dangle: ["error", "never"]*/
@@ -118,15 +112,11 @@ foo({
   qux: "quux"
 });
 ```
-
-:::
 
 ### always
 
 Examples of **incorrect** code for this rule with the `"always"` option:
 
-:::incorrect
-
 ```js
 /*eslint comma-dangle: ["error", "always"]*/
 
@@ -143,11 +133,7 @@ foo({
 });
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `"always"` option:
-
-:::correct
 
 ```js
 /*eslint comma-dangle: ["error", "always"]*/
@@ -164,15 +150,11 @@ foo({
   qux: "quux",
 });
 ```
-
-:::
 
 ### always-multiline
 
 Examples of **incorrect** code for this rule with the `"always-multiline"` option:
 
-:::incorrect
-
 ```js
 /*eslint comma-dangle: ["error", "always-multiline"]*/
 
@@ -199,11 +181,7 @@ foo({
 });
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `"always-multiline"` option:
-
-:::correct
 
 ```js
 /*eslint comma-dangle: ["error", "always-multiline"]*/
@@ -229,15 +207,11 @@ foo({
   qux: "quux",
 });
 ```
-
-:::
 
 ### only-multiline
 
 Examples of **incorrect** code for this rule with the `"only-multiline"` option:
 
-:::incorrect
-
 ```js
 /*eslint comma-dangle: ["error", "only-multiline"]*/
 
@@ -250,11 +224,7 @@ var arr = [1,
 
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `"only-multiline"` option:
-
-:::correct
 
 ```js
 /*eslint comma-dangle: ["error", "only-multiline"]*/
@@ -296,14 +266,10 @@ foo({
 });
 ```
 
-:::
-
 ### functions
 
 Examples of **incorrect** code for this rule with the `{"functions": "never"}` option:
 
-:::incorrect
-
 ```js
 /*eslint comma-dangle: ["error", {"functions": "never"}]*/
 
@@ -313,13 +279,9 @@ function foo(a, b,) {
 foo(a, b,);
 new foo(a, b,);
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{"functions": "never"}` option:
 
-:::correct
-
 ```js
 /*eslint comma-dangle: ["error", {"functions": "never"}]*/
 
@@ -330,11 +292,7 @@ foo(a, b);
 new foo(a, b);
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `{"functions": "always"}` option:
-
-:::incorrect
 
 ```js
 /*eslint comma-dangle: ["error", {"functions": "always"}]*/
@@ -346,11 +304,7 @@ foo(a, b);
 new foo(a, b);
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `{"functions": "always"}` option:
-
-:::correct
 
 ```js
 /*eslint comma-dangle: ["error", {"functions": "always"}]*/
@@ -362,8 +316,6 @@ foo(a, b,);
 new foo(a, b,);
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 You can turn this rule off if you are not concerned with dangling commas.

@@ -1,8 +1,8 @@
 ---
-title: vars-on-top
-layout: doc
-rule_type: suggestion
-further_reading:
+规则名: vars-on-top
+布局: doc
+规则类型: suggestion
+深入了解:
 - https://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting
 - https://danhough.com/blog/single-var-pattern-rant/
@@ -14,14 +14,14 @@ The `vars-on-top` rule generates warnings when variable declarations are not use
 By default variable declarations are always moved (“hoisted”) invisibly to the top of their containing scope by the JavaScript interpreter.
 This rule forces the programmer to represent that behavior by manually moving the variable declaration to the top of its containing scope.
 
-## Rule Details
+## 规则详解
 
 This rule aims to keep all variable declarations in the leading series of statements.
 Allowing multiple declarations helps promote maintainability and is thus allowed.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint vars-on-top: "error"*/
@@ -40,9 +40,7 @@ function doSomething() {
 }
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint vars-on-top: "error"*/
@@ -52,9 +50,7 @@ f();
 var a;
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint vars-on-top: "error"*/
@@ -79,8 +75,6 @@ class C {
 }
 ```
 
-:::
-
 Examples of **correct** code for this rule:
 
 ::: correct
@@ -102,8 +96,6 @@ function doSomething() {
 }
 ```
 
-:::
-
 ::: correct
 
 ```js
@@ -112,8 +104,6 @@ function doSomething() {
 var a;
 f();
 ```
-
-:::
 
 ::: correct
 
@@ -137,8 +127,6 @@ class C {
 }
 ```
 
-:::
-
 ::: correct
 
 ```js
@@ -157,5 +145,3 @@ function doSomething() {
     var second
 }
 ```
-
-:::

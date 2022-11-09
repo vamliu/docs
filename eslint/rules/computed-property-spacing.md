@@ -1,8 +1,8 @@
 ---
-title: computed-property-spacing
-layout: doc
-rule_type: layout
-related_rules:
+规则名: computed-property-spacing
+布局: doc
+规则类型: layout
+关联规则:
 - array-bracket-spacing
 - comma-spacing
 - space-in-parens
@@ -30,14 +30,14 @@ var a = "prop";
 var { [a]: x } = obj; // computed property key in object destructuring pattern (ECMAScript 6)
 ```
 
-## Rule Details
+## 规则详解
 
 This rule enforces consistent spacing inside computed property brackets.
 
 It either requires or disallows spaces between the brackets and the values inside of them.
 This rule does not apply to brackets that are separated from the adjacent value by a newline.
 
-## Options
+## 配置项
 
 This rule has two options, a string option and an object option.
 
@@ -54,7 +54,7 @@ Object option:
 
 Examples of **incorrect** code for this rule with the default `"never"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint computed-property-spacing: ["error", "never"]*/
@@ -68,8 +68,6 @@ obj[foo[ bar ]]
 const { [ a ]: someProp } = obj;
 ({ [ b ]: anotherProp } = anotherObj);
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `"never"` option:
 
@@ -88,13 +86,11 @@ const { [a]: someProp } = obj;
 ({ [b]: anotherProp } = anotherObj);
 ```
 
-:::
-
 ### always
 
 Examples of **incorrect** code for this rule with the `"always"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint computed-property-spacing: ["error", "always"]*/
@@ -109,8 +105,6 @@ var x = {[ b]: a}
 const { [a]: someProp } = obj;
 ({ [b ]: anotherProp } = anotherObj);
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"always"` option:
 
@@ -128,15 +122,13 @@ const { [ a ]: someProp } = obj;
 ({ [ b ]: anotherProp } = anotherObj);
 ```
 
-:::
-
 #### enforceForClassMembers
 
 With `enforceForClassMembers` set to `true` (default), the rule also disallows/enforces spaces inside of computed keys of class methods, getters and setters.
 
 Examples of **incorrect** code for this rule with `"never"` and `{ "enforceForClassMembers": true }` (default):
 
-::: incorrect
+
 
 ```js
 /*eslint computed-property-spacing: ["error", "never", { "enforceForClassMembers": true }]*/
@@ -155,8 +147,6 @@ const Bar = class {
   static set [ c ](value) {}
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with `"never"` and `{ "enforceForClassMembers": true }` (default):
 
@@ -180,8 +170,6 @@ const Bar = class {
 }
 ```
 
-:::
-
 Examples of **correct** code for this rule with `"never"` and `{ "enforceForClassMembers": false }`:
 
 ::: correct
@@ -204,8 +192,6 @@ const Bar = class {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 You can turn this rule off if you are not concerned with the consistency of computed properties.

@@ -1,7 +1,7 @@
 ---
-title: no-bitwise
-layout: doc
-rule_type: suggestion
+规则名: no-bitwise
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -11,13 +11,13 @@ The use of bitwise operators in JavaScript is very rare and often `&` or `|` is 
 var x = y | z;
 ```
 
-## Rule Details
+## 规则详解
 
 This rule disallows bitwise operators.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-bitwise: "error"*/
@@ -49,8 +49,6 @@ x >>= y;
 x >>>= y;
 ```
 
-:::
-
 Examples of **correct** code for this rule:
 
 ::: correct
@@ -69,9 +67,7 @@ var x = y < z;
 x += y;
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule has an object option:
 
@@ -90,8 +86,6 @@ Examples of **correct** code for this rule with the `{ "allow": ["~"] }` option:
 ~[1,2,3].indexOf(1) === -1;
 ```
 
-:::
-
 ### int32Hint
 
 Examples of **correct** code for this rule with the `{ "int32Hint": true }` option:
@@ -103,5 +97,3 @@ Examples of **correct** code for this rule with the `{ "int32Hint": true }` opti
 
 var b = a|0;
 ```
-
-:::

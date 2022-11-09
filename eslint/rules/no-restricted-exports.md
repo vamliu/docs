@@ -1,17 +1,17 @@
 ---
-title: no-restricted-exports
-layout: doc
-rule_type: suggestion
+规则名: no-restricted-exports
+布局: doc
+规则类型: suggestion
 ---
 
 
 In a project, certain names may be disallowed from being used as exported names for various reasons.
 
-## Rule Details
+## 规则详解
 
 This rule disallows specified names from being used as exported names.
 
-## Options
+## 配置项
 
 By default, this rule doesn't disallow any names. Only the names you specify in the configuration will be disallowed.
 
@@ -21,7 +21,7 @@ This rule has an object option:
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-restricted-exports: ["error", {
@@ -48,8 +48,6 @@ export { something as e } from "some_module";
 
 export { "👍" } from "some_module";
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -81,15 +79,13 @@ export { something } from "some_module";
 export { "👍" as thumbsUp } from "some_module";
 ```
 
-:::
-
 ### Default exports
 
 By design, this rule doesn't disallow `export default` declarations. If you configure `"default"` as a restricted name, that restriction will apply only to named export declarations.
 
 Examples of additional **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-restricted-exports: ["error", { "restrictedNamedExports": ["default"] }]*/
@@ -99,17 +95,13 @@ function foo() {}
 export { foo as default };
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint no-restricted-exports: ["error", { "restrictedNamedExports": ["default"] }]*/
 
 export { default } from "some_module";
 ```
-
-:::
 
 Examples of additional **correct** code for this rule:
 
@@ -121,9 +113,7 @@ Examples of additional **correct** code for this rule:
 export default function foo() {}
 ```
 
-:::
-
-## Known Limitations
+## 已知局限
 
 This rule doesn't inspect the content of source modules in re-export declarations. In particular, if you are re-exporting everything from another module's export, that export may include a restricted name. This rule cannot detect such cases.
 

@@ -1,7 +1,7 @@
 ---
-title: no-empty-character-class
-layout: doc
-rule_type: problem
+规则名: no-empty-character-class
+布局: doc
+规则类型: problem
 ---
 
 
@@ -12,13 +12,13 @@ Because empty character classes in regular expressions do not match anything, th
 var foo = /^abc[]/;
 ```
 
-## Rule Details
+## 规则详解
 
 This rule disallows empty character classes in regular expressions.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-empty-character-class: "error"*/
@@ -26,8 +26,6 @@ Examples of **incorrect** code for this rule:
 /^abc[]/.test("abcdefg"); // false
 "abcdefg".match(/^abc[]/); // null
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -43,9 +41,7 @@ Examples of **correct** code for this rule:
 "abcdefg".match(/^abc[a-z]/); // ["abcd"]
 ```
 
-:::
-
-## Known Limitations
+## 已知局限
 
 This rule does not report empty character classes in the string argument of calls to the `RegExp` constructor.
 

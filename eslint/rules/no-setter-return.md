@@ -1,10 +1,10 @@
 ---
-title: no-setter-return
-layout: doc
-rule_type: problem
-related_rules:
+规则名: no-setter-return
+布局: doc
+规则类型: problem
+关联规则:
 - getter-return
-further_reading:
+深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set
 ---
 
@@ -14,7 +14,7 @@ Setters cannot return values.
 
 While returning a value from a setter does not produce an error, the returned value is being ignored. Therefore, returning a value from a setter is either unnecessary or a possible error, since the returned value cannot be used.
 
-## Rule Details
+## 规则详解
 
 This rule disallows returning values from setters and reports `return` statements in setter functions.
 
@@ -28,7 +28,7 @@ This rule checks setters in:
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-setter-return: "error"*/
@@ -66,8 +66,6 @@ Object.defineProperty(foo, "bar", {
     }
 });
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -107,5 +105,3 @@ Object.defineProperty(foo, "bar", {
     }
 });
 ```
-
-:::

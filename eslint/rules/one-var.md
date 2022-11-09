@@ -1,7 +1,7 @@
 ---
-title: one-var
-layout: doc
-rule_type: suggestion
+规则名: one-var
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -30,11 +30,11 @@ function foo() {
 
 The single-declaration school of thought is based in pre-ECMAScript 6 behaviors, where there was no such thing as block scope, only function scope. Since all `var` statements are hoisted to the top of the function anyway, some believe that declaring all variables in a single declaration at the top of the function removes confusion around scoping rules.
 
-## Rule Details
+## 规则详解
 
 This rule enforces variables to be declared either together or separately per function ( for `var`) or block (for `let` and `const`) scope.
 
-## Options
+## 配置项
 
 This rule has one option, which can be a string option or an object option.
 
@@ -70,7 +70,7 @@ Alternate object option:
 
 Examples of **incorrect** code for this rule with the default `"always"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint one-var: ["error", "always"]*/
@@ -116,8 +116,6 @@ class C {
     }
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `"always"` option:
 
@@ -182,13 +180,11 @@ class C {
 }
 ```
 
-:::
-
 ### never
 
 Examples of **incorrect** code for this rule with the `"never"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint one-var: ["error", "never"]*/
@@ -221,8 +217,6 @@ class C {
     }
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"never"` option:
 
@@ -267,13 +261,11 @@ for (var i = 0, len = arr.length; i < len; i++) {
 }
 ```
 
-:::
-
 ### consecutive
 
 Examples of **incorrect** code for this rule with the `"consecutive"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint one-var: ["error", "consecutive"]*/
@@ -302,8 +294,6 @@ class C {
     }
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"consecutive"` option:
 
@@ -338,13 +328,11 @@ class C {
 }
 ```
 
-:::
-
 ### var, let, and const
 
 Examples of **incorrect** code for this rule with the `{ var: "always", let: "never", const: "never" }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint one-var: ["error", { var: "always", let: "never", const: "never" }]*/
@@ -364,8 +352,6 @@ function foo() {
         norf;
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ var: "always", let: "never", const: "never" }` option:
 
@@ -390,11 +376,9 @@ function foo() {
 }
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `{ var: "never" }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint one-var: ["error", { var: "never" }]*/
@@ -405,8 +389,6 @@ function foo() {
         baz;
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ var: "never" }` option:
 
@@ -426,11 +408,9 @@ function foo() {
 }
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `{ separateRequires: true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint one-var: ["error", { separateRequires: true, var: "always" }]*/
@@ -439,8 +419,6 @@ Examples of **incorrect** code for this rule with the `{ separateRequires: true 
 var foo = require("foo"),
     bar = "bar";
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ separateRequires: true }` option:
 
@@ -454,8 +432,6 @@ var foo = require("foo");
 var bar = "bar";
 ```
 
-:::
-
 ::: correct
 
 ```js
@@ -463,11 +439,9 @@ var foo = require("foo"),
     bar = require("bar");
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `{ var: "never", let: "consecutive", const: "consecutive" }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint one-var: ["error", { var: "never", let: "consecutive", const: "consecutive" }]*/
@@ -491,8 +465,6 @@ function foo() {
         e;
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ var: "never", let: "consecutive", const: "consecutive" }` option:
 
@@ -523,11 +495,9 @@ function foo() {
 }
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `{ var: "consecutive" }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint one-var: ["error", { var: "consecutive" }]*/
@@ -538,8 +508,6 @@ function foo() {
     var b;
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ var: "consecutive" }` option:
 
@@ -559,13 +527,11 @@ function foo() {
 }
 ```
 
-:::
-
 ### initialized and uninitialized
 
 Examples of **incorrect** code for this rule with the `{ "initialized": "always", "uninitialized": "never" }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint one-var: ["error", { "initialized": "always", "uninitialized": "never" }]*/
@@ -577,8 +543,6 @@ function foo() {
     var bar = false;
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "initialized": "always", "uninitialized": "never" }` option:
 
@@ -605,11 +569,9 @@ for (z of foo) {
 }
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `{ "initialized": "never" }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint one-var: ["error", { "initialized": "never" }]*/
@@ -620,8 +582,6 @@ function foo() {
         bar = false;
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "initialized": "never" }` option:
 
@@ -637,11 +597,9 @@ function foo() {
 }
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `{ "initialized": "consecutive", "uninitialized": "never" }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint one-var: ["error", { "initialized": "consecutive", "uninitialized": "never" }]*/
@@ -655,8 +613,6 @@ function foo() {
     var f = 4;
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "initialized": "consecutive", "uninitialized": "never" }` option:
 
@@ -675,11 +631,9 @@ function foo() {
 }
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `{ "initialized": "consecutive" }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint one-var: ["error", { "initialized": "consecutive" }]*/
@@ -694,8 +648,6 @@ function foo() {
     var d = 4;
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "initialized": "consecutive" }` option:
 
@@ -714,8 +666,6 @@ function foo() {
         d = 4;
 }
 ```
-
-:::
 
 ## Compatibility
 

@@ -1,7 +1,7 @@
 ---
-title: constructor-super
-layout: doc
-rule_type: problem
+规则名: constructor-super
+布局: doc
+规则类型: problem
 ---
 
 Constructors of derived classes must call `super()`.
@@ -10,13 +10,11 @@ If this is not observed, the JavaScript engine will raise a runtime error.
 
 This rule checks whether or not there is a valid `super()` call.
 
-## Rule Details
+## 规则详解
 
 This rule is aimed to flag invalid/missing `super()` calls.
 
 Examples of **incorrect** code for this rule:
-
-:::incorrect
 
 ```js
 /*eslint constructor-super: "error"*/
@@ -44,11 +42,7 @@ class A extends null {
 }
 ```
 
-:::
-
 Examples of **correct** code for this rule:
-
-:::correct
 
 ```js
 /*eslint constructor-super: "error"*/
@@ -65,8 +59,6 @@ class A extends B {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to be notified about invalid/missing `super()` callings in constructors, you can safely disable this rule.

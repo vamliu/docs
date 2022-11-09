@@ -1,7 +1,7 @@
 ---
-title: no-underscore-dangle
-layout: doc
-rule_type: suggestion
+规则名: no-underscore-dangle
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -15,13 +15,13 @@ There is actually a long history of using dangling underscores to indicate "priv
 
 Whether or not you choose to allow dangling underscores in identifiers is purely a convention and has no effect on performance, readability, or complexity. It's purely a preference.
 
-## Rule Details
+## 规则详解
 
 This rule disallows dangling underscores in identifiers.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-underscore-dangle: "error"*/
@@ -30,8 +30,6 @@ var foo_;
 var __proto__ = {};
 foo._bar();
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -49,9 +47,7 @@ const foo = { onClick(_bar) {} };
 const foo = (_bar) => {};
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule has an object option:
 
@@ -76,8 +72,6 @@ var foo_;
 foo._bar();
 ```
 
-:::
-
 ### allowAfterThis
 
 Examples of **correct** code for this rule with the `{ "allowAfterThis": true }` option:
@@ -90,8 +84,6 @@ Examples of **correct** code for this rule with the `{ "allowAfterThis": true }`
 var a = this.foo_;
 this._bar();
 ```
-
-:::
 
 ### allowAfterSuper
 
@@ -106,8 +98,6 @@ var a = super.foo_;
 super._bar();
 ```
 
-:::
-
 ### allowAfterThisConstructor
 
 Examples of **correct** code for this rule with the `{ "allowAfterThisConstructor": true }` option:
@@ -121,13 +111,11 @@ var a = this.constructor.foo_;
 this.constructor._bar();
 ```
 
-:::
-
 ### enforceInMethodNames
 
 Examples of **incorrect** code for this rule with the `{ "enforceInMethodNames": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint no-underscore-dangle: ["error", { "enforceInMethodNames": true }]*/
@@ -149,13 +137,11 @@ const o = {
 };
 ```
 
-:::
-
 ### enforceInClassFields
 
 Examples of **incorrect** code for this rule with the `{ "enforceInClassFields": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint no-underscore-dangle: ["error", { "enforceInClassFields": true }]*/
@@ -181,13 +167,11 @@ class Foo {
 }
 ```
 
-:::
-
 ### allowFunctionParams
 
 Examples of **incorrect** code for this rule with the `{ "allowFunctionParams": false }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint no-underscore-dangle: ["error", { "allowFunctionParams": false }]*/
@@ -205,8 +189,6 @@ const foo = (_bar = 0) => {};
 const foo = (..._bar) => {};
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you want to allow dangling underscores in identifiers, then you can safely turn this rule off.

@@ -1,8 +1,8 @@
 ---
-title: space-before-keywords
-layout: doc
+规则名: space-before-keywords
+布局: doc
 
-related_rules:
+关联规则:
 - space-after-keywords
 - block-spacing
 - space-return-throw-case
@@ -28,7 +28,7 @@ if (foo) {
 
 Of course, you could also have a style guide that disallows spaces before keywords.
 
-## Rule Details
+## 规则详解
 
 This rule will enforce consistency of spacing before the keywords `if`, `else`, `for`,
 `while`, `do`, `switch`, `throw`, `try`, `catch`, `finally`, `with`, `break`, `continue`,
@@ -44,7 +44,7 @@ this behavior, consider using the [block-spacing](block-spacing) rule.
 
 Examples of **incorrect** code for this rule with the default `"always"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint space-before-keywords: ["error", "always"]*/
@@ -62,8 +62,6 @@ function bar() {
     if (foo) {return; }
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `"always"` option:
 
@@ -84,11 +82,9 @@ if (foo) {
 for (let foo of ['bar', 'baz', 'qux']) {}
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `"never"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint space-before-keywords: ["error", "never"]*/
@@ -106,8 +102,6 @@ try {} finally {}
 
 try {} catch(e) {}
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"never"` option:
 
@@ -127,8 +121,6 @@ try {}finally {}
 try{}catch(e) {}
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you do not wish to enforce consistency on keyword spacing.

@@ -1,7 +1,7 @@
 ---
-title: no-sequences
-layout: doc
-rule_type: suggestion
+规则名: no-sequences
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -17,7 +17,7 @@ while (a = next(), a && a.length);
 (0, eval)("doSomething();");
 ```
 
-## Rule Details
+## 规则详解
 
 This rule forbids the use of the comma operator, with the following exceptions:
 
@@ -26,7 +26,7 @@ This rule forbids the use of the comma operator, with the following exceptions:
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-sequences: "error"*/
@@ -47,8 +47,6 @@ while (val = foo(), val < 42);
 
 with (doSomething(), val) {}
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -74,15 +72,13 @@ while ((val = foo(), val < 42));
 with ((doSomething(), val)) {}
 ```
 
-:::
-
 ### Note about arrow function bodies
 
 If an arrow function body is a statement rather than a block, and that statement contains a sequence, you need to use double parentheses around the statement to indicate that the sequence is intentional.
 
 Examples of **incorrect** code for arrow functions:
 
-::: incorrect
+
 
 ```js
 /*eslint no-sequences: "error"*/
@@ -92,8 +88,6 @@ const foo = () => ((bar = 123), 10);
 
 const foo = () => { return (bar = 123), 10 }
 ```
-
-:::
 
 Examples of **correct** code for arrow functions:
 
@@ -108,9 +102,7 @@ const foo = () => (((bar = 123), 10));
 const foo = () => { return ((bar = 123), 10) }
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule takes one option, an object, with the following properties:
 
@@ -120,7 +112,7 @@ This rule takes one option, an object, with the following properties:
 
 Examples of **incorrect** code for this rule with the `{ "allowInParentheses": false }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint no-sequences: ["error", { "allowInParentheses": false }]*/
@@ -144,8 +136,6 @@ with ((doSomething(), val)) {}
 const foo = (val) => ((console.log('bar'), val));
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `{ "allowInParentheses": false }` option:
 
 ::: correct
@@ -156,9 +146,7 @@ Examples of **correct** code for this rule with the `{ "allowInParentheses": fal
 for (i = 0, j = 10; i < j; i++, j--);
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 Disable this rule if sequence expressions with the comma operator are acceptable.
 Another case is where you might want to report all usages of the comma operator, even in a for loop. You can achieve this using rule `no-restricted-syntax`:

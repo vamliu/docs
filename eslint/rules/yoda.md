@@ -1,8 +1,8 @@
 ---
-title: yoda
-layout: doc
-rule_type: suggestion
-further_reading:
+规则名: yoda
+布局: doc
+规则类型: suggestion
+深入了解:
 - https://en.wikipedia.org/wiki/Yoda_conditions
 - http://thomas.tuerke.net/on/design/?with=1249091668#msg1146181680
 ---
@@ -31,11 +31,11 @@ Proponents of Yoda conditions highlight that it is impossible to mistakenly use 
 
 Opponents of Yoda conditions point out that tooling has made us better programmers because tools will catch the mistaken use of `=` instead of `==` (ESLint will catch this for you). Therefore, they argue, the utility of the pattern doesn't outweigh the readability hit the code takes while using Yoda conditions.
 
-## Rule Details
+## 规则详解
 
 This rule aims to enforce consistent style of conditions which compare a variable to a literal value.
 
-## Options
+## 配置项
 
 This rule can take a string option:
 
@@ -51,9 +51,9 @@ The `onlyEquality` option allows a superset of the exceptions which `exceptRange
 
 ### never
 
-Examples of **incorrect** code for the default `"never"` option:
+选项 default `"never"` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint yoda: "error"*/
@@ -87,9 +87,7 @@ if (0 <= x && x < 1) {
 }
 ```
 
-:::
-
-Examples of **correct** code for the default `"never"` option:
+选项 default `"never"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -112,8 +110,6 @@ if (`${value}` === `red`) {
 
 }
 ```
-
-:::
 
 ### exceptRange
 
@@ -145,8 +141,6 @@ function howLong(arr) {
 }
 ```
 
-:::
-
 ### onlyEquality
 
 Examples of **correct** code for the `"never", { "onlyEquality": true }` options:
@@ -166,13 +160,11 @@ if (x !== `foo` && `bar` != x) {
 }
 ```
 
-:::
-
 ### always
 
-Examples of **incorrect** code for the `"always"` option:
+选项 `"always"` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint yoda: ["error", "always"]*/
@@ -186,9 +178,7 @@ if (color == `blue`) {
 }
 ```
 
-:::
-
-Examples of **correct** code for the `"always"` option:
+选项 `"always"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -211,5 +201,3 @@ if (-1 < str.indexOf(substr)) {
     // ...
 }
 ```
-
-:::

@@ -1,8 +1,8 @@
 ---
-title: no-obj-calls
-layout: doc
-rule_type: problem
-further_reading:
+规则名: no-obj-calls
+布局: doc
+规则类型: problem
+深入了解:
 - https://es5.github.io/#x15.8
 ---
 
@@ -22,7 +22,7 @@ And the [ECMAScript 2017 specification](https://www.ecma-international.org/ecma-
 
 > The Atomics object does not have a `[[Call]]` internal method; it is not possible to invoke the Atomics object as a function.
 
-## Rule Details
+## 规则详解
 
 This rule disallows calling the `Math`, `JSON`, `Reflect` and `Atomics` objects as functions.
 
@@ -30,7 +30,7 @@ This rule also disallows using these objects as constructors with the `new` oper
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-obj-calls: "error"*/
@@ -53,8 +53,6 @@ var atomics = Atomics();
 var newAtomics = new Atomics();
 ```
 
-:::
-
 Examples of **correct** code for this rule:
 
 ::: correct
@@ -73,5 +71,3 @@ var value = Reflect.get({ x: 1, y: 2 }, "x");
 
 var first = Atomics.load(foo, 0);
 ```
-
-:::

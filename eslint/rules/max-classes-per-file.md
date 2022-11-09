@@ -1,7 +1,7 @@
 ---
-title: max-classes-per-file
-layout: doc
-rule_type: suggestion
+规则名: max-classes-per-file
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -9,14 +9,14 @@ Files containing multiple classes can often result in a less navigable
 and poorly structured codebase. Best practice is to keep each file
 limited to a single responsibility.
 
-## Rule Details
+## 规则详解
 
 This rule enforces that each file may contain only a particular number
 of classes and no more.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint max-classes-per-file: "error"*/
@@ -24,8 +24,6 @@ Examples of **incorrect** code for this rule:
 class Foo {}
 class Bar {}
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -37,9 +35,7 @@ Examples of **correct** code for this rule:
 class Foo {}
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule may be configured with either an object or a number.
 
@@ -76,8 +72,6 @@ class Foo {}
 class Bar {}
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `ignoreExpressions` option set to `true`:
 
 ::: correct
@@ -95,5 +89,3 @@ class VisitorFactory {
     }
 }
 ```
-
-:::

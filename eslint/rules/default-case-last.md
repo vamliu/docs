@@ -1,10 +1,10 @@
 ---
-title: default-case-last
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: default-case-last
+布局: doc
+规则类型: suggestion
+关联规则:
 - default-case
-further_reading:
+深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
 ---
 
@@ -17,7 +17,7 @@ Even if there is no "fall through" logic, it's still unexpected to see the `defa
 
 If a `switch` statement should have a `default` clause, it's considered a best practice to define it as the last clause.
 
-## Rule Details
+## 规则详解
 
 This rule enforces `default` clauses in `switch` statements to be last.
 
@@ -26,8 +26,6 @@ It applies only to `switch` statements that already have a `default` clause.
 This rule does not enforce the existence of `default` clauses. See [default-case](default-case) if you also want to enforce the existence of `default` clauses in `switch` statements.
 
 Examples of **incorrect** code for this rule:
-
-:::incorrect
 
 ```js
 /*eslint default-case-last: "error"*/
@@ -79,11 +77,7 @@ switch (foo) {
 }
 ```
 
-:::
-
 Examples of **correct** code for this rule:
-
-:::correct
 
 ```js
 /*eslint default-case-last: "error"*/
@@ -130,5 +124,3 @@ if (foo !== 0) {
 }
 doSomethingAnyway();
 ```
-
-:::

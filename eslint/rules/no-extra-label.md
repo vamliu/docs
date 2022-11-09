@@ -1,8 +1,8 @@
 ---
-title: no-extra-label
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-extra-label
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-labels
 - no-label-var
 - no-unused-labels
@@ -21,13 +21,13 @@ A: while (a) {
 You can achieve the same result by removing the label and using `break` or `continue` without a label.
 Probably those labels would confuse developers because they expect labels to jump to further.
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at eliminating unnecessary labels.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-extra-label: "error"*/
@@ -45,8 +45,6 @@ C: switch (a) {
         break C;
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -87,8 +85,6 @@ C: switch (a) {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to be notified about usage of labels, then it's safe to disable this rule.

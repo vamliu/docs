@@ -1,21 +1,21 @@
 ---
-title: no-label-var
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-label-var
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-extra-label
 - no-labels
 - no-unused-labels
 ---
 
 
-## Rule Details
+## 规则详解
 
 This rule aims to create clearer code by disallowing the bad practice of creating a label that shares a name with a variable that is in scope.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-label-var: "error"*/
@@ -28,8 +28,6 @@ x:
   }
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -52,8 +50,6 @@ q:
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to be notified about usage of labels, then it's safe to disable this rule.

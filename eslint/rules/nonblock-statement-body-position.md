@@ -1,8 +1,8 @@
 ---
-title: nonblock-statement-body-position
-layout: doc
-rule_type: layout
-further_reading:
+规则名: nonblock-statement-body-position
+布局: doc
+规则类型: layout
+深入了解:
 - https://jscs-dev.github.io/rule/requireNewlineBeforeSingleStatementsInIf
 ---
 
@@ -31,13 +31,13 @@ To avoid this issue, one might require all single-line `if` statements to appear
 if (foo) bar();
 ```
 
-## Rule Details
+## 规则详解
 
 This rule aims to enforce a consistent location for single-line statements.
 
 Note that this rule does not enforce the usage of single-line statements in general. If you would like to disallow single-line statements, use the [`curly`](/docs/rules/curly) rule instead.
 
-### Options
+### 配置项
 
 This rule accepts a string option:
 
@@ -52,7 +52,7 @@ Additionally, the rule accepts an optional object option with an `"overrides"` k
 
 Examples of **incorrect** code for this rule with the default `"beside"` option:
 
-::: incorrect
+
 
 ```js
 /* eslint nonblock-statement-body-position: ["error", "beside"] */
@@ -73,8 +73,6 @@ do
 while (foo)
 
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `"beside"` option:
 
@@ -99,11 +97,9 @@ if (foo) { // block statements are always allowed with this rule
 }
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `"below"` option:
 
-::: incorrect
+
 
 ```js
 /* eslint nonblock-statement-body-position: ["error", "below"] */
@@ -117,8 +113,6 @@ for (let i = 1; i < foo; i++) bar();
 
 do bar(); while (foo)
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"below"` option:
 
@@ -149,11 +143,9 @@ if (foo) {
 }
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `"beside", { "overrides": { "while": "below" } }` rule:
 
-::: incorrect
+
 
 ```js
 /* eslint nonblock-statement-body-position: ["error", "beside", { "overrides": { "while": "below" } }] */
@@ -163,8 +155,6 @@ if (foo)
 
 while (foo) bar();
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"beside", { "overrides": { "while": "below" } }` rule:
 
@@ -179,8 +169,6 @@ while (foo)
   bar();
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you're not concerned about consistent locations of single-line statements, you should not turn on this rule. You can also disable this rule if you're using the `"all"` option for the [`curly`](/docs/rules/curly) rule, because this will disallow single-line statements entirely.

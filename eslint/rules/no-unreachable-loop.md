@@ -1,8 +1,8 @@
 ---
-title: no-unreachable-loop
-layout: doc
-rule_type: problem
-related_rules:
+规则名: no-unreachable-loop
+布局: doc
+规则类型: problem
+关联规则:
 - no-unreachable
 - no-constant-condition
 - no-unmodified-loop-condition
@@ -24,7 +24,7 @@ for (let i = 0; i < arr.length; i++) {
 
 In rare cases where only one iteration (or at most one iteration) is intended behavior, the code should be refactored to use `if` conditionals instead of `while`, `do-while` and `for` loops. It's considered a best practice to avoid using loop constructs for such cases.
 
-## Rule Details
+## 规则详解
 
 This rule aims to detect and disallow loops that can have at most one iteration, by performing static code path analysis on loop bodies.
 
@@ -34,7 +34,7 @@ This rule checks `while`, `do-while`, `for`, `for-in` and `for-of` loops. You ca
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-unreachable-loop: "error"*/
@@ -82,8 +82,6 @@ for (foo of bar) {
     break;
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -136,8 +134,6 @@ for (foo of bar) {
 }
 ```
 
-:::
-
 Please note that this rule is not designed to check loop conditions, and will not warn in cases such as the following examples.
 
 Examples of additional **correct** code for this rule:
@@ -160,9 +156,7 @@ for (const a of [1]) {
 }
 ```
 
-:::
-
-## Options
+## 配置项
 
 This rule has an object option, with one option:
 
@@ -193,9 +187,7 @@ for (var key in obj) {
 for (const a of b) break;
 ```
 
-:::
-
-## Known Limitations
+## 已知局限
 
 Static code path analysis, in general, does not evaluate conditions. Due to this fact, this rule might miss reporting cases such as the following:
 

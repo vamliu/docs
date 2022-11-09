@@ -1,7 +1,7 @@
 ---
-title: no-lone-blocks
-layout: doc
-rule_type: suggestion
+规则名: no-lone-blocks
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -15,13 +15,13 @@ In JavaScript, prior to ES6, standalone code blocks delimited by curly braces do
 
 In ES6, code blocks may create a new scope if a block-level binding (`let` and `const`), a class declaration or a function declaration (in strict mode) are present. A block is not considered redundant in these cases.
 
-## Rule Details
+## 规则详解
 
 This rule aims to eliminate unnecessary and potentially confusing blocks at the top level of a script or within other blocks.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-lone-blocks: "error"*/
@@ -58,8 +58,6 @@ class C {
     }
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with ES6 environment:
 
@@ -111,8 +109,6 @@ class C {
 }
 ```
 
-:::
-
 Examples of **correct** code for this rule with ES6 environment and strict mode via `"parserOptions": { "sourceType": "module" }` in the ESLint configuration or `"use strict"` directive in the code:
 
 ::: correct
@@ -127,5 +123,3 @@ Examples of **correct** code for this rule with ES6 environment and strict mode 
     function foo() {}
 }
 ```
-
-:::

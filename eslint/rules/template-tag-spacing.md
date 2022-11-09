@@ -1,8 +1,8 @@
 ---
-title: template-tag-spacing
-layout: doc
-rule_type: layout
-further_reading:
+规则名: template-tag-spacing
+布局: doc
+规则类型: layout
+深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_template_literals
 - https://exploringjs.com/es6/ch_template-literals.html#_examples-of-using-tagged-template-literals
 ---
@@ -18,11 +18,11 @@ let hello = func`Hello world`;
 let hello = func `Hello world`;
 ```
 
-## Rule Details
+## 规则详解
 
 This rule aims to maintain consistency around the spacing between template tag functions and their template literals.
 
-## Options
+## 配置项
 
 ```json
 {
@@ -41,15 +41,13 @@ This rule has one option whose value can be set to `"never"` or `"always"`
 
 Examples of **incorrect** code for this rule with the default `"never"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint template-tag-spacing: "error"*/
 
 func `Hello world`;
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `"never"` option:
 
@@ -61,21 +59,17 @@ Examples of **correct** code for this rule with the default `"never"` option:
 func`Hello world`;
 ```
 
-:::
-
 ### always
 
 Examples of **incorrect** code for this rule with the `"always"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint template-tag-spacing: ["error", "always"]*/
 
 func`Hello world`;
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"always"` option:
 
@@ -87,8 +81,6 @@ Examples of **correct** code for this rule with the `"always"` option:
 func `Hello world`;
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to be notified about usage of spacing between tag functions and their template literals, then it's safe to disable this rule.

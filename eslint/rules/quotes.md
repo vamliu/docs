@@ -1,7 +1,7 @@
 ---
-title: quotes
-layout: doc
-rule_type: layout
+规则名: quotes
+布局: doc
+规则类型: layout
 ---
 
 
@@ -20,11 +20,11 @@ Each of these lines creates a string and, in some cases, can be used interchange
 
 Many codebases require strings to be defined in a consistent manner.
 
-## Rule Details
+## 规则详解
 
 This rule enforces the consistent use of either backticks, double, or single quotes.
 
-## Options
+## 配置项
 
 This rule has two options, a string option and an object option.
 
@@ -45,7 +45,7 @@ Object option:
 
 Examples of **incorrect** code for this rule with the default `"double"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint quotes: ["error", "double"]*/
@@ -54,8 +54,6 @@ var single = 'single';
 var unescaped = 'a string containing "double" quotes';
 var backtick = `back\ntick`; // you can use \n in single or double quoted strings
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `"double"` option:
 
@@ -71,13 +69,11 @@ tick`;  // backticks are allowed due to newline
 var backtick = tag`backtick`; // backticks are allowed due to tag
 ```
 
-:::
-
 ### single
 
 Examples of **incorrect** code for this rule with the `"single"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint quotes: ["error", "single"]*/
@@ -85,8 +81,6 @@ Examples of **incorrect** code for this rule with the `"single"` option:
 var double = "double";
 var unescaped = "a string containing 'single' quotes";
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"single"` option:
 
@@ -100,13 +94,11 @@ var single = 'single';
 var backtick = `back${x}tick`; // backticks are allowed due to substitution
 ```
 
-:::
-
 ### backticks
 
 Examples of **incorrect** code for this rule with the `"backtick"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint quotes: ["error", "backtick"]*/
@@ -115,8 +107,6 @@ var single = 'single';
 var double = "double";
 var unescaped = 'a string containing `backticks`';
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"backtick"` option:
 
@@ -128,8 +118,6 @@ Examples of **correct** code for this rule with the `"backtick"` option:
 
 var backtick = `backtick`;
 ```
-
-:::
 
 ### avoidEscape
 
@@ -143,8 +131,6 @@ Examples of additional **correct** code for this rule with the `"double", { "avo
 var single = 'a string containing "double" quotes';
 ```
 
-:::
-
 Examples of additional **correct** code for this rule with the `"single", { "avoidEscape": true }` options:
 
 ::: correct
@@ -155,8 +141,6 @@ Examples of additional **correct** code for this rule with the `"single", { "avo
 var double = "a string containing 'single' quotes";
 ```
 
-:::
-
 Examples of additional **correct** code for this rule with the `"backtick", { "avoidEscape": true }` options:
 
 ::: correct
@@ -166,8 +150,6 @@ Examples of additional **correct** code for this rule with the `"backtick", { "a
 
 var double = "a string containing `backtick` quotes"
 ```
-
-:::
 
 ### allowTemplateLiterals
 
@@ -182,8 +164,6 @@ var double = "double";
 var double = `double`;
 ```
 
-:::
-
 Examples of additional **correct** code for this rule with the `"single", { "allowTemplateLiterals": true }` options:
 
 ::: correct
@@ -195,10 +175,8 @@ var single = 'single';
 var single = `single`;
 ```
 
-:::
-
 `{ "allowTemplateLiterals": false }` will not disallow the usage of all template literals. If you want to forbid any instance of template literals, use [no-restricted-syntax](no-restricted-syntax) and target the `TemplateLiteral` selector.
 
-## When Not To Use It
+## 使用建议
 
 If you do not need consistency in your string styles, you can safely disable this rule.

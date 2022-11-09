@@ -1,7 +1,7 @@
 ---
-title: no-unreachable
-layout: doc
-rule_type: problem
+规则名: no-unreachable
+布局: doc
+规则类型: problem
 ---
 
 
@@ -28,13 +28,13 @@ class C extends B {
 }
 ```
 
-## Rule Details
+## 规则详解
 
 This rule disallows unreachable code after `return`, `throw`, `continue`, and `break` statements. This rule also flags definitions of instance fields in subclasses whose constructors don't have `super()` calls.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-unreachable: "error"*/
@@ -70,8 +70,6 @@ for (;;) {}
 console.log("done");
 ```
 
-:::
-
 Examples of **correct** code for this rule, because of JavaScript function and variable hoisting:
 
 ::: correct
@@ -98,11 +96,9 @@ switch (foo) {
 }
 ```
 
-:::
-
 Examples of additional **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-unreachable: "error"*/
@@ -118,8 +114,6 @@ class C extends B {
     }
 }
 ```
-
-:::
 
 Examples of additional **correct** code for this rule:
 
@@ -159,5 +153,3 @@ class F extends B {
     }
 }
 ```
-
-:::

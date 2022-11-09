@@ -1,7 +1,7 @@
 ---
-title: indent
-layout: doc
-rule_type: layout
+规则名: indent
+布局: doc
+规则类型: layout
 ---
 
 
@@ -22,11 +22,11 @@ These are the most common scenarios recommended in different style guides:
 * Tabs: jQuery
 * Four spaces: Crockford
 
-## Rule Details
+## 规则详解
 
 This rule enforces a consistent indentation style. The default style is `4 spaces`.
 
-## Options
+## 配置项
 
 This rule has a mixed option:
 
@@ -48,7 +48,7 @@ Or for tabbed indentation:
 
 Examples of **incorrect** code for this rule with the default options:
 
-::: incorrect
+
 
 ```js
 /*eslint indent: "error"*/
@@ -60,8 +60,6 @@ if (a) {
   }
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default options:
 
@@ -77,8 +75,6 @@ if (a) {
     }
 }
 ```
-
-:::
 
 This rule has an object option:
 
@@ -125,7 +121,7 @@ Level of indentation denotes the multiple of the indent specified. Example:
 
 Examples of **incorrect** code for this rule with the `"tab"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint indent: ["error", "tab"]*/
@@ -137,8 +133,6 @@ function foo(d) {
  }
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"tab"` option:
 
@@ -154,8 +148,6 @@ if (a) {
 /*tab*/}
 }
 ```
-
-:::
 
 ### ignoredNodes
 
@@ -177,8 +169,6 @@ var a = foo
 : baz;
 ```
 
-:::
-
 The following configuration ignores indentation in the body of IIFEs.
 
 Examples of **correct** code for this rule with the `4, { "ignoredNodes": ["CallExpression > FunctionExpression.callee > BlockStatement.body"] }` option:
@@ -196,15 +186,13 @@ bar();
 })
 ```
 
-:::
-
 All AST node types can be found at [ESTree](https://github.com/estree/estree) specification. You can use [AST Explorer](https://astexplorer.net/) with the espree parser to examine AST tree of a code snippet.
 
 ### SwitchCase
 
 Examples of **incorrect** code for this rule with the `2, { "SwitchCase": 1 }` options:
 
-::: incorrect
+
 
 ```js
 /*eslint indent: ["error", 2, { "SwitchCase": 1 }]*/
@@ -216,8 +204,6 @@ case "b":
     break;
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `2, { "SwitchCase": 1 }` option:
 
@@ -234,13 +220,11 @@ switch(a){
 }
 ```
 
-:::
-
 ### VariableDeclarator
 
 Examples of **incorrect** code for this rule with the `2, { "VariableDeclarator": 1 }` options:
 
-::: incorrect
+
 
 ```js
 /*eslint indent: ["error", 2, { "VariableDeclarator": 1 }]*/
@@ -256,8 +240,6 @@ const a = 1,
     b = 2,
     c = 3;
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `2, { "VariableDeclarator": 1 }` options:
 
@@ -278,8 +260,6 @@ const a = 1,
   c = 3;
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `2, { "VariableDeclarator": 2 }` options:
 
 ::: correct
@@ -299,11 +279,9 @@ const a = 1,
     c = 3;
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `2, { "VariableDeclarator": "first" }` options:
 
-::: incorrect
+
 
 ```js
 /*eslint indent: ["error", 2, { "VariableDeclarator": "first" }]*/
@@ -319,8 +297,6 @@ const a = 1,
   b = 2,
   c = 3;
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `2, { "VariableDeclarator": "first" }` options:
 
@@ -341,8 +317,6 @@ const a = 1,
       c = 3;
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `2, { "VariableDeclarator": { "var": 2, "let": 2, "const": 3 } }` options:
 
 ::: correct
@@ -362,13 +336,11 @@ const a = 1,
       c = 3;
 ```
 
-:::
-
 ### outerIIFEBody
 
 Examples of **incorrect** code for this rule with the options `2, { "outerIIFEBody": 0 }`:
 
-::: incorrect
+
 
 ```js
 /*eslint indent: ["error", 2, { "outerIIFEBody": 0 }]*/
@@ -385,8 +357,6 @@ if (y) {
 console.log('foo');
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the options `2, { "outerIIFEBody": 0 }`:
 
@@ -407,8 +377,6 @@ if (y) {
    console.log('foo');
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the options `2, { "outerIIFEBody":  "off" }`:
 
@@ -438,13 +406,11 @@ if (y) {
 }
 ```
 
-:::
-
 ### MemberExpression
 
 Examples of **incorrect** code for this rule with the `2, { "MemberExpression": 1 }` options:
 
-::: incorrect
+
 
 ```js
 /*eslint indent: ["error", 2, { "MemberExpression": 1 }]*/
@@ -453,8 +419,6 @@ foo
 .bar
 .baz()
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `2, { "MemberExpression": 1 }` option:
 
@@ -468,13 +432,11 @@ foo
   .baz();
 ```
 
-:::
-
 ### FunctionDeclaration
 
 Examples of **incorrect** code for this rule with the `2, { "FunctionDeclaration": {"body": 1, "parameters": 2} }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint indent: ["error", 2, { "FunctionDeclaration": {"body": 1, "parameters": 2} }]*/
@@ -485,8 +447,6 @@ function foo(bar,
     qux();
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `2, { "FunctionDeclaration": {"body": 1, "parameters": 2} }` option:
 
@@ -502,11 +462,9 @@ function foo(bar,
 }
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `2, { "FunctionDeclaration": {"parameters": "first"} }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint indent: ["error", 2, {"FunctionDeclaration": {"parameters": "first"}}]*/
@@ -516,8 +474,6 @@ function foo(bar, baz,
   qux();
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `2, { "FunctionDeclaration": {"parameters": "first"} }` option:
 
@@ -532,13 +488,11 @@ function foo(bar, baz,
 }
 ```
 
-:::
-
 ### FunctionExpression
 
 Examples of **incorrect** code for this rule with the `2, { "FunctionExpression": {"body": 1, "parameters": 2} }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint indent: ["error", 2, { "FunctionExpression": {"body": 1, "parameters": 2} }]*/
@@ -549,8 +503,6 @@ var foo = function(bar,
     qux();
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `2, { "FunctionExpression": {"body": 1, "parameters": 2} }` option:
 
@@ -566,11 +518,9 @@ var foo = function(bar,
 }
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `2, { "FunctionExpression": {"parameters": "first"} }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint indent: ["error", 2, {"FunctionExpression": {"parameters": "first"}}]*/
@@ -580,8 +530,6 @@ var foo = function(bar, baz,
   qux();
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `2, { "FunctionExpression": {"parameters": "first"} }` option:
 
@@ -596,13 +544,11 @@ var foo = function(bar, baz,
 }
 ```
 
-:::
-
 ### StaticBlock
 
 Examples of **incorrect** code for this rule with the `2, { "StaticBlock": {"body": 1} }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint indent: ["error", 2, { "StaticBlock": {"body": 1} }]*/
@@ -613,8 +559,6 @@ class C {
   }
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `2, { "StaticBlock": {"body": 1} }` option:
 
@@ -630,11 +574,9 @@ class C {
 }
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `2, { "StaticBlock": {"body": 2} }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint indent: ["error", 2, { "StaticBlock": {"body": 2} }]*/
@@ -645,8 +587,6 @@ class C {
   }
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `2, { "StaticBlock": {"body": 2} }` option:
 
@@ -662,13 +602,11 @@ class C {
 }
 ```
 
-:::
-
 ### CallExpression
 
 Examples of **incorrect** code for this rule with the `2, { "CallExpression": {"arguments": 1} }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint indent: ["error", 2, { "CallExpression": {"arguments": 1} }]*/
@@ -678,8 +616,6 @@ foo(bar,
       qux
 );
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `2, { "CallExpression": {"arguments": 1} }` option:
 
@@ -694,11 +630,9 @@ foo(bar,
 );
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `2, { "CallExpression": {"arguments": "first"} }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint indent: ["error", 2, {"CallExpression": {"arguments": "first"}}]*/
@@ -706,8 +640,6 @@ Examples of **incorrect** code for this rule with the `2, { "CallExpression": {"
 foo(bar, baz,
   baz, boop, beep);
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `2, { "CallExpression": {"arguments": "first"} }` option:
 
@@ -720,13 +652,11 @@ foo(bar, baz,
     baz, boop, beep);
 ```
 
-:::
-
 ### ArrayExpression
 
 Examples of **incorrect** code for this rule with the `2, { "ArrayExpression": 1 }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint indent: ["error", 2, { "ArrayExpression": 1 }]*/
@@ -737,8 +667,6 @@ baz,
       qux
 ];
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `2, { "ArrayExpression": 1 }` option:
 
@@ -754,11 +682,9 @@ var foo = [
 ];
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `2, { "ArrayExpression": "first" }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint indent: ["error", 2, {"ArrayExpression": "first"}]*/
@@ -768,8 +694,6 @@ var foo = [bar,
   qux
 ];
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `2, { "ArrayExpression": "first" }` option:
 
@@ -784,13 +708,11 @@ var foo = [bar,
 ];
 ```
 
-:::
-
 ### ObjectExpression
 
 Examples of **incorrect** code for this rule with the `2, { "ObjectExpression": 1 }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint indent: ["error", 2, { "ObjectExpression": 1 }]*/
@@ -801,8 +723,6 @@ baz: 2,
       qux: 3
 };
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `2, { "ObjectExpression": 1 }` option:
 
@@ -818,11 +738,9 @@ var foo = {
 };
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `2, { "ObjectExpression": "first" }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint indent: ["error", 2, {"ObjectExpression": "first"}]*/
@@ -830,8 +748,6 @@ Examples of **incorrect** code for this rule with the `2, { "ObjectExpression": 
 var foo = { bar: 1,
   baz: 2 };
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `2, { "ObjectExpression": "first" }` option:
 
@@ -843,8 +759,6 @@ Examples of **correct** code for this rule with the `2, { "ObjectExpression": "f
 var foo = { bar: 1,
             baz: 2 };
 ```
-
-:::
 
 ### ImportDeclaration
 
@@ -867,11 +781,9 @@ import {
 } from 'qux';
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `4, { "ImportDeclaration": "first" }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint indent: ["error", 4, { "ImportDeclaration": "first" }]*/
@@ -881,8 +793,6 @@ import { foo,
     baz,
 } from 'qux';
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `4, { "ImportDeclaration": "first" }` option:
 
@@ -897,13 +807,11 @@ import { foo,
 } from 'qux';
 ```
 
-:::
-
 ### flatTernaryExpressions
 
 Examples of **incorrect** code for this rule with the default `4, { "flatTernaryExpressions": false }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint indent: ["error", 4, { "flatTernaryExpressions": false }]*/
@@ -913,8 +821,6 @@ var a =
     baz ? qux :
     boop;
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `4, { "flatTernaryExpressions": false }` option:
 
@@ -929,11 +835,9 @@ var a =
             boop;
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `4, { "flatTernaryExpressions": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint indent: ["error", 4, { "flatTernaryExpressions": true }]*/
@@ -943,8 +847,6 @@ var a =
         baz ? qux :
             boop;
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `4, { "flatTernaryExpressions": true }` option:
 
@@ -959,13 +861,11 @@ var a =
     boop;
 ```
 
-:::
-
 ### offsetTernaryExpressions
 
 Examples of **incorrect** code for this rule with the default `2, { "offsetTernaryExpressions": false }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint indent: ["error", 2, { "offsetTernaryExpressions": false }]*/
@@ -978,8 +878,6 @@ condition
       false
     }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `2, { "offsetTernaryExpressions": false }` option:
 
@@ -1001,11 +899,9 @@ condition
     }
 ```
 
-:::
-
 Examples of **incorrect** code for this rule with the `2, { "offsetTernaryExpressions": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint indent: ["error", 2, { "offsetTernaryExpressions": true }]*/
@@ -1022,8 +918,6 @@ condition
       return false
     }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `2, { "offsetTernaryExpressions": true }` option:
 
@@ -1045,8 +939,6 @@ condition
       }
 ```
 
-:::
-
 ### ignoreComments
 
 Examples of additional **correct** code for this rule with the `4, { "ignoreComments": true }` option:
@@ -1063,8 +955,6 @@ if (foo) {
     doSomethingElse();
 }
 ```
-
-:::
 
 ## Compatibility
 

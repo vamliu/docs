@@ -1,6 +1,6 @@
 ---
-title: no-empty-class
-layout: doc
+规则名: no-empty-class
+布局: doc
 
 ---
 
@@ -14,13 +14,13 @@ Empty character classes in regular expressions do not match anything and can res
 var foo = /^abc[]/;
 ```
 
-## Rule Details
+## 规则详解
 
 This rule is aimed at highlighting possible typos and unexpected behavior in regular expressions which may arise from the use of empty character classes.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 var foo = /^abc[]/;
@@ -29,8 +29,6 @@ var foo = /^abc[]/;
 
 bar.match(/^abc[]/);
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -43,5 +41,3 @@ var foo = /^abc[a-z]/;
 
 var bar = new RegExp("^abc[]");
 ```
-
-:::

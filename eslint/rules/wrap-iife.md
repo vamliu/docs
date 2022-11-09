@@ -1,7 +1,7 @@
 ---
-title: wrap-iife
-layout: doc
-rule_type: layout
+规则名: wrap-iife
+布局: doc
+规则类型: layout
 ---
 
 
@@ -16,11 +16,11 @@ var x = function () { return { y: 1 };}();
 function () { /* side effects */ }(); // SyntaxError
 ```
 
-## Rule Details
+## 规则详解
 
 This rule requires all immediately-invoked function expressions to be wrapped in parentheses.
 
-## Options
+## 配置项
 
 This rule has two options, a string option and an object option.
 
@@ -36,9 +36,9 @@ Object option:
 
 ### outside
 
-Examples of **incorrect** code for the default `"outside"` option:
+选项 default `"outside"` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint wrap-iife: ["error", "outside"]*/
@@ -47,9 +47,7 @@ var x = function () { return { y: 1 };}(); // unwrapped
 var x = (function () { return { y: 1 };})(); // wrapped function expression
 ```
 
-:::
-
-Examples of **correct** code for the default `"outside"` option:
+选项 default `"outside"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -58,14 +56,12 @@ Examples of **correct** code for the default `"outside"` option:
 
 var x = (function () { return { y: 1 };}()); // wrapped call expression
 ```
-
-:::
 
 ### inside
 
-Examples of **incorrect** code for the `"inside"` option:
+选项 `"inside"` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint wrap-iife: ["error", "inside"]*/
@@ -74,9 +70,7 @@ var x = function () { return { y: 1 };}(); // unwrapped
 var x = (function () { return { y: 1 };}()); // wrapped call expression
 ```
 
-:::
-
-Examples of **correct** code for the `"inside"` option:
+选项 `"inside"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -85,14 +79,12 @@ Examples of **correct** code for the `"inside"` option:
 
 var x = (function () { return { y: 1 };})(); // wrapped function expression
 ```
-
-:::
 
 ### any
 
-Examples of **incorrect** code for the `"any"` option:
+选项 `"any"` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint wrap-iife: ["error", "any"]*/
@@ -100,9 +92,7 @@ Examples of **incorrect** code for the `"any"` option:
 var x = function () { return { y: 1 };}(); // unwrapped
 ```
 
-:::
-
-Examples of **correct** code for the `"any"` option:
+选项 `"any"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -112,14 +102,12 @@ Examples of **correct** code for the `"any"` option:
 var x = (function () { return { y: 1 };}()); // wrapped call expression
 var x = (function () { return { y: 1 };})(); // wrapped function expression
 ```
-
-:::
 
 ### functionPrototypeMethods
 
 Examples of **incorrect** code for this rule with the `"inside", { "functionPrototypeMethods": true }` options:
 
-::: incorrect
+
 
 ```js
 /* eslint wrap-iife: [2, "inside", { functionPrototypeMethods: true }] */
@@ -129,8 +117,6 @@ var x = (function(){ foo(); }())
 var x = function(){ foo(); }.call(bar)
 var x = (function(){ foo(); }.call(bar))
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `"inside", { "functionPrototypeMethods": true }` options:
 
@@ -142,5 +128,3 @@ Examples of **correct** code for this rule with the `"inside", { "functionProtot
 var x = (function(){ foo(); })()
 var x = (function(){ foo(); }).call(bar)
 ```
-
-:::

@@ -1,8 +1,8 @@
 ---
-title: no-case-declarations
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-case-declarations
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-fallthrough
 ---
 
@@ -16,13 +16,13 @@ will only happen if the case where it is defined is reached.
 To ensure that the lexical declaration only applies to the current case clause
 wrap your clauses in blocks.
 
-## Rule Details
+## 规则详解
 
 This rule aims to prevent access to uninitialized lexical bindings as well as accessing hoisted functions across case clauses.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-case-declarations: "error"*/
@@ -42,8 +42,6 @@ switch (foo) {
         class C {}
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -80,8 +78,6 @@ switch (foo) {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you depend on fall through behavior and want access to bindings introduced in the case block.

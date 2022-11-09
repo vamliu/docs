@@ -1,8 +1,8 @@
 ---
-title: no-cond-assign
-layout: doc
-rule_type: problem
-related_rules:
+规则名: no-cond-assign
+布局: doc
+规则类型: problem
+关联规则:
 - no-extra-parens
 ---
 
@@ -19,11 +19,11 @@ if (user.jobTitle = "manager") {
 
 There are valid reasons to use assignment operators in conditional statements. However, it can be difficult to tell whether a specific assignment was intentional.
 
-## Rule Details
+## 规则详解
 
 This rule disallows ambiguous assignment operators in test conditions of `if`, `for`, `while`, and `do...while` statements.
 
-## Options
+## 配置项
 
 This rule has a string option:
 
@@ -34,7 +34,7 @@ This rule has a string option:
 
 Examples of **incorrect** code for this rule with the default `"except-parens"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint no-cond-assign: "error"*/
@@ -53,8 +53,6 @@ function setHeight(someNode) {
     } while (someNode = someNode.parentNode);
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule with the default `"except-parens"` option:
 
@@ -86,13 +84,11 @@ function setHeight(someNode) {
 }
 ```
 
-:::
-
 ### always
 
 Examples of **incorrect** code for this rule with the `"always"` option:
 
-::: incorrect
+
 
 ```js
 /*eslint no-cond-assign: ["error", "always"]*/
@@ -128,8 +124,6 @@ function setHeight(someNode) {
 }
 ```
 
-:::
-
 Examples of **correct** code for this rule with the `"always"` option:
 
 ::: correct
@@ -143,5 +137,3 @@ if (x === 0) {
     var b = 1;
 }
 ```
-
-:::

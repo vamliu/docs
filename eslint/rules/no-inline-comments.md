@@ -1,20 +1,20 @@
 ---
-title: no-inline-comments
-layout: doc
-rule_type: suggestion
+规则名: no-inline-comments
+布局: doc
+规则类型: suggestion
 ---
 
 
 Some style guides disallow comments on the same line as code. Code can become difficult to read if comments immediately follow the code on the same line.
 On the other hand, it is sometimes faster and more obvious to put comments immediately following code.
 
-## Rule Details
+## 规则详解
 
 This rule disallows comments on the same line as code.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-inline-comments: "error"*/
@@ -31,8 +31,6 @@ function getRandomNumber(){
 var c = 3; /* A block comment after code */
 ```
 
-:::
-
 Examples of **correct** code for this rule:
 
 ::: correct
@@ -47,15 +45,13 @@ var bar = 5;
 //This is a comment below a line of code
 ```
 
-:::
-
 ### JSX exception
 
 Comments inside the curly braces in JSX are allowed to be on the same line as the braces, but only if they are not on the same line with other code, and the braces do not enclose an actual expression.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-inline-comments: "error"*/
@@ -70,8 +66,6 @@ var bar = (
     </div>
 );
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -107,15 +101,13 @@ var quux = (
 )
 ```
 
-:::
-
-## Options
+## 配置项
 
 ### ignorePattern
 
 To make this rule ignore specific comments, set the `ignorePattern` option to a string pattern that will be passed to the [`RegExp` constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp).
 
-Examples of **correct** code for the `ignorePattern` option:
+选项 `ignorePattern` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -125,16 +117,12 @@ Examples of **correct** code for the `ignorePattern` option:
 import(/* webpackChunkName: "my-chunk-name" */ './locale/en');
 ```
 
-:::
+选项 `ignorePattern` 的 **错误** 代码示例：
 
-Examples of **incorrect** code for the `ignorePattern` option:
 
-::: incorrect
 
 ```js
 /*eslint no-inline-comments: ["error", { "ignorePattern": "something" }] */
 
 var foo = 4; // other thing
 ```
-
-:::

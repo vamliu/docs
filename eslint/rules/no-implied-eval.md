@@ -1,8 +1,8 @@
 ---
-title: no-implied-eval
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-implied-eval
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-eval
 ---
 
@@ -26,13 +26,13 @@ setTimeout(function() {
 
 The best practice is to always use a function for the first argument of `setTimeout()` and `setInterval()` (and avoid `execScript()`).
 
-## Rule Details
+## 规则详解
 
 This rule aims to eliminate implied `eval()` through the use of `setTimeout()`, `setInterval()` or `execScript()`. As such, it will warn when either function is used with a string as the first argument.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-implied-eval: "error"*/
@@ -47,8 +47,6 @@ window.setTimeout("count = 5", 10);
 
 window.setInterval("foo = bar", 10);
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -66,8 +64,6 @@ setInterval(function() {
 }, 100);
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you want to allow `setTimeout()` and `setInterval()` with string arguments, then you can safely disable this rule.

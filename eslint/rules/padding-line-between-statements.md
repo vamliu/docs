@@ -1,7 +1,7 @@
 ---
-title: padding-line-between-statements
-layout: doc
-rule_type: layout
+规则名: padding-line-between-statements
+布局: doc
+规则类型: layout
 ---
 
 
@@ -24,7 +24,7 @@ function foo() {
 }
 ```
 
-## Rule Details
+## 规则详解
 
 This rule does nothing if no configurations are provided.
 
@@ -95,7 +95,7 @@ This configuration would require blank lines before all `return` statements, lik
 
 Examples of **incorrect** code for the `[{ blankLine: "always", prev: "*", next: "return" }]` configuration:
 
-::: incorrect
+
 
 ```js
 /*eslint padding-line-between-statements: [
@@ -108,8 +108,6 @@ function foo() {
     return;
 }
 ```
-
-:::
 
 Examples of **correct** code for the `[{ blankLine: "always", prev: "*", next: "return" }]` configuration:
 
@@ -132,15 +130,13 @@ function foo() {
 }
 ```
 
-:::
-
 ----
 
 This configuration would require blank lines after every sequence of variable declarations, like the [newline-after-var](newline-after-var) rule.
 
 Examples of **incorrect** code for the `[{ blankLine: "always", prev: ["const", "let", "var"], next: "*"}, { blankLine: "any", prev: ["const", "let", "var"], next: ["const", "let", "var"]}]` configuration:
 
-::: incorrect
+
 
 ```js
 /*eslint padding-line-between-statements: [
@@ -171,8 +167,6 @@ class C {
     }
 }
 ```
-
-:::
 
 Examples of **correct** code for the `[{ blankLine: "always", prev: ["const", "let", "var"], next: "*"}, { blankLine: "any", prev: ["const", "let", "var"], next: ["const", "let", "var"]}]` configuration:
 
@@ -216,15 +210,13 @@ class C {
 }
 ```
 
-:::
-
 ----
 
 This configuration would require blank lines after all directive prologues, like the [lines-around-directive](lines-around-directive) rule.
 
 Examples of **incorrect** code for the `[{ blankLine: "always", prev: "directive", next: "*" }, { blankLine: "any", prev: "directive", next: "directive" }]` configuration:
 
-::: incorrect
+
 
 ```js
 /*eslint padding-line-between-statements: [
@@ -236,8 +228,6 @@ Examples of **incorrect** code for the `[{ blankLine: "always", prev: "directive
 "use strict";
 foo();
 ```
-
-:::
 
 Examples of **correct** code for the `[{ blankLine: "always", prev: "directive", next: "*" }, { blankLine: "any", prev: "directive", next: "directive" }]` configuration:
 
@@ -256,15 +246,13 @@ Examples of **correct** code for the `[{ blankLine: "always", prev: "directive",
 foo();
 ```
 
-:::
-
 ----
 
 This configuration would require blank lines between clauses in `switch` statements.
 
 Examples of **incorrect** code for the `[{ blankLine: "always", prev: ["case", "default"], next: "*" }]` configuration:
 
-::: incorrect
+
 
 ```js
 /*eslint padding-line-between-statements: [
@@ -284,8 +272,6 @@ switch (foo) {
         quux();
 }
 ```
-
-:::
 
 Examples of **correct** code for the `[{ blankLine: "always", prev: ["case", "default"], next: "*" }]` configuration:
 
@@ -313,9 +299,7 @@ switch (foo) {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you don't want to notify warnings about linebreaks, then it's safe to disable this rule.
 

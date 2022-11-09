@@ -1,8 +1,8 @@
 ---
-title: no-div-regex
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-div-regex
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-control-regex
 - no-regex-spaces
 ---
@@ -15,13 +15,11 @@ Require regex literals to escape division operators.
 function bar() { return /=foo/; }
 ```
 
-## Rule Details
+## 规则详解
 
 This is used to disambiguate the division operator to not confuse users.
 
 Examples of **incorrect** code for this rule:
-
-:::incorrect
 
 ```js
 /*eslint no-div-regex: "error"*/
@@ -29,16 +27,10 @@ Examples of **incorrect** code for this rule:
 function bar() { return /=foo/; }
 ```
 
-:::
-
 Examples of **correct** code for this rule:
-
-:::correct
 
 ```js
 /*eslint no-div-regex: "error"*/
 
 function bar() { return /[=]foo/; }
 ```
-
-:::

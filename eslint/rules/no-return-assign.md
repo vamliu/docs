@@ -1,7 +1,7 @@
 ---
-title: no-return-assign
-layout: doc
-rule_type: suggestion
+规则名: no-return-assign
+布局: doc
+规则类型: suggestion
 ---
 
 
@@ -17,11 +17,11 @@ It is difficult to tell the intent of the `return` statement here. It's possible
 
 Because of this ambiguity, it's considered a best practice to not use assignment in `return` statements.
 
-## Rule Details
+## 规则详解
 
 This rule aims to eliminate assignments from `return` statements. As such, it will warn whenever an assignment is found as part of `return`.
 
-## Options
+## 配置项
 
 The rule takes one option, a string, which must contain one of the following values:
 
@@ -33,9 +33,9 @@ The rule takes one option, a string, which must contain one of the following val
 This is the default option.
 It disallows assignments unless they are enclosed in parentheses.
 
-Examples of **incorrect** code for the default `"except-parens"` option:
+选项 default `"except-parens"` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint no-return-assign: "error"*/
@@ -57,9 +57,7 @@ function doSomething() {
 }
 ```
 
-:::
-
-Examples of **correct** code for the default `"except-parens"` option:
+选项 default `"except-parens"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -87,16 +85,14 @@ function doSomething() {
 }
 ```
 
-:::
-
 ### always
 
 This option disallows all assignments in `return` statements.
 All assignments are treated as problems.
 
-Examples of **incorrect** code for the `"always"` option:
+选项 `"always"` 的 **错误** 代码示例：
 
-::: incorrect
+
 
 ```js
 /*eslint no-return-assign: ["error", "always"]*/
@@ -114,9 +110,7 @@ function doSomething() {
 }
 ```
 
-:::
-
-Examples of **correct** code for the `"always"` option:
+选项 `"always"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -132,8 +126,6 @@ function doSomething() {
 }
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you want to allow the use of assignment operators in a `return` statement, then you can safely disable this rule.

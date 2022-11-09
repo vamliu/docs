@@ -1,13 +1,13 @@
 ---
-title: no-undefined
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: no-undefined
+布局: doc
+规则类型: suggestion
+关联规则:
 - no-undef-init
 - no-void
 - no-shadow-restricted-names
 - no-global-assign
-further_reading:
+深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined
 - https://javascriptweblog.wordpress.com/2010/08/16/understanding-undefined-and-preventing-referenceerrors/
 - https://es5.github.io/#x15.1.1.3
@@ -36,13 +36,13 @@ Because `undefined` can be overwritten or shadowed, reading `undefined` can give
 
 As an alternative, you can use the [no-global-assign](no-global-assign) and [no-shadow-restricted-names](no-shadow-restricted-names) rules to prevent `undefined` from being shadowed or assigned a different value. This ensures that `undefined` will always hold its original, expected value.
 
-## Rule Details
+## 规则详解
 
 This rule aims to eliminate the use of `undefined`, and as such, generates a warning whenever it is used.
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-undefined: "error"*/
@@ -59,8 +59,6 @@ function foo(undefined) {
     // ...
 }
 ```
-
-:::
 
 Examples of **correct** code for this rule:
 
@@ -80,8 +78,6 @@ if (typeof foo === "undefined") {
 global.undefined = "foo";
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 If you want to allow the use of `undefined` in your code, then you can safely turn this rule off.

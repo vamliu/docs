@@ -1,14 +1,14 @@
 ---
-title: no-delete-var
-layout: doc
-rule_type: suggestion
+规则名: no-delete-var
+布局: doc
+规则类型: suggestion
 ---
 
 
 
 The purpose of the `delete` operator is to remove a property from an object. Using the `delete` operator on a variable might lead to unexpected behavior.
 
-## Rule Details
+## 规则详解
 
 This rule disallows the use of the `delete` operator on variables.
 
@@ -16,7 +16,7 @@ If ESLint parses code in strict mode, the parser (instead of this rule) reports 
 
 Examples of **incorrect** code for this rule:
 
-::: incorrect
+
 
 ```js
 /*eslint no-delete-var: "error"*/
@@ -24,5 +24,3 @@ Examples of **incorrect** code for this rule:
 var x;
 delete x;
 ```
-
-:::

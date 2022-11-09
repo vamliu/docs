@@ -1,28 +1,28 @@
 ---
-title: max-lines
-layout: doc
-rule_type: suggestion
-related_rules:
+规则名: max-lines
+布局: doc
+规则类型: suggestion
+关联规则:
 - complexity
 - max-depth
 - max-lines-per-function
 - max-nested-callbacks
 - max-params
 - max-statements
-further_reading:
+深入了解:
 - https://web.archive.org/web/20160725154648/http://www.mind2b.com/component/content/article/24-software-module-size-and-file-size
 ---
 
 
 Some people consider large files a code smell. Large files tend to do a lot of things and can make it hard following what's going. While there is not an objective maximum number of lines considered acceptable in a file, most people would agree it should not be in the thousands. Recommendations usually range from 100 to 500 lines.
 
-## Rule Details
+## 规则详解
 
 This rule enforces a maximum number of lines per file, in order to aid in maintainability and reduce complexity.
 
 Please note that most editors show an additional empty line at the end if the file ends with a line break. This rule does not count that extra line.
 
-## Options
+## 配置项
 
 This rule has a number or object option:
 
@@ -36,7 +36,7 @@ This rule has a number or object option:
 
 Examples of **incorrect** code for this rule with a max value of `2`:
 
-::: incorrect
+
 
 ```js
 /*eslint max-lines: ["error", 2]*/
@@ -45,9 +45,7 @@ var a,
     c;
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint max-lines: ["error", 2]*/
@@ -56,9 +54,7 @@ var a,
     b,c;
 ```
 
-:::
 
-::: incorrect
 
 ```js
 /*eslint max-lines: ["error", 2]*/
@@ -66,8 +62,6 @@ var a,
 var a,
     b,c;
 ```
-
-:::
 
 Examples of **correct** code for this rule with a max value of `2`:
 
@@ -79,8 +73,6 @@ var a,
     b, c;
 ```
 
-:::
-
 ::: correct
 
 ```js
@@ -88,8 +80,6 @@ var a,
 
 var a, b, c;
 ```
-
-:::
 
 ::: correct
 
@@ -99,13 +89,11 @@ var a, b, c;
 var a, b, c;
 ```
 
-:::
-
 ### skipBlankLines
 
 Examples of **incorrect** code for this rule with the `{ "skipBlankLines": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint max-lines: ["error", {"max": 2, "skipBlankLines": true}]*/
@@ -114,8 +102,6 @@ var a,
     b,
     c;
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "skipBlankLines": true }` option:
 
@@ -128,13 +114,11 @@ var a,
     b, c;
 ```
 
-:::
-
 ### skipComments
 
 Examples of **incorrect** code for this rule with the `{ "skipComments": true }` option:
 
-::: incorrect
+
 
 ```js
 /*eslint max-lines: ["error", {"max": 2, "skipComments": true}]*/
@@ -143,8 +127,6 @@ var a,
     b,
     c;
 ```
-
-:::
 
 Examples of **correct** code for this rule with the `{ "skipComments": true }` option:
 
@@ -157,9 +139,7 @@ var a,
     b, c;
 ```
 
-:::
-
-## When Not To Use It
+## 使用建议
 
 You can turn this rule off if you are not concerned with the number of lines in your files.
 
