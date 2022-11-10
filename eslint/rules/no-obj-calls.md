@@ -1,6 +1,5 @@
 ---
 规则名: no-obj-calls
-布局: doc
 规则类型: problem
 深入了解:
 - https://es5.github.io/#x15.8
@@ -28,7 +27,7 @@ This rule disallows calling the `Math`, `JSON`, `Reflect` and `Atomics` objects 
 
 This rule also disallows using these objects as constructors with the `new` operator.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -53,7 +52,7 @@ var atomics = Atomics();
 var newAtomics = new Atomics();
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

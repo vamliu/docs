@@ -1,6 +1,5 @@
 ---
 规则名: operator-linebreak
-布局: doc
 规则类型: layout
 关联规则:
 - comma-style
@@ -46,7 +45,7 @@ The default configuration is `"after", { "overrides": { "?": "before", ":": "bef
 
 ### after
 
-Examples of **incorrect** code for this rule with the `"after"` option:
+选项 `"after"` 的 **错误** 代码示例：
 
 
 
@@ -82,7 +81,7 @@ class Foo {
 }
 ```
 
-Examples of **correct** code for this rule with the `"after"` option:
+选项 `"after"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -119,7 +118,7 @@ class Foo {
 
 ### before
 
-Examples of **incorrect** code for this rule with the `"before"` option:
+选项 `"before"` 的 **错误** 代码示例：
 
 
 
@@ -151,7 +150,7 @@ class Foo {
 }
 ```
 
-Examples of **correct** code for this rule with the `"before"` option:
+选项 `"before"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -188,7 +187,7 @@ class Foo {
 
 ### none
 
-Examples of **incorrect** code for this rule with the `"none"` option:
+选项 `"none"` 的 **错误** 代码示例：
 
 
 
@@ -235,7 +234,7 @@ class Foo {
 }
 ```
 
-Examples of **correct** code for this rule with the `"none"` option:
+选项 `"none"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -307,7 +306,7 @@ answer = everything
   foo;
 ```
 
-Examples of **incorrect** code for this rule with the default `"after", { "overrides": { "?": "before", ":": "before" } }` option:
+选项 `"after", { "overrides": { "?": "before", ":": "before" } }`  默认值的 **错误** 代码示例：
 
 
 
@@ -333,7 +332,7 @@ answer = everything ?
   foo;
 ```
 
-Examples of **correct** code for this rule with the default `"after", { "overrides": { "?": "before", ":": "before" } }` option:
+选项 `"after", { "overrides": { "?": "before", ":": "before" } }` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -357,6 +356,6 @@ answer = everything
   : foo;
 ```
 
-## 使用建议
+## 禁用建议
 
 If your project will not be using a common operator line break style, turn this rule off.

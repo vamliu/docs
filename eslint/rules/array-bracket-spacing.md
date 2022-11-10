@@ -1,6 +1,5 @@
 ---
 规则名: array-bracket-spacing
-布局: doc
 规则类型: layout
 关联规则:
 - space-in-parens
@@ -8,10 +7,7 @@
 - computed-property-spacing
 ---
 
-
-
-A number of style guides require or disallow spaces between array brackets and other tokens. This rule
-applies to both array literals and destructuring assignments (ECMAScript 6).
+许多样式规范都限制了数组括号和其他标记之间是否使用空格。此规则适用于数组字面量和解构赋值（ECMAScript 6）。
 
 ```js
 /*eslint-env es6*/
@@ -25,35 +21,36 @@ var [x,y] = z;
 
 ## 规则详解
 
-This rule enforces consistent spacing inside array brackets.
+此规则在数组括号内强制保持一致的间距。
 
 ## 配置项
 
-This rule has a string option:
+此规则有一个字符串选项：
 
-* `"never"` (default) disallows spaces inside array brackets
-* `"always"` requires one or more spaces or newlines inside array brackets
+* `"never"` （默认值）不允许数组括号内有空格
+* `"always"` 数组括号内需要至少一个空格或换行符
 
-This rule has an object option for exceptions to the `"never"` option:
+`"never"` 选项提供一个额外的对象配置：
 
-* `"singleValue": true` requires one or more spaces or newlines inside brackets of array literals that contain a single element
-* `"objectsInArrays": true` requires one or more spaces or newlines between brackets of array literals and braces of their object literal elements `[ {` or `} ]`
-* `"arraysInArrays": true` requires one or more spaces or newlines between brackets of array literals and brackets of their array literal elements `[ [` or `] ]`
+* `"singleValue": true` 在只含单个元素的数组字面量的括号内需要至少一个空格或换行符
+* `"objectsInArrays": true` 在数组字面量的括号和其对象括号 `[ {` 或 `} ]` 之间需要至少一个空格或换行符
+* `"arraysInArrays": true` 在数组字面量的括号和其数组括号 `[ [` 或 `] ]` 之间需要至少一个空格或换行符
 
-This rule has an object option for exceptions to the `"always"` option:
+`"always"` 选项也提供一个额外的对象配置：
 
-* `"singleValue": false` disallows spaces inside brackets of array literals that contain a single element
-* `"objectsInArrays": false` disallows spaces between brackets of array literals and braces of their object literal elements `[{` or `}]`
-* `"arraysInArrays": false` disallows spaces between brackets of array literals and brackets of their array literal elements `[[` or `]]`
+* `"singleValue": false` 在只含单个元素的数组字面量的括号内不允许空格或换行符
+* `"objectsInArrays": false` 在数组字面量的括号和其对象括号 `[ {` 或 `} ]` 之间不允许空格或换行符
+* `"arraysInArrays": false` 在数组字面量的括号和其数组括号 `[ [` 或 `] ]` 之间不允许空格或换行符
 
-This rule has built-in exceptions:
+另外，此规则还需注意：
 
-* `"never"` (and also the exceptions to the `"always"` option) allows newlines inside array brackets, because this is a common pattern
-* `"always"` does not require spaces or newlines in empty array literals `[]`
+`"never"`（ `"always"` 也是如此）允许在数组括号内换行，因为这是一种常见的模式。
+
+`"always"` 在空数组文本中不需要空格或换行。
 
 ### never
 
-Examples of **incorrect** code for this rule with the default `"never"` option:
+选项 `"never"`  默认值的 **错误** 代码示例：
 
 ```js
 /*eslint array-bracket-spacing: ["error", "never"]*/
@@ -72,7 +69,7 @@ var [ x, ...y ] = z;
 var [ ,,x, ] = z;
 ```
 
-Examples of **correct** code for this rule with the default `"never"` option:
+选项 `"never"` 默认值的 **正确** 代码示例：
 
 ```js
 /*eslint array-bracket-spacing: ["error", "never"]*/
@@ -101,7 +98,7 @@ var [,,x,] = z;
 
 ### always
 
-Examples of **incorrect** code for this rule with the `"always"` option:
+选项 `"always"` 的 **错误** 代码示例：
 
 ```js
 /*eslint array-bracket-spacing: ["error", "always"]*/
@@ -123,7 +120,7 @@ var [x, ...y] = z;
 var [,,x,] = z;
 ```
 
-Examples of **correct** code for this rule with the `"always"` option:
+选项 `"always"` 的 **正确** 代码示例：
 
 ```js
 /*eslint array-bracket-spacing: ["error", "always"]*/
@@ -152,7 +149,7 @@ var [ ,,x, ] = z;
 
 ### singleValue
 
-Examples of **incorrect** code for this rule with the `"always", { "singleValue": false }` options:
+选项 `"always", { "singleValue": false }`  的 **错误** 代码示例：
 
 ```js
 /*eslint array-bracket-spacing: ["error", "always", { "singleValue": false }]*/
@@ -167,7 +164,7 @@ var foo = [ [ 1, 2 ] ];
 var foo = [ { 'foo': 'bar' } ];
 ```
 
-Examples of **correct** code for this rule with the `"always", { "singleValue": false }` options:
+选项 `"always", { "singleValue": false }`  的 **正确** 代码示例：
 
 ```js
 /*eslint array-bracket-spacing: ["error", "always", { "singleValue": false }]*/
@@ -180,7 +177,7 @@ var foo = [{ 'foo': 'bar' }];
 
 ### objectsInArrays
 
-Examples of **incorrect** code for this rule with the `"always", { "objectsInArrays": false }` options:
+选项 `"always", { "objectsInArrays": false }`  的 **错误** 代码示例：
 
 ```js
 /*eslint array-bracket-spacing: ["error", "always", { "objectsInArrays": false }]*/
@@ -191,7 +188,7 @@ var arr = [ {
 } ]
 ```
 
-Examples of **correct** code for this rule with the `"always", { "objectsInArrays": false }` options:
+选项 `"always", { "objectsInArrays": false }`  的 **正确** 代码示例：
 
 ```js
 /*eslint array-bracket-spacing: ["error", "always", { "objectsInArrays": false }]*/
@@ -204,7 +201,7 @@ var arr = [{
 
 ### arraysInArrays
 
-Examples of **incorrect** code for this rule with the `"always", { "arraysInArrays": false }` options:
+选项 `"always", { "arraysInArrays": false }`  的 **错误** 代码示例：
 
 ```js
 /*eslint array-bracket-spacing: ["error", "always", { "arraysInArrays": false }]*/
@@ -213,7 +210,7 @@ var arr = [ [ 1, 2 ], 2, 3, 4 ];
 var arr = [ [ 1, 2 ], 2, [ 3, 4 ] ];
 ```
 
-Examples of **correct** code for this rule with the `"always", { "arraysInArrays": false }` options:
+选项 `"always", { "arraysInArrays": false }`  的 **正确** 代码示例：
 
 ```js
 /*eslint array-bracket-spacing: ["error", "always", { "arraysInArrays": false }]*/
@@ -222,6 +219,6 @@ var arr = [[ 1, 2 ], 2, 3, 4 ];
 var arr = [[ 1, 2 ], 2, [ 3, 4 ]];
 ```
 
-## 使用建议
+## 禁用建议
 
-You can turn this rule off if you are not concerned with the consistency of spacing between array brackets.
+如果不需要数组括号之间间距的一致性，可以关闭此规则。

@@ -1,6 +1,5 @@
 ---
 规则名: template-tag-spacing
-布局: doc
 规则类型: layout
 深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_template_literals
@@ -39,7 +38,7 @@ This rule has one option whose value can be set to `"never"` or `"always"`
 
 ### never
 
-Examples of **incorrect** code for this rule with the default `"never"` option:
+选项 `"never"`  默认值的 **错误** 代码示例：
 
 
 
@@ -49,7 +48,7 @@ Examples of **incorrect** code for this rule with the default `"never"` option:
 func `Hello world`;
 ```
 
-Examples of **correct** code for this rule with the default `"never"` option:
+选项 `"never"` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -61,7 +60,7 @@ func`Hello world`;
 
 ### always
 
-Examples of **incorrect** code for this rule with the `"always"` option:
+选项 `"always"` 的 **错误** 代码示例：
 
 
 
@@ -71,7 +70,7 @@ Examples of **incorrect** code for this rule with the `"always"` option:
 func`Hello world`;
 ```
 
-Examples of **correct** code for this rule with the `"always"` option:
+选项 `"always"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -81,6 +80,6 @@ Examples of **correct** code for this rule with the `"always"` option:
 func `Hello world`;
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to be notified about usage of spacing between tag functions and their template literals, then it's safe to disable this rule.

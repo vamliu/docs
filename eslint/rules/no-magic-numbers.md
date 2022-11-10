@@ -1,6 +1,5 @@
 ---
 规则名: no-magic-numbers
-布局: doc
 规则类型: suggestion
 ---
 
@@ -18,7 +17,7 @@ var now = Date.now(),
 The `no-magic-numbers` rule aims to make code more readable and refactoring easier by ensuring that special numbers
 are declared as constants to make their meaning explicit.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -49,7 +48,7 @@ var SECONDS;
 SECONDS = 60;
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

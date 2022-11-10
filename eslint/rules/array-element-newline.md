@@ -1,6 +1,5 @@
 ---
 规则名: array-element-newline
-布局: doc
 规则类型: layout
 关联规则:
 - array-bracket-spacing
@@ -14,27 +13,26 @@
 ---
 
 
-
-A number of style guides require or disallow line breaks between array elements.
+许多样式规范都限制了是否使用数组内元素之间的换行符。
 
 ## 规则详解
 
-This rule enforces line breaks between array elements.
+此规则在数组内元素之间强制换行。
 
 ## 配置项
 
-This rule has either a string option:
+此规则有一个字符串选项：
 
-* `"always"` (default) requires line breaks between array elements
-* `"never"` disallows line breaks between array elements
-* `"consistent"` requires consistent usage of linebreaks between array elements
+* `"always"` （默认值）数组内元素之间需要换行
+* `"never"` 禁用数组内元素之间的换行符
+* `"consistent"` 需要在数组元素之间统一使用换行符
 
-Or an object option (Requires line breaks if any of properties is satisfied. Otherwise, disallows line breaks):
+此外，还提供一个对象选项（如果满足任何属性，则需要换行。否则，不允许换行）：
 
-* `"multiline": <boolean>` requires line breaks if there are line breaks inside elements. If this is false, this condition is disabled.
-* `"minItems": <number>` requires line breaks if the number of elements is at least the given integer. If this is 0, this condition will act the same as the option `"always"`. If this is `null` (the default), this condition is disabled.
+* `"multiline": <boolean>` 如果元素中有换行符，则需要换行符。如果设为 `false` ，则禁用此条件。
+* `"minItems": <number>` 如果元素数不少于给定整数，则需要换行。如果该值为 `0` ，则该条件的作用与选项 `"always"` 相同。如果此值为 `null` （默认值），则禁用此条件。
 
-Alternatively, different configurations can be specified for array expressions and array patterns:
+或者也可以为数组表达式和数组解构设置不同的配置：
 
 ```json
 {
@@ -45,12 +43,12 @@ Alternatively, different configurations can be specified for array expressions a
 }
 ```
 
-* `"ArrayExpression"` configuration for array expressions (if unspecified, this rule will not apply to array expressions)
-* `"ArrayPattern"` configuration for array patterns of destructuring assignments (if unspecified, this rule will not apply to array patterns)
+* `"ArrayExpression"` 数组表达式的配置（如果未指定，此规则不会对数组表达式生效）
+* `"ArrayPattern"` 数组解构的配置（如果未指定，此规则不会对数组解构生效）
 
 ### always
 
-Examples of **incorrect** code for this rule with the default `"always"` option:
+选项 `"always"`  默认值的 **错误** 代码示例：
 
 ```js
 /*eslint array-element-newline: ["error", "always"]*/
@@ -71,7 +69,7 @@ var g = [
 ];
 ```
 
-Examples of **correct** code for this rule with the default `"always"` option:
+选项 `"always"` 默认值的 **正确** 代码示例：
 
 ```js
 /*eslint array-element-newline: ["error", "always"]*/
@@ -100,7 +98,7 @@ var e = [
 
 ### never
 
-Examples of **incorrect** code for this rule with the `"never"` option:
+选项 `"never"` 的 **错误** 代码示例：
 
 ```js
 /*eslint array-element-newline: ["error", "never"]*/
@@ -124,7 +122,7 @@ var e = [
 ];
 ```
 
-Examples of **correct** code for this rule with the `"never"` option:
+选项 `"never"` 的 **正确** 代码示例：
 
 ```js
 /*eslint array-element-newline: ["error", "never"]*/
@@ -149,7 +147,7 @@ var g = [
 
 ### consistent
 
-Examples of **incorrect** code for this rule with the `"consistent"` option:
+选项 `"consistent"` 的 **错误** 代码示例：
 
 ```js
 /*eslint array-element-newline: ["error", "consistent"]*/
@@ -170,7 +168,7 @@ var b = [
 ];
 ```
 
-Examples of **correct** code for this rule with the `"consistent"` option:
+选项 `"consistent"` 的 **正确** 代码示例：
 
 ```js
 /*eslint array-element-newline: ["error", "consistent"]*/
@@ -212,7 +210,7 @@ var h = [
 
 ### multiline
 
-Examples of **incorrect** code for this rule with the `{ "multiline": true }` option:
+选项 `{ "multiline": true }` 的 **错误** 代码示例：
 
 ```js
 /*eslint array-element-newline: ["error", { "multiline": true }]*/
@@ -228,7 +226,7 @@ var e = [
 ];
 ```
 
-Examples of **correct** code for this rule with the `{ "multiline": true }` option:
+选项 `{ "multiline": true }` 的 **正确** 代码示例：
 
 ```js
 /*eslint array-element-newline: ["error", { "multiline": true }]*/
@@ -249,7 +247,7 @@ var e = [
 
 ### minItems
 
-Examples of **incorrect** code for this rule with the `{ "minItems": 3 }` option:
+选项 `{ "minItems": 3 }` 的 **错误** 代码示例：
 
 ```js
 /*eslint array-element-newline: ["error", { "minItems": 3 }]*/
@@ -267,7 +265,7 @@ var e = [
 ];
 ```
 
-Examples of **correct** code for this rule with the `{ "minItems": 3 }` option:
+选项 `{ "minItems": 3 }` 的 **正确** 代码示例：
 
 ```js
 /*eslint array-element-newline: ["error", { "minItems": 3 }]*/
@@ -289,7 +287,7 @@ var e = [
 
 ### multiline and minItems
 
-Examples of **incorrect** code for this rule with the `{ "multiline": true, "minItems": 3 }` options:
+选项 `{ "multiline": true, "minItems": 3 }`  的 **错误** 代码示例：
 
 ```js
 /*eslint array-element-newline: ["error", { "multiline": true, "minItems": 3 }]*/
@@ -306,7 +304,7 @@ var e = [
 ];
 ```
 
-Examples of **correct** code for this rule with the `{ "multiline": true, "minItems": 3 }` options:
+选项 `{ "multiline": true, "minItems": 3 }`  的 **正确** 代码示例：
 
 ```js
 /*eslint array-element-newline: ["error", { "multiline": true, "minItems": 3 }]*/
@@ -329,7 +327,7 @@ var e = [
 
 ### ArrayExpression and ArrayPattern
 
-Examples of **incorrect** code for this rule with the `{ "ArrayExpression": "always", "ArrayPattern": "never" }` options:
+选项 `{ "ArrayExpression": "always", "ArrayPattern": "never" }`  的 **错误** 代码示例：
 
 ```js
 /*eslint array-element-newline: ["error", { "ArrayExpression": "always", "ArrayPattern": "never" }]*/
@@ -357,7 +355,7 @@ j = function bar() {
 }] = arr
 ```
 
-Examples of **correct** code for this rule with the `{ "ArrayExpression": "always", "ArrayPattern": "never" }` options:
+选项 `{ "ArrayExpression": "always", "ArrayPattern": "never" }`  的 **正确** 代码示例：
 
 ```js
 /*eslint array-element-newline: ["error", { "ArrayExpression": "always", "ArrayPattern": "never" }]*/
@@ -385,10 +383,10 @@ var [i = function foo() {
 }] = arr
 ```
 
-## 使用建议
+## 禁用建议
 
-If you don't want to enforce linebreaks between array elements, don't enable this rule.
+如果你不想让数组内元素强制换行，可以不启用此规则。
 
-## Compatibility
+## 兼容
 
 * **JSCS:** [validateNewlineAfterArrayElements](https://jscs-dev.github.io/rule/validateNewlineAfterArrayElements)

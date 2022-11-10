@@ -1,6 +1,5 @@
 ---
 规则名: prefer-named-capture-group
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-invalid-regexp
@@ -22,7 +21,7 @@ Alternatively, if your intention is not to _capture_ the results, but only expre
 const regex = /(?:cauli|sun)flower/;
 ```
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -36,7 +35,7 @@ const baz = RegExp('(ba[rz])');
 foo.exec('bar')[1]; // Retrieve the group result.
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -51,6 +50,6 @@ const xyz = /xyz(?:zy|abc)/;
 foo.exec('bar').groups.id; // Retrieve the group result.
 ```
 
-## 使用建议
+## 禁用建议
 
 If you are targeting ECMAScript 2017 and/or older environments, you should not use this rule, because this ECMAScript feature is only supported in ECMAScript 2018 and/or newer environments.

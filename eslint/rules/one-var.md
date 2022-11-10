@@ -1,6 +1,5 @@
 ---
 规则名: one-var
-布局: doc
 规则类型: suggestion
 ---
 
@@ -68,7 +67,7 @@ Alternate object option:
 
 ### always
 
-Examples of **incorrect** code for this rule with the default `"always"` option:
+选项 `"always"`  默认值的 **错误** 代码示例：
 
 
 
@@ -117,7 +116,7 @@ class C {
 }
 ```
 
-Examples of **correct** code for this rule with the default `"always"` option:
+选项 `"always"` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -182,7 +181,7 @@ class C {
 
 ### never
 
-Examples of **incorrect** code for this rule with the `"never"` option:
+选项 `"never"` 的 **错误** 代码示例：
 
 
 
@@ -218,7 +217,7 @@ class C {
 }
 ```
 
-Examples of **correct** code for this rule with the `"never"` option:
+选项 `"never"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -263,7 +262,7 @@ for (var i = 0, len = arr.length; i < len; i++) {
 
 ### consecutive
 
-Examples of **incorrect** code for this rule with the `"consecutive"` option:
+选项 `"consecutive"` 的 **错误** 代码示例：
 
 
 
@@ -295,7 +294,7 @@ class C {
 }
 ```
 
-Examples of **correct** code for this rule with the `"consecutive"` option:
+选项 `"consecutive"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -330,7 +329,7 @@ class C {
 
 ### var, let, and const
 
-Examples of **incorrect** code for this rule with the `{ var: "always", let: "never", const: "never" }` option:
+选项 `{ var: "always", let: "never", const: "never" }` 的 **错误** 代码示例：
 
 
 
@@ -353,7 +352,7 @@ function foo() {
 }
 ```
 
-Examples of **correct** code for this rule with the `{ var: "always", let: "never", const: "never" }` option:
+选项 `{ var: "always", let: "never", const: "never" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -376,7 +375,7 @@ function foo() {
 }
 ```
 
-Examples of **incorrect** code for this rule with the `{ var: "never" }` option:
+选项 `{ var: "never" }` 的 **错误** 代码示例：
 
 
 
@@ -390,7 +389,7 @@ function foo() {
 }
 ```
 
-Examples of **correct** code for this rule with the `{ var: "never" }` option:
+选项 `{ var: "never" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -408,7 +407,7 @@ function foo() {
 }
 ```
 
-Examples of **incorrect** code for this rule with the `{ separateRequires: true }` option:
+选项 `{ separateRequires: true }` 的 **错误** 代码示例：
 
 
 
@@ -420,7 +419,7 @@ var foo = require("foo"),
     bar = "bar";
 ```
 
-Examples of **correct** code for this rule with the `{ separateRequires: true }` option:
+选项 `{ separateRequires: true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -439,7 +438,7 @@ var foo = require("foo"),
     bar = require("bar");
 ```
 
-Examples of **incorrect** code for this rule with the `{ var: "never", let: "consecutive", const: "consecutive" }` option:
+选项 `{ var: "never", let: "consecutive", const: "consecutive" }` 的 **错误** 代码示例：
 
 
 
@@ -466,7 +465,7 @@ function foo() {
 }
 ```
 
-Examples of **correct** code for this rule with the `{ var: "never", let: "consecutive", const: "consecutive" }` option:
+选项 `{ var: "never", let: "consecutive", const: "consecutive" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -495,7 +494,7 @@ function foo() {
 }
 ```
 
-Examples of **incorrect** code for this rule with the `{ var: "consecutive" }` option:
+选项 `{ var: "consecutive" }` 的 **错误** 代码示例：
 
 
 
@@ -509,7 +508,7 @@ function foo() {
 }
 ```
 
-Examples of **correct** code for this rule with the `{ var: "consecutive" }` option:
+选项 `{ var: "consecutive" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -529,7 +528,7 @@ function foo() {
 
 ### initialized and uninitialized
 
-Examples of **incorrect** code for this rule with the `{ "initialized": "always", "uninitialized": "never" }` option:
+选项 `{ "initialized": "always", "uninitialized": "never" }` 的 **错误** 代码示例：
 
 
 
@@ -544,7 +543,7 @@ function foo() {
 }
 ```
 
-Examples of **correct** code for this rule with the `{ "initialized": "always", "uninitialized": "never" }` option:
+选项 `{ "initialized": "always", "uninitialized": "never" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -569,7 +568,7 @@ for (z of foo) {
 }
 ```
 
-Examples of **incorrect** code for this rule with the `{ "initialized": "never" }` option:
+选项 `{ "initialized": "never" }` 的 **错误** 代码示例：
 
 
 
@@ -583,7 +582,7 @@ function foo() {
 }
 ```
 
-Examples of **correct** code for this rule with the `{ "initialized": "never" }` option:
+选项 `{ "initialized": "never" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -597,7 +596,7 @@ function foo() {
 }
 ```
 
-Examples of **incorrect** code for this rule with the `{ "initialized": "consecutive", "uninitialized": "never" }` option:
+选项 `{ "initialized": "consecutive", "uninitialized": "never" }` 的 **错误** 代码示例：
 
 
 
@@ -614,7 +613,7 @@ function foo() {
 }
 ```
 
-Examples of **correct** code for this rule with the `{ "initialized": "consecutive", "uninitialized": "never" }` option:
+选项 `{ "initialized": "consecutive", "uninitialized": "never" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -631,7 +630,7 @@ function foo() {
 }
 ```
 
-Examples of **incorrect** code for this rule with the `{ "initialized": "consecutive" }` option:
+选项 `{ "initialized": "consecutive" }` 的 **错误** 代码示例：
 
 
 
@@ -649,7 +648,7 @@ function foo() {
 }
 ```
 
-Examples of **correct** code for this rule with the `{ "initialized": "consecutive" }` option:
+选项 `{ "initialized": "consecutive" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -667,7 +666,7 @@ function foo() {
 }
 ```
 
-## Compatibility
+## 兼容
 
 * **JSHint**: This rule maps to the `onevar` JSHint rule, but allows `let` and `const` to be configured separately.
 * **JSCS**: This rule roughly maps to [disallowMultipleVarDecl](https://jscs-dev.github.io/rule/disallowMultipleVarDecl).

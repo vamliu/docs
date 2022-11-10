@@ -1,6 +1,5 @@
 ---
 规则名: no-new-wrappers
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-array-constructor
@@ -49,7 +48,7 @@ For these reasons, it's considered a best practice to avoid using primitive wrap
 
 This rule aims to eliminate the use of `String`, `Number`, and `Boolean` with the `new` operator. As such, it warns whenever it sees `new String`, `new Number`, or `new Boolean`.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -65,7 +64,7 @@ var numberObject = new Number;
 var booleanObject = new Boolean;
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -78,6 +77,6 @@ var num = Number(someValue);
 var object = new MyString();
 ```
 
-## 使用建议
+## 禁用建议
 
 If you want to allow the use of primitive wrapper objects, then you can safely disable this rule.

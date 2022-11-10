@@ -1,6 +1,5 @@
 ---
 规则名: no-implicit-coercion
-布局: doc
 规则类型: suggestion
 ---
 
@@ -182,6 +181,6 @@ var b = !!foo;
 var b = ~foo.indexOf(".");
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to be notified about shorter notations for the type conversion, you can safely disable this rule.

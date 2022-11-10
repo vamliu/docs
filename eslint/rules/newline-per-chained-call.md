@@ -1,6 +1,5 @@
 ---
 规则名: newline-per-chained-call
-布局: doc
 规则类型: layout
 ---
 
@@ -66,7 +65,7 @@ This rule has an object option:
 
 ### ignoreChainWithDepth
 
-Examples of **incorrect** code for this rule with the default `{ "ignoreChainWithDepth": 2 }` option:
+选项 `{ "ignoreChainWithDepth": 2 }`  默认值的 **错误** 代码示例：
 
 
 
@@ -87,7 +86,7 @@ _
 obj.method().method2().method3();
 ```
 
-Examples of **correct** code for this rule with the default `{ "ignoreChainWithDepth": 2 }` option:
+选项 `{ "ignoreChainWithDepth": 2 }` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -123,6 +122,6 @@ obj
   .method3().prop;
 ```
 
-## 使用建议
+## 禁用建议
 
 If you have conflicting rules or when you are fine with chained calls on one line, you can safely turn this rule off.

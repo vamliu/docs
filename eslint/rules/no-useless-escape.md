@@ -1,6 +1,5 @@
 ---
 规则名: no-useless-escape
-布局: doc
 规则类型: suggestion
 ---
 
@@ -20,7 +19,7 @@ let baz = /\:/ // same functionality with /:/
 
 This rule flags escapes that can be safely removed without changing behavior.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -40,7 +39,7 @@ Examples of **incorrect** code for this rule:
 /[a-z\-]/;
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -64,6 +63,6 @@ Examples of **correct** code for this rule:
 /[a-z-]/;
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to be notified about unnecessary escapes, you can safely disable this rule.

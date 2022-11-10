@@ -1,6 +1,5 @@
 ---
 规则名: consistent-this
-布局: doc
 规则类型: suggestion
 ---
 
@@ -30,7 +29,7 @@ This rule has one or more string options:
 
 * designated alias names for `this` (default `"that"`)
 
-Examples of **incorrect** code for this rule with the default `"that"` option:
+选项 `"that"`  默认值的 **错误** 代码示例：
 
 
 
@@ -46,7 +45,7 @@ that = 42;
 self = this;
 ```
 
-Examples of **correct** code for this rule with the default `"that"` option:
+选项 `"that"` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -92,6 +91,6 @@ foo = 42;
 that = this;
 ```
 
-## 使用建议
+## 禁用建议
 
 If you need to capture nested context, `consistent-this` is going to be problematic. Code of that nature is usually difficult to read and maintain and you should consider refactoring it.

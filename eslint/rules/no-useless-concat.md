@@ -1,6 +1,5 @@
 ---
 规则名: no-useless-concat
-布局: doc
 规则类型: suggestion
 ---
 
@@ -21,7 +20,7 @@ var foo = "ab";
 
 This rule aims to flag the concatenation of 2 literals when they could be combined into a single literal. Literals can be strings or template literals.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -38,7 +37,7 @@ var a = `1` + '0';
 var a = `1` + `0`;
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -55,6 +54,6 @@ var c = "foo" +
     "bar";
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to be notified about unnecessary string concatenation, you can safely disable this rule.

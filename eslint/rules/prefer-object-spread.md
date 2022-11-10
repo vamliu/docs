@@ -1,6 +1,5 @@
 ---
 规则名: prefer-object-spread
-布局: doc
 规则类型: suggestion
 ---
 
@@ -12,7 +11,7 @@ Introduced in ES2018, object spread is a declarative alternative which may perfo
 
 ## 规则详解
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -35,7 +34,7 @@ Object.assign({});
 Object.assign({ foo: bar });
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -56,6 +55,6 @@ Object.assign(foo, { bar, baz });
 Object.assign(foo, { ...baz });
 ```
 
-## 使用建议
+## 禁用建议
 
 This rule should not be used unless ES2018 is supported in your codebase.

@@ -1,6 +1,5 @@
 ---
 规则名: no-unexpected-multiline
-布局: doc
 规则类型: problem
 关联规则:
 - func-call-spacing
@@ -25,7 +24,7 @@ In the exceptions where a newline does **not** end a statement, a typing mistake
 
 This rule disallows confusing multiline expressions where a newline looks like it is ending a statement, but is not.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -49,7 +48,7 @@ let x = foo
 /regex/g.test(bar)
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -75,7 +74,7 @@ let tag = function() {}
 tag `hello`
 ```
 
-## 使用建议
+## 禁用建议
 
 You can turn this rule off if you are confident that you will not accidentally introduce code like this.
 

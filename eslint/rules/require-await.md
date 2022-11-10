@@ -1,6 +1,5 @@
 ---
 规则名: require-await
-布局: doc
 规则类型: suggestion
 关联规则:
 - require-yield
@@ -31,7 +30,7 @@ Note: this rule ignores async generator functions. This is because generators yi
 
 This rule warns async functions which have no `await` expression.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -47,7 +46,7 @@ bar(async () => {
 });
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -74,7 +73,7 @@ bar(() => {
 async function noop() {}
 ```
 
-## 使用建议
+## 禁用建议
 
 Asynchronous functions are designed to work with promises such that throwing an error will cause a promise's rejection handler (such as `catch()`) to be called. For example:
 

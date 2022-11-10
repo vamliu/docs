@@ -1,6 +1,5 @@
 ---
 规则名: consistent-return
-布局: doc
 规则类型: suggestion
 ---
 
@@ -34,7 +33,7 @@ function doSomething(condition) {
 
 This rule requires `return` statements to either always or never specify values. This rule ignores function definitions where the name begins with an uppercase letter, because constructors (when invoked with the `new` operator) return the instantiated object implicitly if they do not return another object explicitly.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -56,7 +55,7 @@ function doSomething(condition) {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -89,7 +88,7 @@ This rule has an object option:
 
 ### treatUndefinedAsUnspecified
 
-Examples of **incorrect** code for this rule with the default `{ "treatUndefinedAsUnspecified": false }` option:
+选项 `{ "treatUndefinedAsUnspecified": false }`  默认值的 **错误** 代码示例：
 
 
 
@@ -111,7 +110,7 @@ function bar(condition) {
 }
 ```
 
-Examples of **incorrect** code for this rule with the `{ "treatUndefinedAsUnspecified": true }` option:
+选项 `{ "treatUndefinedAsUnspecified": true }` 的 **错误** 代码示例：
 
 
 
@@ -133,7 +132,7 @@ function bar(condition) {
 }
 ```
 
-Examples of **correct** code for this rule with the `{ "treatUndefinedAsUnspecified": true }` option:
+选项 `{ "treatUndefinedAsUnspecified": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -155,6 +154,6 @@ function bar(condition) {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you want to allow functions to have different `return` behavior depending on code branching, then it is safe to disable this rule.

@@ -1,6 +1,5 @@
 ---
 规则名: no-fallthrough
-布局: doc
 规则类型: problem
 关联规则:
 - default-case
@@ -81,7 +80,7 @@ In this example, there is no confusion as to the expected behavior. It is clear 
 
 This rule is aimed at eliminating unintentional fallthrough of one case to the other. As such, it flags any fallthrough scenarios that are not marked by a comment.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -97,7 +96,7 @@ switch(foo) {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -223,6 +222,6 @@ switch(foo){
 
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to enforce that each `case` statement should end with a `throw`, `return`, `break`, or comment, then you can safely turn this rule off.

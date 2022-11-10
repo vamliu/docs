@@ -1,6 +1,5 @@
 ---
 规则名: no-bitwise
-布局: doc
 规则类型: suggestion
 ---
 
@@ -15,7 +14,7 @@ var x = y | z;
 
 This rule disallows bitwise operators.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -49,7 +48,7 @@ x >>= y;
 x >>>= y;
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -76,7 +75,7 @@ This rule has an object option:
 
 ### allow
 
-Examples of **correct** code for this rule with the `{ "allow": ["~"] }` option:
+选项 `{ "allow": ["~"] }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -88,7 +87,7 @@ Examples of **correct** code for this rule with the `{ "allow": ["~"] }` option:
 
 ### int32Hint
 
-Examples of **correct** code for this rule with the `{ "int32Hint": true }` option:
+选项 `{ "int32Hint": true }` 的 **正确** 代码示例：
 
 ::: correct
 

@@ -1,6 +1,5 @@
 ---
 规则名: no-mixed-requires
-布局: doc
 规则类型: suggestion
 ---
 
@@ -82,7 +81,7 @@ var foo = require('foo' + VERSION),
 
 ### grouping
 
-Examples of **incorrect** code for this rule with the `{ "grouping": true }` option:
+选项 `{ "grouping": true }` 的 **错误** 代码示例：
 
 
 
@@ -100,7 +99,7 @@ var foo = require('foo'),
 
 ### allowCall
 
-Examples of **incorrect** code for this rule with the `{ "allowCall": true }` option:
+选项 `{ "allowCall": true }` 的 **错误** 代码示例：
 
 
 
@@ -112,7 +111,7 @@ var async = require('async'),
     eslint = require('eslint');
 ```
 
-Examples of **correct** code for this rule with the `{ "allowCall": true }` option:
+选项 `{ "allowCall": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -131,7 +130,7 @@ var async = require('async'),
 * Internally, the list of core modules is retrieved via `require("repl")._builtinLibs`. If you use different versions of Node.js for ESLint and your application, the list of core modules for each version may be different.
   The above mentioned `_builtinLibs` property became available in 0.8, for earlier versions a hardcoded list of module names is used as a fallback. If your version of Node.js is older than 0.6 that list may be inaccurate.
 
-## 使用建议
+## 禁用建议
 
 If you use a pattern such as [UMD][4] where the `require`d modules are not loaded in variable declarations, this rule will obviously do nothing for you.
 

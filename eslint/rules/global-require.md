@@ -1,6 +1,5 @@
 ---
 规则名: global-require
-布局: doc
 规则类型: suggestion
 ---
 
@@ -31,7 +30,7 @@ Further, ES6 modules mandate that `import` and `export` statements can only occu
 
 This rule requires all calls to `require()` to be at the top level of the module, similar to ES6 `import` and `export` statements, which also can occur only at the top level.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -73,7 +72,7 @@ try {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -102,6 +101,6 @@ var x = require("x"),
     z = require("z");
 ```
 
-## 使用建议
+## 禁用建议
 
 If you have a module that must be initialized with information that comes from the file-system or if a module is only used in very rare situations and will cause significant overhead to load it may make sense to disable the rule. If you need to `require()` an optional dependency inside of a `try`/`catch`, you can disable this rule for just that dependency using the `// eslint-disable-line global-require` comment.

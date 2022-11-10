@@ -1,6 +1,5 @@
 ---
 规则名: dot-notation
-布局: doc
 规则类型: suggestion
 ---
 
@@ -16,7 +15,7 @@ foo["bar"];
 
 This rule is aimed at maintaining code consistency and improving code readability by encouraging use of the dot notation style whenever possible. As such, it will warn when it encounters an unnecessary use of square-bracket notation.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 ```js
 /*eslint dot-notation: "error"*/
@@ -24,7 +23,7 @@ Examples of **incorrect** code for this rule:
 var x = foo["bar"];
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ```js
 /*eslint dot-notation: "error"*/

@@ -1,6 +1,5 @@
 ---
 规则名: generator-star-spacing
-布局: doc
 规则类型: layout
 深入了解:
 - https://leanpub.com/understandinges6/read/#leanpub-auto-generators
@@ -108,7 +107,7 @@ Overrides can be either an object with "before" and "after", or a shorthand stri
 
 ### before
 
-Examples of **correct** code for this rule with the `"before"` option:
+选项 `"before"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -125,7 +124,7 @@ var shorthand = { *generator() {} };
 
 ### after
 
-Examples of **correct** code for this rule with the `"after"` option:
+选项 `"after"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -142,7 +141,7 @@ var shorthand = { * generator() {} };
 
 ### both
 
-Examples of **correct** code for this rule with the `"both"` option:
+选项 `"both"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -159,7 +158,7 @@ var shorthand = { * generator() {} };
 
 ### neither
 
-Examples of **correct** code for this rule with the `"neither"` option:
+选项 `"neither"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -218,6 +217,6 @@ var shorthand = { * generator() {} };
 class Class { static * method() {} }
 ```
 
-## 使用建议
+## 禁用建议
 
 If your project will not be using generators or you are not concerned with spacing consistency, you do not need this rule.

@@ -1,6 +1,5 @@
 ---
 规则名: no-buffer-constructor
-布局: doc
 规则类型: problem
 深入了解:
 - https://nodejs.org/api/buffer.html
@@ -17,7 +16,7 @@ In Node.js, the behavior of the `Buffer` constructor is different depending on t
 
 This rule disallows calling and constructing the `Buffer()` constructor.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -32,7 +31,7 @@ new Buffer(res.body.amount);
 new Buffer(res.body.values);
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -45,6 +44,6 @@ Buffer.alloc(res.body.amount);
 Buffer.from(res.body.values);
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't use Node.js, or you still need to support versions of Node.js that lack methods like `Buffer.from`, then you should not enable this rule.

@@ -1,6 +1,5 @@
 ---
 规则名: max-depth
-布局: doc
 规则类型: suggestion
 关联规则:
 - complexity
@@ -29,7 +28,7 @@ This rule has a number or object option:
 
 ### max
 
-Examples of **incorrect** code for this rule with the default `{ "max": 4 }` option:
+选项 `{ "max": 4 }`  默认值的 **错误** 代码示例：
 
 
 
@@ -50,7 +49,7 @@ function foo() {
 }
 ```
 
-Examples of **correct** code for this rule with the default `{ "max": 4 }` option:
+选项 `{ "max": 4 }` 默认值的 **正确** 代码示例：
 
 ::: correct
 

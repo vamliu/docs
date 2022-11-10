@@ -1,6 +1,5 @@
 ---
 规则名: no-empty-function
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-empty
@@ -29,7 +28,7 @@ list.map(() => ({})); // This is an empty object.
 This rule is aimed at eliminating empty functions.
 A function will not be considered a problem if it contains a comment.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -82,7 +81,7 @@ class A {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -369,6 +368,6 @@ class A {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to be notified about empty functions, then it's safe to disable this rule.

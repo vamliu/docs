@@ -1,6 +1,5 @@
 ---
 规则名: curly
-布局: doc
 规则类型: suggestion
 ---
 
@@ -324,6 +323,6 @@ if (foo)
 
 ```
 
-## 使用建议
+## 禁用建议
 
 If you have no strict conventions about when to use block statements and when not to, you can safely disable this rule.

@@ -1,6 +1,5 @@
 ---
 规则名: no-class-assign
-布局: doc
 规则类型: problem
 ---
 
@@ -21,7 +20,7 @@ But the modification is a mistake in most cases.
 
 This rule is aimed to flag modifying variables of class declarations.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -70,7 +69,7 @@ let A = class A {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -108,6 +107,6 @@ class A {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to be notified about modifying variables of class declarations, you can safely disable this rule.

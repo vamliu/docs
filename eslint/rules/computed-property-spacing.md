@@ -1,6 +1,5 @@
 ---
 规则名: computed-property-spacing
-布局: doc
 规则类型: layout
 关联规则:
 - array-bracket-spacing
@@ -52,7 +51,7 @@ Object option:
 
 ### never
 
-Examples of **incorrect** code for this rule with the default `"never"` option:
+选项 `"never"`  默认值的 **错误** 代码示例：
 
 
 
@@ -69,7 +68,7 @@ const { [ a ]: someProp } = obj;
 ({ [ b ]: anotherProp } = anotherObj);
 ```
 
-Examples of **correct** code for this rule with the default `"never"` option:
+选项 `"never"` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -88,7 +87,7 @@ const { [a]: someProp } = obj;
 
 ### always
 
-Examples of **incorrect** code for this rule with the `"always"` option:
+选项 `"always"` 的 **错误** 代码示例：
 
 
 
@@ -106,7 +105,7 @@ const { [a]: someProp } = obj;
 ({ [b ]: anotherProp } = anotherObj);
 ```
 
-Examples of **correct** code for this rule with the `"always"` option:
+选项 `"always"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -192,6 +191,6 @@ const Bar = class {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 You can turn this rule off if you are not concerned with the consistency of computed properties.

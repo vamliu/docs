@@ -1,6 +1,5 @@
 ---
 规则名: keyword-spacing
-布局: doc
 规则类型: layout
 ---
 
@@ -39,7 +38,7 @@ This rule has an object option:
 
 ### before
 
-Examples of **incorrect** code for this rule with the default `{ "before": true }` option:
+选项 `{ "before": true }`  默认值的 **错误** 代码示例：
 
 
 
@@ -55,7 +54,7 @@ if (foo) {
 }
 ```
 
-Examples of **correct** code for this rule with the default `{ "before": true }` option:
+选项 `{ "before": true }` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -112,7 +111,7 @@ if (10+this.foo<= this.bar) {}
 let a = <A foo={this.foo} bar={function(){}} />
 ```
 
-Examples of **incorrect** code for this rule with the `{ "before": false }` option:
+选项 `{ "before": false }` 的 **错误** 代码示例：
 
 
 
@@ -128,7 +127,7 @@ if (foo) {
 }
 ```
 
-Examples of **correct** code for this rule with the `{ "before": false }` option:
+选项 `{ "before": false }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -146,7 +145,7 @@ if (foo) {
 
 ### after
 
-Examples of **incorrect** code for this rule with the default `{ "after": true }` option:
+选项 `{ "after": true }`  默认值的 **错误** 代码示例：
 
 
 
@@ -162,7 +161,7 @@ if(foo) {
 }
 ```
 
-Examples of **correct** code for this rule with the default `{ "after": true }` option:
+选项 `{ "after": true }` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -231,7 +230,7 @@ function* foo(a) {
 let a = <A foo={this.foo} bar={function(){}} />
 ```
 
-Examples of **incorrect** code for this rule with the `{ "after": false }` option:
+选项 `{ "after": false }` 的 **错误** 代码示例：
 
 
 
@@ -247,7 +246,7 @@ if (foo) {
 }
 ```
 
-Examples of **correct** code for this rule with the `{ "after": false }` option:
+选项 `{ "after": false }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -265,7 +264,7 @@ if(foo) {
 
 ### overrides
 
-Examples of **correct** code for this rule with the `{ "overrides": { "if": { "after": false }, "for": { "after": false }, "while": { "after": false }, "static": { "after": false }, "as": { "after": false } } }` option:
+选项 `{ "overrides": { "if": { "after": false }, "for": { "after": false }, "while": { "after": false }, "static": { "after": false }, "as": { "after": false } } }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -301,6 +300,6 @@ class C {
 export { C as"my class" };
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to enforce consistency on keyword spacing, then it's safe to disable this rule.

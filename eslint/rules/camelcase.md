@@ -1,6 +1,5 @@
 ---
 规则名: camelcase
-布局: doc
 规则类型: suggestion
 ---
 
@@ -27,7 +26,7 @@ This rule has an object option:
 
 ### properties: "always"
 
-Examples of **incorrect** code for this rule with the default `{ "properties": "always" }` option:
+选项 `{ "properties": "always" }`  默认值的 **错误** 代码示例：
 
 ```js
 /*eslint camelcase: "error"*/
@@ -67,7 +66,7 @@ var { foo: no_camelcased } = bar;
 var { foo: bar_baz = 1 } = quz;
 ```
 
-Examples of **correct** code for this rule with the default `{ "properties": "always" }` option:
+选项 `{ "properties": "always" }` 默认值的 **正确** 代码示例：
 
 ```js
 /*eslint camelcase: "error"*/
@@ -109,7 +108,7 @@ var { foo: isCamelCased = 1 } = quz;
 
 ### properties: "never"
 
-Examples of **correct** code for this rule with the `{ "properties": "never" }` option:
+选项 `{ "properties": "never" }` 的 **正确** 代码示例：
 
 ```js
 /*eslint camelcase: ["error", {properties: "never"}]*/
@@ -121,7 +120,7 @@ var obj = {
 
 ### ignoreDestructuring: false
 
-Examples of **incorrect** code for this rule with the default `{ "ignoreDestructuring": false }` option:
+选项 `{ "ignoreDestructuring": false }`  默认值的 **错误** 代码示例：
 
 ```js
 /*eslint camelcase: "error"*/
@@ -139,7 +138,7 @@ var { category_id: categoryId, ...other_props } = query;
 
 ### ignoreDestructuring: true
 
-Examples of **incorrect** code for this rule with the `{ "ignoreDestructuring": true }` option:
+选项 `{ "ignoreDestructuring": true }` 的 **错误** 代码示例：
 
 ```js
 /*eslint camelcase: ["error", {ignoreDestructuring: true}]*/
@@ -149,7 +148,7 @@ var { category_id: category_alias } = query;
 var { category_id, ...other_props } = query;
 ```
 
-Examples of **correct** code for this rule with the `{ "ignoreDestructuring": true }` option:
+选项 `{ "ignoreDestructuring": true }` 的 **正确** 代码示例：
 
 ```js
 /*eslint camelcase: ["error", {ignoreDestructuring: true}]*/
@@ -196,7 +195,7 @@ doSomething({ some_property });
 
 ### ignoreImports: false
 
-Examples of **incorrect** code for this rule with the default `{ "ignoreImports": false }` option:
+选项 `{ "ignoreImports": false }`  默认值的 **错误** 代码示例：
 
 ```js
 /*eslint camelcase: "error"*/
@@ -206,7 +205,7 @@ import { snake_cased } from 'mod';
 
 ### ignoreImports: true
 
-Examples of **incorrect** code for this rule with the `{ "ignoreImports": true }` option:
+选项 `{ "ignoreImports": true }` 的 **错误** 代码示例：
 
 ```js
 /*eslint camelcase: ["error", {ignoreImports: true}]*/
@@ -216,7 +215,7 @@ import default_import from 'mod';
 import * as namespaced_import from 'mod';
 ```
 
-Examples of **correct** code for this rule with the `{ "ignoreImports": true }` option:
+选项 `{ "ignoreImports": true }` 的 **正确** 代码示例：
 
 ```js
 /*eslint camelcase: ["error", {ignoreImports: true}]*/
@@ -226,7 +225,7 @@ import { snake_cased } from 'mod';
 
 ### ignoreGlobals: false
 
-Examples of **incorrect** code for this rule with the default `{ "ignoreGlobals": false }` option:
+选项 `{ "ignoreGlobals": false }`  默认值的 **错误** 代码示例：
 
 ```js
 /*eslint camelcase: ["error", {ignoreGlobals: false}]*/
@@ -237,7 +236,7 @@ const foo = no_camelcased;
 
 ### ignoreGlobals: true
 
-Examples of **correct** code for this rule with the `{ "ignoreGlobals": true }` option:
+选项 `{ "ignoreGlobals": true }` 的 **正确** 代码示例：
 
 ```js
 /*eslint camelcase: ["error", {ignoreGlobals: true}]*/
@@ -248,7 +247,7 @@ const foo = no_camelcased;
 
 ### allow
 
-Examples of **correct** code for this rule with the `allow` option:
+选项 `allow` 的 **正确** 代码示例：
 
 ```js
 /*eslint camelcase: ["error", {allow: ["UNSAFE_componentWillMount"]}]*/
@@ -272,6 +271,6 @@ function UNSAFE_componentWillMount() {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you have established coding standards using a different naming convention (separating words with underscores), turn this rule off.

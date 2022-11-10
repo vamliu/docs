@@ -1,6 +1,5 @@
 ---
 规则名: no-eq-null
-布局: doc
 规则类型: suggestion
 ---
 
@@ -17,7 +16,7 @@ if (foo == null) {
 
 The `no-eq-null` rule aims reduce potential bug and unwanted behavior by ensuring that comparisons to `null` only match `null`, and not also `undefined`. As such it will flag comparisons to null when using `==` and `!=`.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -33,7 +32,7 @@ while (qux != null) {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -49,10 +48,10 @@ while (qux !== null) {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you want to enforce type-checking operations in general, use the more powerful [eqeqeq](./eqeqeq) instead.
 
-## Compatibility
+## 兼容
 
 * **JSHint**: This rule corresponds to `eqnull` rule of JSHint.

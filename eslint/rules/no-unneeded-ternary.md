@@ -1,6 +1,5 @@
 ---
 规则名: no-unneeded-ternary
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-ternary
@@ -13,16 +12,16 @@ It's a common mistake in JavaScript to use a conditional expression to select be
 Here are some examples:
 
 ```js
-// 不推荐
+// 错误
 var isYes = answer === 1 ? true : false;
 
-// 推荐
+// 正确
 var isYes = answer === 1;
 
-// 不推荐
+// 错误
 var isNo = answer === 1 ? false : true;
 
-// 推荐
+// 正确
 var isNo = answer !== 1;
 ```
 
@@ -30,10 +29,10 @@ Another common mistake is using a single variable as both the conditional test a
 Here is an example:
 
 ```js
-// 不推荐
+// 错误
 foo(bar ? bar : 1);
 
-// 推荐
+// 正确
 foo(bar || 1);
 ```
 
@@ -41,7 +40,7 @@ foo(bar || 1);
 
 This rule disallow ternary operators when simpler alternatives exist.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -53,7 +52,7 @@ var a = x === 2 ? true : false;
 var a = x ? true : false;
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -96,6 +95,6 @@ f(x ? x : 1);
 
 Note that `defaultAssignment: false` still allows expressions of the form `x ? expr : x` (where the identifier is on the right hand side of the ternary).
 
-## 使用建议
+## 禁用建议
 
 You can turn this rule off if you are not concerned with unnecessary complexity in conditional expressions.

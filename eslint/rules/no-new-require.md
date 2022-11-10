@@ -1,6 +1,5 @@
 ---
 规则名: no-new-require
-布局: doc
 规则类型: suggestion
 ---
 
@@ -31,7 +30,7 @@ For this reason, it is usually best to disallow this particular expression.
 
 This rule aims to eliminate use of the `new require` expression.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -41,7 +40,7 @@ Examples of **incorrect** code for this rule:
 var appHeader = new require('app-header');
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -52,6 +51,6 @@ var AppHeader = require('app-header');
 var appHeader = new AppHeader();
 ```
 
-## 使用建议
+## 禁用建议
 
 If you are using a custom implementation of `require` and your code will never be used in projects where a standard `require` (CommonJS, Node.js, AMD) is expected, you can safely turn this rule off.

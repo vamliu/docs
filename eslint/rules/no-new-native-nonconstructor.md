@@ -1,6 +1,5 @@
 ---
 规则名: no-new-native-nonconstructor
-布局: doc
 规则类型: problem
 关联规则:
 - no-obj-calls
@@ -32,7 +31,7 @@ This rule is aimed at preventing the accidental calling of native JavaScript glo
 
 ## Examples
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -44,7 +43,7 @@ var foo = new Symbol('foo');
 var bar = new BigInt(9007199254740991);
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -65,6 +64,6 @@ function quux(BigInt) {
 
 ```
 
-## 使用建议
+## 禁用建议
 
 This rule should not be used in ES3/5 environments.

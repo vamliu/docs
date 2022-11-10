@@ -1,6 +1,5 @@
 ---
 规则名: no-div-regex
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-control-regex
@@ -19,7 +18,7 @@ function bar() { return /=foo/; }
 
 This is used to disambiguate the division operator to not confuse users.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 ```js
 /*eslint no-div-regex: "error"*/
@@ -27,7 +26,7 @@ Examples of **incorrect** code for this rule:
 function bar() { return /=foo/; }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ```js
 /*eslint no-div-regex: "error"*/

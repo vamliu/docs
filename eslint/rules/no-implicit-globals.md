@@ -1,6 +1,5 @@
 ---
 规则名: no-implicit-globals
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-undef
@@ -43,7 +42,7 @@ When working with browser scripts, developers often forget that variable and fun
 
 This rule disallows `var` and `function` declarations at the top-level script scope. This does not apply to ES and CommonJS modules since they have a module scope.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -55,7 +54,7 @@ var foo = 1;
 function bar() {}
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -93,7 +92,7 @@ a new global variable. This will happen even if the code is in a function.
 
 This does not apply to ES modules since the module code is implicitly in `strict` mode.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -118,7 +117,7 @@ or in a `/*global */` comment.
 * [Specifying Environments](../user-guide/configuring#specifying-environments)
 * [Specifying Globals](../user-guide/configuring#specifying-globals)
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -250,7 +249,7 @@ Examples of **correct** code for `/* exported variableName */` operation:
 var global_var = 42;
 ```
 
-## 使用建议
+## 禁用建议
 
 In the case of a browser script, if you want to be able to explicitly declare variables and functions in the global scope,
 and your code is in strict mode or you don't want this rule to warn you about undeclared variables,

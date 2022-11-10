@@ -1,6 +1,5 @@
 ---
 规则名: no-global-assign
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-extend-native
@@ -27,7 +26,7 @@ ESLint has the capability to configure global variables as read-only.
 * [Specifying Environments](../user-guide/configuring#specifying-environments)
 * [Specifying Globals](../user-guide/configuring#specifying-globals)
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -58,7 +57,7 @@ top = 1
 a = 1
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -100,6 +99,6 @@ This rule accepts an `exceptions` option, which can be used to specify a list of
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you are trying to override one of the native objects.

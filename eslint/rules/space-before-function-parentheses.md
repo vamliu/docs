@@ -1,6 +1,5 @@
 ---
 规则名: space-before-function-parentheses
-布局: doc
 
 关联规则:
 - space-after-keywords
@@ -35,7 +34,7 @@ This rule aims to enforce consistent spacing before function parentheses and as 
 
 This rule takes one argument. If it is `"always"`, which is the default option, all named functions and anonymous functions must have space before function parentheses. If `"never"` then all named functions and anonymous functions must not have space before function parentheses. If you want different spacing for named and anonymous functions you can pass a configuration object as the rule argument to configure those separately (e. g. `{"anonymous": "always", "named": "never"}`).
 
-Examples of **incorrect** code for this rule with the default `"always"` option:
+选项 `"always"`  默认值的 **错误** 代码示例：
 
 
 
@@ -67,7 +66,7 @@ var foo = {
 };
 ```
 
-Examples of **correct** code for this rule with the default `"always"` option:
+选项 `"always"` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -99,7 +98,7 @@ var foo = {
 };
 ```
 
-Examples of **incorrect** code for this rule with the `"never"` option:
+选项 `"never"` 的 **错误** 代码示例：
 
 
 
@@ -131,7 +130,7 @@ var foo = {
 };
 ```
 
-Examples of **correct** code for this rule with the `"never"` option:
+选项 `"never"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -163,7 +162,7 @@ var foo = {
 };
 ```
 
-Examples of **incorrect** code for this rule with the `{"anonymous": "always", "named": "never"}` option:
+选项 `{"anonymous": "always", "named": "never"}` 的 **错误** 代码示例：
 
 
 
@@ -191,7 +190,7 @@ var foo = {
 };
 ```
 
-Examples of **correct** code for this rule with the `{"anonymous": "always", "named": "never"}` option:
+选项 `{"anonymous": "always", "named": "never"}` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -219,7 +218,7 @@ var foo = {
 };
 ```
 
-Examples of **incorrect** code for this rule with the `{"anonymous": "never", "named": "always"}` option:
+选项 `{"anonymous": "never", "named": "always"}` 的 **错误** 代码示例：
 
 
 
@@ -247,7 +246,7 @@ var foo = {
 };
 ```
 
-Examples of **correct** code for this rule with the `{"anonymous": "never", "named": "always"}` option:
+选项 `{"anonymous": "never", "named": "always"}` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -275,6 +274,6 @@ var foo = {
 };
 ```
 
-## 使用建议
+## 禁用建议
 
 You can turn this rule off if you are not concerned with the consistency of spacing before function parenthesis.

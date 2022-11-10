@@ -1,6 +1,5 @@
 ---
 规则名: no-extra-label
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-labels
@@ -25,7 +24,7 @@ Probably those labels would confuse developers because they expect labels to jum
 
 This rule is aimed at eliminating unnecessary labels.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -46,7 +45,7 @@ C: switch (a) {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -85,6 +84,6 @@ C: switch (a) {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to be notified about usage of labels, then it's safe to disable this rule.

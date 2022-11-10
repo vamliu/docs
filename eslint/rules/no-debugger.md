@@ -1,6 +1,5 @@
 ---
 规则名: no-debugger
-布局: doc
 规则类型: problem
 关联规则:
 - no-alert
@@ -42,6 +41,6 @@ function isTruthy(x) {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If your code is still very much in development and don't want to worry about stripping `debugger` statements, then turn this rule off. You'll generally want to turn it back on when testing code prior to deployment.

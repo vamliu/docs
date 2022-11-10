@@ -1,6 +1,5 @@
 ---
 规则名: spaced-line-comment
-布局: doc
 
 关联规则:
 - spaced-comment
@@ -27,7 +26,7 @@ The value is an array of string patterns which are considered exceptions to the 
 It is important to note that the exceptions are ignored if the first argument is `"never"`.
 Exceptions cannot be mixed.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -53,7 +52,7 @@ var foo = 5;
 //------++++++++
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

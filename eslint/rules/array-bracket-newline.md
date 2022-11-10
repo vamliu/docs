@@ -1,35 +1,33 @@
 ---
 规则名: array-bracket-newline
-布局: doc
 规则类型: layout
 关联规则:
 - array-bracket-spacing
 ---
 
-
-
-A number of style guides require or disallow line breaks inside of array brackets.
+许多样式规范都限制了是否使用数组括号内的换行符。
 
 ## 规则详解
 
-This rule enforces line breaks after opening and before closing array brackets.
+此规则在左括号之后和数组右括号之前强制换行。
 
 ## 配置项
 
+此规则有一个字符串选项：
 This rule has either a string option:
 
-* `"always"` requires line breaks inside brackets
-* `"never"` disallows line breaks inside brackets
-* `"consistent"` requires consistent usage of linebreaks for each pair of brackets. It reports an error if one bracket in the pair has a linebreak inside it and the other bracket does not.
+* `"always"` 括号内需要换行
+* `"never"` 括号内不允许换行
+* `"consistent"` 要求对每对括号使用一致的换行符。如果一对括号中的一个括号内有换行符而另一个括号中没有换行符，则会触发警告。
 
-Or an object option (Requires line breaks if any of properties is satisfied. Otherwise, disallows line breaks):
+也可以配置一个对象选项（如果满足任何属性，则需要换行。否则，不允许换行）：
 
-* `"multiline": true` (default) requires line breaks if there are line breaks inside elements or between elements. If this is false, this condition is disabled.
-* `"minItems": null` (default) requires line breaks if the number of elements is at least the given integer. If this is 0, this condition will act the same as the option `"always"`. If this is `null` (the default), this condition is disabled.
+* `"multiline": true` （默认值）如果元素内部或元素之间存在换行符，则需要换行符。如果为false，则禁用此条件。
+* `"minItems": null` （默认值）如果元素数至少为给定整数，则需要换行。如果该值为0，则该条件的作用与选项 `"always"` 相同。如果此值为 `null`（默认值），则禁用此条件。
 
 ### always
 
-Examples of **incorrect** code for this rule with the `"always"` option:
+选项 `"always"` 的 **错误** 代码示例：
 
 ```js
 /*eslint array-bracket-newline: ["error", "always"]*/
@@ -44,7 +42,7 @@ var e = [function foo() {
 }];
 ```
 
-Examples of **correct** code for this rule with the `"always"` option:
+选项 `"always"` 的 **正确** 代码示例：
 
 ```js
 /*eslint array-bracket-newline: ["error", "always"]*/
@@ -70,7 +68,7 @@ var e = [
 
 ### never
 
-Examples of **incorrect** code for this rule with the `"never"` option:
+选项 `"never"` 的 **错误** 代码示例：
 
 ```js
 /*eslint array-bracket-newline: ["error", "never"]*/
@@ -94,7 +92,7 @@ var e = [
 ];
 ```
 
-Examples of **correct** code for this rule with the `"never"` option:
+选项 `"never"` 的 **正确** 代码示例：
 
 ```js
 /*eslint array-bracket-newline: ["error", "never"]*/
@@ -111,7 +109,7 @@ var e = [function foo() {
 
 ### consistent
 
-Examples of **incorrect** code for this rule with the `"consistent"` option:
+选项 `"consistent"` 的 **错误** 代码示例：
 
 ```js
 /*eslint array-bracket-newline: ["error", "consistent"]*/
@@ -130,7 +128,7 @@ var d = [
     }]
 ```
 
-Examples of **correct** code for this rule with the `"consistent"` option:
+选项 `"consistent"` 的 **正确** 代码示例：
 
 ```js
 /*eslint array-bracket-newline: ["error", "consistent"]*/
@@ -154,7 +152,7 @@ var f = [
 
 ### multiline
 
-Examples of **incorrect** code for this rule with the default `{ "multiline": true }` option:
+选项 `{ "multiline": true }`  默认值的 **错误** 代码示例：
 
 ```js
 /*eslint array-bracket-newline: ["error", { "multiline": true }]*/
@@ -174,7 +172,7 @@ var e = [function foo() {
 }];
 ```
 
-Examples of **correct** code for this rule with the default `{ "multiline": true }` option:
+选项 `{ "multiline": true }` 默认值的 **正确** 代码示例：
 
 ```js
 /*eslint array-bracket-newline: ["error", { "multiline": true }]*/
@@ -195,7 +193,7 @@ var e = [
 
 ### minItems
 
-Examples of **incorrect** code for this rule with the `{ "minItems": 2 }` option:
+选项 `{ "minItems": 2 }` 的 **错误** 代码示例：
 
 ```js
 /*eslint array-bracket-newline: ["error", { "minItems": 2 }]*/
@@ -215,7 +213,7 @@ var e = [
 ];
 ```
 
-Examples of **correct** code for this rule with the `{ "minItems": 2 }` option:
+选项 `{ "minItems": 2 }` 的 **正确** 代码示例：
 
 ```js
 /*eslint array-bracket-newline: ["error", { "minItems": 2 }]*/
@@ -236,7 +234,7 @@ var e = [function foo() {
 
 ### multiline and minItems
 
-Examples of **incorrect** code for this rule with the `{ "multiline": true, "minItems": 2 }` options:
+选项 `{ "multiline": true, "minItems": 2 }`  的 **错误** 代码示例：
 
 ```js
 /*eslint array-bracket-newline: ["error", { "multiline": true, "minItems": 2 }]*/
@@ -254,7 +252,7 @@ var e = [function foo() {
 }];
 ```
 
-Examples of **correct** code for this rule with the `{ "multiline": true, "minItems": 2 }` options:
+选项 `{ "multiline": true, "minItems": 2 }`  的 **正确** 代码示例：
 
 ```js
 /*eslint array-bracket-newline: ["error", { "multiline": true, "minItems": 2 }]*/
@@ -275,10 +273,10 @@ var e = [
 ];
 ```
 
-## 使用建议
+## 禁用建议
 
-If you don't want to enforce line breaks after opening and before closing array brackets, don't enable this rule.
+如果不希望对数组左括号后和右括号前强制换行，可以禁用此规则。
 
-## Compatibility
+## 兼容
 
 * **JSCS:** [validateNewlineAfterArrayElements](https://jscs-dev.github.io/rule/validateNewlineAfterArrayElements)

@@ -1,6 +1,5 @@
 ---
 规则名: prefer-reflect
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-useless-call
@@ -81,7 +80,7 @@ Reflect.apply(obj.myMethod, obj, [arg]);
 Reflect.apply(obj.myMethod, other, [arg]);
 ```
 
-Examples of **correct** code for this rule with the `{ "exceptions": ["apply"] }` option:
+选项 `{ "exceptions": ["apply"] }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -95,7 +94,7 @@ obj.myMethod.apply(obj, args);
 obj.myMethod.apply(other, args);
 ```
 
-Examples of **correct** code for this rule with the `{ "exceptions": ["call"] }` option:
+选项 `{ "exceptions": ["call"] }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -133,7 +132,7 @@ Examples of **correct** code for this rule when used without exceptions:
 Reflect.defineProperty({}, 'foo', {value: 1})
 ```
 
-Examples of **correct** code for this rule with the `{ "exceptions": ["defineProperty"] }` option:
+选项 `{ "exceptions": ["defineProperty"] }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -168,7 +167,7 @@ Examples of **correct** code for this rule when used without exceptions:
 Reflect.getOwnPropertyDescriptor({}, 'foo')
 ```
 
-Examples of **correct** code for this rule with the `{ "exceptions": ["getOwnPropertyDescriptor"] }` option:
+选项 `{ "exceptions": ["getOwnPropertyDescriptor"] }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -203,7 +202,7 @@ Examples of **correct** code for this rule when used without exceptions:
 Reflect.getPrototypeOf({}, 'foo')
 ```
 
-Examples of **correct** code for this rule with the `{ "exceptions": ["getPrototypeOf"] }` option:
+选项 `{ "exceptions": ["getPrototypeOf"] }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -238,7 +237,7 @@ Examples of **correct** code for this rule when used without exceptions:
 Reflect.setPrototypeOf({}, Object.prototype)
 ```
 
-Examples of **correct** code for this rule with the `{ "exceptions": ["setPrototypeOf"] }` option:
+选项 `{ "exceptions": ["setPrototypeOf"] }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -273,7 +272,7 @@ Examples of **correct** code for this rule when used without exceptions:
 Reflect.isExtensible({})
 ```
 
-Examples of **correct** code for this rule with the `{ "exceptions": ["isExtensible"] }` option:
+选项 `{ "exceptions": ["isExtensible"] }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -308,7 +307,7 @@ Examples of **correct** code for this rule when used without exceptions:
 Reflect.preventExtensions({})
 ```
 
-Examples of **correct** code for this rule with the `{ "exceptions": ["preventExtensions"] }` option:
+选项 `{ "exceptions": ["preventExtensions"] }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -346,7 +345,7 @@ Reflect.deleteProperty(foo, 'bar');
 
 Note: For a rule preventing deletion of variables, see [no-delete-var instead](no-delete-var)
 
-Examples of **correct** code for this rule with the `{ "exceptions": ["delete"] }` option:
+选项 `{ "exceptions": ["delete"] }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -358,7 +357,7 @@ delete foo.bar
 Reflect.deleteProperty(foo, 'bar');
 ```
 
-## 使用建议
+## 禁用建议
 
 This rule should not be used in ES3/5 environments.
 

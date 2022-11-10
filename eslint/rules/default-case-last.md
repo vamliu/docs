@@ -1,6 +1,5 @@
 ---
 规则名: default-case-last
-布局: doc
 规则类型: suggestion
 关联规则:
 - default-case
@@ -25,7 +24,7 @@ It applies only to `switch` statements that already have a `default` clause.
 
 This rule does not enforce the existence of `default` clauses. See [default-case](default-case) if you also want to enforce the existence of `default` clauses in `switch` statements.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 ```js
 /*eslint default-case-last: "error"*/
@@ -77,7 +76,7 @@ switch (foo) {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ```js
 /*eslint default-case-last: "error"*/

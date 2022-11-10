@@ -1,6 +1,5 @@
 ---
 规则名: max-statements
-布局: doc
 规则类型: suggestion
 关联规则:
 - complexity
@@ -41,7 +40,7 @@ This rule has an object option:
 
 ### max
 
-Examples of **incorrect** code for this rule with the default `{ "max": 10 }` option:
+选项 `{ "max": 10 }`  默认值的 **错误** 代码示例：
 
 
 
@@ -80,7 +79,7 @@ let foo = () => {
 };
 ```
 
-Examples of **correct** code for this rule with the default `{ "max": 10 }` option:
+选项 `{ "max": 10 }` 默认值的 **正确** 代码示例：
 
 ::: correct
 

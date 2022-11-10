@@ -1,6 +1,5 @@
 ---
 规则名: no-restricted-globals
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-restricted-properties

@@ -1,6 +1,5 @@
 ---
 规则名: no-underscore-dangle
-布局: doc
 规则类型: suggestion
 ---
 
@@ -19,7 +18,7 @@ Whether or not you choose to allow dangling underscores in identifiers is purely
 
 This rule disallows dangling underscores in identifiers.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -31,7 +30,7 @@ var __proto__ = {};
 foo._bar();
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -74,7 +73,7 @@ foo._bar();
 
 ### allowAfterThis
 
-Examples of **correct** code for this rule with the `{ "allowAfterThis": true }` option:
+选项 `{ "allowAfterThis": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -87,7 +86,7 @@ this._bar();
 
 ### allowAfterSuper
 
-Examples of **correct** code for this rule with the `{ "allowAfterSuper": true }` option:
+选项 `{ "allowAfterSuper": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -100,7 +99,7 @@ super._bar();
 
 ### allowAfterThisConstructor
 
-Examples of **correct** code for this rule with the `{ "allowAfterThisConstructor": true }` option:
+选项 `{ "allowAfterThisConstructor": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -113,7 +112,7 @@ this.constructor._bar();
 
 ### enforceInMethodNames
 
-Examples of **incorrect** code for this rule with the `{ "enforceInMethodNames": true }` option:
+选项 `{ "enforceInMethodNames": true }` 的 **错误** 代码示例：
 
 
 
@@ -139,7 +138,7 @@ const o = {
 
 ### enforceInClassFields
 
-Examples of **incorrect** code for this rule with the `{ "enforceInClassFields": true }` option:
+选项 `{ "enforceInClassFields": true }` 的 **错误** 代码示例：
 
 
 
@@ -169,7 +168,7 @@ class Foo {
 
 ### allowFunctionParams
 
-Examples of **incorrect** code for this rule with the `{ "allowFunctionParams": false }` option:
+选项 `{ "allowFunctionParams": false }` 的 **错误** 代码示例：
 
 
 
@@ -189,6 +188,6 @@ const foo = (_bar = 0) => {};
 const foo = (..._bar) => {};
 ```
 
-## 使用建议
+## 禁用建议
 
 If you want to allow dangling underscores in identifiers, then you can safely turn this rule off.

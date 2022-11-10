@@ -1,6 +1,5 @@
 ---
 规则名: prefer-numeric-literals
-布局: doc
 规则类型: suggestion
 ---
 
@@ -17,7 +16,7 @@ The `parseInt()` and `Number.parseInt()` functions can be used to turn binary, o
 
 This rule disallows calls to `parseInt()` or `Number.parseInt()` if called with two arguments: a string; and a radix option of 2 (binary), 8 (octal), or 16 (hexadecimal).
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -33,7 +32,7 @@ Number.parseInt("767", 8) === 503;
 Number.parseInt("1F7", 16) === 503;
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -58,10 +57,10 @@ Number.parseInt(foo);
 Number.parseInt(foo, 2);
 ```
 
-## 使用建议
+## 禁用建议
 
 If you want to allow use of `parseInt()` or `Number.parseInt()` for binary, octal, or hexadecimal integers, or if you are not using ES6 (because binary and octal literals are not supported in ES5 and below), you may wish to disable this rule.
 
-## Compatibility
+## 兼容
 
 * **JSCS**: [requireNumericLiterals](https://jscs-dev.github.io/rule/requireNumericLiterals)

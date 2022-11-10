@@ -1,6 +1,5 @@
 ---
 规则名: func-call-spacing
-布局: doc
 规则类型: layout
 关联规则:
 - no-spaced-func
@@ -36,7 +35,7 @@ Further, in `"always"` mode, a second object option is available that contains a
 
 ### never
 
-Examples of **incorrect** code for this rule with the default `"never"` option:
+选项 `"never"`  默认值的 **错误** 代码示例：
 
 
 
@@ -49,7 +48,7 @@ fn
 ();
 ```
 
-Examples of **correct** code for this rule with the default `"never"` option:
+选项 `"never"` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -61,7 +60,7 @@ fn();
 
 ### always
 
-Examples of **incorrect** code for this rule with the `"always"` option:
+选项 `"always"` 的 **错误** 代码示例：
 
 
 
@@ -74,7 +73,7 @@ fn
 ();
 ```
 
-Examples of **correct** code for this rule with the `"always"` option:
+选项 `"always"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -111,11 +110,11 @@ fn
 ();
 ```
 
-## 使用建议
+## 禁用建议
 
 This rule can safely be turned off if your project does not care about enforcing a consistent style for spacing within function calls.
 
-## Compatibility
+## 兼容
 
 * **JSCS**: [disallowSpacesInCallExpression](https://jscs-dev.github.io/rule/disallowSpacesInCallExpression)
 * **JSCS**: [requireSpacesInCallExpression](https://jscs-dev.github.io/rule/requireSpacesInCallExpression)

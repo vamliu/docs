@@ -1,6 +1,5 @@
 ---
 规则名: no-spaced-func
-布局: doc
 规则类型: layout
 ---
 
@@ -14,7 +13,7 @@ While it's possible to have whitespace between the name of a function and the pa
 
 This rule disallows spacing between function identifiers and their applications.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -27,7 +26,7 @@ fn
 ()
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

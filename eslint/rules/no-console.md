@@ -1,6 +1,5 @@
 ---
 规则名: no-console
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-alert
@@ -19,7 +18,7 @@ console.error("That shouldn't have happened.");
 
 This rule disallows calls or assignments to methods of the `console` object.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -32,7 +31,7 @@ console.error("Log an error level message.");
 console.log = foo();
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -60,7 +59,7 @@ console.warn("Log a warn level message.");
 console.error("Log an error level message.");
 ```
 
-## 使用建议
+## 禁用建议
 
 If you're using Node.js, however, `console` is used to output information to the user and so is not strictly used for debugging purposes. If you are developing for Node.js then you most likely do not want this rule enabled.
 

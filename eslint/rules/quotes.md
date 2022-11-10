@@ -1,6 +1,5 @@
 ---
 规则名: quotes
-布局: doc
 规则类型: layout
 ---
 
@@ -43,7 +42,7 @@ Object option:
 
 ### double
 
-Examples of **incorrect** code for this rule with the default `"double"` option:
+选项 `"double"`  默认值的 **错误** 代码示例：
 
 
 
@@ -55,7 +54,7 @@ var unescaped = 'a string containing "double" quotes';
 var backtick = `back\ntick`; // you can use \n in single or double quoted strings
 ```
 
-Examples of **correct** code for this rule with the default `"double"` option:
+选项 `"double"` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -71,7 +70,7 @@ var backtick = tag`backtick`; // backticks are allowed due to tag
 
 ### single
 
-Examples of **incorrect** code for this rule with the `"single"` option:
+选项 `"single"` 的 **错误** 代码示例：
 
 
 
@@ -82,7 +81,7 @@ var double = "double";
 var unescaped = "a string containing 'single' quotes";
 ```
 
-Examples of **correct** code for this rule with the `"single"` option:
+选项 `"single"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -96,7 +95,7 @@ var backtick = `back${x}tick`; // backticks are allowed due to substitution
 
 ### backticks
 
-Examples of **incorrect** code for this rule with the `"backtick"` option:
+选项 `"backtick"` 的 **错误** 代码示例：
 
 
 
@@ -108,7 +107,7 @@ var double = "double";
 var unescaped = 'a string containing `backticks`';
 ```
 
-Examples of **correct** code for this rule with the `"backtick"` option:
+选项 `"backtick"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -177,6 +176,6 @@ var single = `single`;
 
 `{ "allowTemplateLiterals": false }` will not disallow the usage of all template literals. If you want to forbid any instance of template literals, use [no-restricted-syntax](no-restricted-syntax) and target the `TemplateLiteral` selector.
 
-## 使用建议
+## 禁用建议
 
 If you do not need consistency in your string styles, you can safely disable this rule.

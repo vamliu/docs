@@ -1,6 +1,5 @@
 ---
 规则名: logical-assignment-operators
-布局: doc
 规则类型: suggestion
 ---
 
@@ -28,7 +27,7 @@ Object option (only available if string option is set to `"always"`):
 
 #### always
 
-Examples of **incorrect** code for this rule with the default `"always"` option:
+选项 `"always"`  默认值的 **错误** 代码示例：
 
 
 
@@ -43,7 +42,7 @@ a && (a = b)
 a ?? (a = b)
 ```
 
-Examples of **correct** code for this rule with the default `"always"` option:
+选项 `"always"` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -61,7 +60,7 @@ if (a) a = b
 
 #### never
 
-Examples of **incorrect** code for this rule with the `"never"` option:
+选项 `"never"` 的 **错误** 代码示例：
 
 
 
@@ -73,7 +72,7 @@ a &&= b
 a ??= b
 ```
 
-Examples of **correct** code for this rule with the `"never"` option:
+选项 `"never"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -91,7 +90,7 @@ This option checks for additional patterns with if statements which could be exp
 
 
 
-Examples of **incorrect** code for this rule with the `["always", { enforceForIfStatements: true }]` option:
+选项 `["always", { enforceForIfStatements: true }]` 的 **错误** 代码示例：
 
 ```js
 /*eslint logical-assignment-operators: ["error", "always", { enforceForIfStatements: true }]*/
@@ -103,7 +102,7 @@ if (a == null) a = b // <=> a ??= b
 if (a === null || a === undefined) a = b // <=> a ??= b
 ```
 
-Examples of **correct** code for this rule with the `["always", { enforceForIfStatements: true }]` option:
+选项 `["always", { enforceForIfStatements: true }]` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -114,6 +113,6 @@ if (a) b = c
 if (a === 0) a = b
 ```
 
-## 使用建议
+## 禁用建议
 
 Use of logical operator assignment shorthand is a stylistic choice. Leaving this rule turned off would allow developers to choose which style is more readable on a case-by-case basis.

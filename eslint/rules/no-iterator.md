@@ -1,6 +1,5 @@
 ---
 规则名: no-iterator
-布局: doc
 规则类型: suggestion
 深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators
@@ -23,7 +22,7 @@ You should use ECMAScript 6 iterators and generators instead.
 
 This rule is aimed at preventing errors that may arise from using the `__iterator__` property, which is not implemented in several browsers. As such, it will warn whenever it encounters the `__iterator__` property.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -40,7 +39,7 @@ foo["__iterator__"] = function () {};
 
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

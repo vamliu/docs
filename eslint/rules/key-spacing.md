@@ -1,6 +1,5 @@
 ---
 规则名: key-spacing
-布局: doc
 规则类型: layout
 ---
 
@@ -36,7 +35,7 @@ Please note that you can either use the top-level options or the grouped options
 
 ### beforeColon
 
-Examples of **incorrect** code for this rule with the default `{ "beforeColon": false }` option:
+选项 `{ "beforeColon": false }`  默认值的 **错误** 代码示例：
 
 
 
@@ -46,7 +45,7 @@ Examples of **incorrect** code for this rule with the default `{ "beforeColon": 
 var obj = { "foo" : 42 };
 ```
 
-Examples of **correct** code for this rule with the default `{ "beforeColon": false }` option:
+选项 `{ "beforeColon": false }` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -56,7 +55,7 @@ Examples of **correct** code for this rule with the default `{ "beforeColon": fa
 var obj = { "foo": 42 };
 ```
 
-Examples of **incorrect** code for this rule with the `{ "beforeColon": true }` option:
+选项 `{ "beforeColon": true }` 的 **错误** 代码示例：
 
 
 
@@ -66,7 +65,7 @@ Examples of **incorrect** code for this rule with the `{ "beforeColon": true }` 
 var obj = { "foo": 42 };
 ```
 
-Examples of **correct** code for this rule with the `{ "beforeColon": true }` option:
+选项 `{ "beforeColon": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -78,7 +77,7 @@ var obj = { "foo" : 42 };
 
 ### afterColon
 
-Examples of **incorrect** code for this rule with the default `{ "afterColon": true }` option:
+选项 `{ "afterColon": true }`  默认值的 **错误** 代码示例：
 
 
 
@@ -88,7 +87,7 @@ Examples of **incorrect** code for this rule with the default `{ "afterColon": t
 var obj = { "foo":42 };
 ```
 
-Examples of **correct** code for this rule with the default `{ "afterColon": true }` option:
+选项 `{ "afterColon": true }` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -98,7 +97,7 @@ Examples of **correct** code for this rule with the default `{ "afterColon": tru
 var obj = { "foo": 42 };
 ```
 
-Examples of **incorrect** code for this rule with the `{ "afterColon": false }` option:
+选项 `{ "afterColon": false }` 的 **错误** 代码示例：
 
 
 
@@ -108,7 +107,7 @@ Examples of **incorrect** code for this rule with the `{ "afterColon": false }` 
 var obj = { "foo": 42 };
 ```
 
-Examples of **correct** code for this rule with the `{ "afterColon": false }` option:
+选项 `{ "afterColon": false }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -120,7 +119,7 @@ var obj = { "foo":42 };
 
 ### mode
 
-Examples of **incorrect** code for this rule with the default `{ "mode": "strict" }` option:
+选项 `{ "mode": "strict" }`  默认值的 **错误** 代码示例：
 
 
 
@@ -133,7 +132,7 @@ call({
 });
 ```
 
-Examples of **correct** code for this rule with the default `{ "mode": "strict" }` option:
+选项 `{ "mode": "strict" }` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -146,7 +145,7 @@ call({
 });
 ```
 
-Examples of **correct** code for this rule with the `{ "mode": "minimum" }` option:
+选项 `{ "mode": "minimum" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -161,7 +160,7 @@ call({
 
 ### align
 
-Examples of **incorrect** code for this rule with the `{ "align": "value" }` option:
+选项 `{ "align": "value" }` 的 **错误** 代码示例：
 
 
 
@@ -175,7 +174,7 @@ var obj = {
 };
 ```
 
-Examples of **correct** code for this rule with the `{ "align": "value" }` option:
+选项 `{ "align": "value" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -196,7 +195,7 @@ var obj = {
 var obj = { a: "foo", longPropertyName: "bar" };
 ```
 
-Examples of **incorrect** code for this rule with the `{ "align": "colon" }` option:
+选项 `{ "align": "colon" }` 的 **错误** 代码示例：
 
 
 
@@ -209,7 +208,7 @@ call({
 });
 ```
 
-Examples of **correct** code for this rule with the `{ "align": "colon" }` option:
+选项 `{ "align": "colon" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -371,6 +370,6 @@ var obj2 = {
 };
 ```
 
-## 使用建议
+## 禁用建议
 
 If you have another convention for property spacing that might not be consistent with the available options, or if you want to permit multiple styles concurrently you can safely disable this rule.

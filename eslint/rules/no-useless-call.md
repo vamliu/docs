@@ -1,6 +1,5 @@
 ---
 规则名: no-useless-call
-布局: doc
 规则类型: suggestion
 关联规则:
 - prefer-spread
@@ -14,7 +13,7 @@ But `Function.prototype.call()` and `Function.prototype.apply()` are slower than
 
 This rule is aimed to flag usage of `Function.prototype.call()` and `Function.prototype.apply()` that can be replaced with the normal function invocation.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -32,7 +31,7 @@ obj.foo.call(obj, 1, 2, 3);
 obj.foo.apply(obj, [1, 2, 3]);
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -59,7 +58,7 @@ obj.foo.apply(obj, args);
 This rule compares code statically to check whether or not `thisArg` is changed.
 So if the code about `thisArg` is a dynamic expression, this rule cannot judge correctly.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -69,7 +68,7 @@ Examples of **incorrect** code for this rule:
 a[i++].foo.call(a[i++], 1, 2, 3);
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -79,6 +78,6 @@ Examples of **correct** code for this rule:
 a[++i].foo.call(a[i], 1, 2, 3);
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to be notified about unnecessary `.call()` and `.apply()`, you can safely disable this rule.

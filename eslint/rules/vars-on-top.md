@@ -1,6 +1,5 @@
 ---
 规则名: vars-on-top
-布局: doc
 规则类型: suggestion
 深入了解:
 - https://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html
@@ -19,7 +18,7 @@ This rule forces the programmer to represent that behavior by manually moving th
 This rule aims to keep all variable declarations in the leading series of statements.
 Allowing multiple declarations helps promote maintainability and is thus allowed.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -75,7 +74,7 @@ class C {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

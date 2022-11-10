@@ -1,6 +1,5 @@
 ---
 规则名: no-throw-literal
-布局: doc
 规则类型: suggestion
 ---
 
@@ -14,7 +13,7 @@ This rule restricts what can be thrown as an exception.  When it was first creat
 
 This rule is aimed at maintaining consistency when throwing exception by disallowing to throw literals and other expressions which cannot possibly be an `Error` object.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -39,7 +38,7 @@ throw `${err}`
 
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

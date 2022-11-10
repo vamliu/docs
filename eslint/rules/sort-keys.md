@@ -1,6 +1,5 @@
 ---
 规则名: sort-keys
-布局: doc
 规则类型: suggestion
 关联规则:
 - sort-imports
@@ -14,7 +13,7 @@ When declaring multiple properties, some developers prefer to sort property name
 
 This rule checks all property definitions of object expressions and verifies that all variables are sorted alphabetically.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -38,7 +37,7 @@ let obj = {a: 1, ["c"]: 3, b: 2};
 let obj = {a: 1, [S]: 3, b: 2};
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -361,10 +360,10 @@ var obj = {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to notify about properties' order, then it's safe to disable this rule.
 
-## Compatibility
+## 兼容
 
 * **JSCS:** [validateOrderInObjectKeys](https://jscs-dev.github.io/rule/validateOrderInObjectKeys)

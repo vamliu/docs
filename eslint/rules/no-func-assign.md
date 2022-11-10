@@ -1,6 +1,5 @@
 ---
 规则名: no-func-assign
-布局: doc
 规则类型: problem
 ---
 
@@ -17,7 +16,7 @@ foo = bar;
 
 This rule disallows reassigning `function` declarations.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -47,7 +46,7 @@ foo = bar;
 function foo() {}
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

@@ -1,6 +1,5 @@
 ---
 规则名: space-unary-ops
-布局: doc
 规则类型: layout
 ---
 
@@ -67,7 +66,7 @@ This rule has three options:
 
 In this case, spacing will be disallowed after a `new` operator and required before/after a `++` operator.
 
-Examples of **incorrect** code for this rule with the default `{"words": true, "nonwords": false}` option:
+选项 `{"words": true, "nonwords": false}`  默认值的 **错误** 代码示例：
 
 
 
@@ -112,7 +111,7 @@ async function foo() {
 }
 ```
 
-Examples of **correct** code for this rule with the `{"words": true, "nonwords": false}` option:
+选项 `{"words": true, "nonwords": false}` 的 **正确** 代码示例：
 
 ::: correct
 

@@ -1,6 +1,5 @@
 ---
 规则名: callback-return
-布局: doc
 规则类型: suggestion
 关联规则:
 - handle-callback-err
@@ -40,7 +39,7 @@ The rule takes a single option - an array of possible callback names - which may
 
 ### Default callback names
 
-Examples of **incorrect** code for this rule with the default `["callback", "cb", "next"]` option:
+选项 `["callback", "cb", "next"]`  默认值的 **错误** 代码示例：
 
 ```js
 /*eslint callback-return: "error"*/
@@ -53,7 +52,7 @@ function foo(err, callback) {
 }
 ```
 
-Examples of **correct** code for this rule with the default `["callback", "cb", "next"]` option:
+选项 `["callback", "cb", "next"]` 默认值的 **正确** 代码示例：
 
 ```js
 /*eslint callback-return: "error"*/
@@ -169,7 +168,7 @@ function foo(err, callback) {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 There are some cases where you might want to call a callback function more than once. In those cases this rule
  may lead to incorrect behavior. In those cases you may want to reserve a special name for those callbacks and

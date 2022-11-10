@@ -1,6 +1,5 @@
 ---
 规则名: max-lines
-布局: doc
 规则类型: suggestion
 关联规则:
 - complexity
@@ -91,7 +90,7 @@ var a, b, c;
 
 ### skipBlankLines
 
-Examples of **incorrect** code for this rule with the `{ "skipBlankLines": true }` option:
+选项 `{ "skipBlankLines": true }` 的 **错误** 代码示例：
 
 
 
@@ -103,7 +102,7 @@ var a,
     c;
 ```
 
-Examples of **correct** code for this rule with the `{ "skipBlankLines": true }` option:
+选项 `{ "skipBlankLines": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -116,7 +115,7 @@ var a,
 
 ### skipComments
 
-Examples of **incorrect** code for this rule with the `{ "skipComments": true }` option:
+选项 `{ "skipComments": true }` 的 **错误** 代码示例：
 
 
 
@@ -128,7 +127,7 @@ var a,
     c;
 ```
 
-Examples of **correct** code for this rule with the `{ "skipComments": true }` option:
+选项 `{ "skipComments": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -139,10 +138,10 @@ var a,
     b, c;
 ```
 
-## 使用建议
+## 禁用建议
 
 You can turn this rule off if you are not concerned with the number of lines in your files.
 
-## Compatibility
+## 兼容
 
 * **JSCS**: [maximumNumberOfLines](https://jscs-dev.github.io/rule/maximumNumberOfLines)

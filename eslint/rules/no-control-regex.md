@@ -1,6 +1,5 @@
 ---
 规则名: no-control-regex
-布局: doc
 规则类型: problem
 关联规则:
 - no-div-regex
@@ -24,7 +23,7 @@ The following elements of regular expression patterns are considered possible er
 
 Control escapes such as `\t` and `\n` are allowed by this rule.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -40,7 +39,7 @@ var pattern6 = new RegExp("\x0C"); // raw U+000C character in the pattern
 var pattern7 = new RegExp("\\x0C"); // \x0C pattern
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -71,6 +70,6 @@ new RegExp("\\t"); // allowed since the pattern is: \t
 
 There is no difference in behavior between `new RegExp("\t")` and `new RegExp("\\t")`, and the intention to match the TAB character is clear in both cases. They are equally valid for the purpose of this rule, but it only allows `new RegExp("\\t")`.
 
-## 使用建议
+## 禁用建议
 
 If you need to use control character pattern matching, then you should turn this rule off.

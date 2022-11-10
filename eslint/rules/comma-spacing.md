@@ -1,6 +1,5 @@
 ---
 规则名: comma-spacing
-布局: doc
 规则类型: layout
 关联规则:
 - array-bracket-spacing
@@ -109,7 +108,7 @@ foo(a, b,)
 
 ### before
 
-Examples of **incorrect** code for this rule with the `{ "before": true, "after": false }` options:
+选项 `{ "before": true, "after": false }`  的 **错误** 代码示例：
 
 ```js
 /*eslint comma-spacing: ["error", { "before": true, "after": false }]*/
@@ -122,7 +121,7 @@ function foo(a,b){}
 a, b
 ```
 
-Examples of **correct** code for this rule with the `{ "before": true, "after": false }` options:
+选项 `{ "before": true, "after": false }`  的 **正确** 代码示例：
 
 ```js
 /*eslint comma-spacing: ["error", { "before": true, "after": false }]*/
@@ -138,6 +137,6 @@ function foo(a ,b){}
 a ,b
 ```
 
-## 使用建议
+## 禁用建议
 
 If your project will not be following a consistent comma-spacing pattern, turn this rule off.

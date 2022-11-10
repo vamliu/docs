@@ -1,6 +1,5 @@
 ---
 规则名: valid-typeof
-布局: doc
 规则类型: problem
 深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
@@ -22,7 +21,7 @@ This rule has an object option:
 
 * `"requireStringLiterals": true` requires `typeof` expressions to only be compared to string literals or other `typeof` expressions, and disallows comparisons to any other value.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -35,7 +34,7 @@ typeof bar != "nunber"
 typeof bar !== "fucntion"
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -76,6 +75,6 @@ typeof baz === "string"
 typeof bar === typeof qux
 ```
 
-## 使用建议
+## 禁用建议
 
 You may want to turn this rule off if you will be using the `typeof` operator on host objects.

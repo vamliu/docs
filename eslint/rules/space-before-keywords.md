@@ -1,6 +1,5 @@
 ---
 规则名: space-before-keywords
-布局: doc
 
 关联规则:
 - space-after-keywords
@@ -42,7 +41,7 @@ the keywords `else`, `while` (do...while), `finally` and `catch`. The default va
 This rule will allow keywords to be preceded by an opening curly brace (`{`). If you wish to alter
 this behavior, consider using the [block-spacing](block-spacing) rule.
 
-Examples of **incorrect** code for this rule with the default `"always"` option:
+选项 `"always"`  默认值的 **错误** 代码示例：
 
 
 
@@ -63,7 +62,7 @@ function bar() {
 }
 ```
 
-Examples of **correct** code for this rule with the default `"always"` option:
+选项 `"always"` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -82,7 +81,7 @@ if (foo) {
 for (let foo of ['bar', 'baz', 'qux']) {}
 ```
 
-Examples of **incorrect** code for this rule with the `"never"` option:
+选项 `"never"` 的 **错误** 代码示例：
 
 
 
@@ -103,7 +102,7 @@ try {} finally {}
 try {} catch(e) {}
 ```
 
-Examples of **correct** code for this rule with the `"never"` option:
+选项 `"never"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -121,6 +120,6 @@ try {}finally {}
 try{}catch(e) {}
 ```
 
-## 使用建议
+## 禁用建议
 
 If you do not wish to enforce consistency on keyword spacing.

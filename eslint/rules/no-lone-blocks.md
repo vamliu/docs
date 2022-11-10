@@ -1,6 +1,5 @@
 ---
 规则名: no-lone-blocks
-布局: doc
 规则类型: suggestion
 ---
 
@@ -19,7 +18,7 @@ In ES6, code blocks may create a new scope if a block-level binding (`let` and `
 
 This rule aims to eliminate unnecessary and potentially confusing blocks at the top level of a script or within other blocks.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 

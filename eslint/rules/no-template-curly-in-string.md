@@ -1,6 +1,5 @@
 ---
 规则名: no-template-curly-in-string
-布局: doc
 规则类型: problem
 ---
 
@@ -13,7 +12,7 @@ This rule aims to warn when a regular string contains what looks like a template
 
 ## Examples
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -24,7 +23,7 @@ Examples of **incorrect** code for this rule:
 "Time: ${12 * 60 * 60 * 1000}";
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -36,6 +35,6 @@ Examples of **correct** code for this rule:
 templateFunction`Hello ${name}`;
 ```
 
-## 使用建议
+## 禁用建议
 
 This rule should not be used in ES3/5 environments.

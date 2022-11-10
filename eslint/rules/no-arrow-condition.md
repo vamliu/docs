@@ -1,6 +1,5 @@
 ---
 规则名: no-arrow-condition
-布局: doc
 
 关联规则:
 - arrow-parens
@@ -36,7 +35,7 @@ var x = a <= 1 ? 2 : 3
 
 ## 规则详解
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 ```js
 /*eslint no-arrow-condition: "error"*/

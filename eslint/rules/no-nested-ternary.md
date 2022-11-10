@@ -1,6 +1,5 @@
 ---
 规则名: no-nested-ternary
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-ternary
@@ -18,7 +17,7 @@ var foo = bar ? baz : qux === quxx ? bing : bam;
 
 The `no-nested-ternary` rule disallows nested ternary expressions.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -30,7 +29,7 @@ var thing = foo ? bar : baz === qux ? quxx : foobar;
 foo ? baz === qux ? quxx() : foobar() : bar();
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

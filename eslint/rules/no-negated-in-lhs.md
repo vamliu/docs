@@ -1,6 +1,5 @@
 ---
 规则名: no-negated-in-lhs
-布局: doc
 规则类型: problem
 ---
 
@@ -13,7 +12,7 @@ Just as developers might type `-a + b` when they mean `-(a + b)` for the negativ
 
 This rule disallows negating the left operand in `in` expressions.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -26,7 +25,7 @@ if(!key in object) {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -43,6 +42,6 @@ if(('' + !key) in object) {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 Never.

@@ -1,6 +1,5 @@
 ---
 规则名: default-param-last
-布局: doc
 规则类型: suggestion
 ---
 
@@ -20,7 +19,7 @@ createUser(undefined, "tabby")
 
 This rule enforces default parameters to be the last of parameters.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -32,7 +31,7 @@ function f(a = 0, b) {}
 function f(a, b = 0, c) {}
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

@@ -1,6 +1,5 @@
 ---
 规则名: id-denylist
-布局: doc
 规则类型: suggestion
 ---
 
@@ -122,6 +121,6 @@ class Foo {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 You can turn this rule off if you do not want to restrict the use of certain identifiers.

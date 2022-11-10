@@ -1,6 +1,5 @@
 ---
 规则名: no-sparse-arrays
-布局: doc
 规则类型: problem
 深入了解:
 - https://www.nczonline.net/blog/2007/09/09/inconsistent-array-literals/
@@ -28,7 +27,7 @@ The confusion around sparse arrays defined in this manner is enough that it's re
 
 This rule disallows sparse array literals which have "holes" where commas are not preceded by elements. It does not apply to a trailing comma following the last element.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -39,7 +38,7 @@ var items = [,];
 var colors = [ "red",, "blue" ];
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -53,6 +52,6 @@ var items = new Array(23);
 var colors = [ "red", "blue", ];
 ```
 
-## 使用建议
+## 禁用建议
 
 If you want to use sparse arrays, then it is safe to disable this rule.

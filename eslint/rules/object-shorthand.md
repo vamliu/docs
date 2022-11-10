@@ -1,6 +1,5 @@
 ---
 规则名: object-shorthand
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-useless-rename
@@ -245,7 +244,7 @@ var foo = {
 };
 ```
 
-Examples of **correct** code for this rule with the `"consistent"` option:
+选项 `"consistent"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -278,7 +277,7 @@ var foo = {
 };
 ```
 
-## 使用建议
+## 禁用建议
 
 Anyone not yet in an ES6 environment would not want to apply this rule. Others may find the terseness of the shorthand
 syntax harder to read and may not want to encourage it with this rule.

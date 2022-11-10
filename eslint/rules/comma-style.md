@@ -1,6 +1,5 @@
 ---
 规则名: comma-style
-布局: doc
 规则类型: layout
 关联规则:
 - operator-linebreak
@@ -53,7 +52,7 @@ A way to determine the node types as defined by [ESTree](https://github.com/estr
 
 ### last
 
-Examples of **incorrect** code for this rule with the default `"last"` option:
+选项 `"last"`  默认值的 **错误** 代码示例：
 
 ```js
 /*eslint comma-style: ["error", "last"]*/
@@ -76,7 +75,7 @@ function bar() {
 }
 ```
 
-Examples of **correct** code for this rule with the default `"last"` option:
+选项 `"last"` 默认值的 **正确** 代码示例：
 
 ```js
 /*eslint comma-style: ["error", "last"]*/
@@ -99,7 +98,7 @@ function bar() {
 
 ### first
 
-Examples of **incorrect** code for this rule with the `"first"` option:
+选项 `"first"` 的 **错误** 代码示例：
 
 ```js
 /*eslint comma-style: ["error", "first"]*/
@@ -118,7 +117,7 @@ function bar() {
 }
 ```
 
-Examples of **correct** code for this rule with the `"first"` option:
+选项 `"first"` 的 **正确** 代码示例：
 
 ```js
 /*eslint comma-style: ["error", "first"]*/
@@ -163,6 +162,6 @@ var o = {fst:1,
   , a = [];
 ```
 
-## 使用建议
+## 禁用建议
 
 This rule can safely be turned off if your project does not care about enforcing a consistent comma style.

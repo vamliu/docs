@@ -1,6 +1,5 @@
 ---
 规则名: no-unreachable-loop
-布局: doc
 规则类型: problem
 关联规则:
 - no-unreachable
@@ -32,7 +31,7 @@ In particular, this rule will disallow a loop with a body that exits the loop in
 
 This rule checks `while`, `do-while`, `for`, `for-in` and `for-of` loops. You can optionally disable checks for each of these constructs.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -83,7 +82,7 @@ for (foo of bar) {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -172,7 +171,7 @@ You can specify up to 5 different elements in the `"ignore"` array:
 * `"ForInStatement"` - to ignore all `for-in` loops.
 * `"ForOfStatement"` - to ignore all `for-of` loops.
 
-Examples of **correct** code for this rule with the `"ignore"` option:
+选项 `"ignore"` 的 **正确** 代码示例：
 
 ::: correct
 

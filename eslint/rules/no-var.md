@@ -1,6 +1,5 @@
 ---
 规则名: no-var
-布局: doc
 规则类型: suggestion
 ---
 
@@ -29,7 +28,7 @@ This rule is aimed at discouraging the use of `var` and encouraging the use of `
 
 ## Examples
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -40,7 +39,7 @@ var x = "y";
 var CONFIG = {};
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -52,7 +51,7 @@ let x = "y";
 const CONFIG = {};
 ```
 
-## 使用建议
+## 禁用建议
 
 In addition to non-ES6 environments, existing JavaScript projects that are beginning to introduce ES6 into their
 codebase may not want to apply this rule if the cost of migrating from `var` to `let` is too costly.

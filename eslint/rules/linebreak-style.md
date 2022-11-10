@@ -1,6 +1,5 @@
 ---
 规则名: linebreak-style
-布局: doc
 规则类型: layout
 ---
 
@@ -27,7 +26,7 @@ This rule has a string option:
 
 ### unix
 
-Examples of **incorrect** code for this rule with the default `"unix"` option:
+选项 `"unix"`  默认值的 **错误** 代码示例：
 
 
 
@@ -38,7 +37,7 @@ var a = 'a'; // \r\n
 
 ```
 
-Examples of **correct** code for this rule with the default `"unix"` option:
+选项 `"unix"` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -55,7 +54,7 @@ function foo(params) { // \n
 
 ### windows
 
-Examples of **incorrect** code for this rule with the `"windows"` option:
+选项 `"windows"` 的 **错误** 代码示例：
 
 
 
@@ -65,7 +64,7 @@ Examples of **incorrect** code for this rule with the `"windows"` option:
 var a = 'a'; // \n
 ```
 
-Examples of **correct** code for this rule with the `"windows"` option:
+选项 `"windows"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -90,10 +89,10 @@ For example, the default behavior of [git](https://git-scm.com/) on Windows syst
 *.js text eol=lf
 ```
 
-## 使用建议
+## 禁用建议
 
 If you aren't concerned about having different line endings within your code, then you can safely turn this rule off.
 
-## Compatibility
+## 兼容
 
 * **JSCS**: [validateLineBreaks](https://jscs-dev.github.io/rule/validateLineBreaks)

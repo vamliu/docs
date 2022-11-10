@@ -1,6 +1,5 @@
 ---
 规则名: no-loop-func
-布局: doc
 规则类型: suggestion
 ---
 
@@ -37,7 +36,7 @@ This error is raised to highlight a piece of code that may not work as you expec
 
 This rule disallows any function within a loop that contains unsafe references (e.g. to modified variables from the outer scope).
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -73,7 +72,7 @@ for (let i = 0; i < 10; ++i) {
 foo = 100;
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

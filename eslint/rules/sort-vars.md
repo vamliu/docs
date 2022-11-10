@@ -1,6 +1,5 @@
 ---
 规则名: sort-vars
-布局: doc
 规则类型: suggestion
 关联规则:
 - sort-keys
@@ -16,7 +15,7 @@ When declaring multiple variables within the same block, some developers prefer 
 This rule checks all variable declaration blocks and verifies that all variables are sorted alphabetically.
 The default configuration of the rule is case-sensitive.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -30,7 +29,7 @@ var a, B, c;
 var a, A;
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -71,7 +70,7 @@ This rule has an object option:
 
 ### ignoreCase
 
-Examples of **correct** code for this rule with the `{ "ignoreCase": true }` option:
+选项 `{ "ignoreCase": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -83,6 +82,6 @@ var a, A;
 var a, B, c;
 ```
 
-## 使用建议
+## 禁用建议
 
 This rule is a formatting preference and not following it won't negatively affect the quality of your code. If you alphabetizing variables isn't a part of your coding standards, then you can leave this rule off.

@@ -1,6 +1,5 @@
 ---
 规则名: lines-around-directive
-布局: doc
 规则类型: layout
 关联规则:
 - lines-around-comment
@@ -59,7 +58,7 @@ or
 
 This is the default option.
 
-Examples of **incorrect** code for this rule with the `"always"` option:
+选项 `"always"` 的 **错误** 代码示例：
 
 
 
@@ -89,7 +88,7 @@ function foo() {
 }
 ```
 
-Examples of **correct** code for this rule with the `"always"` option:
+选项 `"always"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -127,7 +126,7 @@ function foo() {
 
 ### never
 
-Examples of **incorrect** code for this rule with the `"never"` option:
+选项 `"never"` 的 **错误** 代码示例：
 
 
 
@@ -164,7 +163,7 @@ function foo() {
 }
 ```
 
-Examples of **correct** code for this rule with the `"never"` option:
+选项 `"never"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -196,7 +195,7 @@ function foo() {
 
 ### before & after
 
-Examples of **incorrect** code for this rule with the `{ "before": "never", "after": "always" }` option:
+选项 `{ "before": "never", "after": "always" }` 的 **错误** 代码示例：
 
 
 
@@ -229,7 +228,7 @@ function foo() {
 }
 ```
 
-Examples of **correct** code for this rule with the `{ "before": "never", "after": "always" }`  option:
+选项 `{ "before": "never", "after": "always" }`   的 **正确** 代码示例
 
 ::: correct
 
@@ -263,7 +262,7 @@ function foo() {
 }
 ```
 
-Examples of **incorrect** code for this rule with the `{ "before": "always", "after": "never" }` option:
+选项 `{ "before": "always", "after": "never" }` 的 **错误** 代码示例：
 
 
 
@@ -297,7 +296,7 @@ function foo() {
 }
 ```
 
-Examples of **correct** code for this rule with the `{ "before": "always", "after": "never" }` option:
+选项 `{ "before": "always", "after": "never" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -329,11 +328,11 @@ function foo() {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 You can safely disable this rule if you do not have any strict conventions about whether or not directive prologues should have blank newlines before or after them.
 
-## Compatibility
+## 兼容
 
 * **JSCS**: [requirePaddingNewLinesAfterUseStrict](https://jscs-dev.github.io/rule/requirePaddingNewLinesAfterUseStrict)
 * **JSCS**: [disallowPaddingNewLinesAfterUseStrict](https://jscs-dev.github.io/rule/disallowPaddingNewLinesAfterUseStrict)

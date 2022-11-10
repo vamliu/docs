@@ -1,6 +1,5 @@
 ---
 规则名: arrow-spacing
-布局: doc
 规则类型: layout
 ---
 
@@ -26,7 +25,7 @@ The default configuration is `{ "before": true, "after": true }`.
 
 `true` means there should be **one or more spaces** and `false` means **no spaces**.
 
-Examples of **incorrect** code for this rule with the default `{ "before": true, "after": true }` option:
+选项 `{ "before": true, "after": true }`  默认值的 **错误** 代码示例：
 
 ```js
 /*eslint arrow-spacing: "error"*/
@@ -42,7 +41,7 @@ a=> a;
 () =>{'\n'};
 ```
 
-Examples of **correct** code for this rule with the default `{ "before": true, "after": true }` option:
+选项 `{ "before": true, "after": true }` 默认值的 **正确** 代码示例：
 
 ```js
 /*eslint arrow-spacing: "error"*/
@@ -54,7 +53,7 @@ a => a;
 () => {'\n'};
 ```
 
-Examples of **incorrect** code for this rule with the `{ "before": false, "after": false }` option:
+选项 `{ "before": false, "after": false }` 的 **错误** 代码示例：
 
 ```js
 /*eslint arrow-spacing: ["error", { "before": false, "after": false }]*/
@@ -65,7 +64,7 @@ Examples of **incorrect** code for this rule with the `{ "before": false, "after
 ()=> {'\n'};
 ```
 
-Examples of **correct** code for this rule with the `{ "before": false, "after": false }` option:
+选项 `{ "before": false, "after": false }` 的 **正确** 代码示例：
 
 ```js
 /*eslint arrow-spacing: ["error", { "before": false, "after": false }]*/
@@ -76,7 +75,7 @@ Examples of **correct** code for this rule with the `{ "before": false, "after":
 ()=>{'\n'};
 ```
 
-Examples of **incorrect** code for this rule with the `{ "before": false, "after": true }` option:
+选项 `{ "before": false, "after": true }` 的 **错误** 代码示例：
 
 ```js
 /*eslint arrow-spacing: ["error", { "before": false, "after": true }]*/
@@ -87,7 +86,7 @@ Examples of **incorrect** code for this rule with the `{ "before": false, "after
 ()=>{'\n'};
 ```
 
-Examples of **correct** code for this rule with the `{ "before": false, "after": true }` option:
+选项 `{ "before": false, "after": true }` 的 **正确** 代码示例：
 
 ```js
 /*eslint arrow-spacing: ["error", { "before": false, "after": true }]*/

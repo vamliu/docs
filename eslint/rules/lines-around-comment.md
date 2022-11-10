@@ -1,6 +1,5 @@
 ---
 规则名: lines-around-comment
-布局: doc
 规则类型: layout
 关联规则:
 - space-before-blocks
@@ -37,7 +36,7 @@ This rule has an object option:
 
 ### beforeBlockComment
 
-Examples of **incorrect** code for this rule with the default `{ "beforeBlockComment": true }` option:
+选项 `{ "beforeBlockComment": true }`  默认值的 **错误** 代码示例：
 
 
 
@@ -49,7 +48,7 @@ var night = "long";
 var day = "great"
 ```
 
-Examples of **correct** code for this rule with the default `{ "beforeBlockComment": true }` option:
+选项 `{ "beforeBlockComment": true }` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -64,7 +63,7 @@ var day = "great"
 
 ### afterBlockComment
 
-Examples of **incorrect** code for this rule with the `{ "afterBlockComment": true }` option:
+选项 `{ "afterBlockComment": true }` 的 **错误** 代码示例：
 
 
 
@@ -77,7 +76,7 @@ var night = "long";
 var day = "great"
 ```
 
-Examples of **correct** code for this rule with the `{ "afterBlockComment": true }` option:
+选项 `{ "afterBlockComment": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -93,7 +92,7 @@ var day = "great"
 
 ### beforeLineComment
 
-Examples of **incorrect** code for this rule with the `{ "beforeLineComment": true }` option:
+选项 `{ "beforeLineComment": true }` 的 **错误** 代码示例：
 
 
 
@@ -105,7 +104,7 @@ var night = "long";
 var day = "great"
 ```
 
-Examples of **correct** code for this rule with the `{ "beforeLineComment": true }` option:
+选项 `{ "beforeLineComment": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -120,7 +119,7 @@ var day = "great"
 
 ### afterLineComment
 
-Examples of **incorrect** code for this rule with the `{ "afterLineComment": true }` option:
+选项 `{ "afterLineComment": true }` 的 **错误** 代码示例：
 
 
 
@@ -132,7 +131,7 @@ var night = "long";
 var day = "great"
 ```
 
-Examples of **correct** code for this rule with the `{ "afterLineComment": true }` option:
+选项 `{ "afterLineComment": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -147,7 +146,7 @@ var day = "great"
 
 ### allowBlockStart
 
-Examples of **correct** code for this rule with the `{ "beforeLineComment": true, "allowBlockStart": true }` options:
+选项 `{ "beforeLineComment": true, "allowBlockStart": true }`  的 **正确** 代码示例：
 
 ::: correct
 
@@ -180,7 +179,7 @@ class C {
 }
 ```
 
-Examples of **correct** code for this rule with the `{ "beforeBlockComment": true, "allowBlockStart": true }` options:
+选项 `{ "beforeBlockComment": true, "allowBlockStart": true }`  的 **正确** 代码示例：
 
 ::: correct
 
@@ -223,7 +222,7 @@ switch (foo) {
 
 ### allowBlockEnd
 
-Examples of **correct** code for this rule with the `{ "afterLineComment": true, "allowBlockEnd": true }` option:
+选项 `{ "afterLineComment": true, "allowBlockEnd": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -257,7 +256,7 @@ class C {
 }
 ```
 
-Examples of **correct** code for this rule with the `{ "afterBlockComment": true, "allowBlockEnd": true }` option:
+选项 `{ "afterBlockComment": true, "allowBlockEnd": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -305,7 +304,7 @@ switch (foo) {
 
 ### allowClassStart
 
-Examples of **incorrect** code for this rule with the `{ "beforeLineComment": true, "allowClassStart": false }` option:
+选项 `{ "beforeLineComment": true, "allowClassStart": false }` 的 **错误** 代码示例：
 
 
 
@@ -318,7 +317,7 @@ class foo {
 };
 ```
 
-Examples of **correct** code for this rule with the `{ "beforeLineComment": true, "allowClassStart": false }` option:
+选项 `{ "beforeLineComment": true, "allowClassStart": false }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -332,7 +331,7 @@ class foo {
 };
 ```
 
-Examples of **correct** code for this rule with the `{ "beforeLineComment": true, "allowClassStart": true }` option:
+选项 `{ "beforeLineComment": true, "allowClassStart": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -345,7 +344,7 @@ class foo {
 };
 ```
 
-Examples of **incorrect** code for this rule with the `{ "beforeBlockComment": true, "allowClassStart": false }` option:
+选项 `{ "beforeBlockComment": true, "allowClassStart": false }` 的 **错误** 代码示例：
 
 
 
@@ -358,7 +357,7 @@ class foo {
 };
 ```
 
-Examples of **correct** code for this rule with the `{ "beforeBlockComment": true, "allowClassStart": false }` option:
+选项 `{ "beforeBlockComment": true, "allowClassStart": false }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -372,7 +371,7 @@ class foo {
 };
 ```
 
-Examples of **correct** code for this rule with the `{ "beforeBlockComment": true, "allowClassStart": true }` option:
+选项 `{ "beforeBlockComment": true, "allowClassStart": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -387,7 +386,7 @@ class foo {
 
 ### allowClassEnd
 
-Examples of **correct** code for this rule with the `{ "afterLineComment": true, "allowClassEnd": true }` option:
+选项 `{ "afterLineComment": true, "allowClassEnd": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -400,7 +399,7 @@ class foo {
 };
 ```
 
-Examples of **correct** code for this rule with the `{ "afterBlockComment": true, "allowClassEnd": true }` option:
+选项 `{ "afterBlockComment": true, "allowClassEnd": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -416,7 +415,7 @@ class foo {
 
 ### allowObjectStart
 
-Examples of **correct** code for this rule with the `{ "beforeLineComment": true, "allowObjectStart": true }` option:
+选项 `{ "beforeLineComment": true, "allowObjectStart": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -439,7 +438,7 @@ const {
 } = {day: "great"};
 ```
 
-Examples of **correct** code for this rule with the `{ "beforeBlockComment": true, "allowObjectStart": true }` option:
+选项 `{ "beforeBlockComment": true, "allowObjectStart": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -464,7 +463,7 @@ const {
 
 ### allowObjectEnd
 
-Examples of **correct** code for this rule with the `{ "afterLineComment": true, "allowObjectEnd": true }` option:
+选项 `{ "afterLineComment": true, "allowObjectEnd": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -487,7 +486,7 @@ const {
 } = {day: "great"};
 ```
 
-Examples of **correct** code for this rule with the `{ "afterBlockComment": true, "allowObjectEnd": true }` option:
+选项 `{ "afterBlockComment": true, "allowObjectEnd": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -515,7 +514,7 @@ const {
 
 ### allowArrayStart
 
-Examples of **correct** code for this rule with the `{ "beforeLineComment": true, "allowArrayStart": true }` option:
+选项 `{ "beforeLineComment": true, "allowArrayStart": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -534,7 +533,7 @@ const [
 ] = ["great", "not great"];
 ```
 
-Examples of **correct** code for this rule with the `{ "beforeBlockComment": true, "allowArrayStart": true }` option:
+选项 `{ "beforeBlockComment": true, "allowArrayStart": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -555,7 +554,7 @@ const [
 
 ### allowArrayEnd
 
-Examples of **correct** code for this rule with the `{ "afterLineComment": true, "allowArrayEnd": true }` option:
+选项 `{ "afterLineComment": true, "allowArrayEnd": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -574,7 +573,7 @@ const [
 ] = ["great", "not great"];
 ```
 
-Examples of **correct** code for this rule with the `{ "afterBlockComment": true, "allowArrayEnd": true }` option:
+选项 `{ "afterBlockComment": true, "allowArrayEnd": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -654,6 +653,6 @@ foo();
 
 ```
 
-## 使用建议
+## 禁用建议
 
 Many people enjoy a terser code style and don't mind comments bumping up against code. If you fall into that category this rule is not for you.

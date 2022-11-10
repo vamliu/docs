@@ -1,6 +1,5 @@
 ---
 规则名: multiline-comment-style
-布局: doc
 规则类型: suggestion
 ---
 
@@ -22,7 +21,7 @@ This rule has a string option, which can have one of the following values:
 
 The rule always ignores directive comments such as `/* eslint-disable */`. Additionally, unless the mode is `"starred-block"`, the rule ignores JSDoc comments.
 
-Examples of **incorrect** code for this rule with the default `"starred-block"` option:
+选项 `"starred-block"`  默认值的 **错误** 代码示例：
 
 
 
@@ -56,7 +55,7 @@ foo();
 
 ```
 
-Examples of **correct** code for this rule with the default `"starred-block"` option:
+选项 `"starred-block"` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -72,7 +71,7 @@ foo();
 // single-line comment
 ```
 
-Examples of **incorrect** code for this rule with the `"bare-block"` option:
+选项 `"bare-block"` 的 **错误** 代码示例：
 
 
 
@@ -90,7 +89,7 @@ foo();
 foo();
 ```
 
-Examples of **correct** code for this rule with the `"bare-block"` option:
+选项 `"bare-block"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -102,7 +101,7 @@ Examples of **correct** code for this rule with the `"bare-block"` option:
 foo();
 ```
 
-Examples of **incorrect** code for this rule with the `"separate-lines"` option:
+选项 `"separate-lines"` 的 **错误** 代码示例：
 
 
 
@@ -122,7 +121,7 @@ foo();
 
 ```
 
-Examples of **correct** code for this rule with the `"separate-lines"` option:
+选项 `"separate-lines"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -135,6 +134,6 @@ foo();
 
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to enforce a particular style for multiline comments, you can disable the rule.

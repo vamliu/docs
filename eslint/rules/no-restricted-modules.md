@@ -1,6 +1,5 @@
 ---
 规则名: no-restricted-modules
-布局: doc
 规则类型: suggestion
 ---
 

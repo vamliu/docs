@@ -1,6 +1,5 @@
 ---
 规则名: no-eval
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-implied-eval
@@ -22,7 +21,7 @@ var obj = { x: "foo" },
 
 This rule is aimed at preventing potentially dangerous, unnecessary, and slow code by disallowing the use of the `eval()` function. As such, it will warn whenever the `eval()` function is used.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -64,7 +63,7 @@ Example of additional **incorrect** code for this rule when `node` environment i
 global.eval("var a = 0");
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -118,7 +117,7 @@ var obj = { x: "foo" },
     value = eval("obj." + key);
 ```
 
-Examples of **correct** code for this rule with the `{"allowIndirect": true}` option:
+选项 `{"allowIndirect": true}` 的 **正确** 代码示例：
 
 ::: correct
 

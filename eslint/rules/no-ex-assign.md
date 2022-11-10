@@ -1,6 +1,5 @@
 ---
 规则名: no-ex-assign
-布局: doc
 规则类型: problem
 深入了解:
 - https://bocoup.com/blog/the-catch-with-try-catch
@@ -15,7 +14,7 @@ Since there is no `arguments` object to offer alternative access to this data, a
 
 This rule disallows reassigning exceptions in `catch` clauses.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -29,7 +28,7 @@ try {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

@@ -1,6 +1,5 @@
 ---
 规则名: max-statements-per-line
-布局: doc
 规则类型: layout
 关联规则:
 - max-depth
@@ -29,7 +28,7 @@ This rule enforces a maximum number of statements allowed per line.
 
 The "max" object property is optional (default: 1).
 
-Examples of **incorrect** code for this rule with the default `{ "max": 1 }` option:
+选项 `{ "max": 1 }`  默认值的 **错误** 代码示例：
 
 
 
@@ -45,7 +44,7 @@ var foo = function foo() { bar = 1; };
 (function foo() { bar = 1; })();
 ```
 
-Examples of **correct** code for this rule with the default `{ "max": 1 }` option:
+选项 `{ "max": 1 }` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -61,7 +60,7 @@ var foo = function foo() { };
 (function foo() { })();
 ```
 
-Examples of **incorrect** code for this rule with the `{ "max": 2 }` option:
+选项 `{ "max": 2 }` 的 **错误** 代码示例：
 
 
 
@@ -77,7 +76,7 @@ var foo = function foo() { bar = 1; };
 (function foo() { bar = 1; baz = 2; })();
 ```
 
-Examples of **correct** code for this rule with the `{ "max": 2 }` option:
+选项 `{ "max": 2 }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -93,6 +92,6 @@ var foo = function foo() { bar = 1; };
 (function foo() { var bar = 1; })();
 ```
 
-## 使用建议
+## 禁用建议
 
 You can turn this rule off if you are not concerned with the number of statements on each line.

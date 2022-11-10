@@ -1,6 +1,5 @@
 ---
 规则名: func-names
-布局: doc
 规则类型: suggestion
 深入了解:
 - https://web.archive.org/web/20201112040809/http://markdaggett.com/blog/2013/02/15/functions-explained/
@@ -41,7 +40,7 @@ Please note that `"always"` and `"as-needed"` require function expressions and f
 
 ### always
 
-Examples of **incorrect** code for this rule with the default `"always"` option:
+选项 `"always"`  默认值的 **错误** 代码示例：
 
 
 
@@ -61,7 +60,7 @@ const cat = {
 export default function() {}
 ```
 
-Examples of **correct** code for this rule with the default `"always"` option:
+选项 `"always"` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -85,7 +84,7 @@ export default function foo() {}
 
 ECMAScript 6 introduced a `name` property on all functions. The value of `name` is determined by evaluating the code around the function to see if a name can be inferred. For example, a function assigned to a variable will automatically have a `name` property equal to the name of the variable. The value of `name` is then used in stack traces for easier debugging.
 
-Examples of **incorrect** code for this rule with the `"as-needed"` option:
+选项 `"as-needed"` 的 **错误** 代码示例：
 
 
 
@@ -101,7 +100,7 @@ Foo.prototype.bar = function() {};
 export default function() {}
 ```
 
-Examples of **correct** code for this rule with the `"as-needed"` option:
+选项 `"as-needed"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -130,7 +129,7 @@ export default function foo() {}
 
 ### never
 
-Examples of **incorrect** code for this rule with the `"never"` option:
+选项 `"never"` 的 **错误** 代码示例：
 
 
 
@@ -144,7 +143,7 @@ Foo.prototype.bar = function bar() {};
 }())
 ```
 
-Examples of **correct** code for this rule with the `"never"` option:
+选项 `"never"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -160,7 +159,7 @@ Foo.prototype.bar = function() {};
 
 ### generators
 
-Examples of **incorrect** code for this rule with the `"always", { "generators": "as-needed" }` options:
+选项 `"always", { "generators": "as-needed" }`  的 **错误** 代码示例：
 
 
 
@@ -172,7 +171,7 @@ Examples of **incorrect** code for this rule with the `"always", { "generators":
 }())
 ```
 
-Examples of **correct** code for this rule with the `"always", { "generators": "as-needed" }` options:
+选项 `"always", { "generators": "as-needed" }`  的 **正确** 代码示例：
 
 ::: correct
 
@@ -182,7 +181,7 @@ Examples of **correct** code for this rule with the `"always", { "generators": "
 var foo = function*() {};
 ```
 
-Examples of **incorrect** code for this rule with the `"always", { "generators": "never" }` options:
+选项 `"always", { "generators": "never" }`  的 **错误** 代码示例：
 
 
 
@@ -192,7 +191,7 @@ Examples of **incorrect** code for this rule with the `"always", { "generators":
 var foo = bar(function *baz() {});
 ```
 
-Examples of **correct** code for this rule with the `"always", { "generators": "never" }` options:
+选项 `"always", { "generators": "never" }`  的 **正确** 代码示例：
 
 ::: correct
 
@@ -202,7 +201,7 @@ Examples of **correct** code for this rule with the `"always", { "generators": "
 var foo = bar(function *() {});
 ```
 
-Examples of **incorrect** code for this rule with the `"as-needed", { "generators": "never" }` options:
+选项 `"as-needed", { "generators": "never" }`  的 **错误** 代码示例：
 
 
 
@@ -212,7 +211,7 @@ Examples of **incorrect** code for this rule with the `"as-needed", { "generator
 var foo = bar(function *baz() {});
 ```
 
-Examples of **correct** code for this rule with the `"as-needed", { "generators": "never" }` options:
+选项 `"as-needed", { "generators": "never" }`  的 **正确** 代码示例：
 
 ::: correct
 
@@ -222,7 +221,7 @@ Examples of **correct** code for this rule with the `"as-needed", { "generators"
 var foo = bar(function *() {});
 ```
 
-Examples of **incorrect** code for this rule with the `"never", { "generators": "always" }` options:
+选项 `"never", { "generators": "always" }`  的 **错误** 代码示例：
 
 
 
@@ -232,7 +231,7 @@ Examples of **incorrect** code for this rule with the `"never", { "generators": 
 var foo = bar(function *() {});
 ```
 
-Examples of **correct** code for this rule with the `"never", { "generators": "always" }` options:
+选项 `"never", { "generators": "always" }`  的 **正确** 代码示例：
 
 ::: correct
 
@@ -242,7 +241,7 @@ Examples of **correct** code for this rule with the `"never", { "generators": "a
 var foo = bar(function *baz() {});
 ```
 
-## Compatibility
+## 兼容
 
 * **JSCS**: [requireAnonymousFunctions](https://jscs-dev.github.io/rule/requireAnonymousFunctions)
 * **JSCS**: [disallowAnonymousFunctions](https://jscs-dev.github.io/rule/disallowAnonymousFunctions)

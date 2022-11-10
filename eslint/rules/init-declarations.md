@@ -1,6 +1,5 @@
 ---
 规则名: init-declarations
-布局: doc
 规则类型: suggestion
 ---
 
@@ -141,6 +140,6 @@ Examples of **correct** code for the `"never", { "ignoreForLoopInit": true }` op
 for (var i = 0; i < 1; i++) {}
 ```
 
-## 使用建议
+## 禁用建议
 
 When you are indifferent as to how your variables are initialized.

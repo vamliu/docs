@@ -1,6 +1,5 @@
 ---
 规则名: no-whitespace-before-property
-布局: doc
 规则类型: layout
 ---
 
@@ -23,7 +22,7 @@ foo
   .qux()
 ```
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -45,7 +44,7 @@ foo
   .bar(). baz()
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -72,6 +71,6 @@ foo.
   baz()
 ```
 
-## 使用建议
+## 禁用建议
 
 Turn this rule off if you do not care about allowing whitespace around the dot or before the opening bracket before properties of objects if they are on the same line.

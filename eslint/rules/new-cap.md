@@ -1,6 +1,5 @@
 ---
 规则名: new-cap
-布局: doc
 规则类型: suggestion
 ---
 
@@ -27,7 +26,7 @@ This rule requires constructor names to begin with a capital letter. Certain bui
 * `Symbol`
 * `BigInt`
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -56,7 +55,7 @@ This rule has an object option:
 
 ### newIsCap
 
-Examples of **incorrect** code for this rule with the default `{ "newIsCap": true }` option:
+选项 `{ "newIsCap": true }`  默认值的 **错误** 代码示例：
 
 
 
@@ -66,7 +65,7 @@ Examples of **incorrect** code for this rule with the default `{ "newIsCap": tru
 var friend = new person();
 ```
 
-Examples of **correct** code for this rule with the default `{ "newIsCap": true }` option:
+选项 `{ "newIsCap": true }` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -76,7 +75,7 @@ Examples of **correct** code for this rule with the default `{ "newIsCap": true 
 var friend = new Person();
 ```
 
-Examples of **correct** code for this rule with the `{ "newIsCap": false }` option:
+选项 `{ "newIsCap": false }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -88,7 +87,7 @@ var friend = new person();
 
 ### capIsNew
 
-Examples of **incorrect** code for this rule with the default `{ "capIsNew": true }` option:
+选项 `{ "capIsNew": true }`  默认值的 **错误** 代码示例：
 
 
 
@@ -98,7 +97,7 @@ Examples of **incorrect** code for this rule with the default `{ "capIsNew": tru
 var colleague = Person();
 ```
 
-Examples of **correct** code for this rule with the default `{ "capIsNew": true }` option:
+选项 `{ "capIsNew": true }` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -108,7 +107,7 @@ Examples of **correct** code for this rule with the default `{ "capIsNew": true 
 var colleague = new Person();
 ```
 
-Examples of **correct** code for this rule with the `{ "capIsNew": false }` option:
+选项 `{ "capIsNew": false }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -209,7 +208,7 @@ var z = Foo.Bar(42);
 
 ### properties
 
-Examples of **incorrect** code for this rule with the default `{ "properties": true }` option:
+选项 `{ "properties": true }`  默认值的 **错误** 代码示例：
 
 
 
@@ -219,7 +218,7 @@ Examples of **incorrect** code for this rule with the default `{ "properties": t
 var friend = new person.acquaintance();
 ```
 
-Examples of **correct** code for this rule with the default `{ "properties": true }` option:
+选项 `{ "properties": true }` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -229,7 +228,7 @@ Examples of **correct** code for this rule with the default `{ "properties": tru
 var friend = new person.Acquaintance();
 ```
 
-Examples of **correct** code for this rule with the `{ "properties": false }` option:
+选项 `{ "properties": false }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -239,6 +238,6 @@ Examples of **correct** code for this rule with the `{ "properties": false }` op
 var friend = new person.acquaintance();
 ```
 
-## 使用建议
+## 禁用建议
 
 If you have conventions that don't require an uppercase letter for constructors, or don't require capitalized functions be only used as constructors, turn this rule off.

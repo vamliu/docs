@@ -1,6 +1,5 @@
 ---
 规则名: no-const-assign
-布局: doc
 规则类型: problem
 ---
 
@@ -15,7 +14,7 @@ Under non ES2015 environment, it might be ignored merely.
 
 This rule is aimed to flag modifying variables that are declared using `const` keyword.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -47,7 +46,7 @@ const a = 0;
 ++a;
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -81,6 +80,6 @@ for (const a of [1, 2, 3]) { // `a` is re-defined (not modified) on each loop st
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to be notified about modifying variables that are declared using `const` keyword, you can safely disable this rule.

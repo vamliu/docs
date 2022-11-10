@@ -1,6 +1,5 @@
 ---
 规则名: no-void
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-undef-init
@@ -59,7 +58,7 @@ Some code styles prohibit `void` operator, marking it as non-obvious and hard to
 
 This rule aims to eliminate use of void operator.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -109,6 +108,6 @@ void foo;
 void someFunction();
 ```
 
-## 使用建议
+## 禁用建议
 
 If you intentionally use the `void` operator then you can disable this rule.

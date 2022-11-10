@@ -1,6 +1,5 @@
 ---
 规则名: function-call-argument-newline
-布局: doc
 规则类型: layout
 关联规则:
 - function-paren-newline
@@ -27,7 +26,7 @@ This rule has a string option:
 
 ### always
 
-Examples of **incorrect** code for this rule with the default `"always"` option:
+选项 `"always"`  默认值的 **错误** 代码示例：
 
 
 
@@ -46,7 +45,7 @@ baz("one", "two", (x) => {
 });
 ```
 
-Examples of **correct** code for this rule with the default `"always"` option:
+选项 `"always"` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -85,7 +84,7 @@ baz(
 
 ### never
 
-Examples of **incorrect** code for this rule with the `"never"` option:
+选项 `"never"` 的 **错误** 代码示例：
 
 
 
@@ -113,7 +112,7 @@ baz(
 );
 ```
 
-Examples of **correct** code for this rule with the `"never"` option:
+选项 `"never"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -140,7 +139,7 @@ baz("one", "two", (x) => {
 
 ### consistent
 
-Examples of **incorrect** code for this rule with the `"consistent"` option:
+选项 `"consistent"` 的 **错误** 代码示例：
 
 
 
@@ -162,7 +161,7 @@ baz("one", "two",
 );
 ```
 
-Examples of **correct** code for this rule with the `"consistent"` option:
+选项 `"consistent"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -210,6 +209,6 @@ baz(
 );
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to enforce line breaks between arguments, don't enable this rule.

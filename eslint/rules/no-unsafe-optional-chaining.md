@@ -1,6 +1,5 @@
 ---
 规则名: no-unsafe-optional-chaining
-布局: doc
 规则类型: problem
 ---
 
@@ -31,7 +30,7 @@ var obj = undefined;
 
 This rule aims to detect some cases where the use of optional chaining doesn't prevent runtime errors. In particular, it flags optional chaining expressions in positions where short-circuiting to `undefined` causes throwing a TypeError afterward.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -87,7 +86,7 @@ async function foo () {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

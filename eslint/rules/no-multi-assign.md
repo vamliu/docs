@@ -1,6 +1,5 @@
 ---
 规则名: no-multi-assign
-布局: doc
 规则类型: suggestion
 关联规则:
 - max-statements-per-line
@@ -21,7 +20,7 @@ console.log(bar);        // This will output 1 since `bar` is not scoped.
 
 This rule disallows using multiple assignments within a single statement.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -43,7 +42,7 @@ class Foo {
 a = b = "quux";
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

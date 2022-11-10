@@ -1,6 +1,5 @@
 ---
 规则名: no-multi-str
-布局: doc
 规则类型: suggestion
 ---
 
@@ -18,7 +17,7 @@ Some consider this to be a bad practice as it was an undocumented feature of Jav
 
 This rule is aimed at preventing the use of multiline strings.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -29,7 +28,7 @@ var x = "some very \
 long text";
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

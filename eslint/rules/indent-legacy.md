@@ -1,6 +1,5 @@
 ---
 规则名: indent-legacy
-布局: doc
 规则类型: layout
 ---
 
@@ -118,7 +117,7 @@ Level of indentation denotes the multiple of the indent specified. Example:
 
 ### tab
 
-Examples of **incorrect** code for this rule with the `"tab"` option:
+选项 `"tab"` 的 **错误** 代码示例：
 
 
 
@@ -133,7 +132,7 @@ function foo(d) {
 }
 ```
 
-Examples of **correct** code for this rule with the `"tab"` option:
+选项 `"tab"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -150,7 +149,7 @@ if (a) {
 
 ### SwitchCase
 
-Examples of **incorrect** code for this rule with the `2, { "SwitchCase": 1 }` options:
+选项 `2, { "SwitchCase": 1 }`  的 **错误** 代码示例：
 
 
 
@@ -165,7 +164,7 @@ case "b":
 }
 ```
 
-Examples of **correct** code for this rule with the `2, { "SwitchCase": 1 }` option:
+选项 `2, { "SwitchCase": 1 }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -182,7 +181,7 @@ switch(a){
 
 ### VariableDeclarator
 
-Examples of **incorrect** code for this rule with the `2, { "VariableDeclarator": 1 }` options:
+选项 `2, { "VariableDeclarator": 1 }`  的 **错误** 代码示例：
 
 
 
@@ -201,7 +200,7 @@ const a = 1,
     c = 3;
 ```
 
-Examples of **correct** code for this rule with the `2, { "VariableDeclarator": 1 }` options:
+选项 `2, { "VariableDeclarator": 1 }`  的 **正确** 代码示例：
 
 ::: correct
 
@@ -220,7 +219,7 @@ const a = 1,
   c = 3;
 ```
 
-Examples of **correct** code for this rule with the `2, { "VariableDeclarator": 2 }` options:
+选项 `2, { "VariableDeclarator": 2 }`  的 **正确** 代码示例：
 
 ::: correct
 
@@ -239,7 +238,7 @@ const a = 1,
     c = 3;
 ```
 
-Examples of **correct** code for this rule with the `2, { "VariableDeclarator": { "var": 2, "let": 2, "const": 3 } }` options:
+选项 `2, { "VariableDeclarator": { "var": 2, "let": 2, "const": 3 } }`  的 **正确** 代码示例：
 
 ::: correct
 
@@ -302,7 +301,7 @@ if(y) {
 
 ### MemberExpression
 
-Examples of **incorrect** code for this rule with the `2, { "MemberExpression": 1 }` options:
+选项 `2, { "MemberExpression": 1 }`  的 **错误** 代码示例：
 
 
 
@@ -314,7 +313,7 @@ foo
 .baz()
 ```
 
-Examples of **correct** code for this rule with the `2, { "MemberExpression": 1 }` option:
+选项 `2, { "MemberExpression": 1 }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -332,7 +331,7 @@ var bip = aardvark.badger
 
 ### FunctionDeclaration
 
-Examples of **incorrect** code for this rule with the `2, { "FunctionDeclaration": {"body": 1, "parameters": 2} }` option:
+选项 `2, { "FunctionDeclaration": {"body": 1, "parameters": 2} }` 的 **错误** 代码示例：
 
 
 
@@ -346,7 +345,7 @@ function foo(bar,
 }
 ```
 
-Examples of **correct** code for this rule with the `2, { "FunctionDeclaration": {"body": 1, "parameters": 2} }` option:
+选项 `2, { "FunctionDeclaration": {"body": 1, "parameters": 2} }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -360,7 +359,7 @@ function foo(bar,
 }
 ```
 
-Examples of **incorrect** code for this rule with the `2, { "FunctionDeclaration": {"parameters": "first"} }` option:
+选项 `2, { "FunctionDeclaration": {"parameters": "first"} }` 的 **错误** 代码示例：
 
 
 
@@ -373,7 +372,7 @@ function foo(bar, baz,
 }
 ```
 
-Examples of **correct** code for this rule with the `2, { "FunctionDeclaration": {"parameters": "first"} }` option:
+选项 `2, { "FunctionDeclaration": {"parameters": "first"} }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -388,7 +387,7 @@ function foo(bar, baz,
 
 ### FunctionExpression
 
-Examples of **incorrect** code for this rule with the `2, { "FunctionExpression": {"body": 1, "parameters": 2} }` option:
+选项 `2, { "FunctionExpression": {"body": 1, "parameters": 2} }` 的 **错误** 代码示例：
 
 
 
@@ -402,7 +401,7 @@ var foo = function(bar,
 }
 ```
 
-Examples of **correct** code for this rule with the `2, { "FunctionExpression": {"body": 1, "parameters": 2} }` option:
+选项 `2, { "FunctionExpression": {"body": 1, "parameters": 2} }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -416,7 +415,7 @@ var foo = function(bar,
 }
 ```
 
-Examples of **incorrect** code for this rule with the `2, { "FunctionExpression": {"parameters": "first"} }` option:
+选项 `2, { "FunctionExpression": {"parameters": "first"} }` 的 **错误** 代码示例：
 
 
 
@@ -429,7 +428,7 @@ var foo = function(bar, baz,
 }
 ```
 
-Examples of **correct** code for this rule with the `2, { "FunctionExpression": {"parameters": "first"} }` option:
+选项 `2, { "FunctionExpression": {"parameters": "first"} }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -444,7 +443,7 @@ var foo = function(bar, baz,
 
 ### CallExpression
 
-Examples of **incorrect** code for this rule with the `2, { "CallExpression": {"arguments": 1} }` option:
+选项 `2, { "CallExpression": {"arguments": 1} }` 的 **错误** 代码示例：
 
 
 
@@ -457,7 +456,7 @@ foo(bar,
 );
 ```
 
-Examples of **correct** code for this rule with the `2, { "CallExpression": {"arguments": 1} }` option:
+选项 `2, { "CallExpression": {"arguments": 1} }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -470,7 +469,7 @@ foo(bar,
 );
 ```
 
-Examples of **incorrect** code for this rule with the `2, { "CallExpression": {"arguments": "first"} }` option:
+选项 `2, { "CallExpression": {"arguments": "first"} }` 的 **错误** 代码示例：
 
 
 
@@ -481,7 +480,7 @@ foo(bar, baz,
   baz, boop, beep);
 ```
 
-Examples of **correct** code for this rule with the `2, { "CallExpression": {"arguments": "first"} }` option:
+选项 `2, { "CallExpression": {"arguments": "first"} }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -494,7 +493,7 @@ foo(bar, baz,
 
 ### ArrayExpression
 
-Examples of **incorrect** code for this rule with the `2, { "ArrayExpression": 1 }` option:
+选项 `2, { "ArrayExpression": 1 }` 的 **错误** 代码示例：
 
 
 
@@ -508,7 +507,7 @@ baz,
 ];
 ```
 
-Examples of **correct** code for this rule with the `2, { "ArrayExpression": 1 }` option:
+选项 `2, { "ArrayExpression": 1 }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -522,7 +521,7 @@ var foo = [
 ];
 ```
 
-Examples of **incorrect** code for this rule with the `2, { "ArrayExpression": "first" }` option:
+选项 `2, { "ArrayExpression": "first" }` 的 **错误** 代码示例：
 
 
 
@@ -535,7 +534,7 @@ var foo = [bar,
 ];
 ```
 
-Examples of **correct** code for this rule with the `2, { "ArrayExpression": "first" }` option:
+选项 `2, { "ArrayExpression": "first" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -550,7 +549,7 @@ var foo = [bar,
 
 ### ObjectExpression
 
-Examples of **incorrect** code for this rule with the `2, { "ObjectExpression": 1 }` option:
+选项 `2, { "ObjectExpression": 1 }` 的 **错误** 代码示例：
 
 
 
@@ -564,7 +563,7 @@ baz: 2,
 };
 ```
 
-Examples of **correct** code for this rule with the `2, { "ObjectExpression": 1 }` option:
+选项 `2, { "ObjectExpression": 1 }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -578,7 +577,7 @@ var foo = {
 };
 ```
 
-Examples of **incorrect** code for this rule with the `2, { "ObjectExpression": "first" }` option:
+选项 `2, { "ObjectExpression": "first" }` 的 **错误** 代码示例：
 
 
 
@@ -589,7 +588,7 @@ var foo = { bar: 1,
   baz: 2 };
 ```
 
-Examples of **correct** code for this rule with the `2, { "ObjectExpression": "first" }` option:
+选项 `2, { "ObjectExpression": "first" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -600,7 +599,7 @@ var foo = { bar: 1,
             baz: 2 };
 ```
 
-## Compatibility
+## 兼容
 
 * **JSHint**: `indent`
 * **JSCS**: [validateIndentation](https://jscs-dev.github.io/rule/validateIndentation)

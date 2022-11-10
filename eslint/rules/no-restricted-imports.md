@@ -1,6 +1,5 @@
 ---
 规则名: no-restricted-imports
-布局: doc
 规则类型: suggestion
 ---
 
@@ -129,7 +128,7 @@ To restrict the use of all Node.js core imports (via <https://github.com/nodejs/
 
 ## Examples
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -245,7 +244,7 @@ import pick from 'fooBar';
 import { isEmpty } from 'utils/collection-utils';
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -320,6 +319,6 @@ import pick from 'food';
 import { hasValues } from 'utils/collection-utils';
 ```
 
-## 使用建议
+## 禁用建议
 
 Don't use this rule or don't include a module in the list for this rule if you want to be able to import a module in your project without an ESLint error or warning.

@@ -1,6 +1,5 @@
 ---
 规则名: no-continue
-布局: doc
 规则类型: suggestion
 ---
 
@@ -24,7 +23,7 @@ for(i = 0; i < 10; i++) {
 
 This rule disallows `continue` statements.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -60,7 +59,7 @@ labeledLoop: for(i = 0; i < 10; i++) {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -77,6 +76,6 @@ for(i = 0; i < 10; i++) {
 }
 ```
 
-## Compatibility
+## 兼容
 
 * **JSLint**: `continue`

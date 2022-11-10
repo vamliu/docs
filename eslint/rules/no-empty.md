@@ -1,6 +1,5 @@
 ---
 规则名: no-empty
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-empty-function
@@ -14,7 +13,7 @@ Empty block statements, while not technically errors, usually occur due to refac
 
 This rule disallows empty block statements. This rule ignores block statements which contain a comment (for example, in an empty `catch` or `finally` block of a `try` statement to indicate that execution should continue regardless of errors).
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -39,7 +38,7 @@ try {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -94,6 +93,6 @@ finally {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you intentionally use empty block statements then you can disable this rule.

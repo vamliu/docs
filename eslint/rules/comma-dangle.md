@@ -1,6 +1,5 @@
 ---
 规则名: comma-dangle
-布局: doc
 规则类型: layout
 ---
 
@@ -77,7 +76,7 @@ The default for each option is `"never"` unless otherwise specified.
 
 ### never
 
-Examples of **incorrect** code for this rule with the default `"never"` option:
+选项 `"never"`  默认值的 **错误** 代码示例：
 
 ```js
 /*eslint comma-dangle: ["error", "never"]*/
@@ -95,7 +94,7 @@ foo({
 });
 ```
 
-Examples of **correct** code for this rule with the default `"never"` option:
+选项 `"never"` 默认值的 **正确** 代码示例：
 
 ```js
 /*eslint comma-dangle: ["error", "never"]*/
@@ -115,7 +114,7 @@ foo({
 
 ### always
 
-Examples of **incorrect** code for this rule with the `"always"` option:
+选项 `"always"` 的 **错误** 代码示例：
 
 ```js
 /*eslint comma-dangle: ["error", "always"]*/
@@ -133,7 +132,7 @@ foo({
 });
 ```
 
-Examples of **correct** code for this rule with the `"always"` option:
+选项 `"always"` 的 **正确** 代码示例：
 
 ```js
 /*eslint comma-dangle: ["error", "always"]*/
@@ -153,7 +152,7 @@ foo({
 
 ### always-multiline
 
-Examples of **incorrect** code for this rule with the `"always-multiline"` option:
+选项 `"always-multiline"` 的 **错误** 代码示例：
 
 ```js
 /*eslint comma-dangle: ["error", "always-multiline"]*/
@@ -181,7 +180,7 @@ foo({
 });
 ```
 
-Examples of **correct** code for this rule with the `"always-multiline"` option:
+选项 `"always-multiline"` 的 **正确** 代码示例：
 
 ```js
 /*eslint comma-dangle: ["error", "always-multiline"]*/
@@ -210,7 +209,7 @@ foo({
 
 ### only-multiline
 
-Examples of **incorrect** code for this rule with the `"only-multiline"` option:
+选项 `"only-multiline"` 的 **错误** 代码示例：
 
 ```js
 /*eslint comma-dangle: ["error", "only-multiline"]*/
@@ -224,7 +223,7 @@ var arr = [1,
 
 ```
 
-Examples of **correct** code for this rule with the `"only-multiline"` option:
+选项 `"only-multiline"` 的 **正确** 代码示例：
 
 ```js
 /*eslint comma-dangle: ["error", "only-multiline"]*/
@@ -268,7 +267,7 @@ foo({
 
 ### functions
 
-Examples of **incorrect** code for this rule with the `{"functions": "never"}` option:
+选项 `{"functions": "never"}` 的 **错误** 代码示例：
 
 ```js
 /*eslint comma-dangle: ["error", {"functions": "never"}]*/
@@ -280,7 +279,7 @@ foo(a, b,);
 new foo(a, b,);
 ```
 
-Examples of **correct** code for this rule with the `{"functions": "never"}` option:
+选项 `{"functions": "never"}` 的 **正确** 代码示例：
 
 ```js
 /*eslint comma-dangle: ["error", {"functions": "never"}]*/
@@ -292,7 +291,7 @@ foo(a, b);
 new foo(a, b);
 ```
 
-Examples of **incorrect** code for this rule with the `{"functions": "always"}` option:
+选项 `{"functions": "always"}` 的 **错误** 代码示例：
 
 ```js
 /*eslint comma-dangle: ["error", {"functions": "always"}]*/
@@ -304,7 +303,7 @@ foo(a, b);
 new foo(a, b);
 ```
 
-Examples of **correct** code for this rule with the `{"functions": "always"}` option:
+选项 `{"functions": "always"}` 的 **正确** 代码示例：
 
 ```js
 /*eslint comma-dangle: ["error", {"functions": "always"}]*/
@@ -316,6 +315,6 @@ foo(a, b,);
 new foo(a, b,);
 ```
 
-## 使用建议
+## 禁用建议
 
 You can turn this rule off if you are not concerned with dangling commas.

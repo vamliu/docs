@@ -1,6 +1,5 @@
 ---
 规则名: space-infix-ops
-布局: doc
 规则类型: layout
 ---
 
@@ -40,7 +39,7 @@ Set the `int32Hint` option to `true` (default is `false`) to allow write `a|0` w
 var foo = bar|0; // `foo` is forced to be signed 32 bit integer
 ```
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -63,7 +62,7 @@ var {a=0}=bar;
 function foo(a=0) { }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -84,6 +83,6 @@ var {a = 0} = bar;
 function foo(a = 0) { }
 ```
 
-## 使用建议
+## 禁用建议
 
 You can turn this rule off if you are not concerned with the consistency of spacing around infix operators.

@@ -1,6 +1,5 @@
 ---
 规则名: no-constant-condition
-布局: doc
 规则类型: problem
 关联规则:
 - no-constant-binary-expression
@@ -23,7 +22,7 @@ This rule disallows constant expressions in the test condition of:
 * `if`, `for`, `while`, or `do...while` statement
 * `?:` ternary expression
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -77,7 +76,7 @@ do {
 var result = 0 ? a : b;
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

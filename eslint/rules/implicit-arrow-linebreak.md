@@ -1,6 +1,5 @@
 ---
 规则名: implicit-arrow-linebreak
-布局: doc
 规则类型: layout
 关联规则:
 - brace-style
@@ -21,7 +20,7 @@ This rule accepts a string option:
 * `"beside"` (default) disallows a newline before an arrow function body.
 * `"below"` requires a newline before an arrow function body.
 
-Examples of **incorrect** code for this rule with the default `"beside"` option:
+选项 `"beside"`  默认值的 **错误** 代码示例：
 
 
 
@@ -44,7 +43,7 @@ Examples of **incorrect** code for this rule with the default `"beside"` option:
 );
 ```
 
-Examples of **correct** code for this rule with the default `"beside"` option:
+选项 `"beside"` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -73,7 +72,7 @@ Examples of **correct** code for this rule with the default `"beside"` option:
 }
 ```
 
-Examples of **incorrect** code for this rule with the `"below"` option:
+选项 `"below"` 的 **错误** 代码示例：
 
 
 
@@ -87,7 +86,7 @@ Examples of **incorrect** code for this rule with the `"below"` option:
 (foo) => bar => baz;
 ```
 
-Examples of **correct** code for this rule with the `"below"` option:
+选项 `"below"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -105,7 +104,7 @@ Examples of **correct** code for this rule with the `"below"` option:
     baz;
 ```
 
-## 使用建议
+## 禁用建议
 
 If you're not concerned about consistent locations of implicitly returned arrow function expressions, you should not turn on this rule.
 

@@ -1,6 +1,5 @@
 ---
 规则名: prefer-regex-literals
-布局: doc
 规则类型: suggestion
 深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
@@ -51,7 +50,7 @@ and `String.raw` tagged template literals without expressions.
 The rule does not disallow all use of the `RegExp` constructor. It should be still used for
 dynamically generated regular expressions.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -73,7 +72,7 @@ RegExp(`^\\d\\.$`);
 new RegExp(String.raw`^\d\.$`);
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

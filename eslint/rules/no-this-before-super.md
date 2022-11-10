@@ -1,6 +1,5 @@
 ---
 规则名: no-this-before-super
-布局: doc
 规则类型: problem
 ---
 
@@ -16,7 +15,7 @@ This rule is aimed to flag `this`/`super` keywords before `super()` callings.
 
 ## Examples
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -52,7 +51,7 @@ class A extends B {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -80,6 +79,6 @@ class A extends B {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to be notified about using `this`/`super` before `super()` in constructors, you can safely disable this rule.

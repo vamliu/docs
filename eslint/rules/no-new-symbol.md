@@ -1,6 +1,5 @@
 ---
 规则名: no-new-symbol
-布局: doc
 规则类型: problem
 深入了解:
 - https://www.ecma-international.org/ecma-262/6.0/#sec-symbol-objects
@@ -22,7 +21,7 @@ This rule is aimed at preventing the accidental calling of `Symbol` with the `ne
 
 ## Examples
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -33,7 +32,7 @@ Examples of **incorrect** code for this rule:
 var foo = new Symbol('foo');
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -50,6 +49,6 @@ function bar(Symbol) {
 
 ```
 
-## 使用建议
+## 禁用建议
 
 This rule should not be used in ES3/5 environments.

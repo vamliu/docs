@@ -1,6 +1,5 @@
 ---
 规则名: space-before-blocks
-布局: doc
 规则类型: layout
 关联规则:
 - keyword-spacing
@@ -62,7 +61,7 @@ class Foo{
 }
 ```
 
-Examples of **correct** code for this rule with the `"always"` option:
+选项 `"always"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -94,7 +93,7 @@ try {} catch(a) {}
 
 ### "never"
 
-Examples of **incorrect** code for this rule with the `"never"` option:
+选项 `"never"` 的 **错误** 代码示例：
 
 
 
@@ -114,7 +113,7 @@ for (;;) {
 try {} catch(a) {}
 ```
 
-Examples of **correct** code for this rule with the `"never"` option:
+选项 `"never"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -238,6 +237,6 @@ class Foo {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 You can turn this rule off if you are not concerned with the consistency of spacing before blocks.

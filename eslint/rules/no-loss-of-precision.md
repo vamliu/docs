@@ -1,6 +1,5 @@
 ---
 规则名: no-loss-of-precision
-布局: doc
 规则类型: problem
 ---
 
@@ -12,7 +11,7 @@ This rule would disallow the use of number literals that lose precision at runti
 
 In JS, `Number`s are stored as double-precision floating-point numbers according to the [IEEE 754 standard](https://en.wikipedia.org/wiki/IEEE_754). Because of this, numbers can only retain accuracy up to a certain amount of digits. If the programmer enters additional digits, those digits will be lost in the conversion to the `Number` type and will result in unexpected behavior.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -27,7 +26,7 @@ const x = 0X20000000000001
 const x = 0X2_000000000_0001;
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

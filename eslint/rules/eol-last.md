@@ -1,6 +1,5 @@
 ---
 规则名: eol-last
-布局: doc
 规则类型: layout
 ---
 
@@ -20,7 +19,7 @@ the end of the file. If you still want this behavior, consider enabling
 [no-multiple-empty-lines](no-multiple-empty-lines) with `maxEOF` and/or
 [no-trailing-spaces](no-trailing-spaces).
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -32,7 +31,7 @@ function doSomething() {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

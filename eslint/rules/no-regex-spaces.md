@@ -1,6 +1,5 @@
 ---
 规则名: no-regex-spaces
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-div-regex
@@ -29,7 +28,7 @@ Now it is very clear that three spaces are expected to be matched.
 
 This rule disallows multiple spaces in regular expression literals.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -40,7 +39,7 @@ var re = /foo   bar/;
 var re = new RegExp("foo   bar");
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -51,6 +50,6 @@ var re = /foo {3}bar/;
 var re = new RegExp("foo {3}bar");
 ```
 
-## 使用建议
+## 禁用建议
 
 If you want to allow multiple spaces in a regular expression, then you can safely turn this rule off.

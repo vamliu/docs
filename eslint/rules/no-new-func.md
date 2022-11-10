@@ -1,6 +1,5 @@
 ---
 规则名: no-new-func
-布局: doc
 规则类型: suggestion
 ---
 
@@ -21,7 +20,7 @@ This is considered by many to be a bad practice due to the difficulty in debuggi
 
 This error is raised to highlight the use of a bad practice. By passing a string to the Function constructor, you are requiring the engine to parse that string much in the way it has to when you call the `eval` function.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -36,7 +35,7 @@ var x = Function.bind(null, "a", "b", "return a + b")();
 var f = Function.bind(null, "a", "b", "return a + b"); // assuming that the result of Function.bind(...) will be eventually called.
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -48,6 +47,6 @@ var x = function (a, b) {
 };
 ```
 
-## 使用建议
+## 禁用建议
 
 In more advanced cases where you really need to use the `Function` constructor.

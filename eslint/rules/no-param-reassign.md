@@ -1,6 +1,5 @@
 ---
 规则名: no-param-reassign
-布局: doc
 规则类型: suggestion
 深入了解:
 - https://spin.atomicobject.com/2011/04/10/javascript-don-t-reassign-your-function-arguments/
@@ -15,7 +14,7 @@ This rule can be also configured to fail when function parameters are modified. 
 
 This rule aims to prevent unintended behavior caused by modification or reassignment of function parameters.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -39,7 +38,7 @@ function foo(bar) {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -169,6 +168,6 @@ function foo(barBaz) {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you want to allow assignment to function parameters, then you can safely disable this rule.

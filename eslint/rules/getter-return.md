@@ -1,6 +1,5 @@
 ---
 规则名: getter-return
-布局: doc
 规则类型: problem
 深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get
@@ -31,7 +30,7 @@ Note that every `getter` is expected to return a value.
 
 This rule enforces that a return statement is present in property getters.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -57,7 +56,7 @@ class P{
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -102,6 +101,6 @@ p = {
 };
 ```
 
-## 使用建议
+## 禁用建议
 
 If your project will not be using ES5 property getters you do not need this rule.

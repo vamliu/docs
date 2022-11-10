@@ -1,6 +1,5 @@
 ---
 规则名: no-useless-return
-布局: doc
 规则类型: suggestion
 ---
 
@@ -12,7 +11,7 @@ A `return;` statement with nothing after it is redundant, and has no effect on t
 
 This rule aims to report redundant `return` statements.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -47,7 +46,7 @@ function foo() {
 
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -88,6 +87,6 @@ function foo() {
 
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't care about disallowing redundant return statements, you can turn off this rule.

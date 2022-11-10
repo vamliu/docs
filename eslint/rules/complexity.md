@@ -1,6 +1,5 @@
 ---
 规则名: complexity
-布局: doc
 规则类型: suggestion
 关联规则:
 - max-depth
@@ -147,6 +146,6 @@ is equivalent to
 
 **Deprecated:** the object property `maximum` is deprecated. Please use the property `max` instead.
 
-## 使用建议
+## 禁用建议
 
 If you can't determine an appropriate complexity limit for your code, then it's best to disable this rule.

@@ -1,6 +1,5 @@
 ---
 规则名: jsx-quotes
-布局: doc
 规则类型: layout
 关联规则:
 - quotes
@@ -36,7 +35,7 @@ This rule has a string option:
 
 ### prefer-double
 
-Examples of **incorrect** code for this rule with the default `"prefer-double"` option:
+选项 `"prefer-double"`  默认值的 **错误** 代码示例：
 
 ```xml
 /*eslint jsx-quotes: ["error", "prefer-double"]*/
@@ -44,7 +43,7 @@ Examples of **incorrect** code for this rule with the default `"prefer-double"` 
 <a b='c' />
 ```
 
-Examples of **correct** code for this rule with the default `"prefer-double"` option:
+选项 `"prefer-double"` 默认值的 **正确** 代码示例：
 
 ```xml
 /*eslint jsx-quotes: ["error", "prefer-double"]*/
@@ -55,7 +54,7 @@ Examples of **correct** code for this rule with the default `"prefer-double"` op
 
 ### prefer-single
 
-Examples of **incorrect** code for this rule with the `"prefer-single"` option:
+选项 `"prefer-single"` 的 **错误** 代码示例：
 
 ```xml
 /*eslint jsx-quotes: ["error", "prefer-single"]*/
@@ -63,7 +62,7 @@ Examples of **incorrect** code for this rule with the `"prefer-single"` option:
 <a b="c" />
 ```
 
-Examples of **correct** code for this rule with the `"prefer-single"` option:
+选项 `"prefer-single"` 的 **正确** 代码示例：
 
 ```xml
 /*eslint jsx-quotes: ["error", "prefer-single"]*/
@@ -72,6 +71,6 @@ Examples of **correct** code for this rule with the `"prefer-single"` option:
 <a b="'" />
 ```
 
-## 使用建议
+## 禁用建议
 
 You can turn this rule off if you don’t use JSX or if you aren’t concerned with a consistent usage of quotes within JSX attributes.

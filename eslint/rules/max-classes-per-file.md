@@ -1,6 +1,5 @@
 ---
 规则名: max-classes-per-file
-布局: doc
 规则类型: suggestion
 ---
 
@@ -14,7 +13,7 @@ limited to a single responsibility.
 This rule enforces that each file may contain only a particular number
 of classes and no more.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -25,7 +24,7 @@ class Foo {}
 class Bar {}
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

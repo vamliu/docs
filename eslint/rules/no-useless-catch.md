@@ -1,6 +1,5 @@
 ---
 规则名: no-useless-catch
-布局: doc
 规则类型: suggestion
 ---
 
@@ -12,7 +11,7 @@ A `catch` clause that only rethrows the original error is redundant, and has no 
 
 This rule reports `catch` clauses that only `throw` the caught error.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -34,7 +33,7 @@ try {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -61,6 +60,6 @@ try {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to be notified about unnecessary catch clauses, you can safely disable this rule.

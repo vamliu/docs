@@ -1,6 +1,5 @@
 ---
 规则名: valid-jsdoc
-布局: doc
 规则类型: suggestion
 关联规则:
 - require-jsdoc
@@ -45,7 +44,7 @@ This rule does not report missing JSDoc comments for classes, functions, or meth
 
 **Note:** This rule does not support all of the Google Closure documentation tool's use cases. As such, some code such as `(/**number*/ n => n * 2);` will be flagged as missing appropriate function JSDoc comments even though `/**number*/` is intended to be a type hint and not a documentation block for the function. We don't recommend using this rule if you use type hints in this way.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -87,7 +86,7 @@ function sum(num1, num2) {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -412,6 +411,6 @@ function add(num1, num2) {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you aren't using JSDoc, then you can safely turn this rule off.

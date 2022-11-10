@@ -1,6 +1,5 @@
 ---
 规则名: dot-location
-布局: doc
 规则类型: layout
 关联规则:
 - newline-after-var
@@ -92,6 +91,6 @@ var foo = object
 var bar = object.property;
 ```
 
-## 使用建议
+## 禁用建议
 
 You can turn this rule off if you are not concerned with the consistency of newlines before or after dots in member expressions.

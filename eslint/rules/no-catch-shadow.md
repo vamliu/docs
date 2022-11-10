@@ -1,6 +1,5 @@
 ---
 规则名: no-catch-shadow
-布局: doc
 规则类型: suggestion
 ---
 
@@ -25,7 +24,7 @@ console.log(err)    // err is 'problem', not 'x'
 
 This rule is aimed at preventing unexpected behavior in your program that may arise from a bug in IE 8 and earlier, in which the catch clause parameter can leak into outer scopes. This rule will warn whenever it encounters a catch clause parameter that has the same name as a variable in an outer scope.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -51,7 +50,7 @@ try {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -77,6 +76,6 @@ try {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you do not need to support IE 8 and earlier, you should turn this rule off.

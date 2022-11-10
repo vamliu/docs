@@ -1,6 +1,5 @@
 ---
 规则名: prefer-destructuring
-布局: doc
 规则类型: suggestion
 深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
@@ -32,7 +31,7 @@ The rule has a second object with a single key, `enforceForRenamedProperties`, w
 
 The `--fix` option on the command line fixes only problems reported in variable declarations, and among them only those that fall under the category `object` destructuring. Furthermore, the name of the declared variable has to be the same as the name used for non-computed member access in the initializer. For example, `var foo = object.foo` can be automatically fixed by this rule. Problems that involve computed member access (e.g., `var foo = object[foo]`) or renamed properties (e.g., `var foo = object.bar`) are not automatically fixed.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -45,7 +44,7 @@ var foo = object.foo;
 var foo = object['foo'];
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -182,7 +181,7 @@ Examples of **correct** code when array destructuring in `AssignmentExpression` 
 [bar] = array;
 ```
 
-## 使用建议
+## 禁用建议
 
 If you want to be able to access array indices or object properties directly, you can either configure the rule to your tastes or disable the rule entirely.
 

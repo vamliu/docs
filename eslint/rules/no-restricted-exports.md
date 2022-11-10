@@ -1,6 +1,5 @@
 ---
 规则名: no-restricted-exports
-布局: doc
 规则类型: suggestion
 ---
 
@@ -19,7 +18,7 @@ This rule has an object option:
 
 * `"restrictedNamedExports"` is an array of strings, where each string is a name to be restricted.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -49,7 +48,7 @@ export { something as e } from "some_module";
 export { "👍" } from "some_module";
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

@@ -1,6 +1,5 @@
 ---
 规则名: yoda
-布局: doc
 规则类型: suggestion
 深入了解:
 - https://en.wikipedia.org/wiki/Yoda_conditions

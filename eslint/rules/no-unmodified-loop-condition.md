@@ -1,6 +1,5 @@
 ---
 规则名: no-unmodified-loop-condition
-布局: doc
 规则类型: problem
 ---
 
@@ -31,7 +30,7 @@ the expression instead.
 If a reference is inside of a dynamic expression (e.g. `CallExpression`,
 `YieldExpression`, ...), this rule ignores it.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -54,7 +53,7 @@ while (node !== root) {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -94,6 +93,6 @@ while (check(obj)) {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to notified about references inside of loop conditions, then it's safe to disable this rule.

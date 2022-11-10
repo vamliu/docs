@@ -1,6 +1,5 @@
 ---
 规则名: no-empty-pattern
-布局: doc
 规则类型: problem
 ---
 
@@ -33,7 +32,7 @@ The difference between these two patterns is subtle, especially because the prob
 
 This rule aims to flag any empty patterns in destructured objects and arrays, and as such, will report a problem whenever one is encountered.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -50,7 +49,7 @@ function foo({a: {}}) {}
 function foo({a: []}) {}
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

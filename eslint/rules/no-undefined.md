@@ -1,6 +1,5 @@
 ---
 规则名: no-undefined
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-undef-init
@@ -40,7 +39,7 @@ As an alternative, you can use the [no-global-assign](no-global-assign) and [no-
 
 This rule aims to eliminate the use of `undefined`, and as such, generates a warning whenever it is used.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -60,7 +59,7 @@ function foo(undefined) {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -78,6 +77,6 @@ if (typeof foo === "undefined") {
 global.undefined = "foo";
 ```
 
-## 使用建议
+## 禁用建议
 
 If you want to allow the use of `undefined` in your code, then you can safely turn this rule off.

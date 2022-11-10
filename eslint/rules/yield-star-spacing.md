@@ -1,6 +1,5 @@
 ---
 规则名: yield-star-spacing
-布局: doc
 规则类型: layout
 深入了解:
 - https://leanpub.com/understandinges6/read/#leanpub-auto-generators
@@ -43,7 +42,7 @@ The option also has a string shorthand:
 
 ### after
 
-Examples of **correct** code for this rule with the default `"after"` option:
+选项 `"after"` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -58,7 +57,7 @@ function* generator() {
 
 ### before
 
-Examples of **correct** code for this rule with the `"before"` option:
+选项 `"before"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -73,7 +72,7 @@ function *generator() {
 
 ### both
 
-Examples of **correct** code for this rule with the `"both"` option:
+选项 `"both"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -88,7 +87,7 @@ function * generator() {
 
 ### neither
 
-Examples of **correct** code for this rule with the `"neither"` option:
+选项 `"neither"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -101,6 +100,6 @@ function*generator() {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If your project will not be using generators or you are not concerned with spacing consistency, you do not need this rule.

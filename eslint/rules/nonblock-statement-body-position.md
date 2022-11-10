@@ -1,6 +1,5 @@
 ---
 规则名: nonblock-statement-body-position
-布局: doc
 规则类型: layout
 深入了解:
 - https://jscs-dev.github.io/rule/requireNewlineBeforeSingleStatementsInIf
@@ -50,7 +49,7 @@ Additionally, the rule accepts an optional object option with an `"overrides"` k
 * `"beside", { "overrides": { "while": "below" } }` requires all single-line statements to appear on the same line as their parent, unless the parent is a `while` statement, in which case the single-line statement must not be on the same line.
 * `"below", { "overrides": { "do": "any" } }` disallows all single-line statements from appearing on the same line as their parent, unless the parent is a `do-while` statement, in which case the position of the single-line statement is not enforced.
 
-Examples of **incorrect** code for this rule with the default `"beside"` option:
+选项 `"beside"`  默认值的 **错误** 代码示例：
 
 
 
@@ -74,7 +73,7 @@ while (foo)
 
 ```
 
-Examples of **correct** code for this rule with the default `"beside"` option:
+选项 `"beside"` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -97,7 +96,7 @@ if (foo) { // block statements are always allowed with this rule
 }
 ```
 
-Examples of **incorrect** code for this rule with the `"below"` option:
+选项 `"below"` 的 **错误** 代码示例：
 
 
 
@@ -114,7 +113,7 @@ for (let i = 1; i < foo; i++) bar();
 do bar(); while (foo)
 ```
 
-Examples of **correct** code for this rule with the `"below"` option:
+选项 `"below"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -169,6 +168,6 @@ while (foo)
   bar();
 ```
 
-## 使用建议
+## 禁用建议
 
 If you're not concerned about consistent locations of single-line statements, you should not turn on this rule. You can also disable this rule if you're using the `"all"` option for the [`curly`](/docs/rules/curly) rule, because this will disallow single-line statements entirely.

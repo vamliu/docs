@@ -1,6 +1,5 @@
 ---
 规则名: no-octal
-布局: doc
 规则类型: suggestion
 ---
 
@@ -20,7 +19,7 @@ The rule disallows octal literals.
 
 If ESLint parses code in strict mode, the parser (instead of this rule) reports the error.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -31,7 +30,7 @@ var num = 071;
 var result = 5 + 07;
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -41,6 +40,6 @@ Examples of **correct** code for this rule:
 var num  = "071";
 ```
 
-## Compatibility
+## 兼容
 
 * **JSHint**: W115

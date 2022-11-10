@@ -1,6 +1,5 @@
 ---
 规则名: no-space-before-semi
-布局: doc
 
 关联规则:
 - semi
@@ -25,7 +24,7 @@ var thing = function () {
 
 This rule prevents the use of spaces before a semicolon in expressions.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -40,7 +39,7 @@ var foo = function() {
 var foo = 1 + 2 ;
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

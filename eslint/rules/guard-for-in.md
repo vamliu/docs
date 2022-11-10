@@ -1,6 +1,5 @@
 ---
 规则名: guard-for-in
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-prototype-builtins
@@ -24,7 +23,7 @@ Note that simply checking `foo.hasOwnProperty(key)` is likely to cause an error 
 
 This rule is aimed at preventing unexpected behavior that could arise from using a `for in` loop without filtering the results in the loop. As such, it will warn when `for in` loops do not filter their results with an `if` statement.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -36,7 +35,7 @@ for (key in foo) {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

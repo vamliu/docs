@@ -1,6 +1,5 @@
 ---
 规则名: no-unused-vars
-布局: doc
 规则类型: problem
 ---
 
@@ -21,7 +20,7 @@ A variable `foo` is considered to be used if any of the following are true:
 
 A variable is *not* considered to be used if it is only ever declared (`var foo = 5`) or assigned to (`foo = 7`).
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -59,7 +58,7 @@ function getY([x, y]) {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -366,6 +365,6 @@ try {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to be notified about unused variables or function arguments, you can safely turn this rule off.

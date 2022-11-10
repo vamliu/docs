@@ -1,6 +1,5 @@
 ---
 规则名: no-undef-init
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-undefined
@@ -29,7 +28,7 @@ It's considered a best practice to avoid initializing variables to `undefined`.
 
 This rule aims to eliminate `var` and `let` variable declarations that initialize to `undefined`.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -40,7 +39,7 @@ var foo = undefined;
 let bar = undefined;
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -73,7 +72,7 @@ class Foo {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 There is one situation where initializing to `undefined` behaves differently than omitting the initialization, and that's when a `var` declaration occurs inside of a loop. For example:
 

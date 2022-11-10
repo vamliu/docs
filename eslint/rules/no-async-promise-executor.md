@@ -1,6 +1,5 @@
 ---
 规则名: no-async-promise-executor
-布局: doc
 规则类型: problem
 ---
 
@@ -29,7 +28,7 @@ The executor function can also be an `async function`. However, this is usually 
 
 This rule aims to disallow async Promise executor functions.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -49,7 +48,7 @@ const result = new Promise(async (resolve, reject) => {
 });
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -67,6 +66,6 @@ const foo = new Promise((resolve, reject) => {
 const result = Promise.resolve(foo);
 ```
 
-## 使用建议
+## 禁用建议
 
 If your codebase doesn't support async function syntax, there's no need to enable this rule.

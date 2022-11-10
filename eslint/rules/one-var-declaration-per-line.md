@@ -1,6 +1,5 @@
 ---
 规则名: one-var-declaration-per-line
-布局: doc
 规则类型: suggestion
 关联规则:
 - one-var
@@ -37,7 +36,7 @@ This rule has a single string option:
 
 ### initializations
 
-Examples of **incorrect** code for this rule with the default `"initializations"` option:
+选项 `"initializations"`  默认值的 **错误** 代码示例：
 
 
 
@@ -51,7 +50,7 @@ let a,
     b = 0, c;
 ```
 
-Examples of **correct** code for this rule with the default `"initializations"` option:
+选项 `"initializations"` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -70,7 +69,7 @@ let a,
 
 ### always
 
-Examples of **incorrect** code for this rule with the `"always"` option:
+选项 `"always"` 的 **错误** 代码示例：
 
 
 
@@ -85,7 +84,7 @@ let a, b = 0;
 const a = 0, b = 0;
 ```
 
-Examples of **correct** code for this rule with the `"always"` option:
+选项 `"always"` 的 **正确** 代码示例：
 
 ::: correct
 

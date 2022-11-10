@@ -1,6 +1,5 @@
 ---
 规则名: default-case
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-fallthrough
@@ -48,7 +47,7 @@ Once again, the intent here is to show that the developer intended for there to 
 
 This rule aims to require `default` case in `switch` statements. You may optionally include a `// no default` after the last `case` if there is no `default` case. The comment may be in any desired case, such as `// No Default`.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -63,7 +62,7 @@ switch (a) {
 
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -129,6 +128,6 @@ switch(a) {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to enforce a `default` case for `switch` statements, you can safely disable this rule.

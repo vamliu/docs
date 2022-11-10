@@ -1,6 +1,5 @@
 ---
 规则名: no-sequences
-布局: doc
 规则类型: suggestion
 ---
 
@@ -24,7 +23,7 @@ This rule forbids the use of the comma operator, with the following exceptions:
 * In the initialization or update portions of a `for` statement.
 * By default, if the expression sequence is explicitly wrapped in parentheses. This exception can be removed with the `allowInParentheses` option.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -48,7 +47,7 @@ while (val = foo(), val < 42);
 with (doSomething(), val) {}
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -110,7 +109,7 @@ This rule takes one option, an object, with the following properties:
 
 ### allowInParentheses
 
-Examples of **incorrect** code for this rule with the `{ "allowInParentheses": false }` option:
+选项 `{ "allowInParentheses": false }` 的 **错误** 代码示例：
 
 
 
@@ -136,7 +135,7 @@ with ((doSomething(), val)) {}
 const foo = (val) => ((console.log('bar'), val));
 ```
 
-Examples of **correct** code for this rule with the `{ "allowInParentheses": false }` option:
+选项 `{ "allowInParentheses": false }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -146,7 +145,7 @@ Examples of **correct** code for this rule with the `{ "allowInParentheses": fal
 for (i = 0, j = 10; i < j; i++, j--);
 ```
 
-## 使用建议
+## 禁用建议
 
 Disable this rule if sequence expressions with the comma operator are acceptable.
 Another case is where you might want to report all usages of the comma operator, even in a for loop. You can achieve this using rule `no-restricted-syntax`:

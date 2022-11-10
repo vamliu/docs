@@ -1,6 +1,5 @@
 ---
 规则名: no-constructor-return
-布局: doc
 规则类型: problem
 ---
 
@@ -11,7 +10,7 @@ In JavaScript, returning a value in the constructor of a class may be a mistake.
 
 This rule disallows return statements in the constructor of a class. Note that returning nothing with flow control is allowed.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -34,7 +33,7 @@ class B {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

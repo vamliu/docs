@@ -1,6 +1,5 @@
 ---
 规则名: use-isnan
-布局: doc
 规则类型: problem
 ---
 
@@ -19,7 +18,7 @@ Therefore, use `Number.isNaN()` or global `isNaN()` functions to test whether a 
 
 This rule disallows comparisons to 'NaN'.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -43,7 +42,7 @@ if (foo != Number.NaN) {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

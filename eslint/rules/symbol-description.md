@@ -1,6 +1,5 @@
 ---
 规则名: symbol-description
-布局: doc
 规则类型: suggestion
 深入了解:
 - https://www.ecma-international.org/ecma-262/6.0/#sec-symbol-description
@@ -33,7 +32,7 @@ This rules requires a description when creating symbols.
 
 ## Examples
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -44,7 +43,7 @@ Examples of **incorrect** code for this rule:
 var foo = Symbol();
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -58,7 +57,7 @@ var someString = "some description";
 var bar = Symbol(someString);
 ```
 
-## 使用建议
+## 禁用建议
 
 This rule should not be used in ES3/5 environments.
 In addition, this rule can be safely turned off if you don't want to enforce presence of `description` when creating Symbols.

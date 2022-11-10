@@ -1,6 +1,5 @@
 ---
 规则名: unicode-bom
-布局: doc
 规则类型: layout
 ---
 
@@ -71,7 +70,7 @@ U+FEFF
 var abc;
 ```
 
-## 使用建议
+## 禁用建议
 
 If you use some UTF-16 or UTF-32 files and you want to allow a file to
 optionally begin with a Unicode BOM, you should turn this rule off.

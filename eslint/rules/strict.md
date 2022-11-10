@@ -1,6 +1,5 @@
 ---
 规则名: strict
-布局: doc
 规则类型: suggestion
 ---
 
@@ -81,7 +80,7 @@ Otherwise the `"safe"` option corresponds to the `"function"` option. Note that 
 
 ### global
 
-Examples of **incorrect** code for this rule with the `"global"` option:
+选项 `"global"` 的 **错误** 代码示例：
 
 
 
@@ -114,7 +113,7 @@ function foo() {
 }
 ```
 
-Examples of **correct** code for this rule with the `"global"` option:
+选项 `"global"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -131,7 +130,7 @@ function foo() {
 
 This option ensures that all function bodies are strict mode code, while global code is not. Particularly if a build step concatenates multiple scripts, a strict mode directive in global code of one script could unintentionally enable strict mode in another script that was not intended to be strict code.
 
-Examples of **incorrect** code for this rule with the `"function"` option:
+选项 `"function"` 的 **错误** 代码示例：
 
 
 
@@ -177,7 +176,7 @@ function foo(a = 1) {
 }
 ```
 
-Examples of **correct** code for this rule with the `"function"` option:
+选项 `"function"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -208,7 +207,7 @@ var foo = (function() {
 
 ### never
 
-Examples of **incorrect** code for this rule with the `"never"` option:
+选项 `"never"` 的 **错误** 代码示例：
 
 
 
@@ -231,7 +230,7 @@ function foo() {
 }
 ```
 
-Examples of **correct** code for this rule with the `"never"` option:
+选项 `"never"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -307,6 +306,6 @@ function foo() {
 }());
 ```
 
-## 使用建议
+## 禁用建议
 
 In a codebase that has both strict and non-strict code, either turn this rule off, or [selectively disable it](/docs/user-guide/configuring/rules#disabling-rules) where necessary. For example, functions referencing `arguments.callee` are invalid in strict mode. A [full list of strict mode differences](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode#Differences_from_non-strict_to_strict) is available on MDN.

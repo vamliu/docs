@@ -1,6 +1,5 @@
 ---
 规则名: multiline-ternary
-布局: doc
 规则类型: layout
 关联规则:
 - operator-linebreak
@@ -41,7 +40,7 @@ This rule has a string option:
 
 This is the default option.
 
-Examples of **incorrect** code for this rule with the `"always"` option:
+选项 `"always"` 的 **错误** 代码示例：
 
 
 
@@ -57,7 +56,7 @@ foo > bar ?
     value : value2;
 ```
 
-Examples of **correct** code for this rule with the `"always"` option:
+选项 `"always"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -77,7 +76,7 @@ foo > bar ?
 
 ### always-multiline
 
-Examples of **incorrect** code for this rule with the `"always-multiline"` option:
+选项 `"always-multiline"` 的 **错误** 代码示例：
 
 
 
@@ -94,7 +93,7 @@ foo > bar &&
     bar > baz ? value1 : value2;
 ```
 
-Examples of **correct** code for this rule with the `"always-multiline"` option:
+选项 `"always-multiline"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -125,7 +124,7 @@ foo > bar &&
 
 ### never
 
-Examples of **incorrect** code for this rule with the `"never"` option:
+选项 `"never"` 的 **错误** 代码示例：
 
 
 
@@ -144,7 +143,7 @@ foo >
     value2;
 ```
 
-Examples of **correct** code for this rule with the `"never"` option:
+选项 `"never"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -160,10 +159,10 @@ foo > bar ? (
 ) : value3;
 ```
 
-## 使用建议
+## 禁用建议
 
 You can safely disable this rule if you do not have any strict conventions about whether the operands of a ternary expression should be separated by newlines.
 
-## Compatibility
+## 兼容
 
 * **JSCS**: [requireMultiLineTernary](https://jscs-dev.github.io/rule/requireMultiLineTernary)

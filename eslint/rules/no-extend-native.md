@@ -1,6 +1,5 @@
 ---
 规则名: no-extend-native
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-global-assign
@@ -33,7 +32,7 @@ A common suggestion to avoid this problem would be to wrap the inside of the `fo
 
 Disallows directly modifying the prototype of builtin objects.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -77,6 +76,6 @@ with(Array) {
 window.Function.prototype.bind = 'tight';
 ```
 
-## 使用建议
+## 禁用建议
 
 You may want to disable this rule when working with polyfills that try to patch older versions of JavaScript with the latest spec, such as those that might `Function.prototype.bind` or `Array.prototype.forEach` in a future-friendly way.

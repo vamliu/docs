@@ -1,6 +1,5 @@
 ---
 规则名: no-return-await
-布局: doc
 规则类型: suggestion
 深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
@@ -16,7 +15,7 @@ You can avoid the extra microtask by not awaiting the return value, with the tra
 
 This rule aims to prevent a likely common performance hazard due to a lack of understanding of the semantics of `async function`.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -28,7 +27,7 @@ async function foo() {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -58,7 +57,7 @@ async function foo() {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 There are a few reasons you might want to turn this rule off:
 

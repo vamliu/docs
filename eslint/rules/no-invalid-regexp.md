@@ -1,6 +1,5 @@
 ---
 规则名: no-invalid-regexp
-布局: doc
 规则类型: problem
 深入了解:
 - https://es5.github.io/#x7.8.5
@@ -14,7 +13,7 @@ An invalid pattern in a regular expression literal is a `SyntaxError` when the c
 
 This rule disallows invalid regular expression strings in `RegExp` constructors.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -28,7 +27,7 @@ RegExp('.', 'z')
 new RegExp('\\')
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -54,7 +53,7 @@ This rule has an object option for exceptions:
 
 ### allowConstructorFlags
 
-Examples of **correct** code for this rule with the `{ "allowConstructorFlags": ["a", "z"] }` option:
+选项 `{ "allowConstructorFlags": ["a", "z"] }` 的 **正确** 代码示例：
 
 ::: correct
 

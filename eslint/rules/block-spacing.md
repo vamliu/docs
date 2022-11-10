@@ -1,6 +1,5 @@
 ---
 规则名: block-spacing
-布局: doc
 规则类型: layout
 关联规则:
 - space-before-blocks
@@ -22,7 +21,7 @@ This rule has a string option:
 
 ### always
 
-Examples of **incorrect** code for this rule with the default `"always"` option:
+选项 `"always"`  默认值的 **错误** 代码示例：
 
 ```js
 /*eslint block-spacing: "error"*/
@@ -38,7 +37,7 @@ class C {
 }
 ```
 
-Examples of **correct** code for this rule with the default `"always"` option:
+选项 `"always"` 默认值的 **正确** 代码示例：
 
 ```js
 /*eslint block-spacing: "error"*/
@@ -53,7 +52,7 @@ class C {
 
 ### never
 
-Examples of **incorrect** code for this rule with the `"never"` option:
+选项 `"never"` 的 **错误** 代码示例：
 
 ```js
 /*eslint block-spacing: ["error", "never"]*/
@@ -66,7 +65,7 @@ class C {
 }
 ```
 
-Examples of **correct** code for this rule with the `"never"` option:
+选项 `"never"` 的 **正确** 代码示例：
 
 ```js
 /*eslint block-spacing: ["error", "never"]*/
@@ -79,6 +78,6 @@ class C {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to be notified about spacing style inside of blocks, you can safely disable this rule.

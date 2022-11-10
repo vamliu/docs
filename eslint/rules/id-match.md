@@ -1,6 +1,5 @@
 ---
 规则名: id-match
-布局: doc
 规则类型: suggestion
 ---
 
@@ -28,7 +27,7 @@ For example, to enforce a camelcase naming convention:
 }
 ```
 
-Examples of **incorrect** code for this rule with the `"^[a-z]+([A-Z][a-z]+)*$"` option:
+选项 `"^[a-z]+([A-Z][a-z]+)*$"` 的 **错误** 代码示例：
 
 
 
@@ -58,7 +57,7 @@ class myClass {
 }
 ```
 
-Examples of **correct** code for this rule with the `"^[a-z]+([A-Z][a-z]+)*$"` option:
+选项 `"^[a-z]+([A-Z][a-z]+)*$"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -97,7 +96,7 @@ This rule has an object option:
 
 ### properties
 
-Examples of **incorrect** code for this rule with the `"^[a-z]+([A-Z][a-z]+)*$", { "properties": true }` options:
+选项 `"^[a-z]+([A-Z][a-z]+)*$", { "properties": true }`  的 **错误** 代码示例：
 
 
 
@@ -111,7 +110,7 @@ var obj = {
 
 ### classFields
 
-Examples of **incorrect** code for this rule with the `"^[a-z]+([A-Z][a-z]+)*$", { "classFields": true }` options:
+选项 `"^[a-z]+([A-Z][a-z]+)*$", { "classFields": true }`  的 **错误** 代码示例：
 
 
 
@@ -129,7 +128,7 @@ class myClass {
 
 ### onlyDeclarations
 
-Examples of **correct** code for this rule with the `"^[a-z]+([A-Z][a-z]+)*$", { "onlyDeclarations": true }` options:
+选项 `"^[a-z]+([A-Z][a-z]+)*$", { "onlyDeclarations": true }`  的 **正确** 代码示例：
 
 ::: correct
 
@@ -141,7 +140,7 @@ do_something(__dirname);
 
 ### ignoreDestructuring: false
 
-Examples of **incorrect** code for this rule with the default `"^[^_]+$", { "ignoreDestructuring": false }` option:
+选项 `"^[^_]+$", { "ignoreDestructuring": false }`  默认值的 **错误** 代码示例：
 
 
 
@@ -161,7 +160,7 @@ var { category_id: categoryId, ...other_props } = query;
 
 ### ignoreDestructuring: true
 
-Examples of **incorrect** code for this rule with the `"^[^_]+$", { "ignoreDestructuring": true }` option:
+选项 `"^[^_]+$", { "ignoreDestructuring": true }` 的 **错误** 代码示例：
 
 
 
@@ -173,7 +172,7 @@ var { category_id: category_alias } = query;
 var { category_id, ...other_props } = query;
 ```
 
-Examples of **correct** code for this rule with the `"^[^_]+$", { "ignoreDestructuring": true }` option:
+选项 `"^[^_]+$", { "ignoreDestructuring": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -187,6 +186,6 @@ var { category_id = 1 } = query;
 var { category_id: category_id } = query;
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to enforce any particular naming convention for all identifiers, or your naming convention is too complex to be enforced by configuring this rule, then you should not enable this rule.

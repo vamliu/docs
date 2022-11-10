@@ -1,6 +1,5 @@
 ---
 规则名: require-jsdoc
-布局: doc
 规则类型: suggestion
 关联规则:
 - valid-jsdoc
@@ -59,7 +58,7 @@ Default option settings are:
 
 ### require
 
-Examples of **incorrect** code for this rule with the `{ "require": { "FunctionDeclaration": true, "MethodDefinition": true, "ClassDeclaration": true, "ArrowFunctionExpression": true, "FunctionExpression": true } }` option:
+选项 `{ "require": { "FunctionDeclaration": true, "MethodDefinition": true, "ClassDeclaration": true, "ArrowFunctionExpression": true, "FunctionExpression": true } }` 的 **错误** 代码示例：
 
 
 
@@ -103,7 +102,7 @@ var foo = {
 };
 ```
 
-Examples of **correct** code for this rule with the `{ "require": { "FunctionDeclaration": true, "MethodDefinition": true, "ClassDeclaration": true, "ArrowFunctionExpression": true, "FunctionExpression": true } }` option:
+选项 `{ "require": { "FunctionDeclaration": true, "MethodDefinition": true, "ClassDeclaration": true, "ArrowFunctionExpression": true, "FunctionExpression": true } }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -191,6 +190,6 @@ var foo = {
 setTimeout(() => {}, 10); // since it's an anonymous arrow function
 ```
 
-## 使用建议
+## 禁用建议
 
 If you do not require JSDoc for your functions, then you can leave this rule off.

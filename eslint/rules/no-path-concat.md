@@ -1,6 +1,5 @@
 ---
 规则名: no-path-concat
-布局: doc
 规则类型: suggestion
 ---
 
@@ -33,7 +32,7 @@ Both `path.join()` and `path.resolve()` are suitable replacements for string con
 
 This rule aims to prevent string concatenation of directory paths in Node.js
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -46,7 +45,7 @@ var fullPath = __filename + "/foo.js";
 
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -56,6 +55,6 @@ Examples of **correct** code for this rule:
 var fullPath = dirname + "/foo.js";
 ```
 
-## 使用建议
+## 禁用建议
 
 If you want to allow string concatenation of path names.

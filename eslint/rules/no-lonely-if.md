@@ -1,6 +1,5 @@
 ---
 规则名: no-lonely-if
-布局: doc
 规则类型: suggestion
 ---
 
@@ -32,7 +31,7 @@ if (foo) {
 
 This rule disallows `if` statements as the only statement in `else` blocks.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -58,7 +57,7 @@ if (condition) {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -89,6 +88,6 @@ if (condition) {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 Disable this rule if the code is clearer without requiring the `else if` form.

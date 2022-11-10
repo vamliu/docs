@@ -1,6 +1,5 @@
 ---
 规则名: no-constant-binary-expression
-布局: doc
 规则类型: problem
 关联规则:
 - no-constant-condition
@@ -36,7 +35,7 @@ This rule identifies `==` and `===` comparisons which, based on the semantics of
 
 It also identifies `||`, `&&` and `??` logical expressions which will either always or never short-circuit.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -56,7 +55,7 @@ const objIsEmpty = someObj === {};
 const arrIsEmpty = someArr === [];
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

@@ -1,6 +1,5 @@
 ---
 规则名: no-comma-dangle
-布局: doc
 
 ---
 
@@ -21,7 +20,7 @@ var foo = {
 
 This rule is aimed at detecting trailing commas in object literals. As such, it will warn whenever it encounters a trailing comma in an object literal.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -39,7 +38,7 @@ foo({
 });
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -57,6 +56,6 @@ foo({
 });
 ```
 
-## 使用建议
+## 禁用建议
 
 If your code will not be run in IE8 or below (a Node.js application, for example) and you'd prefer to allow trailing commas, turn this rule off.

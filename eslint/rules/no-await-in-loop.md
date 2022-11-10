@@ -1,6 +1,5 @@
 ---
 规则名: no-await-in-loop
-布局: doc
 规则类型: problem
 ---
 
@@ -19,7 +18,7 @@ Concretely, the following function should be refactored as shown:
 async function foo(things) {
   const results = [];
   for (const thing of things) {
-    // 不推荐: each loop iteration is delayed until the entire asynchronous operation completes
+    // 错误: each loop iteration is delayed until the entire asynchronous operation completes
     results.push(await bar(thing));
   }
   return baz(results);
@@ -30,7 +29,7 @@ async function foo(things) {
 async function foo(things) {
   const results = [];
   for (const thing of things) {
-    // 推荐: all asynchronous operations are immediately started.
+    // 正确: all asynchronous operations are immediately started.
     results.push(bar(thing));
   }
   // Now that all the asynchronous operations are running, here we wait until they all complete.
@@ -44,7 +43,7 @@ This rule disallows the use of `await` within loop bodies.
 
 ## Examples
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ```js
 /*eslint no-await-in-loop: "error"*/
@@ -52,7 +51,7 @@ Examples of **correct** code for this rule:
 async function foo(things) {
   const results = [];
   for (const thing of things) {
-    // 推荐: all asynchronous operations are immediately started.
+    // 正确: all asynchronous operations are immediately started.
     results.push(bar(thing));
   }
   // Now that all the asynchronous operations are running, here we wait until they all complete.
@@ -60,7 +59,7 @@ async function foo(things) {
 }
 ```
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 ```js
 /*eslint no-await-in-loop: "error"*/
@@ -68,14 +67,14 @@ Examples of **incorrect** code for this rule:
 async function foo(things) {
   const results = [];
   for (const thing of things) {
-    // 不推荐: each loop iteration is delayed until the entire asynchronous operation completes
+    // 错误: each loop iteration is delayed until the entire asynchronous operation completes
     results.push(await bar(thing));
   }
   return baz(results);
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 In many cases the iterations of a loop are not actually independent of each-other. For example, the
 output of one iteration might be used as the input to another. Or, loops may be used to retry

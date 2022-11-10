@@ -1,6 +1,5 @@
 ---
 规则名: spaced-comment
-布局: doc
 规则类型: suggestion
 关联规则:
 - spaced-line-comment
@@ -71,7 +70,7 @@ You can also define separate exceptions and markers for block and line comments.
 
 ### always
 
-Examples of **incorrect** code for this rule with the `"always"` option:
+选项 `"always"` 的 **错误** 代码示例：
 
 
 
@@ -90,7 +89,7 @@ Examples of **incorrect** code for this rule with the `"always"` option:
 /* This is a comment with whitespace at the beginning but not the end*/
 ```
 
-Examples of **correct** code for this rule with the `"always"` option:
+选项 `"always"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -122,7 +121,7 @@ This comment has a newline
 
 ### never
 
-Examples of **incorrect** code for this rule with the `"never"` option:
+选项 `"never"` 的 **错误** 代码示例：
 
 
 
@@ -143,7 +142,7 @@ Examples of **incorrect** code for this rule with the `"never"` option:
 /*This is a comment with whitespace at the end */
 ```
 
-Examples of **correct** code for this rule with the `"never"` option:
+选项 `"never"` 的 **正确** 代码示例：
 
 ::: correct
 

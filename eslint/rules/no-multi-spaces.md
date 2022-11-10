@@ -1,6 +1,5 @@
 ---
 规则名: no-multi-spaces
-布局: doc
 规则类型: layout
 关联规则:
 - key-spacing
@@ -34,7 +33,7 @@ if(foo === "bar") {}
 
 This rule aims to disallow multiple whitespace around logical expressions, conditional expressions, declarations, array elements, object properties, sequences and function parameters.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -52,7 +51,7 @@ var arr = [1,  2];
 a ?  b: c
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -105,7 +104,7 @@ var x = 5; /* multiline
  */
 ```
 
-Examples of **correct** code for this rule with the `{ "ignoreEOLComments": true }` option:
+选项 `{ "ignoreEOLComments": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -190,6 +189,6 @@ import mod          from 'mod';
 import someOtherMod from 'some-other-mod';
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to check and disallow multiple spaces, then you should turn this rule off.

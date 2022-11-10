@@ -1,6 +1,5 @@
 ---
 规则名: no-empty-label
-布局: doc
 
 关联规则:
 - no-labels
@@ -42,6 +41,6 @@ for (var i=10; i; i--) {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to be notified about usage of labels, then it's safe to disable this rule.

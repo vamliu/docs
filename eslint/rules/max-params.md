@@ -1,6 +1,5 @@
 ---
 规则名: max-params
-布局: doc
 规则类型: suggestion
 关联规则:
 - complexity
@@ -35,7 +34,7 @@ This rule has a number or object option:
 
 ### max
 
-Examples of **incorrect** code for this rule with the default `{ "max": 3 }` option:
+选项 `{ "max": 3 }`  默认值的 **错误** 代码示例：
 
 ```js
 /*eslint max-params: ["error", 3]*/
@@ -50,7 +49,7 @@ let foo = (bar, baz, qux, qxx) => {
 };
 ```
 
-Examples of **correct** code for this rule with the default `{ "max": 3 }` option:
+选项 `{ "max": 3 }` 默认值的 **正确** 代码示例：
 
 ```js
 /*eslint max-params: ["error", 3]*/

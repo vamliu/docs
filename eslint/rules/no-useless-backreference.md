@@ -1,6 +1,5 @@
 ---
 规则名: no-useless-backreference
-布局: doc
 规则类型: problem
 关联规则:
 - no-control-regex
@@ -51,7 +50,7 @@ This might be surprising to developers coming from other languages where some of
 /^(?:(a)(?=a)|\1b)+$/.test("aab"); // false
 ```
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -87,7 +86,7 @@ new RegExp('(\\1)'); // nested reference to (\1)
 /(?<!(a))b\1/; // reference to (a) into a negative lookbehind
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

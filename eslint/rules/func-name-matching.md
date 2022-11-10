@@ -1,6 +1,5 @@
 ---
 规则名: func-name-matching
-布局: doc
 规则类型: suggestion
 ---
 
@@ -9,7 +8,7 @@
 
 This rule requires function names to match the name of the variable or property to which they are assigned. The rule will ignore property assignments where the property name is a literal that is not a valid identifier in the ECMAScript version specified in your configuration (default ES5).
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -45,7 +44,7 @@ class C {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -188,10 +187,10 @@ module.exports = function foo(name) {};
 module['exports'] = function foo(name) {};
 ```
 
-## 使用建议
+## 禁用建议
 
 Do not use this rule if you want to allow named functions to have different names from the variable or property to which they are assigned.
 
-## Compatibility
+## 兼容
 
 * **JSCS**: [requireMatchingFunctionName](https://jscs-dev.github.io/rule/requireMatchingFunctionName)

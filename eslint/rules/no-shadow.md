@@ -1,6 +1,5 @@
 ---
 规则名: no-shadow
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-shadow-restricted-names
@@ -24,7 +23,7 @@ In this case, the variable `a` inside of `b()` is shadowing the variable `a` in 
 
 This rule aims to eliminate shadowed variable declarations.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 

@@ -1,6 +1,5 @@
 ---
 规则名: space-after-keywords
-布局: doc
 
 ---
 
@@ -33,7 +32,7 @@ This rule will enforce consistency of spacing after the keywords `if`, `else`, `
 This rule takes one argument. If it is `"always"` then the keywords must be followed by at least one space. If `"never"`
 then there should be no spaces following. The default is `"always"`.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -55,7 +54,7 @@ do{} while (a);
 if (a) {}
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

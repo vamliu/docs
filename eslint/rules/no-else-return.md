@@ -1,6 +1,5 @@
 ---
 规则名: no-else-return
-布局: doc
 规则类型: suggestion
 ---
 
@@ -31,7 +30,7 @@ This rule has an object option:
 
 ### `allowElseIf: true`
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -90,7 +89,7 @@ function foo() {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -136,7 +135,7 @@ function foo() {
 
 ### `allowElseIf: false`
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -152,7 +151,7 @@ function foo() {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

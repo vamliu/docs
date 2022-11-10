@@ -1,6 +1,5 @@
 ---
 规则名: space-unary-word-ops
-布局: doc
 
 ---
 
@@ -12,7 +11,7 @@ Require spaces following unary word operators.
 
 ## 规则详解
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -38,7 +37,7 @@ new[a][0]
 delete(a.b)
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

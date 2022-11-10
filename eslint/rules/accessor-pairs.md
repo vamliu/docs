@@ -1,6 +1,5 @@
 ---
 规则名: accessor-pairs
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-dupe-keys
@@ -11,12 +10,12 @@
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
 ---
 
-我们在写js代码时常犯的一个错误是：只为属性创建一个 setter ，而未定义相应的 getter 。没有 getter ，无法读取属性，导致它不可用。
+我们在写js代码时常犯的一个错误是：只为属性创建一个 setter ，而未定义相应的 getter 。由于没有 getter ，无法读取属性，所有它是不可用的。
 
 就像这个例子：
 
 ```js
-// 不推荐
+// 错误
 var o = {
     set a(value) {
         this.val = value;
@@ -24,7 +23,7 @@ var o = {
 };
 
 
-// 推荐
+// 正确
 var o = {
     set a(value) {
         this.val = value;
@@ -35,14 +34,14 @@ var o = {
 };
 
 ```
-启用此规则，当定义了 setter 却没有 getter 则会发出警告，使用选项 `getWithoutSet` ，如果定义了 getter 却没有 setter 时，也会发出警告。
+启用此规则，当定义了 setter 却没有 getter 则会触发警告，启用选项 `getWithoutSet` ，如果定义了 getter 却没有 setter 时，也会触发警告。
 
 ## 规则详解
 此规则强制执行一种样式，它要求每个定义了 setter 的属性都有一个getter。
 
 通过激活选项 `getWithoutSet` ，它强制为每个定义了 getter 的属性设置 setter 。
 
-此规则始终检查 object literals（对象字面量，以对象字面量的方式创建对象，如：`var o = {a: 1}`）和 property descriptors（属性描述符，可以理解为对象的 defineProperty 方法）。默认情况下，它还检查类声明和类表达式。
+此规则始终检查对象字面量和属性描述。默认情况下，它还检查类声明和类表达式。
 
 ## 配置项
 
@@ -246,14 +245,14 @@ const Quux = class {
 
 ## 已知局限
 
-由于静态解析的限制，此规则不会对表达式属性的 getter/setter 的缺失作出警告，如以下示例所示：
+由于静态解析的限制，此规则对通过表达式命名的属性的 getter/setter 缺失不触发警告，如以下示例所示：
 
 ```js
 /*eslint accessor-pairs: "error"*/
 
 var a = 1;
 
-// 不会警告
+// 不触发警告
 var o = {
     get [a++]() {
         return this.val;
@@ -269,7 +268,7 @@ var o = {
 ```js
 /*eslint accessor-pairs: "error"*/
 
-// 不会警告
+// 不触发警告
 var o = {
     get a() {
         return this.val;
@@ -284,8 +283,8 @@ var o = {
 
 详见 [no-dupe-keys](no-dupe-keys) 禁用对象声明中的重复键
 
-详见 [no-dupe-class-members](no-dupe-class-members) 禁用类声明中的重复成员
+详见 [no-dupe-class-members](no-dupe-class-members) 禁用类声明中的重复成员变量
 
-## 使用建议
+## 禁用建议
 
 如果您不关心对象上是否同时存在setter和getter，可以关闭此规则。

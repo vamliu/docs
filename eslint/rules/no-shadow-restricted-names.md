@@ -1,6 +1,5 @@
 ---
 规则名: no-shadow-restricted-names
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-shadow
@@ -21,7 +20,7 @@ Then any code used within the same scope would not get the global `undefined`, b
 
 ## 规则详解
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -37,7 +36,7 @@ var undefined = 5;
 try {} catch(eval){}
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

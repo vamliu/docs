@@ -1,6 +1,5 @@
 ---
 规则名: no-plusplus
-布局: doc
 规则类型: suggestion
 ---
 
@@ -30,7 +29,7 @@ j
 
 This rule disallows the unary operators `++` and `--`.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -48,7 +47,7 @@ for (i = 0; i < l; i++) {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -74,7 +73,7 @@ This rule has an object option.
 
 ### allowForLoopAfterthoughts
 
-Examples of **correct** code for this rule with the `{ "allowForLoopAfterthoughts": true }` option:
+选项 `{ "allowForLoopAfterthoughts": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -94,7 +93,7 @@ for (i = 0, j = l; i < l; i++, j--) {
 }
 ```
 
-Examples of **incorrect** code for this rule with the `{ "allowForLoopAfterthoughts": true }` option:
+选项 `{ "allowForLoopAfterthoughts": true }` 的 **错误** 代码示例：
 
 
 

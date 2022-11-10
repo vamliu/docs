@@ -1,6 +1,5 @@
 ---
 规则名: sort-imports
-布局: doc
 规则类型: suggestion
 关联规则:
 - sort-keys
@@ -137,7 +136,7 @@ import {b, a, c} from 'foo.js'
 
 When `true` the rule ignores the case-sensitivity of the imports local name.
 
-Examples of **incorrect** code for this rule with the `{ "ignoreCase": true }` option:
+选项 `{ "ignoreCase": true }` 的 **错误** 代码示例：
 
 
 
@@ -148,7 +147,7 @@ import B from 'foo.js';
 import a from 'bar.js';
 ```
 
-Examples of **correct** code for this rule with the `{ "ignoreCase": true }` option:
+选项 `{ "ignoreCase": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -166,7 +165,7 @@ Default is `false`.
 
 Ignores the sorting of import declaration statements.
 
-Examples of **incorrect** code for this rule with the default `{ "ignoreDeclarationSort": false }` option:
+选项 `{ "ignoreDeclarationSort": false }`  默认值的 **错误** 代码示例：
 
 
 
@@ -176,7 +175,7 @@ import b from 'foo.js'
 import a from 'bar.js'
 ```
 
-Examples of **correct** code for this rule with the `{ "ignoreDeclarationSort": true }` option:
+选项 `{ "ignoreDeclarationSort": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -200,7 +199,7 @@ Default is `false`.
 
 Ignores the member sorting within a `multiple` member import declaration.
 
-Examples of **incorrect** code for this rule with the default `{ "ignoreMemberSort": false }` option:
+选项 `{ "ignoreMemberSort": false }`  默认值的 **错误** 代码示例：
 
 
 
@@ -209,7 +208,7 @@ Examples of **incorrect** code for this rule with the default `{ "ignoreMemberSo
 import {b, a, c} from 'foo.js'
 ```
 
-Examples of **correct** code for this rule with the `{ "ignoreMemberSort": true }` option:
+选项 `{ "ignoreMemberSort": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -231,7 +230,7 @@ There are four different styles and the default member syntax sort order is:
 
 All four options must be specified in the array, but you can customize their order.
 
-Examples of **incorrect** code for this rule with the default `{ "memberSyntaxSortOrder": ["none", "all", "multiple", "single"] }` option:
+选项 `{ "memberSyntaxSortOrder": ["none", "all", "multiple", "single"] }`  默认值的 **错误** 代码示例：
 
 
 
@@ -241,7 +240,7 @@ import a from 'foo.js';
 import * as b from 'bar.js';
 ```
 
-Examples of **correct** code for this rule with the `{ "memberSyntaxSortOrder": ['single', 'all', 'multiple', 'none'] }` option:
+选项 `{ "memberSyntaxSortOrder": ['single', 'all', 'multiple', 'none'] }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -252,7 +251,7 @@ import a from 'foo.js';
 import * as b from 'bar.js';
 ```
 
-Examples of **correct** code for this rule with the `{ "memberSyntaxSortOrder": ['all', 'single', 'multiple', 'none'] }` option:
+选项 `{ "memberSyntaxSortOrder": ['all', 'single', 'multiple', 'none'] }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -272,7 +271,7 @@ When `true` the rule checks the sorting of import declaration statements only fo
 
 In other words, a blank line or a comment line or line with any other statement after an import declaration statement will reset the sorting of import declaration statements.
 
-Examples of **incorrect** code for this rule with the `{ "allowSeparatedGroups": true }` option:
+选项 `{ "allowSeparatedGroups": true }` 的 **错误** 代码示例：
 
 
 
@@ -284,7 +283,7 @@ import c from 'bar.js';
 import a from 'baz.js';
 ```
 
-Examples of **correct** code for this rule with the `{ "allowSeparatedGroups": true }` option:
+选项 `{ "allowSeparatedGroups": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -321,6 +320,6 @@ import a from 'baz.js';
 
 Default is `false`.
 
-## 使用建议
+## 禁用建议
 
 This rule is a formatting preference and not following it won't negatively affect the quality of your code. If alphabetizing imports isn't a part of your coding standards, then you can leave this rule disabled.

@@ -1,6 +1,5 @@
 ---
 规则名: object-curly-newline
-布局: doc
 规则类型: layout
 关联规则:
 - comma-spacing
@@ -50,7 +49,7 @@ You can specify different options for object literals, destructuring assignments
 
 ### always
 
-Examples of **incorrect** code for this rule with the `"always"` option:
+选项 `"always"` 的 **错误** 代码示例：
 
 
 
@@ -77,7 +76,7 @@ let {k = function() {
 }} = obj;
 ```
 
-Examples of **correct** code for this rule with the `"always"` option:
+选项 `"always"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -124,7 +123,7 @@ let {
 
 ### never
 
-Examples of **incorrect** code for this rule with the `"never"` option:
+选项 `"never"` 的 **错误** 代码示例：
 
 
 
@@ -169,7 +168,7 @@ let {
 } = obj;
 ```
 
-Examples of **correct** code for this rule with the `"never"` option:
+选项 `"never"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -198,7 +197,7 @@ let {k = function() {
 
 ### multiline
 
-Examples of **incorrect** code for this rule with the `{ "multiline": true }` option:
+选项 `{ "multiline": true }` 的 **错误** 代码示例：
 
 
 
@@ -235,7 +234,7 @@ let {k = function() {
 }} = obj;
 ```
 
-Examples of **correct** code for this rule with the `{ "multiline": true }` option:
+选项 `{ "multiline": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -272,7 +271,7 @@ let {
 
 ### minProperties
 
-Examples of **incorrect** code for this rule with the `{ "minProperties": 2 }` option:
+选项 `{ "minProperties": 2 }` 的 **错误** 代码示例：
 
 
 
@@ -309,7 +308,7 @@ let {
 } = obj;
 ```
 
-Examples of **correct** code for this rule with the `{ "minProperties": 2 }` option:
+选项 `{ "minProperties": 2 }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -346,7 +345,7 @@ let {k = function() {
 
 ### consistent
 
-Examples of **incorrect** code for this rule with the default `{ "consistent": true }` option:
+选项 `{ "consistent": true }`  默认值的 **错误** 代码示例：
 
 
 
@@ -392,7 +391,7 @@ let {
     }} = obj;
 ```
 
-Examples of **correct** code for this rule with the default `{ "consistent": true }` option:
+选项 `{ "consistent": true }` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -448,7 +447,7 @@ let {
 
 ### ObjectExpression and ObjectPattern
 
-Examples of **incorrect** code for this rule with the `{ "ObjectExpression": "always", "ObjectPattern": "never" }` options:
+选项 `{ "ObjectExpression": "always", "ObjectPattern": "never" }`  的 **错误** 代码示例：
 
 
 
@@ -484,7 +483,7 @@ let {
 } = obj;
 ```
 
-Examples of **correct** code for this rule with the `{ "ObjectExpression": "always", "ObjectPattern": "never" }` options:
+选项 `{ "ObjectExpression": "always", "ObjectPattern": "never" }`  的 **正确** 代码示例：
 
 ::: correct
 
@@ -522,7 +521,7 @@ let {k = function() {
 
 ### ImportDeclaration and ExportDeclaration
 
-Examples of **incorrect** code for this rule with the `{ "ImportDeclaration": "always", "ExportDeclaration": "never" }` options:
+选项 `{ "ImportDeclaration": "always", "ExportDeclaration": "never" }`  的 **错误** 代码示例：
 
 
 
@@ -545,7 +544,7 @@ export {
 } from 'foo-bar';
 ```
 
-Examples of **correct** code for this rule with the `{ "ImportDeclaration": "always", "ExportDeclaration": "never" }` options:
+选项 `{ "ImportDeclaration": "always", "ExportDeclaration": "never" }`  的 **正确** 代码示例：
 
 ::: correct
 
@@ -569,11 +568,11 @@ export { foo, bar } from 'foo-bar';
 export { foo as f, bar } from 'foo-bar';
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to enforce consistent line breaks after opening and before closing braces, then it's safe to disable this rule.
 
-## Compatibility
+## 兼容
 
 * **JSCS**: [requirePaddingNewLinesInObjects](https://jscs-dev.github.io/rule/requirePaddingNewLinesInObjects)
 * **JSCS**: [disallowPaddingNewLinesInObjects](https://jscs-dev.github.io/rule/disallowPaddingNewLinesInObjects)

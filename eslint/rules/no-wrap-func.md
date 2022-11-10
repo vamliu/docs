@@ -1,6 +1,5 @@
 ---
 规则名: no-wrap-func
-布局: doc
 
 ---
 
@@ -32,7 +31,7 @@ Example of **incorrect** code for this rule:
 var a = (function() {/*...*/});
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

@@ -1,6 +1,5 @@
 ---
 规则名: radix
-布局: doc
 规则类型: suggestion
 深入了解:
 - https://davidwalsh.name/parseint-radix
@@ -101,6 +100,6 @@ var num = parseInt("071", 8);
 var num = parseFloat(someValue);
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to enforce either presence or omission of the `10` radix value you can turn this rule off.

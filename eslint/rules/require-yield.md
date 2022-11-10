@@ -1,6 +1,5 @@
 ---
 规则名: require-yield
-布局: doc
 规则类型: suggestion
 关联规则:
 - require-await
@@ -14,7 +13,7 @@ This rule generates warnings for generator functions that do not have the `yield
 
 ## Examples
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -27,7 +26,7 @@ function* foo() {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -48,6 +47,6 @@ function foo() {
 function* foo() { }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to notify generator functions that have no `yield` expression, then it's safe to disable this rule.

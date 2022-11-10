@@ -1,6 +1,5 @@
 ---
 规则名: rest-spread-spacing
-布局: doc
 规则类型: layout
 深入了解:
 - https://github.com/tc39/proposal-object-rest-spread
@@ -147,6 +146,6 @@ let { x, y, ... z } = { x: 1, y: 2, a: 3, b: 4 };
 let n = { x, y, ... z };
 ```
 
-## 使用建议
+## 禁用建议
 
 You can safely disable this rule if you do not care about enforcing consistent spacing between spread operators and their expressions.

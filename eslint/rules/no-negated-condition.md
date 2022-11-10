@@ -1,6 +1,5 @@
 ---
 规则名: no-negated-condition
-布局: doc
 规则类型: suggestion
 ---
 
@@ -14,7 +13,7 @@ This rule disallows negated conditions in either of the following:
 * `if` statements which have an `else` branch
 * ternary expressions
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -42,7 +41,7 @@ if (a !== b) {
 !a ? c : b
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

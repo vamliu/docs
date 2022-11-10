@@ -1,6 +1,5 @@
 ---
 规则名: no-irregular-whitespace
-布局: doc
 规则类型: problem
 深入了解:
 - https://es5.github.io/#x7.2
@@ -67,7 +66,7 @@ This rule has an object option for exceptions:
 
 ### skipStrings
 
-Examples of **incorrect** code for this rule with the default `{ "skipStrings": true }` option:
+选项 `{ "skipStrings": true }`  默认值的 **错误** 代码示例：
 
 
 
@@ -116,7 +115,7 @@ function thing() {
 }
 ```
 
-Examples of **correct** code for this rule with the default `{ "skipStrings": true }` option:
+选项 `{ "skipStrings": true }` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -183,6 +182,6 @@ function thing() {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you decide that you wish to use whitespace other than tabs and spaces outside of strings in your application.

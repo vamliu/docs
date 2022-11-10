@@ -1,6 +1,5 @@
 ---
 规则名: no-caller
-布局: doc
 规则类型: suggestion
 ---
 
@@ -17,7 +16,7 @@ function foo() {
 
 This rule is aimed at discouraging the use of deprecated and sub-optimal code by disallowing the use of `arguments.caller` and `arguments.callee`. As such, it will warn when `arguments.caller` and `arguments.callee` are used.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -37,7 +36,7 @@ function foo(n) {
 });
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

@@ -1,6 +1,5 @@
 ---
 规则名: padded-blocks
-布局: doc
 规则类型: layout
 关联规则:
 - lines-between-class-members
@@ -51,7 +50,7 @@ Object option:
 
 ### always
 
-Examples of **incorrect** code for this rule with the default `"always"` option:
+选项 `"always"`  默认值的 **错误** 代码示例：
 
 
 
@@ -87,7 +86,7 @@ class C {
 }
 ```
 
-Examples of **correct** code for this rule with the default `"always"` option:
+选项 `"always"` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -127,7 +126,7 @@ class C {
 
 ### never
 
-Examples of **incorrect** code for this rule with the `"never"` option:
+选项 `"never"` 的 **错误** 代码示例：
 
 
 
@@ -168,7 +167,7 @@ class C {
 }
 ```
 
-Examples of **correct** code for this rule with the `"never"` option:
+选项 `"never"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -193,7 +192,7 @@ class C {
 
 ### blocks
 
-Examples of **incorrect** code for this rule with the `{ "blocks": "always" }` option:
+选项 `{ "blocks": "always" }` 的 **错误** 代码示例：
 
 
 
@@ -236,7 +235,7 @@ class C {
 }
 ```
 
-Examples of **correct** code for this rule with the `{ "blocks": "always" }` option:
+选项 `{ "blocks": "always" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -283,7 +282,7 @@ class D {
 }
 ```
 
-Examples of **incorrect** code for this rule with the `{ "blocks": "never" }` option:
+选项 `{ "blocks": "never" }` 的 **错误** 代码示例：
 
 
 
@@ -322,7 +321,7 @@ class C {
 }
 ```
 
-Examples of **correct** code for this rule with the `{ "blocks": "never" }` option:
+选项 `{ "blocks": "never" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -355,7 +354,7 @@ class D {
 
 ### classes
 
-Examples of **incorrect** code for this rule with the `{ "classes": "always" }` option:
+选项 `{ "classes": "always" }` 的 **错误** 代码示例：
 
 
 
@@ -368,7 +367,7 @@ class  A {
 }
 ```
 
-Examples of **correct** code for this rule with the `{ "classes": "always" }` option:
+选项 `{ "classes": "always" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -383,7 +382,7 @@ class  A {
 }
 ```
 
-Examples of **incorrect** code for this rule with the `{ "classes": "never" }` option:
+选项 `{ "classes": "never" }` 的 **错误** 代码示例：
 
 
 
@@ -398,7 +397,7 @@ class  A {
 }
 ```
 
-Examples of **correct** code for this rule with the `{ "classes": "never" }` option:
+选项 `{ "classes": "never" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -413,7 +412,7 @@ class  A {
 
 ### switches
 
-Examples of **incorrect** code for this rule with the `{ "switches": "always" }` option:
+选项 `{ "switches": "always" }` 的 **错误** 代码示例：
 
 
 
@@ -425,7 +424,7 @@ switch (a) {
 }
 ```
 
-Examples of **correct** code for this rule with the `{ "switches": "always" }` option:
+选项 `{ "switches": "always" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -443,7 +442,7 @@ if (a) {
 }
 ```
 
-Examples of **incorrect** code for this rule with the `{ "switches": "never" }` option:
+选项 `{ "switches": "never" }` 的 **错误** 代码示例：
 
 
 
@@ -457,7 +456,7 @@ switch (a) {
 }
 ```
 
-Examples of **correct** code for this rule with the `{ "switches": "never" }` option:
+选项 `{ "switches": "never" }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -477,7 +476,7 @@ if (a) {
 
 ### always + allowSingleLineBlocks
 
-Examples of **incorrect** code for this rule with the `"always", {"allowSingleLineBlocks": true}` options:
+选项 `"always", {"allowSingleLineBlocks": true}`  的 **错误** 代码示例：
 
 
 
@@ -499,7 +498,7 @@ if (a) {
 }
 ```
 
-Examples of **correct** code for this rule with the `"always", {"allowSingleLineBlocks": true}` options:
+选项 `"always", {"allowSingleLineBlocks": true}`  的 **正确** 代码示例：
 
 ::: correct
 
@@ -515,6 +514,6 @@ if (a) {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 You can turn this rule off if you are not concerned with the consistency of padding within blocks.

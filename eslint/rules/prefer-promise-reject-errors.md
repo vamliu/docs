@@ -1,6 +1,5 @@
 ---
 规则名: prefer-promise-reject-errors
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-throw-literal
@@ -21,7 +20,7 @@ This rule takes one optional object argument:
 
 * `allowEmptyReject: true` (`false` by default) allows calls to `Promise.reject()` with no arguments.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -44,7 +43,7 @@ new Promise(function(resolve, reject) {
 
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -63,7 +62,7 @@ var foo = getUnknownValue();
 Promise.reject(foo);
 ```
 
-Examples of **correct** code for this rule with the `allowEmptyReject: true` option:
+选项 `allowEmptyReject: true` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -83,6 +82,6 @@ Due to the limits of static analysis, this rule cannot guarantee that you will o
 
 To avoid conflicts between rules, this rule does not report non-error values used in `throw` statements in async functions, even though these lead to Promise rejections. To lint for these cases, use the [`no-throw-literal`](no-throw-literal) rule.
 
-## 使用建议
+## 禁用建议
 
 If you're using custom non-error values as Promise rejection reasons, you can turn off this rule.

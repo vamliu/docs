@@ -1,6 +1,5 @@
 ---
 规则名: no-useless-computed-key
-布局: doc
 规则类型: suggestion
 ---
 
@@ -22,7 +21,7 @@ var foo = {"a": "b"};
 
 This rule disallows unnecessary usage of computed property keys.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -36,7 +35,7 @@ var a = { ['x']: 0 };
 var a = { ['x']() {} };
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -77,7 +76,7 @@ as the default value for `enforceForClassMembers` is `false`.
 
 When `enforceForClassMembers` is set to `true`, the rule will also disallow unnecessary computed keys inside of class fields, class methods, class getters, and class setters.
 
-Examples of **incorrect** code for this rule with the `{ "enforceForClassMembers": true }` option:
+选项 `{ "enforceForClassMembers": true }` 的 **错误** 代码示例：
 
 
 
@@ -98,7 +97,7 @@ class Foo {
 }
 ```
 
-Examples of **correct** code for this rule with the `{ "enforceForClassMembers": true }` option:
+选项 `{ "enforceForClassMembers": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -139,6 +138,6 @@ class Foo {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to be notified about unnecessary computed property keys, you can safely disable this rule.

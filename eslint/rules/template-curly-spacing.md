@@ -1,6 +1,5 @@
 ---
 规则名: template-curly-spacing
-布局: doc
 规则类型: layout
 ---
 
@@ -35,7 +34,7 @@ This rule has one option which has either `"never"` or `"always"` as value.
 
 ### never
 
-Examples of **incorrect** code for this rule with the default `"never"` option:
+选项 `"never"`  默认值的 **错误** 代码示例：
 
 
 
@@ -48,7 +47,7 @@ Examples of **incorrect** code for this rule with the default `"never"` option:
 `hello, ${ people.name }!`;
 ```
 
-Examples of **correct** code for this rule with the default `"never"` option:
+选项 `"never"` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -64,7 +63,7 @@ Examples of **correct** code for this rule with the default `"never"` option:
 
 ### always
 
-Examples of **incorrect** code for this rule with the `"always"` option:
+选项 `"always"` 的 **错误** 代码示例：
 
 
 
@@ -77,7 +76,7 @@ Examples of **incorrect** code for this rule with the `"always"` option:
 `hello, ${people.name}!`;
 ```
 
-Examples of **correct** code for this rule with the `"always"` option:
+选项 `"always"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -91,6 +90,6 @@ Examples of **correct** code for this rule with the `"always"` option:
 }!`;
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to be notified about usage of spacing inside of template strings, then it's safe to disable this rule.

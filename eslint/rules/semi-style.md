@@ -1,6 +1,5 @@
 ---
 规则名: semi-style
-布局: doc
 规则类型: layout
 关联规则:
 - no-extra-semi
@@ -131,6 +130,6 @@ class C {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to notify the location of semicolons, then it's safe to disable this rule.

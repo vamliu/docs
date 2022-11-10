@@ -1,6 +1,5 @@
 ---
 规则名: no-mixed-operators
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-extra-parens
@@ -37,7 +36,7 @@ This rule checks `BinaryExpression`, `LogicalExpression` and `ConditionalExpress
 This rule may conflict with [no-extra-parens](no-extra-parens) rule.
 If you use both this and [no-extra-parens](no-extra-parens) rule together, you need to use the `nestedBinaryExpressions` option of [no-extra-parens](no-extra-parens) rule.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -48,7 +47,7 @@ var foo = a && b < 0 || c > 0 || d + 1 === 0;
 var foo = a + b * c;
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -196,6 +195,6 @@ Examples of **correct** code for this rule with `{"allowSamePrecedence": false}`
 var foo = (a + b) - c;
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to be notified about mixed operators, then it's safe to disable this rule.

@@ -1,6 +1,5 @@
 ---
 规则名: switch-colon-spacing
-布局: doc
 规则类型: layout
 ---
 
@@ -26,7 +25,7 @@ This rule has 2 options that are boolean value.
 * `"before": true` requires one or more spaces before colons.
 * `"before": false` (Default) disallows before colons.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -39,7 +38,7 @@ switch (a) {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -88,6 +87,6 @@ switch (a) {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to notify spacing around colons of switch statements, then it's safe to disable this rule.

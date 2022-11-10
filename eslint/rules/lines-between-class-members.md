@@ -1,6 +1,5 @@
 ---
 规则名: lines-between-class-members
-布局: doc
 规则类型: layout
 关联规则:
 - padded-blocks
@@ -13,7 +12,7 @@ This rule improves readability by enforcing lines between class members. It will
 
 ## 规则详解
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -30,7 +29,7 @@ class MyClass {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -137,11 +136,11 @@ class Foo{
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to enforce empty lines between class members, you can disable this rule.
 
-## Compatibility
+## 兼容
 
 * [requirePaddingNewLinesAfterBlocks](https://jscs-dev.github.io/rule/requirePaddingNewLinesAfterBlocks)
 * [disallowPaddingNewLinesAfterBlocks](https://jscs-dev.github.io/rule/disallowPaddingNewLinesAfterBlocks)

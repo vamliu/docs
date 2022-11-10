@@ -1,6 +1,5 @@
 ---
 规则名: prefer-const
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-var
@@ -17,7 +16,7 @@ If a variable is never reassigned, using the `const` declaration is better.
 
 This rule is aimed at flagging variables that are declared using `let` keyword, but never reassigned after the initial assignment.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -51,7 +50,7 @@ for (let a of [1, 2, 3]) {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -235,6 +234,6 @@ function initialize() {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to be notified about variables that are never reassigned after initial assignment, you can safely disable this rule.

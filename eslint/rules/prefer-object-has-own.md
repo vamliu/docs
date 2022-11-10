@@ -1,6 +1,5 @@
 ---
 规则名: prefer-object-has-own
-布局: doc
 规则类型: suggestion
 深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn
@@ -28,7 +27,7 @@ if (Object.hasOwn(object, "foo")) {
 
 ## 规则详解
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -44,7 +43,7 @@ Object.hasOwnProperty.call(obj, "a");
 const hasProperty = Object.prototype.hasOwnProperty.call(object, property);
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -56,6 +55,6 @@ Object.hasOwn(obj, "a");
 const hasProperty = Object.hasOwn(object, property);
 ```
 
-## 使用建议
+## 禁用建议
 
 This rule should not be used unless ES2022 is supported in your codebase.

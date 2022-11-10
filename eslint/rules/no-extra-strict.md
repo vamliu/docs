@@ -1,6 +1,5 @@
 ---
 规则名: no-extra-strict
-布局: doc
 
 深入了解:
 - https://es5.github.io/#C
@@ -38,7 +37,7 @@ Example of **incorrect** code for this rule:
 }());
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

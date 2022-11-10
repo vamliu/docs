@@ -1,6 +1,5 @@
 ---
 规则名: no-self-assign
-布局: doc
 规则类型: problem
 ---
 
@@ -18,7 +17,7 @@ foo = foo;
 
 This rule is aimed at eliminating self assignments.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -38,7 +37,7 @@ foo ||= foo;
 foo ??= foo;
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -101,6 +100,6 @@ obj["a"] = obj["a"];
 obj[a] = obj[a];
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to notify about self assignments, then it's safe to disable this rule.

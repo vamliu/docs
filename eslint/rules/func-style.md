@@ -1,6 +1,5 @@
 ---
 规则名: func-style
-布局: doc
 规则类型: suggestion
 深入了解:
 - https://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html
@@ -66,7 +65,7 @@ This rule has an object option for an exception:
 
 ### expression
 
-Examples of **incorrect** code for this rule with the default `"expression"` option:
+选项 `"expression"`  默认值的 **错误** 代码示例：
 
 
 
@@ -78,7 +77,7 @@ function foo() {
 }
 ```
 
-Examples of **correct** code for this rule with the default `"expression"` option:
+选项 `"expression"` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -96,7 +95,7 @@ var foo = () => {};
 
 ### declaration
 
-Examples of **incorrect** code for this rule with the `"declaration"` option:
+选项 `"declaration"` 的 **错误** 代码示例：
 
 
 
@@ -110,7 +109,7 @@ var foo = function() {
 var foo = () => {};
 ```
 
-Examples of **correct** code for this rule with the `"declaration"` option:
+选项 `"declaration"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -139,6 +138,6 @@ Examples of additional **correct** code for this rule with the `"declaration", {
 var foo = () => {};
 ```
 
-## 使用建议
+## 禁用建议
 
 If you want to allow developers to each decide how they want to write functions on their own, then you can disable this rule.

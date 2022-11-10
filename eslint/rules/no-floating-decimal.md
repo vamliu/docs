@@ -1,6 +1,5 @@
 ---
 规则名: no-floating-decimal
-布局: doc
 规则类型: suggestion
 ---
 
@@ -20,7 +19,7 @@ Although not a syntax error, this format for numbers can make it difficult to di
 
 This rule is aimed at eliminating floating decimal points and will warn whenever a numeric value has a decimal point but is missing a number either before or after it.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -32,7 +31,7 @@ var num = 2.;
 var num = -.7;
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -44,10 +43,10 @@ var num = 2.0;
 var num = -0.7;
 ```
 
-## 使用建议
+## 禁用建议
 
 If you aren't concerned about misinterpreting floating decimal point values, then you can safely turn this rule off.
 
-## Compatibility
+## 兼容
 
 * **JSHint**: W008, W047

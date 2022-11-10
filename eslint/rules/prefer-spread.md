@@ -1,6 +1,5 @@
 ---
 规则名: prefer-spread
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-useless-call
@@ -29,7 +28,7 @@ This rule is aimed to flag usage of `Function.prototype.apply()` in situations w
 
 ## Examples
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -41,7 +40,7 @@ foo.apply(null, args);
 obj.foo.apply(obj, args);
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -78,7 +77,7 @@ a[i++].foo.apply(a[i++], args);
 a[++i].foo.apply(a[i], args);
 ```
 
-## 使用建议
+## 禁用建议
 
 This rule should not be used in ES3/5 environments.
 

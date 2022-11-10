@@ -1,6 +1,5 @@
 ---
 规则名: require-atomic-updates
-布局: doc
 规则类型: problem
 ---
 
@@ -60,7 +59,7 @@ Note that the rule does not report the assignment in step 3 in any of the follow
 * If the variable is read again between steps 2 and 3.
 * If the variable cannot be accessed while the function is paused (for example, if it's a local variable).
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -92,7 +91,7 @@ function* generator() {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -192,6 +191,6 @@ async function foo(obj) {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't use async or generator functions, you don't need to enable this rule.

@@ -1,6 +1,5 @@
 ---
 规则名: no-tabs
-布局: doc
 规则类型: layout
 ---
 
@@ -11,7 +10,7 @@ Some style guides don't allow the use of tab characters at all, including within
 
 This rule looks for tabs anywhere inside a file: code, comments or anything else.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -26,7 +25,7 @@ function test(){}
 var x = 1; // \t test
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -49,7 +48,7 @@ This rule has an optional object option with the following properties:
 
 #### allowIndentationTabs
 
-Examples of **correct** code for this rule with the `allowIndentationTabs: true` option:
+选项 `allowIndentationTabs: true` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -63,10 +62,10 @@ function test() {
 \t// comment with leading indentation tab
 ```
 
-## 使用建议
+## 禁用建议
 
 If you have established a standard where having tabs is fine, then you can disable this rule.
 
-## Compatibility
+## 兼容
 
 * **JSCS**: [disallowTabs](https://jscs-dev.github.io/rule/disallowTabs)

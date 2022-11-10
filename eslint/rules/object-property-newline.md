@@ -1,6 +1,5 @@
 ---
 规则名: object-property-newline
-布局: doc
 规则类型: layout
 关联规则:
 - brace-style
@@ -271,10 +270,10 @@ const obj3 = {
 };
 ```
 
-## 使用建议
+## 禁用建议
 
 You can turn this rule off if you want to decide, case-by-case, whether to place property specifications on separate lines.
 
-## Compatibility
+## 兼容
 
 * **JSCS**: This rule provides partial compatibility with [requireObjectKeysOnNewLine](https://jscs-dev.github.io/rule/requireObjectKeysOnNewLine).

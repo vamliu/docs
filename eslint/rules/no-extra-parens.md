@@ -1,6 +1,5 @@
 ---
 规则名: no-extra-parens
-布局: doc
 规则类型: layout
 关联规则:
 - arrow-parens
@@ -42,7 +41,7 @@ This rule has an object option for exceptions to the `"all"` option:
 
 ### all
 
-Examples of **incorrect** code for this rule with the default `"all"` option:
+选项 `"all"`  默认值的 **错误** 代码示例：
 
 
 
@@ -72,7 +71,7 @@ class B {
 }
 ```
 
-Examples of **correct** code for this rule with the default `"all"` option:
+选项 `"all"` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -108,7 +107,7 @@ class B {
 
 ### conditionalAssign
 
-Examples of **correct** code for this rule with the `"all"` and `{ "conditionalAssign": false }` options:
+选项 `"all"` and `{ "conditionalAssign": false }`  的 **正确** 代码示例：
 
 ::: correct
 
@@ -126,7 +125,7 @@ for (;(a = b););
 
 ### returnAssign
 
-Examples of **correct** code for this rule with the `"all"` and `{ "returnAssign": false }` options:
+选项 `"all"` and `{ "returnAssign": false }`  的 **正确** 代码示例：
 
 ::: correct
 
@@ -148,7 +147,7 @@ b => b ? (c = d) : (c = e);
 
 ### nestedBinaryExpressions
 
-Examples of **correct** code for this rule with the `"all"` and `{ "nestedBinaryExpressions": false }` options:
+选项 `"all"` and `{ "nestedBinaryExpressions": false }`  的 **正确** 代码示例：
 
 ::: correct
 
@@ -162,7 +161,7 @@ x = (a * b) / c;
 
 ### ignoreJSX
 
-Examples of **correct** code for this rule with the `all` and `{ "ignoreJSX": "all" }` options:
+选项 `all` and `{ "ignoreJSX": "all" }`  的 **正确** 代码示例：
 
 ::: correct
 
@@ -176,7 +175,7 @@ const Component = (
 )
 ```
 
-Examples of **incorrect** code for this rule with the `all` and `{ "ignoreJSX": "multi-line" }` options:
+选项 `all` and `{ "ignoreJSX": "multi-line" }`  的 **错误** 代码示例：
 
 
 
@@ -186,7 +185,7 @@ const Component = (<div />)
 const Component = (<div><p /></div>)
 ```
 
-Examples of **correct** code for this rule with the `all` and `{ "ignoreJSX": "multi-line" }` options:
+选项 `all` and `{ "ignoreJSX": "multi-line" }`  的 **正确** 代码示例：
 
 ::: correct
 
@@ -204,7 +203,7 @@ const Component = (
 )
 ```
 
-Examples of **incorrect** code for this rule with the `all` and `{ "ignoreJSX": "single-line" }` options:
+选项 `all` and `{ "ignoreJSX": "single-line" }`  的 **错误** 代码示例：
 
 
 
@@ -222,7 +221,7 @@ const Component = (
 )
 ```
 
-Examples of **correct** code for this rule with the `all` and `{ "ignoreJSX": "single-line" }` options:
+选项 `all` and `{ "ignoreJSX": "single-line" }`  的 **正确** 代码示例：
 
 ::: correct
 
@@ -234,7 +233,7 @@ const Component = (<div><p /></div>)
 
 ### enforceForArrowConditionals
 
-Examples of **correct** code for this rule with the `"all"` and `{ "enforceForArrowConditionals": false }` options:
+选项 `"all"` and `{ "enforceForArrowConditionals": false }`  的 **正确** 代码示例：
 
 ::: correct
 
@@ -247,7 +246,7 @@ const d = c => (1 ? 2 : 3);
 
 ### enforceForSequenceExpressions
 
-Examples of **correct** code for this rule with the `"all"` and `{ "enforceForSequenceExpressions": false }` options:
+选项 `"all"` and `{ "enforceForSequenceExpressions": false }`  的 **正确** 代码示例：
 
 ::: correct
 
@@ -263,7 +262,7 @@ while ((val = foo(), val < 10));
 
 ### enforceForNewInMemberExpressions
 
-Examples of **correct** code for this rule with the `"all"` and `{ "enforceForNewInMemberExpressions": false }` options:
+选项 `"all"` and `{ "enforceForNewInMemberExpressions": false }`  的 **正确** 代码示例：
 
 ::: correct
 
@@ -279,7 +278,7 @@ const quux = (new Bar())[baz];
 
 ### enforceForFunctionPrototypeMethods
 
-Examples of **correct** code for this rule with the `"all"` and `{ "enforceForFunctionPrototypeMethods": false }` options:
+选项 `"all"` and `{ "enforceForFunctionPrototypeMethods": false }`  的 **正确** 代码示例：
 
 ::: correct
 
@@ -297,7 +296,7 @@ const quux = (function () {}.apply());
 
 ### functions
 
-Examples of **incorrect** code for this rule with the `"functions"` option:
+选项 `"functions"` 的 **错误** 代码示例：
 
 
 
@@ -309,7 +308,7 @@ Examples of **incorrect** code for this rule with the `"functions"` option:
 var y = (function () {return 1;});
 ```
 
-Examples of **correct** code for this rule with the `"functions"` option:
+选项 `"functions"` 的 **正确** 代码示例：
 
 ::: correct
 

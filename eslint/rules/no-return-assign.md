@@ -1,6 +1,5 @@
 ---
 规则名: no-return-assign
-布局: doc
 规则类型: suggestion
 ---
 
@@ -126,6 +125,6 @@ function doSomething() {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you want to allow the use of assignment operators in a `return` statement, then you can safely disable this rule.

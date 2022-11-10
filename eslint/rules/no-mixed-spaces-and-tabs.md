@@ -1,6 +1,5 @@
 ---
 规则名: no-mixed-spaces-and-tabs
-布局: doc
 规则类型: layout
 深入了解:
 - https://www.emacswiki.org/emacs/SmartTabs
@@ -14,7 +13,7 @@ Most code conventions require either tabs or spaces be used for indentation. As 
 
 This rule disallows mixed spaces and tabs for indentation.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -36,7 +35,7 @@ function main() {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -57,7 +56,7 @@ This rule has a string option.
 
 ### smart-tabs
 
-Examples of **correct** code for this rule with the `"smart-tabs"` option:
+选项 `"smart-tabs"` 的 **正确** 代码示例：
 
 ::: correct
 

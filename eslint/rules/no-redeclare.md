@@ -1,6 +1,5 @@
 ---
 规则名: no-redeclare
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-shadow
@@ -14,7 +13,7 @@ In JavaScript, it's possible to redeclare the same variable name using `var`. Th
 
 This rule is aimed at eliminating variables that have multiple declarations in the same scope.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -37,7 +36,7 @@ class C {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

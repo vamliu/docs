@@ -1,6 +1,5 @@
 ---
 规则名: no-labels
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-extra-label
@@ -29,7 +28,7 @@ While convenient in some cases, labels tend to be used only rarely and are frown
 
 This rule aims to eliminate the use of labeled statements in JavaScript. It will warn whenever a labeled statement is encountered and whenever `break` or `continue` are used with a label.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -68,7 +67,7 @@ label:
     }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -129,6 +128,6 @@ label:
     }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you need to use labeled statements everywhere, then you can safely disable this rule.

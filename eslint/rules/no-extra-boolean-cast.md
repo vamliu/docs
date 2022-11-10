@@ -1,6 +1,5 @@
 ---
 规则名: no-extra-boolean-cast
-布局: doc
 规则类型: suggestion
 ---
 
@@ -28,7 +27,7 @@ if (foo) {
 
 This rule disallows unnecessary boolean casts.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -64,7 +63,7 @@ for (; !!foo; ) {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

@@ -1,6 +1,5 @@
 ---
 规则名: prefer-rest-params
-布局: doc
 规则类型: suggestion
 关联规则:
 - prefer-spread
@@ -18,7 +17,7 @@ This rule is aimed to flag usage of `arguments` variables.
 
 ## Examples
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -40,7 +39,7 @@ function foo(action) {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -65,7 +64,7 @@ function foo() {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 This rule should not be used in ES3/5 environments.
 

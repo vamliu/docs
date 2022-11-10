@@ -1,6 +1,5 @@
 ---
 规则名: function-paren-newline
-布局: doc
 规则类型: layout
 ---
 
@@ -41,7 +40,7 @@ Example configurations:
 }
 ```
 
-Examples of **incorrect** code for this rule with the `"always"` option:
+选项 `"always"` 的 **错误** 代码示例：
 
 
 
@@ -57,7 +56,7 @@ var foo = (bar, baz) => {};
 foo(bar, baz);
 ```
 
-Examples of **correct** code for this rule with the `"always"` option:
+选项 `"always"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -84,7 +83,7 @@ foo(
 );
 ```
 
-Examples of **incorrect** code for this rule with the `"never"` option:
+选项 `"never"` 的 **错误** 代码示例：
 
 
 
@@ -111,7 +110,7 @@ foo(
 );
 ```
 
-Examples of **correct** code for this rule with the `"never"` option:
+选项 `"never"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -133,7 +132,7 @@ foo(bar,
   baz);
 ```
 
-Examples of **incorrect** code for this rule with the default `"multiline"` option:
+选项 `"multiline"`  默认值的 **错误** 代码示例：
 
 
 
@@ -162,7 +161,7 @@ foo(
 );
 ```
 
-Examples of **correct** code for this rule with the default `"multiline"` option:
+选项 `"multiline"` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -191,7 +190,7 @@ foo(function() {
 });
 ```
 
-Examples of **incorrect** code for this rule with the `"consistent"` option:
+选项 `"consistent"` 的 **错误** 代码示例：
 
 
 
@@ -220,7 +219,7 @@ foo(
   });
 ```
 
-Examples of **correct** code for this rule with the `"consistent"` option:
+选项 `"consistent"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -248,7 +247,7 @@ foo(
 );
 ```
 
-Examples of **incorrect** code for this rule with the `"multiline-arguments"` option:
+选项 `"multiline-arguments"` 的 **错误** 代码示例：
 
 
 
@@ -302,7 +301,7 @@ foo(
 );
 ```
 
-Examples of **incorrect** code for this rule with the `{ "minItems": 3 }` option:
+选项 `{ "minItems": 3 }` 的 **错误** 代码示例：
 
 
 
@@ -327,7 +326,7 @@ foo(bar,
   baz);
 ```
 
-Examples of **correct** code for this rule with the `{ "minItems": 3 }` option:
+选项 `{ "minItems": 3 }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -353,6 +352,6 @@ foo(
 );
 ```
 
-## 使用建议
+## 禁用建议
 
 If don't want to enforce consistent linebreaks inside function parentheses, do not turn on this rule.

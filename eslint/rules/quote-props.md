@@ -1,6 +1,5 @@
 ---
 规则名: quote-props
-布局: doc
 规则类型: suggestion
 深入了解:
 - https://kangax.github.io/compat-table/es5/#Reserved_words_as_property_names
@@ -63,7 +62,7 @@ Object option:
 
 ### always
 
-Examples of **incorrect** code for this rule with the default `"always"` option:
+选项 `"always"`  默认值的 **错误** 代码示例：
 
 
 
@@ -76,7 +75,7 @@ var object = {
 };
 ```
 
-Examples of **correct** code for this rule with the default `"always"` option:
+选项 `"always"` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -105,7 +104,7 @@ var object3 = {
 
 ### as-needed
 
-Examples of **incorrect** code for this rule with the `"as-needed"` option:
+选项 `"as-needed"` 的 **错误** 代码示例：
 
 
 
@@ -120,7 +119,7 @@ var object = {
 };
 ```
 
-Examples of **correct** code for this rule with the `"as-needed"` option:
+选项 `"as-needed"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -151,7 +150,7 @@ var object3 = {
 
 ### consistent
 
-Examples of **incorrect** code for this rule with the `"consistent"` option:
+选项 `"consistent"` 的 **错误** 代码示例：
 
 
 
@@ -170,7 +169,7 @@ var object2 = {
 };
 ```
 
-Examples of **correct** code for this rule with the `"consistent"` option:
+选项 `"consistent"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -196,7 +195,7 @@ var object3 = {
 
 ### consistent-as-needed
 
-Examples of **incorrect** code for this rule with the `"consistent-as-needed"` option:
+选项 `"consistent-as-needed"` 的 **错误** 代码示例：
 
 
 
@@ -215,7 +214,7 @@ var object2 = {
 };
 ```
 
-Examples of **correct** code for this rule with the `"consistent-as-needed"` option:
+选项 `"consistent-as-needed"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -291,6 +290,6 @@ var x = {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't care if property names are consistently wrapped in quotes or not, and you don't target legacy ES3 environments, turn this rule off.

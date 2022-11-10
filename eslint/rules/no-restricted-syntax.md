@@ -1,6 +1,5 @@
 ---
 规则名: no-restricted-syntax
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-alert
@@ -56,7 +55,7 @@ If a custom message is specified with the `message` property, ESLint will use th
 
 The string and object formats can be freely mixed in the configuration as needed.
 
-Examples of **incorrect** code for this rule with the `"FunctionExpression", "WithStatement", BinaryExpression[operator='in']` options:
+选项 `"FunctionExpression", "WithStatement", BinaryExpression[operator='in']`  的 **错误** 代码示例：
 
 
 
@@ -72,7 +71,7 @@ var doSomething = function () {};
 foo in bar;
 ```
 
-Examples of **correct** code for this rule with the `"FunctionExpression", "WithStatement", BinaryExpression[operator='in']` options:
+选项 `"FunctionExpression", "WithStatement", BinaryExpression[operator='in']`  的 **正确** 代码示例：
 
 ::: correct
 
@@ -86,6 +85,6 @@ function doSomething() {};
 foo instanceof bar;
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to restrict your code from using any JavaScript features or syntax, you should not use this rule.

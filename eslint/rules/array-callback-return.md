@@ -1,12 +1,9 @@
 ---
 规则名: array-callback-return
-布局: doc
 规则类型: problem
 ---
 
-
-`Array` has several methods for filtering, mapping, and folding.
-If we forget to write `return` statement in a callback of those, it's probably a mistake. If you don't want to use a return or don't need the returned results, consider using [.forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) instead.
+忘记在数组的过滤、映射和折叠方法的回调中写 `return` 语句可能会导致错误。如果你不想使用 `return` 或不需要返回的结果，请改用 [.forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) 。
 
 ```js
 // example: convert ['a', 'b', 'c'] --> {a: 0, b: 1, c: 2}
@@ -17,10 +14,9 @@ var indexMap = myArray.reduce(function(memo, item, index) {
 
 ## 规则详解
 
-This rule enforces usage of `return` statement in callbacks of array's methods.
-Additionally, it may also enforce the `forEach` array method callback to **not** return a value by using the `checkForEach` option.
+此规则强制在数组方法的回调中使用 `return` 语句。此外，它还可以通过使用 `checkForEach` 选项强制 `forEach` 数组方法回调 **不** 返回值。
 
-This rule finds callback functions of the following methods, then checks usage of `return` statement.
+此规则检查以下方法的回调函数 `return` 语句的用法：
 
 * [`Array.from`](https://www.ecma-international.org/ecma-262/6.0/#sec-array.from)
 * [`Array.prototype.every`](https://www.ecma-international.org/ecma-262/6.0/#sec-array.prototype.every)
@@ -30,15 +26,15 @@ This rule finds callback functions of the following methods, then checks usage o
 * [`Array.prototype.findLast`](https://tc39.es/ecma262/#sec-array.prototype.findlast)
 * [`Array.prototype.findLastIndex`](https://tc39.es/ecma262/#sec-array.prototype.findlastindex)
 * [`Array.prototype.flatMap`](https://www.ecma-international.org/ecma-262/10.0/#sec-array.prototype.flatmap)
-* [`Array.prototype.forEach`](https://www.ecma-international.org/ecma-262/6.0/#sec-array.prototype.foreach) (optional, based on `checkForEach` parameter)
+* [`Array.prototype.forEach`](https://www.ecma-international.org/ecma-262/6.0/#sec-array.prototype.foreach) (可选，基于 `checkForEach` 参数)
 * [`Array.prototype.map`](https://www.ecma-international.org/ecma-262/6.0/#sec-array.prototype.map)
 * [`Array.prototype.reduce`](https://www.ecma-international.org/ecma-262/6.0/#sec-array.prototype.reduce)
 * [`Array.prototype.reduceRight`](https://www.ecma-international.org/ecma-262/6.0/#sec-array.prototype.reduceright)
 * [`Array.prototype.some`](https://www.ecma-international.org/ecma-262/6.0/#sec-array.prototype.some)
 * [`Array.prototype.sort`](https://www.ecma-international.org/ecma-262/6.0/#sec-array.prototype.sort)
-* And above of typed arrays.
+* 以及数组实例的以上类型方法。
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 ```js
 /*eslint array-callback-return: "error"*/
@@ -62,7 +58,7 @@ var bar = foo.filter(function(x) {
 });
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ```js
 /*eslint array-callback-return: "error"*/
@@ -84,10 +80,10 @@ var bar = foo.map(node => node.getAttribute("id"));
 
 ## 配置项
 
-This rule accepts a configuration object with two options:
+此规则接受两个选项的配置对象：
 
-* `"allowImplicit": false` (default) When set to `true`, allows callbacks of methods that require a return value to implicitly return `undefined` with a `return` statement containing no expression.
-* `"checkForEach": false` (default) When set to `true`, rule will also report `forEach` callbacks that return a value.
+* `"allowImplicit": false` （默认值）当设置为 `true` 时，允许需要返回值的方法回调 `return` 语句隐式返回不包含表达式的 `undefined` 。
+* `"checkForEach": false` （默认）设置为true时，规则将会应用于 `forEach` 的回调。
 
 ### allowImplicit
 
@@ -153,8 +149,8 @@ myArray.forEach(item => {
 
 ## 已知局限
 
-This rule checks callback functions of methods with the given names, *even if* the object which has the method is *not* an array.
+此规则匹配给定方法名称，即使拥有该方法的对象类型 *不* 是数组，也会检查该方法的回调函数。
 
-## 使用建议
+## 禁用建议
 
-If you don't want to warn about usage of `return` statement in callbacks of array's methods, then it's safe to disable this rule.
+如果您不想在数组方法的回调中使用 `return` 语句触发警告，那么禁用此规则是安全的。

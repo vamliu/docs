@@ -1,6 +1,5 @@
 ---
 规则名: semi-spacing
-布局: doc
 规则类型: layout
 关联规则:
 - semi
@@ -51,7 +50,7 @@ The default is `{"before": false, "after": true}`.
 
 This is the default option. It enforces spacing after semicolons and disallows spacing before semicolons.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -66,7 +65,7 @@ for (i = 0 ; i < 10 ; i++) {}
 for (i = 0;i < 10;i++) {}
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -87,7 +86,7 @@ if (true) {;}
 
 This option enforces spacing before semicolons and disallows spacing after semicolons.
 
-Examples of **incorrect** code for this rule with the `{"before": true, "after": false}` option:
+选项 `{"before": true, "after": false}` 的 **错误** 代码示例：
 
 
 
@@ -102,7 +101,7 @@ for (i = 0;i < 10;i++) {}
 for (i = 0; i < 10; i++) {}
 ```
 
-Examples of **correct** code for this rule with the `{"before": true, "after": false}` option:
+选项 `{"before": true, "after": false}` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -116,6 +115,6 @@ while (a) {break ;}
 for (i = 0 ;i < 10 ;i++) {}
 ```
 
-## 使用建议
+## 禁用建议
 
 You can turn this rule off if you are not concerned with the consistency of spacing before or after semicolons.

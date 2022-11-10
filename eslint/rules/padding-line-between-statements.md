@@ -1,6 +1,5 @@
 ---
 规则名: padding-line-between-statements
-布局: doc
 规则类型: layout
 ---
 
@@ -299,11 +298,11 @@ switch (foo) {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to notify warnings about linebreaks, then it's safe to disable this rule.
 
-## Compatibility
+## 兼容
 
 * **JSCS:** [requirePaddingNewLineAfterVariableDeclaration](https://jscs-dev.github.io/rule/requirePaddingNewLineAfterVariableDeclaration)
 * **JSCS:** [requirePaddingNewLinesAfterBlocks](https://jscs-dev.github.io/rule/requirePaddingNewLinesAfterBlocks)

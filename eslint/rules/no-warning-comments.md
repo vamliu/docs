@@ -1,6 +1,5 @@
 ---
 规则名: no-warning-comments
-布局: doc
 规则类型: suggestion
 ---
 
@@ -138,7 +137,7 @@ Examples of **correct** code for the `{ "decoration": ["/", "*"] }` options:
  */
 ```
 
-## 使用建议
+## 禁用建议
 
 * If you have a large code base that was not developed with a policy to not use such warning terms, you might get hundreds of warnings / errors which might be counter-productive if you can't fix all of them (e.g. if you don't get the time to do it) as you might overlook other warnings / errors or get used to many of them and don't pay attention on it anymore.
 * Same reason as the point above: You shouldn't configure terms that are used very often (e.g. central parts of the native language used in your comments).

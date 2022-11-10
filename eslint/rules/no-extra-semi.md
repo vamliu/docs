@@ -1,6 +1,5 @@
 ---
 规则名: no-extra-semi
-布局: doc
 规则类型: suggestion
 关联规则:
 - semi
@@ -17,7 +16,7 @@ Typing mistakes and misunderstandings about where semicolons are required can le
 
 This rule disallows unnecessary semicolons.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -43,7 +42,7 @@ class C {
 };
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -73,6 +72,6 @@ class C {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you intentionally use extra semicolons then you can disable this rule.

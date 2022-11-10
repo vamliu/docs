@@ -1,6 +1,5 @@
 ---
 规则名: handle-callback-err
-布局: doc
 规则类型: suggestion
 深入了解:
 - https://github.com/maxogden/art-of-node#callbacks
@@ -86,7 +85,7 @@ If the configured name of the error variable begins with a `^` it is considered 
 * If the option is `"^.+Error$"`, the rule reports unhandled errors where the parameter name ends with `Error` (for example, `connectionError` or `validationError` will match).
 * If the option is `"^.*(e|E)rr"`, the rule reports unhandled errors where the parameter name matches any string that contains `err` or `Err` (for example, `err`, `error`, `anyError`, `some_err` will match).
 
-## 使用建议
+## 禁用建议
 
 There are cases where it may be safe for your application to ignore errors, however only ignore errors if you are
 confident that some other form of monitoring will help you catch the problem.

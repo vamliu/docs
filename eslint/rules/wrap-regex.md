@@ -1,6 +1,5 @@
 ---
 规则名: wrap-regex
-布局: doc
 规则类型: layout
 ---
 

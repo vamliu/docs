@@ -1,6 +1,5 @@
 ---
 规则名: no-undef
-布局: doc
 规则类型: problem
 关联规则:
 - no-global-assign
@@ -15,7 +14,7 @@ This rule can help you locate potential ReferenceErrors resulting from misspelli
 
 Any reference to an undeclared variable causes a warning, unless the variable is explicitly mentioned in a `/*global ...*/` comment, or specified in the [`globals` key in the configuration file](../user-guide/configuring/language-options#using-configuration-files-1). A common use case for these is if you intentionally use globals that are defined elsewhere (e.g. in a script sourced from HTML).
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -120,10 +119,10 @@ module.exports = function() {
 };
 ```
 
-## 使用建议
+## 禁用建议
 
 If explicit declaration of global variables is not to your taste.
 
-## Compatibility
+## 兼容
 
 This rule provides compatibility with treatment of global variables in [JSHint](http://jshint.com/) and [JSLint](http://www.jslint.com).

@@ -1,6 +1,5 @@
 ---
 规则名: newline-before-return
-布局: doc
 规则类型: layout
 关联规则:
 - newline-after-var
@@ -43,7 +42,7 @@ function foo(bar) {
 
 This rule requires an empty line before `return` statements to increase code clarity, except when the `return` is alone inside a statement group (such as an if statement). In the latter case, the `return` statement does not need to be delineated by virtue of it being alone. Comments are ignored and do not count as empty lines.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -67,7 +66,7 @@ function foo(bar) {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -119,6 +118,6 @@ function foo() {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 You can safely disable this rule if you do not have any strict conventions about whitespace before `return` statements.

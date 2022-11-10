@@ -1,6 +1,5 @@
 ---
 规则名: wrap-iife
-布局: doc
 规则类型: layout
 ---
 
@@ -105,7 +104,7 @@ var x = (function () { return { y: 1 };})(); // wrapped function expression
 
 ### functionPrototypeMethods
 
-Examples of **incorrect** code for this rule with the `"inside", { "functionPrototypeMethods": true }` options:
+选项 `"inside", { "functionPrototypeMethods": true }`  的 **错误** 代码示例：
 
 
 
@@ -118,7 +117,7 @@ var x = function(){ foo(); }.call(bar)
 var x = (function(){ foo(); }.call(bar))
 ```
 
-Examples of **correct** code for this rule with the `"inside", { "functionPrototypeMethods": true }` options:
+选项 `"inside", { "functionPrototypeMethods": true }`  的 **正确** 代码示例：
 
 ::: correct
 

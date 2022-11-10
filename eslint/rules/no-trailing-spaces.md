@@ -1,6 +1,5 @@
 ---
 规则名: no-trailing-spaces
-布局: doc
 规则类型: layout
 ---
 
@@ -12,7 +11,7 @@ Sometimes in the course of editing files, you can end up with extra whitespace a
 
 This rule disallows trailing whitespace (spaces, tabs, and other Unicode whitespace characters) at the end of lines.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -24,7 +23,7 @@ var baz = 5;//••
 //•••••
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -46,7 +45,7 @@ This rule has an object option:
 
 ### skipBlankLines
 
-Examples of **correct** code for this rule with the `{ "skipBlankLines": true }` option:
+选项 `{ "skipBlankLines": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -60,7 +59,7 @@ var baz = 5;
 
 ### ignoreComments
 
-Examples of **correct** code for this rule with the `{ "ignoreComments": true }` option:
+选项 `{ "ignoreComments": true }` 的 **正确** 代码示例：
 
 ::: correct
 

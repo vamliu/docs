@@ -1,6 +1,5 @@
 ---
 规则名: generator-star
-布局: doc
 深入了解:
 - https://leanpub.com/understandinges6/read/#leanpub-auto-generators
 ---
@@ -124,6 +123,6 @@ var generator = function*() {
 
 The shortened object literal syntax for generators is not affected by this rule.
 
-## 使用建议
+## 禁用建议
 
 If your project will not be using generators you do not need this rule.

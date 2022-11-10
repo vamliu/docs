@@ -1,6 +1,5 @@
 ---
 规则名: no-nonoctal-decimal-escape
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-octal-escape
@@ -29,7 +28,7 @@ Regardless of your targeted environment, these escape sequences shouldn't be use
 
 This rule disallows `\8` and `\9` escape sequences in string literals.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -49,7 +48,7 @@ var baz = "Don't use \8 and \9 escapes.";
 var quux = "\0\8";
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

@@ -1,6 +1,5 @@
 ---
 规则名: no-reserved-keys
-布局: doc
 
 深入了解:
 - https://kangax.github.io/compat-table/es5/#Reserved_words_as_property_names
@@ -26,7 +25,7 @@ ECMAScript 5 loosened the restriction such that keywords and reserved words can 
 
 This rule is aimed at eliminating the use of ECMAScript 3 keywords and reserved words as object literal keys. As such, it warns whenever an object key would throw an error in an ECMAScript 3 environment.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -41,7 +40,7 @@ var values = {
 };
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -56,6 +55,6 @@ var values = {
 };
 ```
 
-## 使用建议
+## 禁用建议
 
 If your code is only going to be executed in an ECMAScript 5 or higher environment, then you can safely leave this rule off.

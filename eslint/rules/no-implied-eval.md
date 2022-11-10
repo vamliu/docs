@@ -1,6 +1,5 @@
 ---
 规则名: no-implied-eval
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-eval
@@ -30,7 +29,7 @@ The best practice is to always use a function for the first argument of `setTime
 
 This rule aims to eliminate implied `eval()` through the use of `setTimeout()`, `setInterval()` or `execScript()`. As such, it will warn when either function is used with a string as the first argument.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -48,7 +47,7 @@ window.setTimeout("count = 5", 10);
 window.setInterval("foo = bar", 10);
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -64,6 +63,6 @@ setInterval(function() {
 }, 100);
 ```
 
-## 使用建议
+## 禁用建议
 
 If you want to allow `setTimeout()` and `setInterval()` with string arguments, then you can safely disable this rule.

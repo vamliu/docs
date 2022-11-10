@@ -1,6 +1,5 @@
 ---
 规则名: no-new-object
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-array-constructor
@@ -28,7 +27,7 @@ While there are no performance differences between the two approaches, the byte 
 
 This rule disallows `Object` constructors.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -40,7 +39,7 @@ var myObject = new Object();
 new Object();
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -55,6 +54,6 @@ var Object = function Object() {};
 new Object();
 ```
 
-## 使用建议
+## 禁用建议
 
 If you wish to allow the use of the `Object` constructor, you can safely turn this rule off.

@@ -1,6 +1,5 @@
 ---
 规则名: space-in-brackets
-布局: doc
 
 关联规则:
 - array-bracket-spacing
@@ -44,7 +43,7 @@ Depending on your coding conventions, you can choose either option by specifying
 
 ### "never"
 
-Examples of **incorrect** code for this rule with the default `"never"` option:
+选项 `"never"`  默认值的 **错误** 代码示例：
 
 
 
@@ -68,7 +67,7 @@ var obj = { baz: {'foo': 'qux'}, bar};
 var obj = {baz: { 'foo': 'qux' }, bar};
 ```
 
-Examples of **correct** code for this rule with the default `"never"` option:
+选项 `"never"` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -112,7 +111,7 @@ var obj = {};
 
 ### "always"
 
-Examples of **incorrect** code for this rule with the `"always"` option:
+选项 `"always"` 的 **错误** 代码示例：
 
 
 
@@ -145,7 +144,7 @@ var obj = {
   'foo':'bar'};
 ```
 
-Examples of **correct** code for this rule with the `"always"` option:
+选项 `"always"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -338,6 +337,6 @@ var foo = obj[bar];
 var foo = obj[0, 1];
 ```
 
-## 使用建议
+## 禁用建议
 
 You can turn this rule off if you are not concerned with the consistency of spacing between brackets.

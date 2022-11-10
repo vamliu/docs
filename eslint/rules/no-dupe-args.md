@@ -1,6 +1,5 @@
 ---
 规则名: no-dupe-args
-布局: doc
 规则类型: problem
 ---
 
@@ -14,7 +13,7 @@ This rule disallows duplicate parameter names in function declarations or expres
 
 If ESLint parses code in strict mode, the parser (instead of this rule) reports the error.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -30,7 +29,7 @@ var bar = function (a, b, a) {
 };
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

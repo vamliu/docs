@@ -1,6 +1,5 @@
 ---
 规则名: no-unsafe-finally
-布局: doc
 规则类型: problem
 ---
 
@@ -69,7 +68,7 @@ JavaScript suspends the control flow statements of `try` and `catch` blocks unti
 
 This rule disallows `return`, `throw`, `break`, and `continue` statements inside `finally` blocks. It allows indirect usages, such as in `function` or `class` definitions.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -101,7 +100,7 @@ let foo = function() {
 };
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -155,6 +154,6 @@ let foo = function(a) {
 };
 ```
 
-## 使用建议
+## 禁用建议
 
 If you want to allow control flow operations in `finally` blocks, you can turn this rule off.

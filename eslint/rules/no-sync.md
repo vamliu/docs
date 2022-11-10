@@ -1,6 +1,5 @@
 ---
 规则名: no-sync
-布局: doc
 规则类型: suggestion
 ---
 
@@ -17,7 +16,7 @@ This rule is aimed at preventing synchronous methods from being called in Node.j
 
 This rule has an optional object option `{ allowAtRootLevel: <boolean> }`, which determines whether synchronous methods should be allowed at the top level of a file, outside of any functions. This option defaults to `false`.
 
-Examples of **incorrect** code for this rule with the default `{ allowAtRootLevel: false }` option:
+选项 `{ allowAtRootLevel: false }`  默认值的 **错误** 代码示例：
 
 
 
@@ -31,7 +30,7 @@ function foo() {
 }
 ```
 
-Examples of **correct** code for this rule with the default `{ allowAtRootLevel: false }` option:
+选项 `{ allowAtRootLevel: false }` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -69,6 +68,6 @@ Examples of **correct** code for this rule with the `{ allowAtRootLevel: true }`
 fs.readFileSync(somePath).toString();
 ```
 
-## 使用建议
+## 禁用建议
 
 If you want to allow synchronous operations in your script, do not enable this rule.

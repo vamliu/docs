@@ -1,6 +1,5 @@
 ---
 规则名: no-promise-executor-return
-布局: doc
 规则类型: problem
 关联规则:
 - no-async-promise-executor
@@ -33,7 +32,7 @@ This rule disallows returning values from Promise executor functions.
 
 Only `return` without a value is allowed, as it's a control flow statement.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -66,7 +65,7 @@ new Promise(() => {
 });
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

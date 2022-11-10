@@ -1,6 +1,5 @@
 ---
 规则名: no-use-before-define
-布局: doc
 规则类型: problem
 ---
 
@@ -13,7 +12,7 @@ In ES6, block-level bindings (`let` and `const`) introduce a "temporal dead zone
 
 This rule will warn when it encounters a reference to an identifier that has not yet been declared.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -65,7 +64,7 @@ export { foo };
 const foo = 1;
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

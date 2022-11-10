@@ -1,6 +1,5 @@
 ---
 规则名: no-case-declarations
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-fallthrough
@@ -20,7 +19,7 @@ wrap your clauses in blocks.
 
 This rule aims to prevent access to uninitialized lexical bindings as well as accessing hoisted functions across case clauses.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -43,7 +42,7 @@ switch (foo) {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -78,6 +77,6 @@ switch (foo) {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you depend on fall through behavior and want access to bindings introduced in the case block.

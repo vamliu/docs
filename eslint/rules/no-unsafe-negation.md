@@ -1,6 +1,5 @@
 ---
 规则名: no-unsafe-negation
-布局: doc
 规则类型: problem
 ---
 
@@ -17,7 +16,7 @@ This rule disallows negating the left operand of the following relational operat
 * [`in` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in).
 * [`instanceof` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof).
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -35,7 +34,7 @@ if (!obj instanceof Ctor) {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -56,7 +55,7 @@ if (!(obj instanceof Ctor)) {
 For rare situations when negating the left operand is intended, this rule allows an exception.
 If the whole negation is explicitly wrapped in parentheses, the rule will not report a problem.
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -74,7 +73,7 @@ if(("" + !foo) in object) {
 }
 ```
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -120,6 +119,6 @@ foo = ! a <= b;
 foo = ! a >= b;
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to notify unsafe logical negations, then it's safe to disable this rule.

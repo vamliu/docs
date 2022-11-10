@@ -1,6 +1,5 @@
 ---
 规则名: no-dupe-else-if
-布局: doc
 规则类型: problem
 关联规则:
 - no-duplicate-case
@@ -39,7 +38,7 @@ In the above example, `baz()` can never execute. Obviously, `baz()` could be exe
 
 This rule disallows duplicate conditions in the same `if-else-if` chain.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -77,7 +76,7 @@ if (n === 1) {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -183,6 +182,6 @@ if (a) {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 In rare cases where you really need identical test conditions in the same chain, which necessarily means that the expressions in the chain are causing and relying on side effects, you will have to turn this rule off.

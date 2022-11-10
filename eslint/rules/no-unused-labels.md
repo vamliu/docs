@@ -1,6 +1,5 @@
 ---
 规则名: no-unused-labels
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-extra-label
@@ -31,7 +30,7 @@ Such labels take up space in the code and can lead to confusion by readers.
 
 This rule is aimed at eliminating unused labels.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -50,7 +49,7 @@ for (let i = 0; i < 10; ++i) {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -73,6 +72,6 @@ for (let i = 0; i < 10; ++i) {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to be notified about unused labels, then it's safe to disable this rule.

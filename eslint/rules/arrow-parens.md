@@ -1,73 +1,66 @@
 ---
 规则名: arrow-parens
-布局: doc
 规则类型: layout
 深入了解:
 - https://github.com/airbnb/javascript#arrows--one-arg-parens
 ---
 
-
-
-Arrow functions can omit parentheses when they have exactly one parameter. In all other cases the parameter(s) must
-be wrapped in parentheses. This rule enforces the consistent use of parentheses in arrow functions.
+当箭头函数只有一个参数时可以省略括号，否则，参数必须用括号括起来。此规则强制在箭头函数中统一使用括号。
 
 ## 规则详解
 
-This rule enforces parentheses around arrow function parameters regardless of arity. For example:
+不管是否一致，此规则在箭头函数参数外强制使用括号。例如：
 
 ```js
 /*eslint-env es6*/
 
-// 不推荐
+// 错误
 a => {}
 
-// 推荐
+// 正确
 (a) => {}
 ```
-
-Following this style will help you find arrow functions (`=>`) which may be mistakenly included in a condition
-when a comparison such as `>=` was the intent.
+遵循此样式将有助于发现进行比较（如 `>=` ）时被错误地包含在条件语句中的箭头函数（ `=>` ）。
 
 ```js
 /*eslint-env es6*/
 
-// 不推荐
+// 错误
 if (a => 2) {
 }
 
-// 推荐
+// 正确
 if (a >= 2) {
 }
 ```
-
-The rule can also be configured to discourage the use of parens when they are not required:
+该规则还可以配置成防止使用非必要的括号：
 
 ```js
 /*eslint-env es6*/
 
-// 不推荐
+// 错误
 (a) => {}
 
-// 推荐
+// 正确
 a => {}
 ```
 
 ## 配置项
 
-This rule has a string option and an object one.
+此规则提供了一个字符串选项和一个对象选项。
 
-String options are:
+字符串选项如下：
 
-* `"always"` (default) requires parens around arguments in all cases.
-* `"as-needed"` enforces no parens where they can be omitted.
+* `"always"` （默认值）强制使用括号包裹参数
+* `"as-needed"` 强制只有在需要时使用括号
 
-Object properties for variants of the `"as-needed"` option:
+`"as-needed"` 选项的第二个对象参数的属性：
 
-* `"requireForBlockBody": true` modifies the as-needed rule in order to require parens if the function body is in an instructions block (surrounded by braces).
+* `"requireForBlockBody": true` 当方法体是一个指令块（被大括号包裹的）时，需要括号。
 
 ### always
 
-Examples of **incorrect** code for this rule with the default `"always"` option:
+选项 `"always"`  默认值的 **错误** 代码示例：
 
 ```js
 /*eslint arrow-parens: ["error", "always"]*/
@@ -81,7 +74,7 @@ a.then(foo => a);
 a(foo => { if (true) {} });
 ```
 
-Examples of **correct** code for this rule with the default `"always"` option:
+选项 `"always"` 默认值的 **正确** 代码示例：
 
 ```js
 /*eslint arrow-parens: ["error", "always"]*/
@@ -95,9 +88,9 @@ a.then((foo) => {});
 a.then((foo) => { if (true) {} });
 ```
 
-#### If Statements
+#### If 语句
 
-One of the benefits of this option is that it prevents the incorrect use of arrow functions in conditionals:
+此选项有一个好处就是可以防止在条件语句中错误使用箭头函数：
 
 ```js
 /*eslint-env es6*/
@@ -110,12 +103,11 @@ if (a => b) {
 } else {
  console.log('smaller');
 }
-// outputs 'bigger', not smaller as expected
+// 输出 'bigger', 而不是预期的 'smaller'
 ```
+`if` 语句里的内容是一个箭头函数，而不是比较语句。
 
-The contents of the `if` statement is an arrow function, not a comparison.
-
-If the arrow function is intentional, it should be wrapped in parens to remove ambiguity.
+如果箭头函数是有意的，则应将其包裹在括号中以消除歧义。
 
 ```js
 /*eslint-env es6*/
@@ -128,10 +120,10 @@ if ((a) => b) {
 } else {
  console.log('falsey value returned');
 }
-// outputs 'truthy value returned'
+// 输出 'truthy value returned'
 ```
 
-The following is another example of this behavior:
+下面是另一个类似的例子：
 
 ```js
 /*eslint-env es6*/
@@ -141,9 +133,9 @@ var f = a => b ? c: d;
 // f = ?
 ```
 
-`f` is an arrow function which takes `a` as an argument and returns the result of `b ? c: d`.
+`f` 是一个将 `a` 为参数， `b ? c: d` 为返回值的箭头函数。
 
-This should be rewritten like so:
+它应被重写成：
 
 ```js
 /*eslint-env es6*/
@@ -154,7 +146,7 @@ var f = (a) => b ? c: d;
 
 ### as-needed
 
-Examples of **incorrect** code for this rule with the `"as-needed"` option:
+选项 `"as-needed"` 的 **错误** 代码示例：
 
 ```js
 /*eslint arrow-parens: ["error", "as-needed"]*/
@@ -171,7 +163,7 @@ const g = /* comment */ (a) => a + a;
 const h = (a) /* comment */ => a + a;
 ```
 
-Examples of **correct** code for this rule with the `"as-needed"` option:
+选项 `"as-needed"` 的 **正确** 代码示例：
 
 ```js
 /*eslint arrow-parens: ["error", "as-needed"]*/

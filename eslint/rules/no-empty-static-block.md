@@ -1,6 +1,5 @@
 ---
 规则名: no-empty-static-block
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-empty
@@ -15,7 +14,7 @@ Empty static blocks, while not technically errors, usually occur due to refactor
 
 This rule disallows empty static blocks. This rule ignores static blocks which contain a comment.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -27,7 +26,7 @@ class Foo {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ```js
 /*eslint no-empty-static-block: "error"*/
@@ -45,6 +44,6 @@ class Foo {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 This rule should not be used in environments prior to ES2022.

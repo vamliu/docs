@@ -1,6 +1,5 @@
 ---
 规则名: prefer-template
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-useless-concat
@@ -27,7 +26,7 @@ This rule is aimed to flag usage of `+` operators with strings.
 
 ## Examples
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -38,7 +37,7 @@ var str = "Hello, " + name + "!";
 var str = "Time: " + (12 * 60 * 60 * 1000);
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -54,7 +53,7 @@ var str = `Time: ${12 * 60 * 60 * 1000}`;
 var str = "Hello, " + "World!";
 ```
 
-## 使用建议
+## 禁用建议
 
 This rule should not be used in ES3/5 environments.
 

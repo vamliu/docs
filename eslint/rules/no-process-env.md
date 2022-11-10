@@ -1,6 +1,5 @@
 ---
 规则名: no-process-env
-布局: doc
 规则类型: suggestion
 深入了解:
 - https://stackoverflow.com/questions/5869216/how-to-store-node-js-deployment-settings-configuration-files
@@ -16,7 +15,7 @@ The `process.env` object in Node.js is used to store deployment/configuration pa
 
 This rule is aimed at discouraging use of `process.env` to avoid global dependencies. As such, it will warn whenever `process.env` is used.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -28,7 +27,7 @@ if(process.env.NODE_ENV === "development") {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -42,6 +41,6 @@ if(config.env === "development") {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you prefer to use `process.env` throughout your project to retrieve values from environment variables, then you can safely disable this rule.

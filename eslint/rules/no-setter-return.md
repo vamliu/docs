@@ -1,6 +1,5 @@
 ---
 规则名: no-setter-return
-布局: doc
 规则类型: problem
 关联规则:
 - getter-return
@@ -26,7 +25,7 @@ This rule checks setters in:
 * Class declarations and class expressions.
 * Property descriptors in `Object.create`, `Object.defineProperty`, `Object.defineProperties`, and `Reflect.defineProperty` methods of the global objects.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -67,7 +66,7 @@ Object.defineProperty(foo, "bar", {
 });
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

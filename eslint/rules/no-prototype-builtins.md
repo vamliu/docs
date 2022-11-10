@@ -1,6 +1,5 @@
 ---
 规则名: no-prototype-builtins
-布局: doc
 规则类型: problem
 ---
 
@@ -16,7 +15,7 @@ To avoid subtle bugs like this, it's better to always call these methods from `O
 
 This rule disallows calling some `Object.prototype` methods directly on object instances.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -30,7 +29,7 @@ var isPrototypeOfBar = foo.isPrototypeOf(bar);
 var barIsEnumerable = foo.propertyIsEnumerable("bar");
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -44,6 +43,6 @@ var isPrototypeOfBar = Object.prototype.isPrototypeOf.call(foo, bar);
 var barIsEnumerable = {}.propertyIsEnumerable.call(foo, "bar");
 ```
 
-## 使用建议
+## 禁用建议
 
 You may want to turn this rule off if your code only touches objects with hardcoded keys, and you will never use an object that shadows an `Object.prototype` method or which does not inherit from `Object.prototype`.

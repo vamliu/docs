@@ -1,6 +1,5 @@
 ---
 规则名: semi
-布局: doc
 规则类型: layout
 关联规则:
 - no-extra-semi
@@ -93,7 +92,7 @@ Object option (when `"never"`):
 
 ### always
 
-Examples of **incorrect** code for this rule with the default `"always"` option:
+选项 `"always"`  默认值的 **错误** 代码示例：
 
 
 
@@ -111,7 +110,7 @@ class Foo {
 }
 ```
 
-Examples of **correct** code for this rule with the default `"always"` option:
+选项 `"always"` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -131,7 +130,7 @@ class Foo {
 
 ### never
 
-Examples of **incorrect** code for this rule with the `"never"` option:
+选项 `"never"` 的 **错误** 代码示例：
 
 
 
@@ -149,7 +148,7 @@ class Foo {
 }
 ```
 
-Examples of **correct** code for this rule with the `"never"` option:
+选项 `"never"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -233,6 +232,6 @@ import a from "a"
 })()
 ```
 
-## 使用建议
+## 禁用建议
 
 If you do not want to enforce semicolon usage (or omission) in any particular way, then you can turn this rule off.

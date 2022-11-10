@@ -1,6 +1,5 @@
 ---
 规则名: no-extra-bind
-布局: doc
 规则类型: suggestion
 深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
@@ -40,7 +39,7 @@ This rule is aimed at avoiding the unnecessary use of `bind()` and as such will 
 
 **Note:** Arrow functions can never have their `this` value set using `bind()`. This rule flags all uses of `bind()` with arrow functions as a problem
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -73,7 +72,7 @@ var x = function () {
 }.bind(baz);
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -89,6 +88,6 @@ var x = function (a) {
 }.bind(foo, bar);
 ```
 
-## 使用建议
+## 禁用建议
 
 If you are not concerned about unnecessary calls to `bind()`, you can safely disable this rule.

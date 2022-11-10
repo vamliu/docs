@@ -1,6 +1,5 @@
 ---
 规则名: line-comment-position
-布局: doc
 规则类型: layout
 ---
 
@@ -115,10 +114,10 @@ Default ignore patterns are applied even when `ignorePattern` is provided. If yo
 
 **Deprecated:** the object property `applyDefaultPatterns` is deprecated. Please use the property `applyDefaultIgnorePatterns` instead.
 
-## 使用建议
+## 禁用建议
 
 If you aren't concerned about having different line comment styles, then you can turn off this rule.
 
-## Compatibility
+## 兼容
 
 **JSCS**: [validateCommentPosition](https://jscs-dev.github.io/rule/validateCommentPosition)

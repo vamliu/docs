@@ -1,6 +1,5 @@
 ---
 规则名: require-unicode-regexp
-布局: doc
 规则类型: suggestion
 ---
 
@@ -28,7 +27,7 @@ Therefore, the `u` flag lets us work better with regular expressions.
 
 This rule aims to enforce the use of `u` flag on regular expressions.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -41,7 +40,7 @@ const c = new RegExp("ccc")
 const d = new RegExp("ddd", "gi")
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -59,6 +58,6 @@ function f(flags) {
 }
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to notify regular expressions with no `u` flag, then it's safe to disable this rule.

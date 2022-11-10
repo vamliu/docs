@@ -1,6 +1,5 @@
 ---
 规则名: prefer-arrow-callback
-布局: doc
 规则类型: suggestion
 深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
@@ -97,7 +96,7 @@ foo(function() { (() => this); });
 someArray.map(function(item) { return this.doSomething(item); }, someObject);
 ```
 
-## 使用建议
+## 禁用建议
 
 * In environments that have not yet adopted ES6 language features (ES3/5).
 

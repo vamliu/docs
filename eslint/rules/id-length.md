@@ -1,6 +1,5 @@
 ---
 规则名: id-length
-布局: doc
 规则类型: suggestion
 关联规则:
 - max-len
@@ -108,7 +107,7 @@ This rule has an object option:
 
 ### min
 
-Examples of **incorrect** code for this rule with the `{ "min": 4 }` option:
+选项 `{ "min": 4 }` 的 **错误** 代码示例：
 
 
 
@@ -136,7 +135,7 @@ var { prop: [x]} = {};
 ({ prop: obj.x } = {});
 ```
 
-Examples of **correct** code for this rule with the `{ "min": 4 }` option:
+选项 `{ "min": 4 }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -170,7 +169,7 @@ data["y"] = 3;  // excused because of calculated property access
 
 ### max
 
-Examples of **incorrect** code for this rule with the `{ "max": 10 }` option:
+选项 `{ "max": 10 }` 的 **错误** 代码示例：
 
 
 
@@ -191,7 +190,7 @@ try {
 var [reallyLongFirstElementName] = arr;
 ```
 
-Examples of **correct** code for this rule with the `{ "max": 10 }` option:
+选项 `{ "max": 10 }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -214,7 +213,7 @@ var [first] = arr;
 
 ### properties
 
-Examples of **correct** code for this rule with the `{ "properties": "never" }` option:
+选项 `{ "properties": "never" }` 的 **正确** 代码示例：
 
 ::: correct
 

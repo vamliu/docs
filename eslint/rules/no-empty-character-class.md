@@ -1,6 +1,5 @@
 ---
 规则名: no-empty-character-class
-布局: doc
 规则类型: problem
 ---
 
@@ -16,7 +15,7 @@ var foo = /^abc[]/;
 
 This rule disallows empty character classes in regular expressions.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -27,7 +26,7 @@ Examples of **incorrect** code for this rule:
 "abcdefg".match(/^abc[]/); // null
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

@@ -1,6 +1,5 @@
 ---
 规则名: operator-assignment
-布局: doc
 规则类型: suggestion
 ---
 
@@ -40,7 +39,7 @@ This rule has a single string option:
 
 ### always
 
-Examples of **incorrect** code for this rule with the default `"always"` option:
+选项 `"always"`  默认值的 **错误** 代码示例：
 
 
 
@@ -53,7 +52,7 @@ x[0] = x[0] / y;
 x.y = x.y << z;
 ```
 
-Examples of **correct** code for this rule with the default `"always"` option:
+选项 `"always"` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -71,7 +70,7 @@ x = y + x; // `+` is not always commutative (e.g. x = "abc")
 
 ### never
 
-Examples of **incorrect** code for this rule with the `"never"` option:
+选项 `"never"` 的 **错误** 代码示例：
 
 
 
@@ -82,7 +81,7 @@ x *= y;
 x ^= (y + z) / foo();
 ```
 
-Examples of **correct** code for this rule with the `"never"` option:
+选项 `"never"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -93,6 +92,6 @@ x = x + y;
 x.y = x.y / a.b;
 ```
 
-## 使用建议
+## 禁用建议
 
 Use of operator assignment shorthand is a stylistic choice. Leaving this rule turned off would allow developers to choose which style is more readable on a case-by-case basis.

@@ -1,6 +1,5 @@
 ---
 规则名: no-self-compare
-布局: doc
 规则类型: problem
 ---
 
@@ -13,7 +12,7 @@ The only time you would compare a variable against itself is when you are testin
 
 This error is raised to highlight a potentially confusing and potentially pointless piece of code. There are almost no situations in which you would need to compare something to itself.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 

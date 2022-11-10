@@ -1,6 +1,5 @@
 ---
 规则名: no-restricted-properties
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-restricted-globals
@@ -72,7 +71,7 @@ If the property name is omitted, accessing any property of the given object is d
 }
 ```
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -107,7 +106,7 @@ foo.__defineGetter__(bar, baz);
 require.resolve('foo');
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -132,6 +131,6 @@ allowedObjectName.disallowedPropertyName();
 require('foo');
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't have any object/property combinations to restrict, you should not use this rule.

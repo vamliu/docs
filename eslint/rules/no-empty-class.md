@@ -1,6 +1,5 @@
 ---
 规则名: no-empty-class
-布局: doc
 
 ---
 
@@ -18,7 +17,7 @@ var foo = /^abc[]/;
 
 This rule is aimed at highlighting possible typos and unexpected behavior in regular expressions which may arise from the use of empty character classes.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -30,7 +29,7 @@ var foo = /^abc[]/;
 bar.match(/^abc[]/);
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

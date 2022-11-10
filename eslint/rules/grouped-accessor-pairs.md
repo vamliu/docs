@@ -1,6 +1,5 @@
 ---
 规则名: grouped-accessor-pairs
-布局: doc
 规则类型: suggestion
 关联规则:
 - accessor-pairs
@@ -51,7 +50,7 @@ Optionally, this rule can also enforce consistent order (`getBeforeSet` or `setB
 
 This rule does not enforce the existence of the pair for a getter or a setter. See [accessor-pairs](accessor-pairs) if you also want to enforce getter/setter pairs.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -99,7 +98,7 @@ const Bar = class {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -157,7 +156,7 @@ This rule has a string option:
 
 ### getBeforeSet
 
-Examples of **incorrect** code for this rule with the `"getBeforeSet"` option:
+选项 `"getBeforeSet"` 的 **错误** 代码示例：
 
 
 
@@ -192,7 +191,7 @@ const Bar = class {
 }
 ```
 
-Examples of **correct** code for this rule with the `"getBeforeSet"` option:
+选项 `"getBeforeSet"` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -229,7 +228,7 @@ const Bar = class {
 
 ### setBeforeGet
 
-Examples of **incorrect** code for this rule with the `"setBeforeGet"` option:
+选项 `"setBeforeGet"` 的 **错误** 代码示例：
 
 
 
@@ -264,7 +263,7 @@ const Bar = class {
 }
 ```
 
-Examples of **correct** code for this rule with the `"setBeforeGet"` option:
+选项 `"setBeforeGet"` 的 **正确** 代码示例：
 
 ::: correct
 

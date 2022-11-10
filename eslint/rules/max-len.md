@@ -1,6 +1,5 @@
 ---
 规则名: max-len
-布局: doc
 规则类型: layout
 关联规则:
 - complexity
@@ -38,7 +37,7 @@ This rule has a number or object option:
 
 ### code
 
-Examples of **incorrect** code for this rule with the default `{ "code": 80 }` option:
+选项 `{ "code": 80 }`  默认值的 **错误** 代码示例：
 
 
 
@@ -48,7 +47,7 @@ Examples of **incorrect** code for this rule with the default `{ "code": 80 }` o
 var foo = { "bar": "This is a bar.", "baz": { "qux": "This is a qux" }, "difficult": "to read" };
 ```
 
-Examples of **correct** code for this rule with the default `{ "code": 80 }` option:
+选项 `{ "code": 80 }` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -64,7 +63,7 @@ var foo = {
 
 ### tabWidth
 
-Examples of **incorrect** code for this rule with the default `{ "tabWidth": 4 }` option:
+选项 `{ "tabWidth": 4 }`  默认值的 **错误** 代码示例：
 
 
 
@@ -74,7 +73,7 @@ Examples of **incorrect** code for this rule with the default `{ "tabWidth": 4 }
 \t  \t  var foo = { "bar": "This is a bar.", "baz": { "qux": "This is a qux" } };
 ```
 
-Examples of **correct** code for this rule with the default `{ "tabWidth": 4 }` option:
+选项 `{ "tabWidth": 4 }` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -89,7 +88,7 @@ Examples of **correct** code for this rule with the default `{ "tabWidth": 4 }` 
 
 ### comments
 
-Examples of **incorrect** code for this rule with the `{ "comments": 65 }` option:
+选项 `{ "comments": 65 }` 的 **错误** 代码示例：
 
 
 
@@ -103,7 +102,7 @@ Examples of **incorrect** code for this rule with the `{ "comments": 65 }` optio
 
 ### ignoreComments
 
-Examples of **correct** code for this rule with the `{ "ignoreComments": true }` option:
+选项 `{ "ignoreComments": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -117,7 +116,7 @@ Examples of **correct** code for this rule with the `{ "ignoreComments": true }`
 
 ### ignoreTrailingComments
 
-Examples of **correct** code for this rule with the `{ "ignoreTrailingComments": true }` option:
+选项 `{ "ignoreTrailingComments": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -129,7 +128,7 @@ var foo = 'bar'; // This is a really really really really really really really l
 
 ### ignoreUrls
 
-Examples of **correct** code for this rule with the `{ "ignoreUrls": true }` option:
+选项 `{ "ignoreUrls": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -141,7 +140,7 @@ var url = 'https://www.example.com/really/really/really/really/really/really/rea
 
 ### ignoreStrings
 
-Examples of **correct** code for this rule with the `{ "ignoreStrings": true }` option:
+选项 `{ "ignoreStrings": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -153,7 +152,7 @@ var longString = 'this is a really really really really really long string!';
 
 ### ignoreTemplateLiterals
 
-Examples of **correct** code for this rule with the `{ "ignoreTemplateLiterals": true }` option:
+选项 `{ "ignoreTemplateLiterals": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -165,7 +164,7 @@ var longTemplateLiteral = `this is a really really really really really long tem
 
 ### ignoreRegExpLiterals
 
-Examples of **correct** code for this rule with the `{ "ignoreRegExpLiterals": true }` option:
+选项 `{ "ignoreRegExpLiterals": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -177,7 +176,7 @@ var longRegExpLiteral = /this is a really really really really really long regul
 
 ### ignorePattern
 
-Examples of **correct** code for this rule with the `ignorePattern` option:
+选项 `ignorePattern` 的 **正确** 代码示例：
 
 ::: correct
 

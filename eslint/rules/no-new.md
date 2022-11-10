@@ -1,6 +1,5 @@
 ---
 规则名: no-new
-布局: doc
 规则类型: suggestion
 ---
 
@@ -23,7 +22,7 @@ In this case, the created object is thrown away because its reference isn't stor
 
 This rule is aimed at maintaining consistency and convention by disallowing constructor calls using the `new` keyword that do not assign the resulting object to a variable.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -33,7 +32,7 @@ Examples of **incorrect** code for this rule:
 new Thing();
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

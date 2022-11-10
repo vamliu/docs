@@ -1,6 +1,5 @@
 ---
 规则名: no-inline-comments
-布局: doc
 规则类型: suggestion
 ---
 
@@ -12,7 +11,7 @@ On the other hand, it is sometimes faster and more obvious to put comments immed
 
 This rule disallows comments on the same line as code.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -31,7 +30,7 @@ function getRandomNumber(){
 var c = 3; /* A block comment after code */
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -49,7 +48,7 @@ var bar = 5;
 
 Comments inside the curly braces in JSX are allowed to be on the same line as the braces, but only if they are not on the same line with other code, and the braces do not enclose an actual expression.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -67,7 +66,7 @@ var bar = (
 );
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 

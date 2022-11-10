@@ -1,6 +1,5 @@
 ---
 规则名: max-lines-per-function
-布局: doc
 规则类型: suggestion
 关联规则:
 - complexity
@@ -139,7 +138,7 @@ function foo() {
 
 ### skipBlankLines
 
-Examples of **incorrect** code for this rule with the `{ "skipBlankLines": true }` option:
+选项 `{ "skipBlankLines": true }` 的 **错误** 代码示例：
 
 
 
@@ -151,7 +150,7 @@ function foo() {
 }
 ```
 
-Examples of **correct** code for this rule with the `{ "skipBlankLines": true }` option:
+选项 `{ "skipBlankLines": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -165,7 +164,7 @@ function foo() {
 
 ### skipComments
 
-Examples of **incorrect** code for this rule with the `{ "skipComments": true }` option:
+选项 `{ "skipComments": true }` 的 **错误** 代码示例：
 
 
 
@@ -177,7 +176,7 @@ function foo() {
 }
 ```
 
-Examples of **correct** code for this rule with the `{ "skipComments": true }` option:
+选项 `{ "skipComments": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -191,7 +190,7 @@ function foo() {
 
 ### IIFEs
 
-Examples of **incorrect** code for this rule with the `{ "IIFEs": true }` option:
+选项 `{ "IIFEs": true }` 的 **错误** 代码示例：
 
 
 
@@ -206,7 +205,7 @@ Examples of **incorrect** code for this rule with the `{ "IIFEs": true }` option
 })();
 ```
 
-Examples of **correct** code for this rule with the `{ "IIFEs": true }` option:
+选项 `{ "IIFEs": true }` 的 **正确** 代码示例：
 
 ::: correct
 
@@ -221,6 +220,6 @@ Examples of **correct** code for this rule with the `{ "IIFEs": true }` option:
 })();
 ```
 
-## 使用建议
+## 禁用建议
 
 You can turn this rule off if you are not concerned with the number of lines in your functions.

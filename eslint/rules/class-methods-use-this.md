@@ -1,6 +1,5 @@
 ---
 规则名: class-methods-use-this
-布局: doc
 规则类型: suggestion
 深入了解:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
@@ -57,7 +56,7 @@ Also note in the above examples that if you switch a method to a static method, 
 
 This rule is aimed to flag class methods that do not use `this`.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -72,7 +71,7 @@ class A {
 }
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -177,7 +176,7 @@ class A {
 }
 ```
 
-Examples of **correct** code for this rule with the `{ "enforceForClassFields": false }` option:
+选项 `{ "enforceForClassFields": false }` 的 **正确** 代码示例：
 
 ::: correct
 

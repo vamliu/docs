@@ -1,6 +1,5 @@
 ---
 规则名: capitalized-comments
-布局: doc
 规则类型: suggestion
 ---
 
@@ -16,7 +15,7 @@ This rule aims to enforce a consistent style of comments across your codebase, s
 
 By default, this rule will require a non-lowercase letter at the beginning of comments.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 ```js
 /* eslint capitalized-comments: ["error"] */
@@ -25,7 +24,7 @@ Examples of **incorrect** code for this rule:
 
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ```js
 
@@ -83,7 +82,7 @@ Using the `"always"` option means that this rule will report any comments which 
 
 Note that configuration comments and comments which start with URLs are never reported.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 ```js
 /* eslint capitalized-comments: ["error", "always"] */
@@ -92,7 +91,7 @@ Examples of **incorrect** code for this rule:
 
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ```js
 /* eslint capitalized-comments: ["error", "always"] */
@@ -245,11 +244,11 @@ Examples of **correct** code with different line and block comment configuration
 
 ```
 
-## 使用建议
+## 禁用建议
 
 This rule can be disabled if you do not care about the grammatical style of comments in your codebase.
 
-## Compatibility
+## 兼容
 
 * **JSCS**: [requireCapitalizedComments](https://jscs-dev.github.io/rule/requireCapitalizedComments)
 * **JSCS**: [disallowCapitalizedComments](https://jscs-dev.github.io/rule/disallowCapitalizedComments)

@@ -1,24 +1,23 @@
 ---
 规则名: arrow-body-style
-布局: doc
 规则类型: suggestion
 ---
 
-Arrow functions have two syntactic forms for their function bodies.  They may be defined with a *block* body (denoted by curly braces) `() => { ... }` or with a single expression `() => ...`, whose value is implicitly returned.
+箭头函数的函数体有两种语法形式。可以用 *区块* （用大括号表示） `() = > { ... }` 或单个表达式 `() => ...` 定义，其值隐式返回。
 
 ## 规则详解
 
-This rule can enforce or disallow the use of braces around arrow function body.
+此规则可以决定是否在箭头函数体外使用大括号。
 
 ## 配置项
 
-The rule takes one or two options. The first is a string, which can be:
+此规则提供一个或两个选项。第一个选项为字符串，如下：
 
-* `"always"` enforces braces around the function body
-* `"as-needed"` enforces no braces where they can be omitted (default)
-* `"never"` enforces no braces around the function body (constrains arrow functions to the role of returning an expression)
+* `"always"` 强制在函数体外使用大括号
+* `"as-needed"` 强制在可以省略的地方不使用大括号（默认值）
+* `"never"` 强制在函数体外不使用大括号（预设每个箭头函数只返回表达式）
 
-The second one is an object for more fine-grained configuration when the first option is `"as-needed"`. Currently, the only available option is `requireReturnForObjectLiteral`, a boolean property. It's `false` by default. If set to `true`, it requires braces and an explicit return for object literals.
+当第一个选项是 `"as-needed"` 时，第二个选项是一个用于更细粒度配置的对象。目前，唯一可用的选项是 `requireReturnForObjectLiteral` ，布尔属性。默认情况下为 `false` 。如果设置为 `true` ，返回值为对象时，需要大括号和显式返回。
 
 ```json
 "arrow-body-style": ["error", "always"]
@@ -26,7 +25,7 @@ The second one is an object for more fine-grained configuration when the first o
 
 ### always
 
-Examples of **incorrect** code for this rule with the `"always"` option:
+选项 `"always"` 的 **错误** 代码示例：
 
 ```js
 /*eslint arrow-body-style: ["error", "always"]*/
@@ -34,7 +33,7 @@ Examples of **incorrect** code for this rule with the `"always"` option:
 let foo = () => 0;
 ```
 
-Examples of **correct** code for this rule with the `"always"` option:
+选项 `"always"` 的 **正确** 代码示例：
 
 ```js
 let foo = () => {
@@ -48,7 +47,7 @@ let foo = (retv, name) => {
 
 ### as-needed
 
-Examples of **incorrect** code for this rule with the default `"as-needed"` option:
+选项 `"as-needed"`  默认值的 **错误** 代码示例：
 
 ```js
 /*eslint arrow-body-style: ["error", "as-needed"]*/
@@ -67,7 +66,7 @@ let foo = () => {
 };
 ```
 
-Examples of **correct** code for this rule with the default `"as-needed"` option:
+选项 `"as-needed"` 默认值的 **正确** 代码示例：
 
 ```js
 /*eslint arrow-body-style: ["error", "as-needed"]*/
@@ -95,9 +94,9 @@ let foo = () => ({ bar: 0 });
 
 #### requireReturnForObjectLiteral
 
-> This option is only applicable when used in conjunction with the `"as-needed"` option.
+> 此选项仅在与 `"as-needed"` 选项一起使用时适用。
 
-Examples of **incorrect** code for this rule with the `{ "requireReturnForObjectLiteral": true }` option:
+选项 `{ "requireReturnForObjectLiteral": true }` 的 **错误** 代码示例：
 
 ```js
 /*eslint arrow-body-style: ["error", "as-needed", { "requireReturnForObjectLiteral": true }]*/
@@ -106,7 +105,7 @@ let foo = () => ({});
 let foo = () => ({ bar: 0 });
 ```
 
-Examples of **correct** code for this rule with the `{ "requireReturnForObjectLiteral": true }` option:
+选项 `{ "requireReturnForObjectLiteral": true }` 的 **正确** 代码示例：
 
 ```js
 /*eslint arrow-body-style: ["error", "as-needed", { "requireReturnForObjectLiteral": true }]*/
@@ -118,7 +117,7 @@ let foo = () => { return { bar: 0 }; };
 
 ### never
 
-Examples of **incorrect** code for this rule with the `"never"` option:
+选项 `"never"` 的 **错误** 代码示例：
 
 ```js
 /*eslint arrow-body-style: ["error", "never"]*/
@@ -133,7 +132,7 @@ let foo = (retv, name) => {
 };
 ```
 
-Examples of **correct** code for this rule with the `"never"` option:
+选项 `"never"` 的 **正确** 代码示例：
 
 ```js
 /*eslint arrow-body-style: ["error", "never"]*/

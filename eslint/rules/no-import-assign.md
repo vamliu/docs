@@ -1,6 +1,5 @@
 ---
 规则名: no-import-assign
-布局: doc
 规则类型: problem
 ---
 
@@ -12,7 +11,7 @@ The updates of imported bindings by ES Modules cause runtime errors.
 
 This rule warns the assignments, increments, and decrements of imported bindings.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -30,7 +29,7 @@ mod_ns = {}      // ERROR: 'mod_ns' is readonly.
 Object.assign(mod_ns, { foo: "foo" }) // ERROR: The members of 'mod_ns' are readonly.
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -51,6 +50,6 @@ function test(obj) {
 test(mod_ns) // Not errored because it doesn't know that 'test' updates the member of the argument.
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to be notified about modifying imported bindings, you can disable this rule.

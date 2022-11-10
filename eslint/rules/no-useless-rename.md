@@ -1,6 +1,5 @@
 ---
 规则名: no-useless-rename
-布局: doc
 规则类型: suggestion
 关联规则:
 - object-shorthand
@@ -135,10 +134,10 @@ function foo({ bar: bar }) {}
 ({ foo: foo }) => {}
 ```
 
-## 使用建议
+## 禁用建议
 
 You can safely disable this rule if you do not care about redundantly renaming import, export, and destructuring assignments.
 
-## Compatibility
+## 兼容
 
 * **JSCS**: [disallowIdenticalDestructuringNames](https://jscs-dev.github.io/rule/disallowIdenticalDestructuringNames)

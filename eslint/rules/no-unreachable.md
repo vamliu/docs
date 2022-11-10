@@ -1,6 +1,5 @@
 ---
 规则名: no-unreachable
-布局: doc
 规则类型: problem
 ---
 
@@ -32,7 +31,7 @@ class C extends B {
 
 This rule disallows unreachable code after `return`, `throw`, `continue`, and `break` statements. This rule also flags definitions of instance fields in subclasses whose constructors don't have `super()` calls.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 

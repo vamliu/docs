@@ -1,6 +1,5 @@
 ---
 规则名: no-confusing-arrow
-布局: doc
 规则类型: suggestion
 关联规则:
 - no-constant-condition
@@ -26,7 +25,7 @@ var x = a <= 1 ? 2 : 3;
 
 ## 规则详解
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -38,7 +37,7 @@ var x = a => 1 ? 2 : 3;
 var x = (a) => 1 ? 2 : 3;
 ```
 
-Examples of **correct** code for this rule:
+此规则的 **正确** 代码实例：
 
 ::: correct
 
@@ -73,7 +72,7 @@ This rule accepts two options argument with the following defaults:
 1. `true` relaxes the rule and accepts parenthesis as a valid "confusion-preventing" syntax.
 2. `false` warns even if the expression is wrapped in parenthesis
 
-Examples of **incorrect** code for this rule with the `{"allowParens": false}` option:
+选项 `{"allowParens": false}` 的 **错误** 代码示例：
 
 
 
@@ -89,7 +88,7 @@ var x = (a) => (1 ? 2 : 3);
 1. `true` relaxes the rule and doesn't report errors if the arrow function has 0 or more than 1 parameters, or the parameter is not an identifier.
 2. `false` warns regardless of parameters.
 
-Examples of **correct** code for this rule with the `{"onlyOneSimpleParam": true}` option:
+选项 `{"onlyOneSimpleParam": true}` 的 **正确** 代码示例：
 
 ::: correct
 

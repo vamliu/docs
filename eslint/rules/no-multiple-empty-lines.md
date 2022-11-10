@@ -1,6 +1,5 @@
 ---
 规则名: no-multiple-empty-lines
-布局: doc
 规则类型: layout
 ---
 
@@ -22,7 +21,7 @@ This rule has an object option:
 
 ### max
 
-Examples of **incorrect** code for this rule with the default `{ "max": 2 }` option:
+选项 `{ "max": 2 }`  默认值的 **错误** 代码示例：
 
 
 
@@ -35,7 +34,7 @@ var foo = 5;
 var bar = 3;
 ```
 
-Examples of **correct** code for this rule with the default `{ "max": 2 }` option:
+选项 `{ "max": 2 }` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -49,7 +48,7 @@ var bar = 3;
 
 ### maxEOF
 
-Examples of **incorrect** code for this rule with the `{ max: 2, maxEOF: 0 }` options:
+选项 `{ max: 2, maxEOF: 0 }`  的 **错误** 代码示例：
 
 
 
@@ -62,7 +61,7 @@ var bar = 3;
 
 ```
 
-Examples of **correct** code for this rule with the `{ max: 2, maxEOF: 0 }` options:
+选项 `{ max: 2, maxEOF: 0 }`  的 **正确** 代码示例：
 
 ::: correct
 
@@ -103,7 +102,7 @@ var bar = 3;
 
 ### maxBOF
 
-Examples of **incorrect** code for this rule with the `{ max: 2, maxBOF: 1 }` options:
+选项 `{ max: 2, maxBOF: 1 }`  的 **错误** 代码示例：
 
 
 
@@ -115,7 +114,7 @@ var foo = 5;
 var bar = 3;
 ```
 
-Examples of **correct** code for this rule with the `{ max: 2, maxBOF: 1 }` options:
+选项 `{ max: 2, maxBOF: 1 }`  的 **正确** 代码示例：
 
 ::: correct
 
@@ -127,6 +126,6 @@ var foo = 5;
 var bar = 3;
 ```
 
-## 使用建议
+## 禁用建议
 
 If you do not care about extra blank lines, turn this off.

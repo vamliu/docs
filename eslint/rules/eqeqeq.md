@@ -1,6 +1,5 @@
 ---
 规则名: eqeqeq
-布局: doc
 规则类型: suggestion
 ---
 
@@ -21,7 +20,7 @@ If one of those occurs in an innocent-looking statement such as `a == b` the act
 
 This rule is aimed at eliminating the type-unsafe equality operators.
 
-Examples of **incorrect** code for this rule:
+此规则的 **错误** 代码实例：
 
 
 
@@ -136,6 +135,6 @@ foo == null
 ["error", "always", {"null": "ignore"}]
 ```
 
-## 使用建议
+## 禁用建议
 
 If you don't want to enforce a style for using equality operators, then it's safe to disable this rule.

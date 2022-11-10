@@ -1,6 +1,5 @@
 ---
 规则名: newline-after-var
-布局: doc
 规则类型: layout
 ---
 
@@ -41,7 +40,7 @@ This rule has a string option:
 
 ### always
 
-Examples of **incorrect** code for this rule with the default `"always"` option:
+选项 `"always"`  默认值的 **错误** 代码示例：
 
 
 
@@ -67,7 +66,7 @@ var name = "world";
 console.log(greet, name);
 ```
 
-Examples of **correct** code for this rule with the default `"always"` option:
+选项 `"always"` 默认值的 **正确** 代码示例：
 
 ::: correct
 
@@ -99,7 +98,7 @@ console.log(greet, name);
 
 ### never
 
-Examples of **incorrect** code for this rule with the `"never"` option:
+选项 `"never"` 的 **错误** 代码示例：
 
 
 
@@ -129,7 +128,7 @@ var name = "world";
 console.log(greet, name);
 ```
 
-Examples of **correct** code for this rule with the `"never"` option:
+选项 `"never"` 的 **正确** 代码示例：
 
 ::: correct
 
